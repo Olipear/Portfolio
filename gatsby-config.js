@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: 'Oliver Pearson\'s portfolio',
     description:
-      'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+      'Oliver Pearson, UX engineer, front end developer, UI designer. Available for work both contract and full-time, based in Royal Leamington Spa.',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
