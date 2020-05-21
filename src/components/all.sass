@@ -1,4 +1,5 @@
-@import "~bulma/sass/utilities/initial-variables"
+@import "~bulma/sass/utilities/_all.sass"
+@import "~bulma/sass/grid/columns.sass"
 
 // Config vars
 // Kaldi logo brand color: #FD461E
@@ -9,6 +10,29 @@ $primary: $kaldi-red
 $primary-invert: $kaldi-red-invert
 $body-color: #333
 $black: #2b2523
+
+// Olipear colours
+$bg-light: #F8F8F8
+$bg-medium: #E1E1E1
+$bg-dark: #424B41
+$primary: #4CB497
+$secondary: #FC7753
+$text: #4E5166
+
+//olipear styles
+
+//fonts
+body
+  font-family: "Segoe UI", "Ubuntu", Helvetica, sans-serif
+
+// landing page
+.splash
+  width: 100%
+  height: 100vh
+  position: fixed
+  background: $bg-light
+
+
 
 .navbar .navbar-menu
   box-shadow:none !important
@@ -121,9 +145,6 @@ $menu-label-color: $white-ter
 .blog-list-item .featured-thumbnail
   flex-basis: 35%;
   margin: 0 1.5em 0 0;
-
-
-@import "~bulma"
 
 
 // responsiveness
