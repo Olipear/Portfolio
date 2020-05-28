@@ -1,15 +1,7 @@
 @import "~bulma/sass/utilities/_all.sass"
-@import "~bulma/sass/grid/columns.sass"
+@import "~bulma/sass/grid/_all.sass"
+@import "~bulma/sass/layout/_all.sass"
 
-// Config vars
-// Kaldi logo brand color: #FD461E
-$kaldi-red: #D64000
-$kaldi-red-invert: #fff
-
-$primary: $kaldi-red
-$primary-invert: $kaldi-red-invert
-$body-color: #333
-$black: #2b2523
 
 // Olipear colours
 $bg-light: #F8F8F8
@@ -19,19 +11,36 @@ $primary: #4CB497
 $secondary: #FC7753
 $text: #4E5166
 
+$primary-invert: $secondary
+$body-color: $text
+$black: #2b2523
+
 //olipear styles
 
 //fonts
 body
   font-family: "Segoe UI", "Ubuntu", Helvetica, sans-serif
+  background: $bg-light
 
 // landing page
 .splash
-  width: 100%
-  height: 100vh
-  position: fixed
-  background: $bg-light
 
+// icon menu
+.icon-link
+  width: 48px
+  height: 48px
+  background: $bg-medium
+  border-radius: 26px
+  display: inline-block
+  a
+    width: 100%
+    height: 100%
+    display: block  
+  img
+    padding: 12px
+
+
+//-------------------------------------------
 
 
 .navbar .navbar-menu
@@ -108,14 +117,6 @@ footer.footer
   padding: 3rem 0rem 0rem
   background-color: transparent
 
-//Menu overrides
-$menu-item-color: $white-ter
-$menu-item-hover-color: $black !important
-$menu-item-hover-background-color: $black
-$menu-item-active-color: $kaldi-red-invert
-$menu-item-active-background-color:	$kaldi-red-invert
-$menu-list-border-left: 1px solid $kaldi-red-invert
-$menu-label-color: $white-ter
 
 
 .menu-label
@@ -129,7 +130,6 @@ $menu-label-color: $white-ter
 .social a
     padding: .5em .5em .3em .5em
     border-radius: 1em
-    background-color: $white-ter
     margin: .5em
     width: 1em
     height: 1em

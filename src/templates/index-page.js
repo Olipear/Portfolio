@@ -16,7 +16,12 @@ export const IndexPageTemplate = ({
   intro,
 }) => (
   <div>
-    <Splash SplashInfo={title}/>
+    <section className="hero">
+      <div className="hero-body">
+        <Splash SplashInfo={title}/>
+      </div>
+    </section>
+    
   </div>
 )
 
