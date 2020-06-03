@@ -1,92 +1,76 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import github from '../img/github-icon.svg'
 import logo from '../img/logo.svg'
+import { ReactComponent as Github } from '../img/github-icon.svg'
+import { ReactComponent as CirVitae } from '../img/cv-icon.svg'
+import { ReactComponent as Linkedin } from '../img/linkedin-icon.svg'
 
-const Navbar = class extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      active: false,
-      navBarActiveClass: '',
-    }
-  }
+const Navbar = (props) => {
 
-  toggleHamburger = () => {
-    // toggle the active boolean in the state
-    this.setState(
-      {
-        active: !this.state.active,
-      },
-      // after state has been updated,
-      () => {
-        // set the class in state for the navbar accordingly
-        this.state.active
-          ? this.setState({
-              navBarActiveClass: 'is-active',
-            })
-          : this.setState({
-              navBarActiveClass: '',
-            })
-      }
-    )
-  }
+  const [active, setActive] = useState(false);
+  const [isOnSplash, setSplashMode] = useState(true);
 
-  render() {
-    return (
-      <nav
-        className="navbar is-transparent"
-        role="navigation"
-        aria-label="main-navigation"
-      >
-        <div className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
-            </Link>
-            {/* Hamburger menu */}
-            <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
-            >
-              <span />
-              <span />
-              <span />
-            </div>
-          </div>
-          <div
-            id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
-          >
-            <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
-                About
-              </Link>
-              <Link className="navbar-item" to="/projects">
-                Projects
-              </Link>
-              <Link className="navbar-item" to="/contact">
-                Contact
-              </Link>
-            </div>
-            <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://github.com/Olipear"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="icon">
-                  <img src={github} alt="Github" />
-                </span>
-              </a>
-            </div>
-          </div>
+
+  return (
+    <nav
+      className={`navbar ${isOnSplash?'splash':''}`}
+      role="navigation"
+      aria-label="main-navigation"
+    >
+      <div className="container">
+        <div className="navbar-brand">
+          <Link to="/" className="navbar-item" title="Logo">
+            <img src={logo} alt="olipear" />
+          </Link>
         </div>
-      </nav>
-    )
-  }
+        <div
+          id="navMenu"
+          className={`navbar-menu ${active?'is-open':''}`}
+        >
+          <a
+            className="menu-item"
+            href="https://github.com/Olipear"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="icon">
+              <CirVitae />
+            </span>
+          </a>
+          <a
+            className="menu-item"
+            href="https://github.com/Olipear"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="icon">
+              <Github />
+            </span>
+          </a>
+          <a
+            className="menu-item"
+            href="https://www.linkedin.com/in/oliver-pearson-799140100/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="icon">
+              <Linkedin />
+            </span>
+          </a>
+          </div>
+          <div 
+            className={`navbutton ${active?'is-active':''}`} 
+            aria-label="menu" aria-expanded={active?'true':'false'} 
+            onClick={() => {setActive(active?false:true)}}
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </div>
+      </div>
+    </nav>
+  )
 }
 
 export default Navbar
