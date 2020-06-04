@@ -19,6 +19,7 @@ const Navbar = (props) => {
       aria-label="main-navigation"
     >
       <div className="container">
+        <div className={`navbar-overlay ${active?'is-open':''}`}><span></span></div>
         <div className="navbar-brand">
           <Link to="/" className="navbar-item" title="Logo">
             <img src={logo} alt="olipear" />
@@ -58,15 +59,15 @@ const Navbar = (props) => {
               <Linkedin />
             </span>
           </a>
-          </div>
-          <div 
-            className={`navbutton ${active?'is-active':''}`} 
-            aria-label="menu" aria-expanded={active?'true':'false'} 
-            onClick={() => {setActive(active?false:true)}}
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
+        </div>
+        <div 
+          className={`navbutton ${active?'is-active':''}`} 
+          aria-label="menu" aria-expanded={active?'true':'false'} 
+          onClick={() => {setActive(active?false:true)}}
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
         </div>
       </div>
     </nav>

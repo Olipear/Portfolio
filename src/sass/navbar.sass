@@ -1,0 +1,155 @@
+.navbar
+    align-items: stretch
+    display: flex
+    position: relative
+    padding: 2rem 0 1rem 0
+    >.container
+        display: flex
+        min-height: 3.25rem
+        align-items: center
+        justify-content: space-between
+        margin: 0 1rem
+        +desktop
+            padding: 0
+            margin: 0 auto
+    .navbutton
+        display: block
+        width: 3rem
+        height: 3rem
+        position: relative
+        margin-left: auto
+        +tablet
+            display: none
+        > span
+            left: .5rem
+            display: block
+            position: absolute
+            background: $interact
+            width: 2rem
+            height: 3px
+            transform-origin: center
+            transition-duration: $speed
+            transition-property: background-color, opacity, transform
+            transition-timing-function: $easing
+            &:nth-child(1)
+                top: calc(1rem - 3px)
+            &:nth-child(2)
+                top: calc(1rem + 6px)
+            &:nth-child(3)
+                top: calc(1rem + 15px)
+        
+        &.is-active
+            > span
+                &:nth-child(1), &:nth-child(3)
+                    transform: rotate(-225deg)
+                    top: calc(1rem + 6px)
+                &:nth-child(2)
+                    transform: rotate(225deg)
+                    top: calc(1rem + 6px)
+    &-brand
+        position: relative
+        align-items: center
+        display: flex
+        flex-shrink: 0
+        > a
+            display: flex
+            cursor: pointer
+        img
+            height: 3rem
+            width: auto
+    &-menu
+        position: absolute
+        right: .75rem
+        top: 0
+        margin-top: 0rem
+        max-height: 0%
+        display: block
+        transition-duration: $speed
+        transition-property: margin-top, max-height
+        transition-timing-function: $easing
+        +tablet
+            position: relative
+            max-height: unset
+            display: flex
+            align-items: center
+            justify-content: flex-end
+            flex-shrink: 0
+        .menu-item
+            display: block
+            margin-left: -24px
+            margin-top: 0rem
+            opacity: 0
+            +mobile
+                transition-duration: $speed
+                transition-property: margin-top, opacity
+                transition-timing-function: $easing
+            +tablet
+                margin-left: 1.5rem
+                opacity: 1
+        &.is-open
+            +mobile
+                margin-top: 3rem
+                max-height: 100vh
+                .menu-item
+                    opacity: 1
+                    margin-top: 3rem
+                    margin-left: 0
+    &-overlay
+        position: absolute
+        display: block
+        top: 0
+        right: 0
+        transition-duration: $speed
+        transition-delay: $speed
+        transition-property: top, right
+        transition-timing-function: $easing
+        +tablet
+            display: none
+        > span
+            display: block
+            position: relative
+            background: $bg-medium
+            transition-duration: $speed
+            transition-property: width, height, border-radius
+            transition-timing-function: $easing
+            width: 0
+            height: 0
+            opacity: 0.8
+            border-radius: 50%
+        &.is-open
+            animation: overlayContainerOpen $speed $easing
+            top: -2rem
+            right: -1rem
+            > span
+                animation: overlaySpanOpen $speed $easing
+                width: 100pc
+                height: 100pc
+                border-radius: 0
+    &.splash
+
+@keyframes overlaySpanOpen
+    0%
+        width: 0
+        height: 0
+        border-radius: 50%
+    20%
+        border-radius: 50%
+        width: 5rem
+        height: 5rem
+    50%
+        border-radius: 50% 0 25% 50%
+    100%
+        width: 100pc
+        height: 100pc
+        border-radius: 0
+
+@keyframes overlayContainerOpen
+    0%
+        top: 1.5rem
+        right: 1.5rem
+    20%
+        top: -1rem
+        right: -1rem
+    100%
+        top: -2rem
+        right: -1rem
