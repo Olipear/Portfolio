@@ -29,7 +29,9 @@ module.exports = {
         name: 'images',
       },
     },
-    'gatsby-plugin-svgr',
+    {
+      resolve: 'gatsby-plugin-svgr',
+    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {

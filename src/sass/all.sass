@@ -30,6 +30,17 @@ body
   font-family: "Segoe UI", "Ubuntu", Helvetica, sans-serif
   background: $bg-light
 
+// interactions
+.icon 
+  color: $interact
+  &:hover
+    color: $hover
+  &:disabled, &.disabled
+    color: $disabled
+    cursor: default
+    &:hover
+      color: $disabled    
+
 // landing page
 .splash
 

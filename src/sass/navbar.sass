@@ -46,6 +46,9 @@
                 &:nth-child(2)
                     transform: rotate(225deg)
                     top: calc(1rem + 6px)
+        &:hover
+            > span
+                background: $hover
     &-brand
         position: relative
         align-items: center
@@ -108,7 +111,7 @@
         > span
             display: block
             position: relative
-            background: $bg-medium
+            background: $bg-light
             transition-duration: $speed
             transition-property: width, height, border-radius
             transition-timing-function: $easing

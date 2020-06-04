@@ -6,6 +6,7 @@ import { ReactComponent as Github } from '../img/github-icon.svg'
 import { ReactComponent as CirVitae } from '../img/cv-icon.svg'
 import { ReactComponent as Linkedin } from '../img/linkedin-icon.svg'
 
+
 const Navbar = (props) => {
 
   const [active, setActive] = useState(false);
@@ -31,11 +32,11 @@ const Navbar = (props) => {
         >
           <a
             className="menu-item"
-            href="https://github.com/Olipear"
-            target="_blank"
+            href=""
+            target=""
             rel="noopener noreferrer"
           >
-            <span className="icon">
+            <span className="icon disabled">
               <CirVitae />
             </span>
           </a>
