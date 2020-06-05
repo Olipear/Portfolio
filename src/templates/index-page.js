@@ -21,13 +21,13 @@ export const IndexPageTemplate = ({
         className="full-width-image margin-top-0"
         style={{
           backgroundImage: `url(${
-            image
+            !!image.childImageSharp ? image.childImageSharp.fluid.src : image
           })`,
           backgroundPosition: `top left`,
           backgroundAttachment: `fixed`,
         }}
       ></div>
-        <Splash heading={heading} /> 
+        <Splash heading={heading} image={image} /> 
       </div>
     </section>
     
