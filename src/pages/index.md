@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: Portfolio site under construction
-image: /img/home-jumbotron.jpg
+image: /img/splash.png
 heading: Portfolio site under construction
 subheading: "Using gatsby + netlify "
 mainpitch:
