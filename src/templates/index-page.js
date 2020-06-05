@@ -12,13 +12,22 @@ export const IndexPageTemplate = ({
   heading,
   subheading,
   mainpitch,
-  description,
   intro,
 }) => (
   <div>
     <section className="hero">
       <div className="hero-body">
-        <Splash SplashInfo={title}/>
+        <div
+        className="full-width-image margin-top-0"
+        style={{
+          backgroundImage: `url(${
+            image
+          })`,
+          backgroundPosition: `top left`,
+          backgroundAttachment: `fixed`,
+        }}
+      ></div>
+        <Splash heading={heading} /> 
       </div>
     </section>
     
@@ -31,7 +40,6 @@ IndexPageTemplate.propTypes = {
   heading: PropTypes.string,
   subheading: PropTypes.string,
   mainpitch: PropTypes.object,
-  description: PropTypes.string,
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
@@ -48,7 +56,6 @@ const IndexPage = ({ data }) => {
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
         intro={frontmatter.intro}
       />
     </Layout>
@@ -83,7 +90,6 @@ export const pageQuery = graphql`
           title
           description
         }
-        description
         intro {
           blurbs {
             image {

@@ -1,16 +1,21 @@
 import React from 'react'
-import logo from '../img/logo.svg'
+import PropTypes from 'prop-types'
+import PreviewCompatibleImage from './PreviewCompatibleImage'
+import Img from 'gatsby-image'
 
-const Splash = ({SplashInfo}) => {
+const Splash = ({heading}) => {
 
     return (
         <div className="splash">
             <div>
-                {SplashInfo}
+                {heading}
             </div>
-            
         </div>
       )
+}
+
+Splash.propTypes = {
+    heading: PropTypes.string,
 }
 
 export default Splash

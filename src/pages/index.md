@@ -1,17 +1,13 @@
 ---
 templateKey: index-page
 title: Portfolio site under construction
-image: /img/home-jumbotron.jpg
+image: /img/Splash.png
 heading: Portfolio site under construction
 subheading: "Using gatsby + netlify "
 mainpitch:
   title: Oliver Pearson
   description: |
     I'm a UX designer / product designer hire me for contract work
-description: Kaldi is the ultimate spot for coffee lovers who want to learn
-  about their java’s origin and support the farmers that grew it. We take coffee
-  production, roasting and brewing seriously and we’re glad to pass that
-  knowledge to anyone.
 intro:
   blurbs:
     - image: /img/coffee.png
