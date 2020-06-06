@@ -29,8 +29,7 @@ module.exports = {
         name: 'images',
       },
     },
-    'gatsby-plugin-svgr',
-    'gatsby-plugin-sharp',
+    'gatsby-plugin-sharp', 
     'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-transformer-remark',
@@ -66,6 +65,7 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
+    'gatsby-plugin-svgr',
     {
       resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
       options: {

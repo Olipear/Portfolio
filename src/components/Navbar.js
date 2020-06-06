@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Link } from 'gatsby'
+import React, { useState, useEffect } from 'react'
+import { Link, graphql, useStaticQuery } from 'gatsby'
 import github from '../img/github-icon.svg'
 import logo from '../img/logo.svg'
 import { ReactComponent as Github } from '../img/github-icon.svg'
@@ -12,6 +12,19 @@ const Navbar = (props) => {
   const [active, setActive] = useState(false);
   const [isOnSplash, setSplashMode] = useState(true);
 
+  const data = useStaticQuery(
+    graphql`query navigationQuery {
+      markdownRemark(frontmatter: {templateKey: {eq: "index-page"}}) {
+        frontmatter {
+          navigation {
+            githuburl
+            linkedinurl
+            cv_pdf
+          }
+        }
+      }
+    }`
+  ).markdownRemark.frontmatter.navigation
 
   return (
     <nav
@@ -32,31 +45,32 @@ const Navbar = (props) => {
         >
           <a
             className="menu-item"
-            href=""
-            target=""
+            href={data.cv_pdf||""}
+            target={data.cv_pdf?"_blank":""}
             rel="noopener noreferrer"
+            download
           >
-            <span className="icon disabled">
+            <span className={`icon ${data.cv_pdf?'': 'disabled'}`}>
               <CirVitae />
             </span>
           </a>
           <a
             className="menu-item"
-            href="https://github.com/Olipear"
-            target="_blank"
+            href={data.githuburl||""}
+            target={data.githuburl?"_blank":""}
             rel="noopener noreferrer"
           >
-            <span className="icon">
+            <span className={`icon ${data.githuburl?'': 'disabled'}`}>
               <Github />
             </span>
           </a>
           <a
             className="menu-item"
-            href="https://www.linkedin.com/in/oliver-pearson-799140100/"
-            target="_blank"
+            href={data.linkedinurl}
+            target={data.linkedinurl?"_blank":""}
             rel="noopener noreferrer"
           >
-            <span className="icon">
+            <span className={`icon ${data.linkedinurl?'': 'disabled'}`}>
               <Linkedin />
             </span>
           </a>

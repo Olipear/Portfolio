@@ -7,12 +7,8 @@ import ProjectRoll from '../components/ProjectRoll'
 import Splash from '../components/Splash'
 
 export const IndexPageTemplate = ({
-  image,
   title,
-  heading,
-  subheading,
-  mainpitch,
-  intro,
+  splash
 }) => (
   <div>
     <section className="hero">
@@ -21,13 +17,13 @@ export const IndexPageTemplate = ({
         className="full-width-image margin-top-0"
         style={{
           backgroundImage: `url(${
-            !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+            !!splash.image.childImageSharp ? splash.image.childImageSharp.fluid.src : splash.image
           })`,
           backgroundPosition: `top left`,
           backgroundAttachment: `fixed`,
         }}
       ></div>
-        <Splash heading={heading} image={image} /> 
+        <Splash heading={splash.intro} image={splash.image} /> 
       </div>
     </section>
     
@@ -35,13 +31,10 @@ export const IndexPageTemplate = ({
 )
 
 IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
+  splash: PropTypes.shape({
+    intro: PropTypes.string,
+    image: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
   }),
 }
 
@@ -51,12 +44,8 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        image={frontmatter.image}
+        splash={frontmatter.splash || {}}
         title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        intro={frontmatter.intro}
       />
     </Layout>
   )
@@ -77,32 +66,15 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        heading
-        subheading
-        mainpitch {
-          title
-          description
-        }
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
+        splash {
+          intro
+          image {
+            childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
               }
             }
-            text
           }
-          heading
-          description
         }
       }
     }
