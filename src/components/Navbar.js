@@ -28,7 +28,7 @@ const Navbar = (props) => {
 
   return (
     <nav
-      className={`navbar ${isOnSplash?'splash':''}`}
+      className={`navbar`}
       role="navigation"
       aria-label="main-navigation"
     >

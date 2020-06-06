@@ -1,8 +1,8 @@
 @import "~bulma/sass/utilities/_all.sass"
 @import "~bulma/sass/base/_all.sass"
 @import "~bulma/sass/grid/_all.sass"
-@import "~bulma/sass/layout/_all.sass"
 @import "~bulma/sass/elements/container.sass"
+@import "~bulma/sass/layout/_all.sass"
 
 // bulma overrides
 $speed: 0.4s
@@ -14,7 +14,6 @@ $bg-dark: #424B41
 $primary: #4CB497
 $secondary: #FC7753
 $text: #031926
-
 $primary-invert: $secondary
 $body-color: $text
 $black: #2b2523
@@ -29,6 +28,25 @@ $disabled: #B8B9C2
 body
   font-family: "Segoe UI", "Ubuntu", Helvetica, sans-serif
   background: $bg-light
+  color: $text
+
+h1, h2
+  font-size: 36px
+
+h1
+  font-weight: bolder
+h2
+  font-weight: lighter
+
+h3, h4
+  font-size: 24px
+h3
+  font-weight: bold
+h4
+  font-weight: light
+p
+  font-size: 18px
+  font-weight: light
 
 // interactions
 .icon 
@@ -44,12 +62,44 @@ body
 svg
   fill: currentcolor
 
+
 // landing page
-.splash
+.splash.hero
+  background-position: 100% 80%
+  background-size: 95% auto
+  background-repeat: no-repeat
+  +tablet
+    background-position: 100% 50%
+    background-size: 50% auto
+  .container
+    +mobile
+      align-self: flex-start
+      margin-top: 7rem
+  h2
+    +tablet
+      width: 55%
+  .scroll-down-btn
+    height: 2rem
+    width: 2rem
+    position: relative
+    margin: 0 auto
+    overflow: hidden
+    span
+      height: 2rem
+      width: 2rem
+      position: absolute
+      margin: 0 auto
+      border: 3px solid $interact
+      border-right: 0
+      border-top: 0
+      content: " "
+      transform: rotate(-45deg)
+      transform-origin: center
+      margin-top: -2.5rem
+
+
 
 @import "./navbar.sass"
-
-
 
 //-------------------------------------------
 

@@ -7,31 +7,25 @@ import ProjectRoll from '../components/ProjectRoll'
 import Splash from '../components/Splash'
 
 export const IndexPageTemplate = ({
-  title,
   splash
 }) => (
-  <div>
-    <section className="hero">
-      <div className="hero-body">
-        <div
-        className="full-width-image margin-top-0"
-        style={{
-          backgroundImage: `url(${
-            !!splash.image.childImageSharp ? splash.image.childImageSharp.fluid.src : splash.image
-          })`,
-          backgroundPosition: `top left`,
-          backgroundAttachment: `fixed`,
-        }}
-      ></div>
-        <Splash heading={splash.intro} image={splash.image} /> 
+  <div className="scrollsnap-container">
+    <Splash data={splash} /> 
+    <section className="section scrollsnap-section">
+      <div className="container">
+        <ProjectRoll/>
+      </div>
+      <div className="container">
+        <ProjectRoll/>
+      </div>
+      <div className="container">
+        <ProjectRoll/>
       </div>
     </section>
-    
   </div>
 )
 
 IndexPageTemplate.propTypes = {
-  title: PropTypes.string,
   splash: PropTypes.shape({
     intro: PropTypes.string,
     image: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
@@ -45,7 +39,6 @@ const IndexPage = ({ data }) => {
     <Layout>
       <IndexPageTemplate
         splash={frontmatter.splash || {}}
-        title={frontmatter.title}
       />
     </Layout>
   )
@@ -65,7 +58,6 @@ export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
-        title
         splash {
           intro
           image {
