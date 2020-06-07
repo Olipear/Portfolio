@@ -9,9 +9,9 @@ import Splash from '../components/Splash'
 export const IndexPageTemplate = ({
   splash
 }) => (
-  <div className="scrollsnap-container">
+  <div>
     <Splash data={splash} /> 
-    <section className="section scrollsnap-section">
+    <section className="section">
       <div className="container">
         <ProjectRoll/>
       </div>

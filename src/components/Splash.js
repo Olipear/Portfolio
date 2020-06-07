@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import scrollToSmooth from './SmoothScroll'
 import PropTypes from 'prop-types'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
-import Img from 'gatsby-image'
 
 const Splash = ({data}) => {
 
+    const scrollOffSplash = () => {
+        scrollToSmooth(window.innerHeight, 400, "ease-out-quart");
+    }
+
     return (
         <section 
-            className="splash hero is-fullheight scrollsnap-section" 
+            className="splash hero is-fullheight" 
             style={{
                 backgroundImage: `url(${
                     !!data.image.childImageSharp ? data.image.childImageSharp.fluid.src : data.image
@@ -18,7 +21,7 @@ const Splash = ({data}) => {
                 </div>
             </div>
             <div className="hero-foot">
-                <div className="container" onClick={()=>{console.log('clicked down!')}}>
+                <div className="container" onClick={scrollOffSplash}>
                     <div className="scroll-down-btn">
                         <span></span>
                     </div>

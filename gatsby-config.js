@@ -5,9 +5,6 @@ module.exports = {
       'Oliver Pearson, UX engineer, front end developer, UI designer. Available for work both contract and full-time, based in Royal Leamington Spa.',
   },
   plugins: [
-    'gatsby-plugin-sharp', 
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass',
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
@@ -30,7 +27,9 @@ module.exports = {
         name: 'images',
       },
     },
-    
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sass',
     'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-transformer-remark',

@@ -9,6 +9,7 @@
     "bulma": "^0.8.0",
     "codemirror": "^5.54.0",
     "core-js": "^3.6.5",
+    "framer-motion": "^1.11.0",
     "gatsby": "^2.23.1",
     "gatsby-cli": "^2.12.44",
     "gatsby-image": "^2.4.6",
