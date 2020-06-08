@@ -19,16 +19,12 @@ const scrollToSmooth = (
 ) => {
   const timingFunc = TIMINGFUNC_MAP[timingName];
   let initY = window.scrollY;
-  console.log(initY)
   let start = null;
   const step = (timestamp) => {
     start = start || timestamp;
     const progress = timestamp - start,
     // Growing from 0 to 1
     time = Math.min(1, (timestamp - start) / duration);
-    console.log(timingFunc(time));
-    console.log(destinationY)
-    console.log(timingFunc(time) * destinationY);
     window.scrollTo(0, initY + (timingFunc(time) * (destinationY - initY)) );
     if (progress < duration) {
       window.requestAnimationFrame(step);

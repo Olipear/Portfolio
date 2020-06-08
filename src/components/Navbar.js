@@ -1,16 +1,58 @@
 import React, { useState, useEffect } from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
-import github from '../img/github-icon.svg'
+import { motion, useViewportScroll, useTransform, useMotionValue } from "framer-motion"
+import NavMenu from './navbar/NavMenu'
+import NavMenuButton from './navbar/NavMenuButton'
 import logo from '../img/logo.svg'
-import { ReactComponent as Github } from '../img/github-icon.svg'
-import { ReactComponent as CirVitae } from '../img/cv-icon.svg'
-import { ReactComponent as Linkedin } from '../img/linkedin-icon.svg'
+import NavOverlay from './navbar/NavOverlay'
 
+const navBarVariants = {
+  splash: {
+    padding: "1.5rem 0 1.5rem 0",
+    height: "7rem",
+    boxShadow: "rgba(0, 0, 0, 0) 0px 1px 5px",
+    background: "rgba(248,248,248,0)"
+  },
+  small: {
+    padding: "0.8rem 0 0.8rem 0",
+    height: "3.4rem",
+    boxShadow: "rgba(0, 0, 0, 0.2) 0px 1px 5px",
+    background: "rgba(248,248,248,1)"
+  }
+}
 
 const Navbar = (props) => {
 
-  const [active, setActive] = useState(false);
-  const [isOnSplash, setSplashMode] = useState(true);
+  const [open, setOpen] = useState(false);
+
+  const { scrollY } = useViewportScroll()
+
+  const height = useTransform( 
+    scrollY, 
+    [0, window.innerHeight], 
+    [navBarVariants.splash.height, navBarVariants.small.height] 
+  )
+  const padding = useTransform(
+    scrollY, 
+    [0, window.innerHeight], 
+    [navBarVariants.splash.padding, navBarVariants.small.padding] 
+  )
+  const boxShadow = useTransform(
+    scrollY, 
+    [0, window.innerHeight], 
+    [navBarVariants.splash.boxShadow, navBarVariants.small.boxShadow] 
+  )
+  const background = useTransform(
+    scrollY, 
+    [0, window.innerHeight/2], 
+    [navBarVariants.splash.background, navBarVariants.small.background] 
+  )
+  const style = {
+    height,
+    padding,
+    boxShadow,
+    background
+  }
 
   const data = useStaticQuery(
     graphql`query navigationQuery {
@@ -27,65 +69,25 @@ const Navbar = (props) => {
   ).markdownRemark.frontmatter.navigation
 
   return (
-    <nav
-      className={`navbar`}
+    <motion.nav
+      className="navbar"
+      style={style}
       role="navigation"
       aria-label="main-navigation"
+      id="navigation"
     >
       <div className="container">
-        <div className={`navbar-overlay ${active?'is-open':''}`}><span></span></div>
+        <NavOverlay open={open} />
         <div className="navbar-brand">
           <Link to="/" className="navbar-item" title="Logo">
             <img src={logo} alt="olipear" />
           </Link>
         </div>
-        <div
-          id="navMenu"
-          className={`navbar-menu ${active?'is-open':''}`}
-        >
-          <a
-            className="menu-item"
-            href={data.cv_pdf||""}
-            target={data.cv_pdf?"_blank":""}
-            rel="noopener noreferrer"
-            download
-          >
-            <span className={`icon ${data.cv_pdf?'': 'disabled'}`}>
-              <CirVitae />
-            </span>
-          </a>
-          <a
-            className="menu-item"
-            href={data.githuburl||""}
-            target={data.githuburl?"_blank":""}
-            rel="noopener noreferrer"
-          >
-            <span className={`icon ${data.githuburl?'': 'disabled'}`}>
-              <Github />
-            </span>
-          </a>
-          <a
-            className="menu-item"
-            href={data.linkedinurl}
-            target={data.linkedinurl?"_blank":""}
-            rel="noopener noreferrer"
-          >
-            <span className={`icon ${data.linkedinurl?'': 'disabled'}`}>
-              <Linkedin />
-            </span>
-          </a>
-        </div>
-        <div 
-          className={`navbutton ${active?'is-active':''}`} 
-          aria-label="menu" aria-expanded={active?'true':'false'} 
-          onClick={() => {setActive(active?false:true)}}
-        >
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </div>
+        
+        <NavMenu data={data} open={open}/>
+        <NavMenuButton open={open} setOpen={setOpen} />
       </div>
-    </nav>
+    </motion.nav>
   )
 }
 
