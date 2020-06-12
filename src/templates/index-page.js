@@ -1,21 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
+import scrollToSmooth from '../components/SmoothScroll'
 import Layout from '../components/Layout'
-import ProjectRoll from '../components/ProjectRoll'
+import ProjectRoll from '../components/projects/ProjectRoll'
 import useWindowDimensions from '../components/UseWindowDimensions'
 
 export const IndexPageTemplate = ({
-  splash
+  data
 }) => {
   const {windowHeight} = useWindowDimensions();
 
   const scrollOffSplash = () => {
-    if ( (typeof window !== 'undefined') ) {
-      const scrollToSmooth = require('../components/SmoothScroll')
-      let nav = document.getElementById('navigation')
-      scrollToSmooth(windowHeight - (nav.offsetHeight/2), 400, "ease-out-quart");
-    }
+    let nav = document.getElementById('navigation')
+    scrollToSmooth(windowHeight - (nav.offsetHeight/2), 400, "ease-out-quart");
   }
 
   return (
@@ -24,11 +22,11 @@ export const IndexPageTemplate = ({
           className="splash hero is-fullheight" 
           style={{
               backgroundImage: `url(${
-                  !!splash.image.childImageSharp ? splash.image.childImageSharp.fluid.src : splash.image
+                  !!data.splash.image.childImageSharp ? data.splash.image.childImageSharp.fluid.src : data.splash.image
           })`}}>
           <div className="hero-body">
               <div className="container">
-                  <h1 className="title">{splash.intro}</h1>
+                  <h1 className="title">{data.splash.intro}</h1>
               </div>
           </div>
           <div className="hero-foot">
@@ -43,15 +41,10 @@ export const IndexPageTemplate = ({
         <div className="container">
           <div className="columns">
             <div className="column is-8 is-offset-1">
-              <h2>
-                I take digital products from research and requirements gathering, all the way through to protyping and development.
-              </h2>
-              <h2>
-                So whether you're looking for a flexible team member on a fast moving project, or
-                need a someone who can bring your design and dev teams together, look no further.
-                <br/>
-              </h2>
-              <br/>
+            {data.blurbs &&
+              data.blurbs.map(i => (
+                <h2>{i.blurb}</h2>
+              ))}
             </div>
           </div>
         </div>
@@ -68,19 +61,27 @@ export const IndexPageTemplate = ({
 }
 
 IndexPageTemplate.propTypes = {
-  splash: PropTypes.shape({
-    intro: PropTypes.string,
-    image: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
-  }),
+  data: PropTypes.shape({
+    splash: PropTypes.shape({
+      intro: PropTypes.string,
+      image: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
+    }),
+    burbs: PropTypes.arrayOf(
+      PropTypes.shape({
+        blurb: PropTypes.string
+      })
+    )
+  })
+  
 }
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
   return (
-    <Layout>
+    <Layout splash={true}>
       <IndexPageTemplate
-        splash={frontmatter.splash || {}}
+        data={frontmatter || {}}
       />
     </Layout>
   )
@@ -109,6 +110,9 @@ export const pageQuery = graphql`
               }
             }
           }
+        }
+        blurbs {
+          blurb
         }
       }
     }

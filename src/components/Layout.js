@@ -3,9 +3,9 @@ import { Helmet } from 'react-helmet'
 import '../sass/all.sass'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
-import Navbar from './Navbar'
+import Navbar from './navbar/Navbar'
 
-const TemplateWrapper = ({ children }) => {
+const TemplateWrapper = ({ splash = false, children }) => {
   const { title, description } = useSiteMetadata()
   return (
     <div>
@@ -47,7 +47,7 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix('/')}img/og-image.jpg`}
         />
       </Helmet>
-      <Navbar />
+      <Navbar splash={splash} />
       <div>{children}</div>
     </div>
   )

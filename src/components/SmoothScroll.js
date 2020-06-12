@@ -6,6 +6,7 @@ const TIMINGFUNC_MAP = {
   "ease-out-quart": (t) => 1 - Math.pow( 1 - t, 4 ),
 };
 
+
 const scrollToSmooth = (
   destinationY,
   duration = 300,
