@@ -4,14 +4,16 @@ import { Link, graphql } from 'gatsby'
 import scrollToSmooth from '../components/SmoothScroll'
 import Layout from '../components/Layout'
 import ProjectRoll from '../components/ProjectRoll'
+import useWindowDimensions from '../components/UseWindowDimensions'
 
 export const IndexPageTemplate = ({
   splash
 }) => {
+  const {windowHeight} = useWindowDimensions();
 
   const scrollOffSplash = () => {
     let nav = document.getElementById('navigation')
-    scrollToSmooth(window.innerHeight - (nav.offsetHeight/2), 400, "ease-out-quart");
+    scrollToSmooth(windowHeight - (nav.offsetHeight/2), 400, "ease-out-quart");
   }
 
   return (

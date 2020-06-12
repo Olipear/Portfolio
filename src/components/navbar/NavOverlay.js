@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const variants = {
     open: {
-        clipPath: `circle(${window.screen.height + window.screen.width/2}px at right top)`,
+        clipPath: "circle(130vh at top right)",
         transition: {
             type: "spring",
             stiffness: 200,
@@ -12,7 +12,7 @@ const variants = {
         }
     },
     closed: {
-        clipPath: "circle(0px at right top)",
+        clipPath: "circle(0px at top right)",
         transition: {
             delay: 0.5,
             type: "spring",

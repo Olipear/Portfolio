@@ -5,6 +5,7 @@ import NavMenu from './navbar/NavMenu'
 import NavMenuButton from './navbar/NavMenuButton'
 import logo from '../img/logo.svg'
 import NavOverlay from './navbar/NavOverlay'
+import useWindowDimensions from './UseWindowDimensions'
 
 const navBarVariants = {
   splash: {
@@ -24,27 +25,27 @@ const navBarVariants = {
 const Navbar = (props) => {
 
   const [open, setOpen] = useState(false);
-
+  const {windowHeight} = useWindowDimensions();
   const { scrollY } = useViewportScroll()
 
   const height = useTransform( 
     scrollY, 
-    [0, window.innerHeight], 
+    [0, windowHeight], 
     [navBarVariants.splash.height, navBarVariants.small.height] 
   )
   const padding = useTransform(
     scrollY, 
-    [0, window.innerHeight], 
+    [0, windowHeight], 
     [navBarVariants.splash.padding, navBarVariants.small.padding] 
   )
   const boxShadow = useTransform(
     scrollY, 
-    [0, window.innerHeight], 
+    [0, windowHeight], 
     [navBarVariants.splash.boxShadow, navBarVariants.small.boxShadow] 
   )
   const background = useTransform(
     scrollY, 
-    [0, window.innerHeight/2], 
+    [0, windowHeight/2], 
     [navBarVariants.splash.background, navBarVariants.small.background] 
   )
   const style = {
