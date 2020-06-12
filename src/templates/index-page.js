@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-import scrollToSmooth from '../components/SmoothScroll'
 import Layout from '../components/Layout'
 import ProjectRoll from '../components/ProjectRoll'
 import useWindowDimensions from '../components/UseWindowDimensions'
@@ -13,6 +12,7 @@ export const IndexPageTemplate = ({
 
   const scrollOffSplash = () => {
     if ( (typeof window !== 'undefined') ) {
+      const scrollToSmooth = require('../components/SmoothScroll')
       let nav = document.getElementById('navigation')
       scrollToSmooth(windowHeight - (nav.offsetHeight/2), 400, "ease-out-quart");
     }
@@ -58,9 +58,8 @@ export const IndexPageTemplate = ({
       </section>
       <section className="section" id="projects">
         <div className="container">
-          <h2>Projects</h2>
-        </div>
-        <div className="container">
+          <h2>My work</h2>
+          <hr/>
           <ProjectRoll/>
         </div>
       </section>
