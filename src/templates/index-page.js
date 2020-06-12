@@ -1,21 +1,29 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import scrollToSmooth from '../components/SmoothScroll'
 import Layout from '../components/Layout'
 import ProjectRoll from '../components/projects/ProjectRoll'
 import useWindowDimensions from '../components/UseWindowDimensions'
+import { useTransform, useViewportScroll, motion } from 'framer-motion'
 
 export const IndexPageTemplate = ({
   data
 }) => {
   const {windowHeight} = useWindowDimensions();
+  const { scrollY } = useViewportScroll();
+
+  const scrollButtonOpacity = useTransform(
+    scrollY,
+    [0, windowHeight-100],
+    [1, 0]
+  );
 
   const scrollOffSplash = () => {
     let nav = document.getElementById('navigation')
     scrollToSmooth(windowHeight - (nav.offsetHeight/2), 400, "ease-out-quart");
   }
-
+  
   return (
     <div>
       <section 
@@ -30,10 +38,14 @@ export const IndexPageTemplate = ({
               </div>
           </div>
           <div className="hero-foot">
-              <div className="container" onClick={scrollOffSplash}>
-                  <div className="scroll-down-btn">
-                      <span></span>
-                  </div>
+              <div className="container" role="navigation" onClick={scrollOffSplash}>
+                  <motion.div
+                    className="icon scroll-down-btn"
+                    style={{opacity: scrollButtonOpacity ?? '1' }}
+                    whileHover={{ scale: 1.1 }}
+                  >
+                    <span></span>
+                  </motion.div>
               </div>
           </div>
       </section>
@@ -42,8 +54,8 @@ export const IndexPageTemplate = ({
           <div className="columns">
             <div className="column is-8 is-offset-1">
             {data.blurbs &&
-              data.blurbs.map(i => (
-                <h2>{i.blurb}</h2>
+              data.blurbs.map((n) => (
+                <h2 key={n.blurb.substring(0, 5)}>{n.blurb}</h2>
               ))}
             </div>
           </div>

@@ -13,7 +13,7 @@ class ProjectRoll extends React.Component {
       <div className="columns is-multiline">
         {posts &&
           posts.map(({ node: post }) => (
-            <ProjectTile post={post} />
+            <ProjectTile key={post.id} post={post} />
           ))}
       </div>
     )

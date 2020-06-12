@@ -10,10 +10,10 @@ $easing: cubic-bezier(0.75, 0.29, 0.29, 1.35)
 // Olipear colours
 $bg-light: #F8F8F8
 $bg-medium: #E1E1E1
-$bg-dark: #424B41
+$bg-dark: #031926
 $primary: #4CB497
 $secondary: #FC7753
-$text: #031926
+$text: $bg-dark
 $primary-invert: $secondary
 $body-color: $text
 $black: #2b2523
@@ -37,7 +37,6 @@ h2
   font-weight: bolder
   font-size: 2rem
   
-
 h3, h4
   font-size: 1.5rem
 h3
@@ -51,8 +50,13 @@ p
 // interactions
 .icon 
   color: $interact
+  svg
+    transform: scale(1)
+    transition: transform 0.1s $easing
   &:hover
     color: $hover
+    svg
+      transform: scale(1.1)
   &:disabled, &.disabled
     color: $disabled
     cursor: default
@@ -103,7 +107,7 @@ svg
         border-color: $hover
 
 #blurb
-  background: $text
+  background: $bg-dark
   color: $bg-light
   line-height: 1.5
   word-spacing: 0.3rem
@@ -112,6 +116,35 @@ svg
     &:last-child
       margin-bottom: 3rem
 
+.tile
+  background: $bg-dark
+  padding: 0
+  border-radius: 2px
+  color: $bg-light
+  position: relative
+  > *
+    width: 100%
+  &-project
+    a
+      color: $bg-light
+      h3
+        position: absolute
+        opacity: 0
+        width: 100%
+        height: 100%
+        text-align: center
+        vertical-align: center
+        transition: all 0.3s $easing
+        z-index: 1
+        padding-top: 1rem
+      &:hover
+        h3
+          opacity: 1
+          background:#031926bf
+          padding-top: 2rem
+        
+
+  
 @import "./navbar.sass"
 
 //-------------------------------------------
