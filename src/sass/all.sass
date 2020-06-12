@@ -30,22 +30,22 @@ body
   background: $bg-light
   color: $text
 
-h1, h2
-  font-size: 36px
-
 h1
-  font-weight: bolder
-h2
   font-weight: lighter
+  font-size: 3rem
+h2
+  font-weight: bolder
+  font-size: 2rem
+  
 
 h3, h4
-  font-size: 24px
+  font-size: 1.5rem
 h3
   font-weight: bold
 h4
   font-weight: light
 p
-  font-size: 18px
+  font-size: 1rem
   font-weight: light
 
 // interactions
@@ -74,7 +74,7 @@ svg
     +mobile
       align-self: flex-start
       margin-top: 7rem
-  h2
+  .title
     +tablet
       width: 55%
   .scroll-down-btn
@@ -102,7 +102,13 @@ svg
       span
         border-color: $hover
 
-
+#blurb
+  background: $text
+  color: $bg-light
+  line-height: 1.5
+  word-spacing: 0.3rem
+  h2
+    margin-top: 2rem
 
 @import "./navbar.sass"
 

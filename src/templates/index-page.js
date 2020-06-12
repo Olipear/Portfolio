@@ -12,8 +12,10 @@ export const IndexPageTemplate = ({
   const {windowHeight} = useWindowDimensions();
 
   const scrollOffSplash = () => {
-    let nav = document.getElementById('navigation')
-    scrollToSmooth(windowHeight - (nav.offsetHeight/2), 400, "ease-out-quart");
+    if ( (typeof window !== 'undefined') ) {
+      let nav = document.getElementById('navigation')
+      scrollToSmooth(windowHeight - (nav.offsetHeight/2), 400, "ease-out-quart");
+    }
   }
 
   return (
@@ -26,7 +28,7 @@ export const IndexPageTemplate = ({
           })`}}>
           <div className="hero-body">
               <div className="container">
-                  <h2 className="title">{splash.intro}</h2>
+                  <h1 className="title">{splash.intro}</h1>
               </div>
           </div>
           <div className="hero-foot">
@@ -37,12 +39,26 @@ export const IndexPageTemplate = ({
               </div>
           </div>
       </section>
-      <section className="section">
+      <section className="section" id="blurb">
         <div className="container">
-          <ProjectRoll/>
+          <div className="columns">
+            <div className="column is-8 is-offset-1">
+              <h2>
+                I take digital products from research and requirements gathering, all the way through to protyping and development.
+              </h2>
+              <h2>
+                So whether you're looking for a flexible team member on a fast moving project, or
+                need a someone who can bring your design and dev teams together, look no further.
+                <br/>
+              </h2>
+              <br/>
+            </div>
+          </div>
         </div>
+      </section>
+      <section className="section" id="projects">
         <div className="container">
-          <ProjectRoll/>
+          <h2>Projects</h2>
         </div>
         <div className="container">
           <ProjectRoll/>
