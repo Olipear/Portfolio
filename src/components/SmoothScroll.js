@@ -17,15 +17,22 @@ const scrollToSmooth = (
   duration = 300,
   timingName = "linear"
 ) => {
+
   const timingFunc = TIMINGFUNC_MAP[timingName];
-  let initY = window.scrollY;
+
+  const [srollPos, setScrollPos] = useState(0);
+
+  useEffect(() => {
+    setScrollPos(window.scrollY)
+  }, []);
+
   let start = null;
   const step = (timestamp) => {
     start = start || timestamp;
     const progress = timestamp - start,
     // Growing from 0 to 1
     time = Math.min(1, (timestamp - start) / duration);
-    window.scrollTo(0, initY + (timingFunc(time) * (destinationY - initY)) );
+    window.scrollTo(0, srollPos + (timingFunc(time) * (destinationY - srollPos)) );
     if (progress < duration) {
       window.requestAnimationFrame(step);
     }
