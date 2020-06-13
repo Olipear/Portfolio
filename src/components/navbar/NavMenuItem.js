@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 
-const NavMenuItem = ({ url, Icon }) => {
+const NavMenuItem = ({ url, alt, Icon }) => {
 
     const disabled = !url
   return (
@@ -11,6 +11,7 @@ const NavMenuItem = ({ url, Icon }) => {
       href={url}
       target={!disabled ? "_blank" : ""}
       rel="noopener noreferrer"
+      title={alt}
     >
     <motion.span 
         className={`icon ${!disabled? "" : "disabled"}`}

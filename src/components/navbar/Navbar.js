@@ -15,8 +15,11 @@ const Navbar = ({ splash }) => {
           frontmatter {
             navigation {
               githuburl
+              githublabel
               linkedinurl
+              linkedinlabel
               cv_pdf
+              cv_pdflabel
             }
           }
         }
@@ -30,11 +33,10 @@ const Navbar = ({ splash }) => {
     <div className="container">
       <NavOverlay open={open} />
       <div className="navbar-brand">
-        <Link to="/" className="navbar-item" title="Logo">
+        <Link to="/" className="navbar-item" title="Logo" title="home">
           <img src={logo} alt="olipear" />
         </Link>
       </div>
-
       <NavMenu data={data} open={open} />
       <NavMenuButton open={open} setOpen={setOpen} />
     </div>

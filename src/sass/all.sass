@@ -32,10 +32,18 @@ body
 
 h1
   font-weight: lighter
-  font-size: 3rem
+  font-size: 2.3rem
+  +tablet
+    font-size: 2.8rem
+  +desktop
+    font-size: 3rem
 h2
   font-weight: bolder
-  font-size: 2rem
+  font-size: 1.3rem
+  +tablet
+    font-size: 1.7rem
+  +desktop
+    font-size: 2rem
   
 h3, h4
   font-size: 1.5rem
@@ -53,15 +61,13 @@ p
   svg
     transform: scale(1)
     transition: transform 0.1s $easing
-  &:hover
+  &:hover:not(.disabled)
     color: $hover
     svg
       transform: scale(1.1)
   &:disabled, &.disabled
-    color: $disabled
     cursor: default
-    &:hover
-      color: $disabled
+    color: $disabled
 
 svg
   fill: currentcolor
@@ -77,7 +83,7 @@ svg
   .container
     +mobile
       align-self: flex-start
-      margin-top: 7rem
+      margin-top: 5.5rem
   .title
     +tablet
       width: 55%
@@ -110,9 +116,10 @@ svg
   background: $bg-dark
   color: $bg-light
   line-height: 1.5
-  word-spacing: 0.3rem
+  word-spacing: 0.2rem
   h2
     margin-top: 2rem
+    text-align: justify
     &:last-child
       margin-bottom: 3rem
 

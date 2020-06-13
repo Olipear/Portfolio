@@ -31,14 +31,17 @@ collections:
             name: "navigation"
             widget: "object"
             fields:
-              - {label: "Github profile link" , name: "githuburl", widget: "string"}
+              - {label: "Github profile link" , name: "githuburl", widget: "string"}#
+              - {label: "Github profile label" , name: "githublabel", widget: "string"}
               - {label: "Linkedin profile link", name: "linkedinurl", widget: "string"}
+              - {label: "Linkedin profile label", name: "linkedinlabel", widget: "string"}
               - label: "CV pdf"
                 name: "cv_pdf"
                 widget: "file"
                 media_library:
                   config:
                     multiple: "false"
+              - {label: "CV pdf label", name: "cv_pdflabel", widget: "string"}
           - label: "Blurbs"
             name: "blurbs"
             widget: "list"

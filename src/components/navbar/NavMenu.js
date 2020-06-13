@@ -8,9 +8,9 @@ import NavMenuItem from "./NavMenuItem";
 const NavMenu = ({ open, data }) => {
   return (
     <div id="navMenu" className={`navbar-menu ${open ? "is-open" : ""}`}>
-      <NavMenuItem url={data.cv_pdf} Icon={CirVitae} />
-      <NavMenuItem url={data.githuburl} Icon={Github} />
-      <NavMenuItem url={data.linkedinurl} Icon={Linkedin} />
+      <NavMenuItem url={data.cv_pdf} alt={data.cv_pdflabel} Icon={CirVitae} />
+      <NavMenuItem url={data.githuburl} alt={data.githublabel} Icon={Github} />
+      <NavMenuItem url={data.linkedinurl} alt={data.linkedinlabel} Icon={Linkedin} />
     </div>
   );
 };
@@ -19,8 +19,11 @@ NavMenu.propTypes = {
   open: PropTypes.bool.isRequired,
   data: PropTypes.shape({
     cv_pdf: PropTypes.string,
+    cv_pdflabel: PropTypes.string,
     githuburl: PropTypes.string,
+    githublabel: PropTypes.string,
     linkedinurl: PropTypes.string,
+    linkedinlabel: PropTypes.string
   }),
 };
 
