@@ -34,7 +34,7 @@ const Navbar = ({ splash }) => {
       <NavOverlay open={open} />
       <div className="navbar-brand">
         <Link to="/" className="navbar-item" title="Logo" title="home">
-          <img src={logo} alt="olipear" />
+          <img src={logo} style={{height: "100%"}} alt="olipear" />
         </Link>
       </div>
       <NavMenu data={data} open={open} />
