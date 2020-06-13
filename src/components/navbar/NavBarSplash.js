@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {
   motion,
   useViewportScroll,
   useTransform,
-  useMotionValue,
 } from "framer-motion";
 import useWindowDimensions from "../UseWindowDimensions";
 

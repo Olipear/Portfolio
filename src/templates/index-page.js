@@ -5,7 +5,7 @@ import scrollToSmooth from '../components/SmoothScroll'
 import Layout from '../components/Layout'
 import ProjectRoll from '../components/projects/ProjectRoll'
 import useWindowDimensions from '../components/UseWindowDimensions'
-import { useTransform, useViewportScroll, motion, useAnimation, transform } from 'framer-motion'
+import { useTransform, useViewportScroll, motion } from 'framer-motion'
 
 export const IndexPageTemplate = ({
   data
