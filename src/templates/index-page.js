@@ -1,81 +1,76 @@
-import React, { useEffect, useState } from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import ProjectRoll from '../components/home/ProjectRoll'
-import useWindowDimensions from '../components/UseWindowDimensions'
-import { useTransform, useViewportScroll, motion } from 'framer-motion'
-import Splash from '../components/home/Splash'
-import Blurbs from '../components/home/Blurbs'
-import About from '../components/home/About'
+import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
+import { graphql } from "gatsby";
+import Layout from "../components/Layout";
+import ProjectRoll from "../components/home/ProjectRoll";
+import useWindowDimensions from "../components/UseWindowDimensions";
+import { useTransform, useViewportScroll, motion } from "framer-motion";
+import Splash from "../components/home/Splash";
+import Blurbs from "../components/home/Blurbs";
+import About from "../components/home/About";
 
-export const IndexPageTemplate = ({
-  data
-}) => {
-  const {windowHeight} = useWindowDimensions();
+export const IndexPageTemplate = ({ data }) => {
+  const { windowHeight } = useWindowDimensions();
   const { scrollY } = useViewportScroll();
-  const [offSplash, setOffSplash] = useState(false)
+  const [offSplash, setOffSplash] = useState(false);
 
   const scrollOffSplashProgress = useTransform(
     scrollY,
-    [0, windowHeight-100],
+    [0, windowHeight - 100],
     [0, 1]
   );
 
-  useEffect(()=>{
-    scrollOffSplashProgress.onChange(v=>{
-      if (v > .5) {
-        setOffSplash(true)
+  useEffect(() => {
+    console.log(data)
+    scrollOffSplashProgress.onChange((v) => {
+      if (v > 0.5) {
+        setOffSplash(true);
       }
-    })
-  }, [scrollOffSplashProgress])
+    });
+  }, [scrollOffSplashProgress]);
 
   return (
     <div>
-      <Splash 
-        content={data.splash}
-        motionProgress={scrollOffSplashProgress}
-      />
-      <Blurbs
-        content={data.blurbs}
-        triggerIn={offSplash}
-      />
+      <Splash content={data.splash} motionProgress={scrollOffSplashProgress} />
+      <Blurbs content={data.blurbs} triggerIn={offSplash} />
       <section className="section" id="projects">
         <div className="container">
-          <ProjectRoll/>
+          <ProjectRoll />
         </div>
       </section>
-      <About />
+      <About content={data.about} />
     </div>
-  )
-}
+  );
+};
 
 IndexPageTemplate.propTypes = {
   data: PropTypes.shape({
     splash: PropTypes.shape({
       intro: PropTypes.string,
-      image: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
+      image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+      buttontext: PropTypes.string,
     }),
     burbs: PropTypes.arrayOf(
       PropTypes.shape({
-        blurb: PropTypes.string
+        blurb: PropTypes.string,
       })
-    )
-  })
-  
-}
+    ),
+    about: PropTypes.shape({
+      aboutbody: PropTypes.string,
+      image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    }),
+  }),
+};
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const { frontmatter } = data.markdownRemark;
 
   return (
     <Layout splash={true}>
-      <IndexPageTemplate
-        data={frontmatter || {}}
-      />
+      <IndexPageTemplate data={frontmatter || {}} />
     </Layout>
-  )
-}
+  );
+};
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
@@ -83,9 +78,9 @@ IndexPage.propTypes = {
       frontmatter: PropTypes.object,
     }),
   }),
-}
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
@@ -100,11 +95,22 @@ export const pageQuery = graphql`
               }
             }
           }
+          buttontext
         }
         blurbs {
           blurb
         }
+        about {
+          aboutbody
+          image {
+            childImageSharp {
+              fluid(maxWidth: 300, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
       }
     }
   }
-`
+`;

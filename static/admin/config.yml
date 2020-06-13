@@ -27,6 +27,7 @@ collections:
             fields: 
               - {label: "Intro line", name: "intro", widget: "text"}
               - {label: "Splash image", name: "image", widget: "image"}
+              - {label: "Scroll down label", name: "buttontext", widget: "string"}
           - label: "navigation"
             name: "navigation"
             widget: "object"
@@ -48,6 +49,12 @@ collections:
             create: true
             fields:
               - {label: "Blurb ", name: "blurb", widget: "text"}
+          - label: "About"
+            name: "about"
+            widget: "object"
+            fields:
+              - {label: "About me", name: "aboutbody", widget: "text"}
+              - {label: "Profile Pic", name: "image", widget: "image"}
   - name: "projects"
     label: "Project"
     folder: "src/pages/projects"
