@@ -7,6 +7,7 @@
 // bulma overrides
 $speed: 0.4s
 $easing: cubic-bezier(0.75, 0.29, 0.29, 1.35)
+
 // Olipear colours
 $bg-light: #F8F8F8
 $bg-medium: #E1E1E1
@@ -72,46 +73,7 @@ p
 svg
   fill: currentcolor
 
-// landing page
-.splash.hero
-  background-position: 100% 80%
-  background-size: 95% auto
-  background-repeat: no-repeat
-  +tablet
-    background-position: 100% 50%
-    background-size: 50% auto
-  .container
-    +mobile
-      align-self: flex-start
-      margin-top: 5.5rem
-  .title
-    +tablet
-      width: 55%
-  .scroll-down-btn
-    height: 3rem
-    width: 3rem
-    position: relative
-    margin: 0.5rem auto
-    overflow: hidden
-    border: 3px solid $interact
-    border-radius: 50%
-    cursor: pointer
-    span
-      height: 1.3rem
-      width: 1.3rem
-      position: absolute
-      border: 3px solid $interact
-      left: 25%
-      top: 15%
-      border-right: 0
-      border-top: 0
-      content: " "
-      transform: rotate(-45deg)
-    &:hover
-      border-color: $hover
-      span
-        border-color: $hover
-
+// index page
 #blurb
   background: $bg-dark
   color: $bg-light
@@ -123,36 +85,20 @@ svg
     &:last-child
       margin-bottom: 3rem
 
-.tile
-  background: $bg-dark
-  padding: 0
-  border-radius: 2px
-  color: $bg-light
-  position: relative
-  > *
-    width: 100%
-  &-project
-    a
-      color: $bg-light
-      h3
-        position: absolute
-        opacity: 0
-        width: 100%
-        height: 100%
-        text-align: center
-        vertical-align: center
-        transition: all 0.3s $easing
-        z-index: 1
-        padding-top: 1rem
-      &:hover
-        h3
-          opacity: 1
-          background:#031926bf
-          padding-top: 2rem
-        
-
-  
+#about
+ .profile-pic
+   border-radius: 50%
+   overflow: hidden
+   display: inline-block
+   width: 300px
+   height: auto
+   max-width: 50%
+   margin: 0 0 1rem 1rem
+   float: right
+   
 @import "./navbar.sass"
+@import "./splash.sass"
+@import "./projects.sass"
 
 //-------------------------------------------
 
