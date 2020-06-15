@@ -4,12 +4,12 @@ import scrollToSmooth from "../SmoothScroll";
 import useWindowDimensions from "../UseWindowDimensions";
 
 const Splash = ({ content, motionProgress }) => {
-  const { windowHeight } = useWindowDimensions();
+  const initialWindowHeight = useWindowDimensions(true).windowHeight;
   const buttonOpacity = useTransform(motionProgress, (value) => 1 - value);
 
   const scrollOffSplash = () => {
     const nav = document.getElementById("navigation");
-    scrollToSmooth(windowHeight - nav.offsetHeight / 2, 400, "ease-out-quart");
+    scrollToSmooth(initialWindowHeight - nav.offsetHeight / 2, 400, "ease-out-quart");
   };
   
   return (
@@ -18,6 +18,7 @@ const Splash = ({ content, motionProgress }) => {
       animate={{ opacity: 1 }}
       initial={{ opacity: 0 }}
       style={{
+        minHeight: initialWindowHeight,
         backgroundImage: `url(${
           !!content.image.childImageSharp
             ? content.image.childImageSharp.fluid.src
@@ -34,7 +35,7 @@ const Splash = ({ content, motionProgress }) => {
         <div className="container" role="navigation" onClick={scrollOffSplash}>
           <motion.div
             className="icon scroll-down-btn"
-            style={{ opacity: buttonOpacity }}
+            style={{ opacity: buttonOpacity&& 1 }}
             whileHover={{ scale: 1.1 }}
           >
             <span></span>
