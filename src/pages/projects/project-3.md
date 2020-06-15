@@ -1,10 +1,10 @@
 ---
 templateKey: project-entry
-title: Adaptive UI example
-date: 2016-12-17T15:04:10.000Z
+title: Rapid prototyping
+date: 2014-12-17T15:04:10.000Z
 featuredpost: false
-featuredimage: /img/products-grid1.jpg
-description: In selling this design icon I went for an adaptive interface design and was very sucessful in improving sales. I also had fun making those lovely renders!
+featuredimage: /img/products-grid3.jpg
+description: Leading a small team of 4 other developers, we came up with this functional prototype in just one month.
 tags:
   - flavor
   - tasting

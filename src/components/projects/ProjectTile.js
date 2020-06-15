@@ -4,18 +4,22 @@ import PreviewCompatibleImage from "../PreviewCompatibleImage";
 
 const ProjectTile = ({ post }) => {
   return (
-    <div className="column is-3 tile tile-project">
-      <Link to={post.fields.slug}>
-          <h3>{post.frontmatter.title}</h3>
-          {post.frontmatter.featuredimage ? (
+    <div className="tile is-child project">
+      <div className="image-container">
+        {post.frontmatter.featuredimage ? (
           <PreviewCompatibleImage
             imageInfo={{
               image: post.frontmatter.featuredimage,
               alt: `featured image thumbnail for post ${post.frontmatter.title}`,
             }}
           />
-          ) : null}
-      </Link>
+        ) : null}
+      </div>
+      <h3>{post.frontmatter.title}</h3>
+      <div className="tile-content">
+        <p>{post.frontmatter.description}</p>
+        <Link to={post.fields.slug}>See more -></Link>
+      </div>
     </div>
   );
 };

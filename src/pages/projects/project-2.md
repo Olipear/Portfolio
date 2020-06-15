@@ -1,10 +1,10 @@
 ---
 templateKey: project-entry
-title: Adaptive UI example
-date: 2016-12-17T15:04:10.000Z
+title: UX case study
+date: 2015-12-17T15:04:10.000Z
 featuredpost: false
-featuredimage: /img/products-grid1.jpg
-description: In selling this design icon I went for an adaptive interface design and was very sucessful in improving sales. I also had fun making those lovely renders!
+featuredimage: /img/products-grid2.jpg
+description: In conjunction with the implementation of a new VoIP phone system, I redesigned the means of contacting the company.
 tags:
   - flavor
   - tasting

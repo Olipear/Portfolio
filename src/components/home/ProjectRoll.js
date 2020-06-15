@@ -10,11 +10,13 @@ class ProjectRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="columns is-multiline">
-        {posts &&
-          posts.map(({ node: post }) => (
-            <ProjectTile key={post.id} post={post} />
-          ))}
+      <div className="tile is-ancestor">
+        <div className="tile is-parent">
+          {posts &&
+            posts.map(({ node: post }) => (
+              <ProjectTile key={post.id} post={post} />
+            ))}
+        </div>
       </div>
     )
   }
@@ -55,6 +57,7 @@ export default () => (
                     }
                   }
                 }
+                description
               }
             }
           }
