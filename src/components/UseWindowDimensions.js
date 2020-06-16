@@ -9,21 +9,19 @@ function getWindowDimensions() {
   };
 }
 
-const useWindowDimensions = (intial = false) =>  {
+const useWindowDimensions = () => {
   const [windowDimensions, setWindowDimensions] = useState(100);
 
   useEffect(() => {
     setWindowDimensions(getWindowDimensions());
-    if (!intial) {
-      let handleResize = _.debounce(() => {
-        setWindowDimensions(getWindowDimensions());
-      }, 150);
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
-    }
+    let handleResize = _.debounce(() => {
+      setWindowDimensions(getWindowDimensions());
+    }, 150);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return windowDimensions;
-}
+};
 
-export default useWindowDimensions
+export default useWindowDimensions;

@@ -21,7 +21,6 @@ export const IndexPageTemplate = ({ data }) => {
   );
 
   useEffect(() => {
-    console.log(data)
     scrollOffSplashProgress.onChange((v) => {
       if (v > 0.5) {
         setOffSplash(true);

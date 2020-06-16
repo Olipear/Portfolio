@@ -1,38 +1,45 @@
 .splash.hero
-  background-position: 100% 80%
-  background-size: 95% auto
-  background-repeat: no-repeat
-  +tablet
-    background-position: 100% 50%
-    background-size: 50% auto
-  .container
-    +mobile
-      align-self: flex-start
-      margin-top: 5.5rem
-  .title
-    +tablet
-      width: 55%
-  .scroll-down-btn
-    height: 3rem
-    width: 3rem
     position: relative
-    margin: 0.5rem auto
-    overflow: hidden
-    border: 3px solid $interact
-    border-radius: 50%
-    cursor: pointer
-    span
-      height: 1.3rem
-      width: 1.3rem
-      position: absolute
-      border: 3px solid $interact
-      left: 25%
-      top: 15%
-      border-right: 0
-      border-top: 0
-      content: " "
-      transform: rotate(-45deg)
-    &:hover
-      border-color: $hover
-      span
-        border-color: $hover
+    background-position: 100% 80%
+    background-size: 95% auto
+    background-repeat: no-repeat
+    +tablet
+        background-position: 100% 50%
+        background-size: 50% auto
+    .container
+        +mobile
+            align-self: flex-start
+            margin-top: 5.5rem
+    .title
+        +tablet
+            width: 55%
+    .hero-footer
+        position: fixed
+        bottom: 0
+        left: 0
+        right: 0
+        width: 100%
+        .scroll-down-btn
+            height: 3rem
+            width: 3rem
+            position: relative
+            margin: 0.5rem auto
+            overflow: hidden
+            border: 3px solid $interact
+            border-radius: 50%
+            cursor: pointer
+            span
+                height: 1.3rem
+                width: 1.3rem
+                position: absolute
+                border: 3px solid $interact
+                left: 25%
+                top: 15%
+                border-right: 0
+                border-top: 0
+                content: " "
+                transform: rotate(-45deg)
+            &:hover
+                border-color: $hover
+            span
+                border-color: $hover
