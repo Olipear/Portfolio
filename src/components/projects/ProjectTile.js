@@ -16,7 +16,7 @@ const ProjectTile = ({ project }) => {
             <Img
               className="image-inner-container"
               style={{overflow: 'visible'}}
-              imgStyle={{ top: 0, left: 0, width: 'unset', height: 'unset' }}
+              imgStyle={{ top: 0, left: 0, width: '100%', height: '100%' }}
               fluid={project.frontmatter.featuredimage.childImageSharp.fluid}
               alt={`featured image thumbnail for project ${project.frontmatter.title}`}
             />

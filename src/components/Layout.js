@@ -4,6 +4,7 @@ import '../sass/all.sass'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 import Navbar from './navbar/Navbar'
+import Footer from './Footer'
 
 const TemplateWrapper = ({ splash = false, children }) => {
   const { title, description } = useSiteMetadata()
@@ -49,6 +50,7 @@ const TemplateWrapper = ({ splash = false, children }) => {
       </Helmet>
       <Navbar splash={splash} />
       <div>{children}</div>
+      <Footer/>
     </div>
   )
 }

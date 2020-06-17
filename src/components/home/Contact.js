@@ -8,15 +8,15 @@ const Contact = () => {
         <div className="columns">
           <div className="column is-two-thirds">
             <div className="columns is-mobile">
-              <div className="column is-one-half">
+              <div className="column is-one-half is-one-third-mobile">
                 <h2>Contact</h2>
               </div>
-              <div className="column is-one-half">
+              <div className="column">
                 <h4>07787 385 189</h4>
               </div>
             </div>
           </div>
-          <div className="column is-one-third is-offset-6-mobile">
+          <div className="column is-one-third is-offset-4-mobile">
             <h4>olipear@gmail.com</h4>
           </div>
         </div>
