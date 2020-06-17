@@ -5,12 +5,13 @@ import { ReactComponent as CirVitae } from "../../img/cv-icon.svg";
 import { ReactComponent as Linkedin } from "../../img/linkedin-icon.svg";
 import NavMenuItem from "./NavMenuItem";
 
-const NavMenu = ({ open, data }) => {
+const NavMenu = ({ open, setOpen, data }) => {
+
   return (
     <div id="navMenu" className={`navbar-menu ${open ? "is-open" : ""}`}>
-      <NavMenuItem url={data.cv_pdf} alt={data.cv_pdflabel} Icon={CirVitae} />
+      <NavMenuItem setOpenOnFocus={setOpen} url={data.cv_pdf} alt={data.cv_pdflabel} Icon={CirVitae} />
       <NavMenuItem url={data.githuburl} alt={data.githublabel} Icon={Github} />
-      <NavMenuItem url={data.linkedinurl} alt={data.linkedinlabel} Icon={Linkedin} />
+      <NavMenuItem setClosedOnBlur={setOpen} url={data.linkedinurl} alt={data.linkedinlabel} Icon={Linkedin} />
     </div>
   );
 };

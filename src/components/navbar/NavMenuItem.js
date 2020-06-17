@@ -2,9 +2,20 @@ import React from "react";
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 
-const NavMenuItem = ({ url, alt, Icon }) => {
+const NavMenuItem = ({ url, alt, Icon, setOpenOnFocus = false, setClosedOnBlur = false }) => {
 
-    const disabled = !url
+  const disabled = !url
+
+  let onBlurHandler = null;
+  if( typeof setClosedOnBlur === "function") {
+    onBlurHandler = () => setClosedOnBlur(false);
+  }
+
+  let onFocusHandler = null;
+  if( typeof setOpenOnFocus === "function") {
+    onFocusHandler = () => setOpenOnFocus(true);
+  }
+  
   return (
     <a
       className="menu-item"
@@ -12,13 +23,15 @@ const NavMenuItem = ({ url, alt, Icon }) => {
       target={!disabled ? "_blank" : ""}
       rel="noopener noreferrer"
       title={alt}
+      onBlur={onBlurHandler}
+      onFocus={onFocusHandler}
     >
-    <motion.span 
+    <motion.div 
         className={`icon ${!disabled? "" : "disabled"}`}
         whileHover={{scale: 1.1}}
     >
         <Icon width={24} height={24}/>
-    </motion.span>
+    </motion.div>
     </a>
   );
 };

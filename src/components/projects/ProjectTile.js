@@ -1,29 +1,31 @@
 import React, { useEffect } from "react";
 import { Link } from "gatsby";
-import PreviewCompatibleImage from "../PreviewCompatibleImage";
+import Img from "gatsby-image";
 
 const ProjectTile = ({ project }) => {
-  useEffect(()=>{
-    console.log(project)
-  }, [project])
-  
+  useEffect(() => {
+    console.log(project.frontmatter.featuredimage);
+  }, [project]);
+
   return (
     <div className="tile is-child project">
-      <div className="image-container">
-        {project.frontmatter.featuredimage ? (
-          <PreviewCompatibleImage
-            imageInfo={{
-              image: project.frontmatter.featuredimage,
-              alt: `featured image thumbnail for post ${project.frontmatter.title}`,
-            }}
-          />
-        ) : null}
-      </div>
-      <h3>{project.frontmatter.title}</h3>
-      <div className="tile-content">
-        <p>{project.frontmatter.description}</p>
-        <Link to={project.fields.slug}>See more -></Link>
-      </div>
+      <Link to={project.fields.slug}>
+        <div className="image-outer-container">
+          
+          {project.frontmatter.featuredimage ? (
+            <Img
+              className="image-inner-container"
+              style={{overflow: 'visible'}}
+              imgStyle={{ top: 0, left: 0, width: 'unset', height: 'unset' }}
+              fluid={project.frontmatter.featuredimage.childImageSharp.fluid}
+              alt={`featured image thumbnail for project ${project.frontmatter.title}`}
+            />
+          ) : null}
+          <div className="image-overlay"></div>
+        </div>
+        
+      </Link>
+      <h4>{project.frontmatter.title}</h4>
     </div>
   );
 };

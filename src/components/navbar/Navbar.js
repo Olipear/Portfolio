@@ -33,11 +33,12 @@ const Navbar = ({ splash }) => {
     <div className="container">
       <NavOverlay open={open} />
       <div className="navbar-brand">
-        <Link to="/" className="navbar-item" title="Logo" title="home">
+        <Link to="/" className="navbar-item" title="home">
           <img src={logo} style={{height: "100%"}} alt="olipear" />
         </Link>
       </div>
-      <NavMenu data={data} open={open} />
+      
+      <NavMenu data={data} open={open} setOpen={setOpen} />
       <NavMenuButton open={open} setOpen={setOpen} />
     </div>
   )

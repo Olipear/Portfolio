@@ -1,13 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { motion, transform } from "framer-motion";
+import { motion } from "framer-motion";
 
 const NavMenuButton = ({ open, setOpen }) => {
   return (
     <div 
         className={`navbutton ${open?'is-open':''}`} 
         aria-label="menu" aria-expanded={open?'true':'false'} 
-        onClick={() => {setOpen(open?false:true)}}
+        onClick={() => {setOpen(!open)}}
+        tabIndex="-1"    
     >
         <motion.span 
             animate={open?'open':'closed'}

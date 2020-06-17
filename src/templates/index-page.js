@@ -4,10 +4,11 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import ProjectRoll from "../components/home/ProjectRoll";
 import useWindowDimensions from "../components/UseWindowDimensions";
-import { useTransform, useViewportScroll, motion } from "framer-motion";
+import { useTransform, useViewportScroll } from "framer-motion";
 import Splash from "../components/home/Splash";
 import Blurbs from "../components/home/Blurbs";
 import About from "../components/home/About";
+import Contact from "../components/home/Contact";
 
 export const IndexPageTemplate = ({ data }) => {
   const { windowHeight } = useWindowDimensions();
@@ -32,12 +33,9 @@ export const IndexPageTemplate = ({ data }) => {
     <div>
       <Splash content={data.splash} motionProgress={scrollOffSplashProgress} />
       <Blurbs content={data.blurbs} triggerIn={offSplash} />
-      <section className="section" id="projects">
-        <div className="container">
-          <ProjectRoll />
-        </div>
-      </section>
+      <ProjectRoll />
       <About content={data.about} />
+      <Contact/>
     </div>
   );
 };
@@ -103,7 +101,7 @@ export const pageQuery = graphql`
           aboutbody
           image {
             childImageSharp {
-              fluid(maxWidth: 300, maxHeight: 300, quality: 100) {
+              fluid(maxWidth: 300, maxHeight: 300, quality: 100, cropFocus: ENTROPY ) {
                 ...GatsbyImageSharpFluid
               }
             }

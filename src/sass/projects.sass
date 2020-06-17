@@ -1,28 +1,54 @@
 
 
-$title-padding-height: 0.7rem
-$title-height: 1.5 + $title-padding*2
-$tile-image-height: 18rem
-$total-tile-height: $title-height + $tile-image-height rem
-
-
+$title-padding-height: 0.4
+$title-height: ($title-padding-height*2)+1.5
+$tile-image-height: 12
+$tile-padding: 0
+$total-tile-height: $title-height + $tile-image-height + ($tile-padding*2)
+    
 .project
     position: relative
-    padding: 0.5rem
-    .image-container
-        width: 100%
-        height: $tile-image-height
-        overflow: hidden
-    .tile-content
-        position: absolute
-        top: 0
-        left: 0
-        padding: 1rem
-        opacity: 0
-    h3
-        padding: $title-padding 0
+    padding: $tile-padding+rem
+    .image
+        &-outer-container
+            width: 100%
+            height: $tile-image-height+rem
+            position: relative
+            overflow: hidden
+        &-inner-container
+            width: 100%
+            height: 100%
+            transform: translate(-5%, 5%) scale(1.1)
+            transition-duration: 300ms
+            transition-property: transform
+            transition-timing-function: ease-out
+        &-overlay
+            position: absolute
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+            background-color: $bg-light
+            opacity: 0
+            transition-duration: $speed
+            transition-property: opacity
+            transition-timing-function: ease-in-out
+    a:hover, a:focus
+        .image-inner-container
+            transform: translate(0%,-50%) scale(1)
+            transition-duration: 2s
+        .image-overlay
+            opacity: 0.2
+    h4
+        padding: $title-padding-height+rem 0
     &:only-child
-        .image-container
-            height: ($total-tile-height*2 - $title-height + 2) rem
+        .image-outer-container
+            +tablet
+                height: ($total-tile-height*2 - $title-height + 2)+rem
+        a:hover, a:focus
+            .image-inner-container
+                transform: translate(0%, 0%) scale(1)
+                transition-duration: 2s
+            .image-overlay
+                opacity: 0.2
         
-    

@@ -5,9 +5,13 @@ const About = ({ content }) => {
   return (
     <section className="section" id="about">
       <div className="container">
-        <div className="columns is-mobile">
-          <div className="column is-one-third">
-          <div className="profile-pic">
+        <hr />
+        <div className="columns">
+          <div className="column is-one-third is-one-half-mobile">
+            <h2>About</h2>
+          </div>
+          <div className="column is-two-fifths is-three-fifths-mobile">
+            <div className="profile-pic">
               {content.image ? (
                 <PreviewCompatibleImage
                   imageInfo={{
@@ -18,7 +22,7 @@ const About = ({ content }) => {
               ) : null}
             </div>
           </div>
-          <div className="column is-two-thirds">
+          <div className="column">
             <p>{content.aboutbody}</p>
           </div>
         </div>

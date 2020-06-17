@@ -17,7 +17,7 @@ const Splash = ({ content, motionProgress }) => {
   return (
     <motion.section
       ref={splashElement}
-      className="splash hero is-fullheight"
+      className="splash hero is-fullheight double-padded"
       animate={{ opacity: 1 }}
       initial={{ opacity: 0 }}
       style={{
@@ -41,11 +41,12 @@ const Splash = ({ content, motionProgress }) => {
       >
         <div className="container">
           <motion.div
-            role="navigation"
+            role="button"
             onClick={scrollOffSplash}
             className="icon scroll-down-btn"
             style={{ opacity: buttonOpacity?buttonOpacity: 1 }}
             whileHover={{ scale: 1.1 }}
+            tabIndex="-1"
           >
             <span></span>
           </motion.div>

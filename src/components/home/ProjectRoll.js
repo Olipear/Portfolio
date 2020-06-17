@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
-import PropTypes from "prop-types";
-import { Link, graphql, StaticQuery, useStaticQuery } from "gatsby";
-import PreviewCompatibleImage from "../PreviewCompatibleImage";
+import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
 import ProjectTile from "../projects/ProjectTile";
+
 
 const projectQuery = graphql`
   query ProjectRollQuery {
@@ -24,7 +23,7 @@ const projectQuery = graphql`
             featuredpost
             featuredimage {
               childImageSharp {
-                fluid(maxWidth: 120, quality: 100) {
+                fluid(maxWidth: 650, maxHeight: 650, quality: 100) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -64,7 +63,6 @@ const ProjectRoll = () => {
   const buildProjectTiles = (obj) => {
     if (Array.isArray(obj)) {
       return obj.map((projectIndex) => {
-        console.log(projectIndex);
         return (
           <ProjectTile
             key={projects[projectIndex].node.id}
@@ -88,12 +86,16 @@ const ProjectRoll = () => {
       );
     }
   };
-
+  
   return (
-    <div className="tile is-ancestor">
-      {projects &&
-        tileLayouts[Math.min(projects.length - 1, 4)].map((layout) => buildProjectGrid(layout))}
-    </div>
+    <section className="section double-padded" id="projects">
+        <div className="container">
+          <div className="tile is-ancestor">
+            {projects &&
+              tileLayouts[Math.min(projects.length - 1, 4)].map((layout) => buildProjectGrid(layout))}
+          </div>
+        </div>
+      </section>
   );
 };
 
