@@ -30,14 +30,10 @@ const NavMenuItem = ({ url, alt, Icon, setOpenOnFocus = false, setClosedOnBlur =
         className={`icon ${!disabled? "" : "disabled"}`}
         whileHover={{scale: 1.1}}
     >
-        <Icon width={24} height={24}/>
+        <h5>{alt}</h5><Icon width="24px" height="24px"/>
     </motion.div>
     </a>
   );
-};
-
-NavMenuItem.propTypes = {
-  url: PropTypes.string,
 };
 
 export default NavMenuItem;

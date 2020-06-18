@@ -64,6 +64,7 @@
         transition-duration: $speed
         transition-property: margin-top, max-height
         transition-timing-function: $easing
+        width: 10rem
         +tablet
             position: relative
             max-height: unset
@@ -82,8 +83,11 @@
             +tablet
                 margin-left: 1.5rem
                 opacity: 1
+                h5
+                    display: none
             .icon
                 display: flex
+                justify-content: space-between
                 padding: 0.2rem
         &.is-open
             +mobile

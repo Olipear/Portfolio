@@ -8,7 +8,6 @@ import { useTransform, useViewportScroll } from "framer-motion";
 import Splash from "../components/home/Splash";
 import Blurbs from "../components/home/Blurbs";
 import About from "../components/home/About";
-import Contact from "../components/home/Contact";
 
 export const IndexPageTemplate = ({ data }) => {
   const { windowHeight } = useWindowDimensions();
@@ -35,7 +34,6 @@ export const IndexPageTemplate = ({ data }) => {
       <Blurbs content={data.blurbs} triggerIn={offSplash} />
       <ProjectRoll />
       <About content={data.about} />
-      <Contact/>
     </div>
   );
 };
