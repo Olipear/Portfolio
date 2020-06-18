@@ -1,6 +1,5 @@
 @import "~bulma/sass/utilities/_all.sass"
-@import "~bulma/sass/base/minireset.sass"
-@import "~bulma/sass/base/helpers.sass"
+@import "~bulma/sass/base/_all.sass"
 @import "~bulma/sass/grid/_all.sass"
 @import "~bulma/sass/elements/container.sass"
 @import "~bulma/sass/layout/_all.sass"
@@ -110,6 +109,40 @@ a
 svg
   fill: currentcolor
 
+.scroll-btn
+  height: 24px
+  width: 24px
+  overflow: hidden
+  background: $interact
+  border-radius: 50%
+  cursor: pointer
+  position: relative
+  span
+    height: 8px
+    width: 8px
+    border: 3px solid $bg-light
+    border-right: 0
+    border-top: 0
+    margin: auto
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+  &:hover
+    background: $hover
+  &.up span
+    transform: rotate(135deg)
+    top: 3px
+  &.down span
+    top: -3px
+    transform: rotate(-45deg)
+  &.big
+    height: 36px
+    width: 36px
+    span
+      height: 14px
+      width: 14px
+
 // ---- layout -----
 section, .section
   padding: 1rem 1.5rem 1.5rem 1.5rem
@@ -144,41 +177,7 @@ section, .section
       margin: 0 auto
       float: none
 
-footer.footer
-  margin-top: 6rem
-  padding: 6rem 1.5rem 1.5rem 2rem
-  background: $bg-dark
-  color: $bg-light
-  +tablet
-    padding: 9rem 1.5rem 1.5rem 2rem
-  a
-    color: $bg-light
-    text-decoration: underline
-    &:hover
-      color: $secondary
-  .logo
-    padding: 0.75rem 1.5rem 0.75rem 0.75rem
-    +tablet
-      padding: 0.75rem 11% 0.75rem 0.75rem
-  .contact
-    &-items
-      li a
-        display: flex
-        margin: 0.8rem 0
-        white-space: nowrap
-        overflow: hidden
-        text-overflow: ellipsis
-        svg
-          margin-right: 1rem
-  .bottom-text
-    font-size: 0.7rem
-    margin-top: 2rem
-    +tablet
-      width: 50%
-    
-        
-
-
 @import "./navbar.sass"
 @import "./splash.sass"
 @import "./projects.sass"
+@import "./footer.sass"

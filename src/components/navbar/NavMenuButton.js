@@ -8,7 +8,7 @@ const NavMenuButton = ({ open, setOpen }) => {
         className={`navbutton ${open?'is-open':''}`} 
         aria-label="menu" aria-expanded={open?'true':'false'} 
         onClick={() => {setOpen(!open)}}
-        tabIndex="-1"    
+        role="menu"
     >
         <motion.span 
             animate={open?'open':'closed'}

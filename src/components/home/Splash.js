@@ -1,7 +1,6 @@
 import React from "react";
 import { useTransform, motion } from "framer-motion";
 import scrollToSmooth from "../SmoothScroll";
-import useWindowDimensions from "../UseWindowDimensions";
 
 const Splash = ({ content, motionProgress }) => {
   const buttonOpacity = useTransform(motionProgress,[0, 0.4], [1, 0]);
@@ -43,10 +42,9 @@ const Splash = ({ content, motionProgress }) => {
           <motion.div
             role="button"
             onClick={scrollOffSplash}
-            className="icon scroll-down-btn"
+            className="scroll-btn down big"
             style={{ opacity: buttonOpacity?buttonOpacity: 1 }}
             whileHover={{ scale: 1.1 }}
-            tabIndex="-1"
           >
             <span></span>
           </motion.div>

@@ -1,12 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "gatsby";
 import Img from "gatsby-image";
 
 const ProjectTile = ({ project }) => {
-  useEffect(() => {
-    console.log(project.frontmatter.featuredimage);
-  }, [project]);
 
+  
   return (
     <div className="tile is-child project">
       <Link to={project.fields.slug}>
