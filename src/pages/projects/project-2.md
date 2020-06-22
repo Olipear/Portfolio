@@ -1,10 +1,12 @@
 ---
 templateKey: project-entry
 title: UX case study
-date: 2015-12-17T15:04:10.000Z
-featuredpost: false
+description: In conjunction with the implementation of a new VoIP phone system,
+  I redesigned the means of contacting the company.
+featuredproject: true
 featuredimage: /img/products-grid2.jpg
-description: In conjunction with the implementation of a new VoIP phone system, I redesigned the means of contacting the company.
+featuredpost: false
+date: 2015-12-17T15:04:10.000Z
 tags:
   - flavor
   - tasting
