@@ -1,5 +1,5 @@
 import React from "react";
-import PreviewCompatibleImage from "../PreviewCompatibleImage";
+import CMSImage from "../CMSImage";
 
 const About = ({ content }) => {
   return (
@@ -14,14 +14,12 @@ const About = ({ content }) => {
               </div>
               <div className="column">
                 <div className="profile-pic is-hidden-tablet">
-                  {content.image ? (
-                    <PreviewCompatibleImage
-                      imageInfo={{
-                        image: content.image,
-                        alt: "Oliver Pearson looking sharp!",
-                      }}
+                  {content.image && (
+                    <CMSImage
+                      image={content.image}
+                      alt="Oliver Pearson looking sharp!"
                     />
-                  ) : null}
+                  )}
                 </div>
                 <p>{content.aboutbody}</p>
               </div>
@@ -29,14 +27,12 @@ const About = ({ content }) => {
           </div>
           <div className="column is-hidden-mobile">
             <div className="profile-pic">
-              {content.image ? (
-                <PreviewCompatibleImage
-                  imageInfo={{
-                    image: content.image,
-                    alt: "Oliver Pearson looking sharp!",
-                  }}
+              {content.image && (
+                <CMSImage
+                  image={content.image}
+                  alt="Oliver Pearson looking sharp!"
                 />
-              ) : null}
+              )}
             </div>
           </div>
         </div>

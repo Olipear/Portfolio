@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import Layout from "../components/Layout";
-import ProjectRoll from "../components/home/ProjectRoll";
 import useWindowDimensions from "../components/UseWindowDimensions";
 import { useTransform, useViewportScroll } from "framer-motion";
+import Layout from "../components/Layout";
 import Splash from "../components/home/Splash";
 import Blurbs from "../components/home/Blurbs";
+import ProjectRoll from "../components/home/ProjectRoll";
 import About from "../components/home/About";
 
 export const IndexPageTemplate = ({ data }) => {
@@ -99,7 +99,12 @@ export const pageQuery = graphql`
           aboutbody
           image {
             childImageSharp {
-              fluid(maxWidth: 300, maxHeight: 300, quality: 100, cropFocus: ENTROPY ) {
+              fluid(
+                maxWidth: 300
+                maxHeight: 300
+                quality: 100
+                cropFocus: ENTROPY
+              ) {
                 ...GatsbyImageSharpFluid
               }
             }

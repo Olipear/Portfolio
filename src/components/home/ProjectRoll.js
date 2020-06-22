@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql, StaticQuery } from "gatsby";
-import ProjectTile from "../projects/ProjectTile";
+import ProjectTile from "./ProjectTile";
 
 // array to determine how many tiles per row to place
 const tileLayouts = [

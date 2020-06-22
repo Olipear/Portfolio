@@ -2,8 +2,8 @@
 
 $title-padding-height: 0.4
 $title-height: ($title-padding-height*2)+1.5
-$tile-image-height: 12
-$tile-padding: 0
+$tile-image-height: 18
+$tile-padding: 0.5
 $total-tile-height: $title-height + $tile-image-height + ($tile-padding*2)
     
 .project.tile
@@ -60,6 +60,12 @@ section.project
         padding: 0
         position: relative
         overflow: hidden
-        .image-container::after
+        .hero-body 
+            .title, .subtitle
+                max-width: 40%
+        .image-overlay
+            background: $bg-light
+            background: linear-gradient(-90deg, rgba(248,248,248,0.2) 0%, rgba(248,248,248,0.96) 60%)
+            position: absolute
             width: 100%
-            content: ''
+            height: 100%

@@ -15,7 +15,7 @@ const Splash = ({ content, motionProgress }) => {
 
   return (
     <motion.section
-      //ref={splashElement}
+      ref={splashElement}
       className="splash hero is-fullheight double-padded"
       animate={{ opacity: 1 }}
       initial={{ opacity: 0 }}

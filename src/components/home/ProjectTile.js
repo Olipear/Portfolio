@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import Img from "gatsby-image";
+import CMSImage from '../CMSImage'
 
 const ProjectTile = ({ project }) => {
 
@@ -11,11 +11,11 @@ const ProjectTile = ({ project }) => {
         <div className="image-outer-container">
           
           {project.frontmatter.featuredimage ? (
-            <Img
+            <CMSImage
               className="image-inner-container"
               style={{overflow: 'visible'}}
               imgStyle={{ top: 0, left: 0, width: '100%', height: '100%' }}
-              fluid={project.frontmatter.featuredimage.childImageSharp.fluid}
+              image={project.frontmatter.featuredimage}
               alt={`featured image thumbnail for project ${project.frontmatter.title}`}
             />
           ) : null}

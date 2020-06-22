@@ -4,28 +4,29 @@ import { kebabCase } from "lodash";
 import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
-import Img from "gatsby-image";
 import ProjectSection from "../components/projects/ProjectSection";
 import _ from "lodash"
+import CMSImage from "../components/CMSImage";
 
 export const ProjectEntryTemplate = ({
   project,
 }) => {
-
+  console.log(project)
   return (
     <>
-      <section className="hero is-halfheight double-padded project">
-        {project.featuredimage ? (
-          <Img
+      <section className="hero is-medium double-padded project">
+        {project.featuredimage &&(
+          <CMSImage
             className="image-container"
             style={{position: "absolute", width: "100%", height: "auto"}}
-            fluid={project.featuredimage.childImageSharp.fluid}
+            image={project.featuredimage}
             alt={`featured image thumbnail for project ${project.title}`}
           />
-        ) : null}
+        )}
+        <div className="image-overlay"></div>
         <div className="hero-body">
           <div className="container">
-            <h1 className="title">{project.title}</h1>
+            <h2 className="title">{project.title}</h2>
             <h4 className="subtitle">{project.description}</h4>
           </div>
         </div>
