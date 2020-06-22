@@ -2,7 +2,6 @@ import React from "react";
 import { graphql, StaticQuery } from "gatsby";
 import ProjectTile from "../projects/ProjectTile";
 
-
 // array to determine how many tiles per row to place
 const tileLayouts = [
   // one stretched
@@ -24,8 +23,8 @@ const tileLayouts = [
   [{ parent: [0, 1] }, { parent: [2, 3, 4] }],
 ];
 
-const ProjectRoll = ({data}) => {
-  const {edges: projects} = data.allMarkdownRemark;
+const ProjectRoll = ({ data }) => {
+  const { edges: projects } = data.allMarkdownRemark;
 
   const buildProjectTiles = (obj) => {
     if (Array.isArray(obj)) {
@@ -35,74 +34,82 @@ const ProjectRoll = ({data}) => {
             key={projects[projectIndex].node.id}
             project={projects[projectIndex].node}
           />
-        )
+        );
       });
     } else {
       return obj.map((container) => {
-        return (buildProjectGrid(container));
+        return buildProjectGrid(container);
       });
     }
   };
 
   const buildProjectGrid = (obj) => {
     if (obj.hasOwnProperty("parentV")) {
-      return <div className="tile is-parent is-vertical">{buildProjectTiles(obj.parentV)}</div>;
+      return (
+        <div className="tile is-parent is-vertical">
+          {buildProjectTiles(obj.parentV)}
+        </div>
+      );
     } else {
       return (
         <div className="tile is-parent">{buildProjectTiles(obj.parent)}</div>
       );
     }
   };
-  console.log(projects)
+  console.log(projects);
   if (projects.length > 0) {
     return (
       <section className="section double-padded" id="projects">
-          <div className="container">
-            <div className="tile is-ancestor">
-              {projects.length &&
-                tileLayouts[Math.min(projects.length - 1, 4)].map((layout) => buildProjectGrid(layout))}
-            </div>
+        <div className="container">
+          <div className="tile is-ancestor">
+            {tileLayouts[Math.min(projects.length - 1, 4)].map((layout) =>
+              buildProjectGrid(layout)
+            )}
           </div>
-        </section>
+        </div>
+      </section>
     );
   } else {
-    return null
+    return null;
   }
 };
 
 export default () => (
   <StaticQuery
     query={graphql`
-    query ProjectRollQuery {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        filter: { frontmatter: { templateKey: { eq: "project-entry" }, featuredproject: {eq: true} } }
-      ) {
-        edges {
-          node {
-            excerpt(pruneLength: 400)
-            id
-            fields {
-              slug
+      query ProjectRollQuery {
+        allMarkdownRemark(
+          sort: { order: DESC, fields: [frontmatter___date] }
+          filter: {
+            frontmatter: {
+              templateKey: { eq: "project-entry" }
+              featuredproject: { eq: true }
             }
-            frontmatter {
-              title
-              templateKey
-              date(formatString: "MMMM DD, YYYY")
-              featuredimage {
-                childImageSharp {
-                  fluid(maxWidth: 650, maxHeight: 650, quality: 100) {
-                    ...GatsbyImageSharpFluid
+          }
+        ) {
+          edges {
+            node {
+              excerpt(pruneLength: 400)
+              id
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+                description
+                featuredimage {
+                  childImageSharp {
+                    fluid(maxWidth: 650, maxHeight: 650, quality: 100) {
+                      ...GatsbyImageSharpFluid
+                    }
                   }
                 }
               }
-              description
             }
           }
         }
       }
-    }
-  `}
-    render={(data) => <ProjectRoll data={data}/>}
+    `}
+    render={(data) => <ProjectRoll data={data} />}
   />
-  )
+);

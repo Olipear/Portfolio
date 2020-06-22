@@ -4,81 +4,66 @@ import { kebabCase } from "lodash";
 import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
-import Content, { HTMLContent } from "../components/Content";
 import Img from "gatsby-image";
+import ProjectSection from "../components/projects/ProjectSection";
+import _ from "lodash"
 
 export const ProjectEntryTemplate = ({
-  content,
-  contentComponent,
-  description,
-  title,
-  helmet,
-  featuredimage,
+  project,
 }) => {
-  const PostContent = contentComponent || Content;
 
   return (
     <>
       <section className="hero is-halfheight double-padded project">
-        {featuredimage ? (
+        {project.featuredimage ? (
           <Img
             className="image-container"
             style={{position: "absolute", width: "100%", height: "auto"}}
-            fluid={featuredimage.childImageSharp.fluid}
-            alt={`featured image thumbnail for project ${title}`}
+            fluid={project.featuredimage.childImageSharp.fluid}
+            alt={`featured image thumbnail for project ${project.title}`}
           />
         ) : null}
         <div className="hero-body">
           <div className="container">
-            <h1 className="title">{title}</h1>
-            <h4 class="subtitle">{description}</h4>
-          </div>
-        </div>
-        
-      </section>
-
-      <section className="section project">
-        {helmet || ""}
-        <div className="container content">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <PostContent content={content} />
-            </div>
+            <h1 className="title">{project.title}</h1>
+            <h4 className="subtitle">{project.description}</h4>
           </div>
         </div>
       </section>
+      {project.sections.map((section) => {
+        return (
+          <ProjectSection key={_.trim(section.heading.substring(0, 5))} section={section} />
+        )
+      })}
+      
     </>
   );
 };
 
 ProjectEntryTemplate.propTypes = {
-  content: PropTypes.node.isRequired,
-  contentComponent: PropTypes.func,
-  description: PropTypes.string,
-  title: PropTypes.string,
-  helmet: PropTypes.object,
+  content: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    sections: PropTypes.array.isRequired
+  }).isRequired,
 };
 
 const ProjectEntry = ({ data }) => {
-  const { markdownRemark: post } = data;
+  const { markdownRemark: project } = data;
 
   return (
     <Layout>
       <ProjectEntryTemplate
-        content={post.html}
-        contentComponent={HTMLContent}
-        description={post.frontmatter.description}
-        featuredimage={post.frontmatter.featuredimage}
+        project={project.frontmatter}
         helmet={
           <Helmet titleTemplate="%s | Project">
-            <title>{`${post.frontmatter.title}`}</title>
+            <title>{`${project.frontmatter.title}`}</title>
             <meta
               name="description"
-              content={`${post.frontmatter.description}`}
+              content={`${project.frontmatter.description}`}
             />
           </Helmet>
         }
-        title={post.frontmatter.title}
       />
     </Layout>
   );
@@ -98,13 +83,35 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
         title
         description
         featuredimage {
           childImageSharp {
-            fluid(maxWidth: 660, quality: 100) {
+            fluid(maxWidth: 650, maxHeight: 650, quality: 100) {
               ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        sections {
+          intro
+          standout
+          heading
+          headerimage {
+            childImageSharp {
+              fluid(maxWidth: 650, maxHeight: 650, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          subsections {
+            body
+            subheading
+            image {
+              childImageSharp {
+                fluid(maxWidth: 650, maxHeight: 650, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
             }
           }
         }
