@@ -7,7 +7,7 @@ description: In selling this design icon I went for an adaptive interface design
 featuredproject: true
 featuredimage: /img/products-grid1.jpg
 featuredpost: false
-date: 2016-12-17T15:04:10.000Z
+date: 2020-06-22T13:16:57.702Z
 tags:
   - flavor
   - tasting
