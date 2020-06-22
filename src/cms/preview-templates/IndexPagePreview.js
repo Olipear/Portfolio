@@ -8,8 +8,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
   if (data) {
     return (
       <IndexPageTemplate
-        splash={data.splash || {}}
-        title={data.title}
+      data={data}
       />
     )
   } else {

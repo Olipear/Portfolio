@@ -10,14 +10,10 @@ $easing: cubic-bezier(0.75, 0.29, 0.29, 1.35)
 
 // Olipear colours
 $bg-light: #F8F8F8
-$bg-medium: #E1E1E1
-$bg-dark: #031926
+$bg-dark: #0B2027
 $primary: #4CB497
 $secondary: #FA9F42
-$text: $bg-dark
-$primary-invert: $secondary
-$body-color: $text
-$black: #2b2523
+$text: #031926
 
 $interact: #4E5166
 $hover: #333442
@@ -148,12 +144,14 @@ section, .section
   padding: 1rem 1.5rem 1.5rem 1.5rem
   &.double-padded
     padding: 6rem 1.5rem 6rem 1.5rem
-
+  &.dark
+    background: $bg-dark
+    color: $bg-light
+    border-top: 2px solid $text
+    border-bottom: 2px solid $text
+    
 // ---- index page ----
 #blurb
-  background: $bg-dark
-  color: $bg-light
-  
   h2
     margin-bottom: 2rem
     text-align: justify

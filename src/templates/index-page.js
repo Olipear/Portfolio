@@ -29,12 +29,12 @@ export const IndexPageTemplate = ({ data }) => {
   }, [scrollOffSplashProgress]);
 
   return (
-    <div>
+    <>
       <Splash content={data.splash} motionProgress={scrollOffSplashProgress} />
       <Blurbs content={data.blurbs} triggerIn={offSplash} />
       <ProjectRoll />
       <About content={data.about} />
-    </div>
+    </>
   );
 };
 

@@ -6,7 +6,7 @@ $tile-image-height: 12
 $tile-padding: 0
 $total-tile-height: $title-height + $tile-image-height + ($tile-padding*2)
     
-.project
+.project.tile
     position: relative
     padding: $tile-padding+rem
     .image
@@ -55,3 +55,11 @@ $total-tile-height: $title-height + $tile-image-height + ($tile-padding*2)
                 .image-overlay
                     opacity: 0.2
         
+section.project
+    &.hero
+        padding: 0
+        position: relative
+        overflow: hidden
+        .image-container::after
+            width: 100%
+            content: ''

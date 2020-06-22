@@ -2,7 +2,7 @@
 templateKey: project-entry
 title: Rapid prototyping
 date: 2014-12-17T15:04:10.000Z
-featuredpost: false
+featuredproject: false
 featuredimage: /img/products-grid3.jpg
 description: Leading a small team of 4 other developers, we came up with this functional prototype in just one month.
 tags:
