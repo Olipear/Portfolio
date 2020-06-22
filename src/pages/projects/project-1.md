@@ -18,7 +18,7 @@ sections:
 
       Due to the product's nature, this isn't especially unusual, since most people would want to sit in one before purchase. However, since Vitsoe only operated 4 physical shops worldwide, improving online sales was important. 
     headerimage: /img/620-image.jpg
-    standout: true
+    standout: false
   - heading: Immediate improvements
     intro: >-
       The existing product page had clear problems that I identified could be
@@ -56,7 +56,7 @@ sections:
 
           Since another relatively unique feature of the 620 was it's customisation options, I found the luxury car market to be good case studies to look to.
         image: /img/products-grid1.jpg
-    standout: true
+    standout: false
 tags:
   - flavor
   - tasting
