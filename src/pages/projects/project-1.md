@@ -1,10 +1,13 @@
 ---
 templateKey: project-entry
 title: Adaptive UI example
-date: 2016-12-17T15:04:10.000Z
-featuredpost: false
+description: In selling this design icon I went for an adaptive interface design
+  and was very sucessful in improving sales. I also had fun making those lovely
+  renders!
+featuredproject: true
 featuredimage: /img/products-grid1.jpg
-description: In selling this design icon I went for an adaptive interface design and was very sucessful in improving sales. I also had fun making those lovely renders!
+featuredpost: false
+date: 2016-12-17T15:04:10.000Z
 tags:
   - flavor
   - tasting
