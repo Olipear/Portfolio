@@ -6,7 +6,7 @@ title: Adaptive UI example
 description: In selling this design icon I went for an adaptive interface design
   and was very sucessful in improving sales. I also had fun making those lovely
   renders!
-featuredimage: /img/products-grid1.jpg
+featuredimage: /img/620-image.jpg
 featuredpost: false
 sections:
   - heading: Brief
