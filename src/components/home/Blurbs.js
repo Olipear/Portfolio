@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 const Blurbs = ({ content, triggerIn }) => {
   return (
-    <section className="section double-padded dark" id="blurb">
+    <section className="section is-medium" id="blurb">
       <div className="container">
         <div className="columns">
           <motion.div

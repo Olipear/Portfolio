@@ -56,12 +56,11 @@ const ProjectRoll = ({ data }) => {
       );
     }
   };
-  console.log(projects);
   if (projects.length > 0) {
     return (
-      <section className="section double-padded" id="projects">
+      <section className="section is-medium" id="projects">
         <div className="container">
-          <div className="tile is-ancestor">
+          <div className="tile is-ancestor project">
             {tileLayouts[Math.min(projects.length - 1, 4)].map((layout) =>
               buildProjectGrid(layout)
             )}

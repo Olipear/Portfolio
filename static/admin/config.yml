@@ -43,6 +43,7 @@ collections:
               - label: "CV pdf"
                 name: "cv_pdf"
                 widget: "file"
+                required: false
                 media_library:
                   config:
                     multiple: "false"

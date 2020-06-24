@@ -11,14 +11,13 @@ import CMSImage from "../components/CMSImage";
 export const ProjectEntryTemplate = ({
   project,
 }) => {
-  console.log(project)
   return (
     <>
-      <section className="hero is-medium double-padded project">
+      <section className="hero is-medium double-padded project" style={{zIndex: -1}}>
         {project.featuredimage &&(
           <CMSImage
             className="image-container"
-            style={{position: "absolute", width: "100%", height: "auto"}}
+            style={{position: "fixed", width: "60%", marginLeft: "40%", height: "auto"}}
             image={project.featuredimage}
             alt={`featured image thumbnail for project ${project.title}`}
           />
@@ -88,7 +87,7 @@ export const pageQuery = graphql`
         description
         featuredimage {
           childImageSharp {
-            fluid(maxWidth: 650, maxHeight: 650, quality: 100) {
+            fluid(maxWidth: 1050, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }

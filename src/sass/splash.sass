@@ -1,15 +1,22 @@
 .splash.hero
     position: relative
-    background-position: 100% 80%
-    background-size: 95% auto
-    background-repeat: no-repeat
-    +tablet
-        background-position: 100% 50%
-        background-size: 50% auto
+    .image-container
+        right: 0
+        bottom: 0
+        width: 100%
+        +tablet
+            width: 60%
+            bottom: 10%
+        +desktop
+            bottom: -5%
+        +fullhd
+            bottom: -10%
     .container
         +mobile
             align-self: flex-start
     .title
+        font-size: 2rem
+        line-height: 3.5rem
         +tablet
             width: 55%
     .hero-footer

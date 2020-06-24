@@ -6,7 +6,7 @@ const ProjectTile = ({ project }) => {
 
   
   return (
-    <div className="tile is-child project">
+    <div className="tile is-child">
       <Link to={project.fields.slug}>
         <div className="image-outer-container">
           
@@ -23,7 +23,7 @@ const ProjectTile = ({ project }) => {
         </div>
         
       </Link>
-      <h4>{project.frontmatter.title}</h4>
+      <h1>{project.frontmatter.title}</h1>
     </div>
   );
 };
