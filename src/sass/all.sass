@@ -159,7 +159,7 @@ section, .section
   position: relative
   padding: 7rem 0.75rem
   +desktop
-    padding: 5rem 15rem
+    padding: 5rem 18%
   &::before, &::after
     content: " "
     background-position-y: center
@@ -174,10 +174,14 @@ section, .section
     background-image: url("../img/Illustrated bracket - open.png")
     top: 0
     left: 0
+    +desktop
+      left: 3%
   &::after
     background-image: url("../img/Illustrated bracket - close.png")
     bottom: 0
     right: 0
+    +desktop
+      right: 3%
 
 .quotes
   position: relative
