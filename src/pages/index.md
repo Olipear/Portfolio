@@ -3,7 +3,7 @@ templateKey: index-page
 title: Olipear home
 splash:
   intro: I'm a UX designer / product designer hire me for contract work
-  image: /img/Splash.png
+  image: /img/paper-illustrations-stack.png
   buttontext: Read more
 navigation:
   githuburl: https://github.com/Olipear

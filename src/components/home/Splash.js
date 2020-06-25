@@ -5,7 +5,7 @@ import CMSImage from "../CMSImage";
 
 const Splash = ({ content, motionProgress }) => {
   const buttonOpacity = useTransform(motionProgress, [0, 0.4], [1, 0]);
-  const splashImageMargin = useTransform(motionProgress, [0, 1], ["0%", "30%"]);
+  const splashImageY = useTransform(motionProgress, [0, 1], ["0", "5rem"]);
   const footerPosition = useTransform(motionProgress, [0, 0.4], ["0%", "100%"]);
   const splashElement = React.createRef();
 
@@ -19,24 +19,18 @@ const Splash = ({ content, motionProgress }) => {
   };
 
   return (
-    <section ref={splashElement} className="splash hero is-fullheight">
-      <motion.div
-        style={{
-          position: "absolute",
-          width: "100%",
-          height: "100%",
-          y: splashImageMargin
-        }}
-      >
-        <CMSImage
-          className="image-container"
-          style={{ position: "fixed" }}
-          image={content.image}
-        />
-      </motion.div>
+    <section ref={splashElement} className="splash hero">
       <div className="hero-body">
         <div className="container">
-          <h1 className="title">{content.intro}</h1>
+          <h1 className="title" >
+            {content.intro}
+          </h1>
+          <motion.div className="image-wrapper" style={{ y: splashImageY }}>
+            <CMSImage
+              image={content.image}
+              imgStyle={{ objectFit: "contain" }}
+            />
+          </motion.div>
         </div>
       </div>
       <motion.div

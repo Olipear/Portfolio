@@ -5,8 +5,8 @@ const About = ({ content }) => {
   return (
     <section className="section" id="about">
       <div className="container">
-        <div className="columns is-mobile">
-          <div className="column is-one-fifth is-offset-2-tablet">
+        <div className="columns">
+          <div className="column is-one-fifth-tablet is-offset-1-tablet">
             <div className="profile-pic">
               {content.image && (
                 <CMSImage
@@ -16,7 +16,7 @@ const About = ({ content }) => {
               )}
             </div>
           </div>
-          <div className="column is-two-fifths-tablet ">
+          <div className="column is-three-fifths-tablet quotes">
             <p>{content.aboutbody}</p>
           </div>
         </div>
