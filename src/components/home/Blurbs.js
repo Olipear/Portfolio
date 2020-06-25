@@ -5,9 +5,7 @@ const Blurbs = ({ content, triggerIn }) => {
   return (
     <section className="section standout" id="blurb">
       <div className="container">
-        <div className="columns">
-          <motion.div
-            className="column is-8-desktop is-offset-2-desktop"
+        <motion.div
             animate={{
               opacity: triggerIn ? 1 : 0,
               translateY: triggerIn ? 0 : 50,
@@ -24,7 +22,6 @@ const Blurbs = ({ content, triggerIn }) => {
                 <h2 key={i.blurb.substring(0, 5)}>{i.blurb}</h2>
               ))}
           </motion.div>
-        </div>
       </div>
     </section>
   );

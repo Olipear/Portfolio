@@ -10,6 +10,7 @@ $section-padding-medium: 5rem 1.5rem
 @import "~bulma/sass/elements/container.sass"
 @import "~bulma/sass/layout/_all.sass"
 
+
 // Olipear colours
 $bg-light: #F8F8F8
 $bg-dark: #0B2027
@@ -150,12 +151,15 @@ svg
 section, .section
   z-index: 0
   position: relative
-  &.standout
+  &.is-medium
     padding: $section-padding-medium
 
 // illustration brackets
 .standout
-  overflow: hidden
+  position: relative
+  padding: 7rem 0.75rem
+  +desktop
+    padding: 5rem 15rem
   &::before, &::after
     content: " "
     background-position-y: center
@@ -165,25 +169,15 @@ section, .section
     height: 7rem
     width: 7rem
     +desktop
-      height: 100%
-      width: 7rem    
+      height: 100%  
   &::before
     background-image: url("../img/Illustrated bracket - open.png")
     top: 0
     left: 0
-    +desktop
-      height: 100%
-      width: 7rem
-      left: 4rem
-      top: 0
   &::after
     background-image: url("../img/Illustrated bracket - close.png")
     bottom: 0
     right: 0
-    +desktop
-      right: 4rem
-      top: 0
-      bottom: unset
 
 .quotes
   position: relative
@@ -219,6 +213,7 @@ section, .section
 
 #about
   .profile-pic
+    align-self: center
     border-radius: 50%
     overflow: hidden
     width: 100%

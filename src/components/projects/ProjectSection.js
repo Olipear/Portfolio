@@ -5,10 +5,18 @@ import _ from "lodash";
 
 const ProjectSection = ({ section }) => {
   return (
-    <section className={`section ${section.standout && "dark"}`}>
+    <section className={`section ${section.standout?"standout":"is-medium"}`}>
       <div className="container">
-        <h2>{section.heading}</h2>
-        <p> {section.intro}</p>
+        <div className="columns">
+          <div className="column is-two-fifths">
+            <h2>{section.heading}</h2>
+          </div>
+          <div className="column is-three-fifths">
+          <p> {section.intro}</p>
+          </div>
+        </div>
+        
+        
         {section.subsections &&
           section.subsections.map((subsection) => {
             return (

@@ -5,37 +5,41 @@ import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import ProjectSection from "../components/projects/ProjectSection";
-import _ from "lodash"
+import _ from "lodash";
 import CMSImage from "../components/CMSImage";
 
-export const ProjectEntryTemplate = ({
-  project,
-}) => {
+export const ProjectEntryTemplate = ({ project }) => {
   return (
     <>
-      <section className="hero is-medium double-padded project" style={{zIndex: -1}}>
-        {project.featuredimage &&(
-          <CMSImage
-            className="image-container"
-            style={{position: "fixed", width: "60%", marginLeft: "40%", height: "auto"}}
-            image={project.featuredimage}
-            alt={`featured image thumbnail for project ${project.title}`}
-          />
-        )}
-        <div className="image-overlay"></div>
+      <section
+        className="hero double-padded project"
+        style={{ zIndex: -1 }}
+      >
         <div className="hero-body">
           <div className="container">
-            <h2 className="title">{project.title}</h2>
-            <h4 className="subtitle">{project.description}</h4>
+            <div className="title-container">
+              <h2 className="title">{project.title}</h2>
+              <h4 className="subtitle">{project.description}</h4>
+            </div>
+            {project.featuredimage && (
+              <CMSImage
+                className="image-container"
+                image={project.featuredimage}
+                imgStyle={{ objectFit: "contain" }}
+                alt={`featured image thumbnail for project ${project.title}`}
+              />
+            )}
           </div>
         </div>
       </section>
       {project.sections.map((section) => {
         return (
-          <ProjectSection key={_.trim(section.heading.substring(0, 5))} section={section} />
-        )
+          <ProjectSection
+            key={_.trim(section.heading.substring(0, 5))}
+            section={section}
+          />
+        );
       })}
-      
     </>
   );
 };
@@ -44,7 +48,7 @@ ProjectEntryTemplate.propTypes = {
   content: PropTypes.shape({
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    sections: PropTypes.array.isRequired
+    sections: PropTypes.array.isRequired,
   }).isRequired,
 };
 
