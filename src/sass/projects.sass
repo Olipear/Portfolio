@@ -6,10 +6,11 @@ $tile-image-height: 18
 $tile-padding: 1
 $total-tile-height: $title-height + $tile-image-height + ($tile-padding*2)
     
-.project            
+.project.tile.is-ancestor            
     .tile.is-child
         position: relative
-        padding: $tile-padding+rem
+        +tablet
+            padding: $tile-padding+rem
         .image
             &-outer-container
                 width: 100%
@@ -89,3 +90,19 @@ section.project
                         flex-shrink: 0
                         max-height: unset
                         width: 37%
+    .section-heading
+        text-align: center
+        +tablet
+            h2
+            text-align: right
+            p
+                text-align: left
+                margin-right: 6rem
+        &-image
+            width: 100%
+            max-width: 280px
+            +mobile
+                margin: 0 auto
+    .subsection
+        &-image
+

@@ -12,23 +12,12 @@ export const ProjectEntryTemplate = ({ project }) => {
   return (
     <>
       <section
-        className="hero double-padded project"
+        className="hero is-medium project"
         style={{ zIndex: -1 }}
       >
         <div className="hero-body">
           <div className="container">
-            <div className="title-container">
-              <h2 className="title">{project.title}</h2>
-              <h4 className="subtitle">{project.description}</h4>
-            </div>
-            {project.featuredimage && (
-              <CMSImage
-                className="image-container"
-                image={project.featuredimage}
-                imgStyle={{ objectFit: "contain" }}
-                alt={`featured image thumbnail for project ${project.title}`}
-              />
-            )}
+              <h1 className="title">{project.description}</h1>
           </div>
         </div>
       </section>
@@ -85,13 +74,12 @@ export const pageQuery = graphql`
   query ProjectEntryByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
-      html
       frontmatter {
         title
         description
         featuredimage {
           childImageSharp {
-            fluid(maxWidth: 1050, quality: 100) {
+            fluid(maxWidth: 600, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -102,17 +90,17 @@ export const pageQuery = graphql`
           heading
           headerimage {
             childImageSharp {
-              fluid(maxWidth: 650, maxHeight: 650, quality: 100) {
+              fluid(maxWidth: 760, quality: 100) {
                 ...GatsbyImageSharpFluid
               }
             }
           }
           subsections {
-            body
+            subsection
             subheading
             image {
               childImageSharp {
-                fluid(maxWidth: 650, maxHeight: 650, quality: 100) {
+                fluid(maxWidth: 760, quality: 100) {
                   ...GatsbyImageSharpFluid
                 }
               }

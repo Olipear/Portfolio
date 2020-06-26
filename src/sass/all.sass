@@ -8,6 +8,7 @@ $section-padding-medium: 5rem 1.5rem
 @import "~bulma/sass/base/_all.sass"
 @import "~bulma/sass/grid/_all.sass"
 @import "~bulma/sass/elements/container.sass"
+@import "~bulma/sass/components/level.sass"
 @import "~bulma/sass/layout/_all.sass"
 
 
@@ -63,12 +64,13 @@ body
 
 
 h1, h2
-  font-size: 1.7rem
   line-height: 3rem
   margin-bottom: 1rem
 h1
+  font-size: 1.7rem
   font-weight: 300
 h2
+  font-size: 1.5rem
   font-weight: 800
 h3, h4
   font-size: 1.3rem
@@ -157,31 +159,33 @@ section, .section
 // illustration brackets
 .standout
   position: relative
-  padding: 7rem 0.75rem
+  padding: 7rem 1.5rem
+  +tablet
+    padding: 5rem 10%
   +desktop
     padding: 5rem 18%
   &::before, &::after
     content: " "
-    background-position-y: center
+    background-position: center
     background-size: contain
     background-repeat: no-repeat
     position: absolute
-    height: 7rem
-    width: 7rem
-    +desktop
-      height: 100%  
+    height: 100% 
+    width: 6rem
+    display: none
+    top: 0
+    +tablet
+      display: block
   &::before
     background-image: url("../img/Illustrated bracket - open.png")
-    top: 0
-    left: 0
+    left: 1%
     +desktop
-      left: 3%
+      left: 5%
   &::after
     background-image: url("../img/Illustrated bracket - close.png")
-    bottom: 0
-    right: 0
+    right: 1%
     +desktop
-      right: 3%
+      right: 5%
 
 .quotes
   position: relative
