@@ -39,6 +39,14 @@ sections:
 
           * Another final things??
         image: /img/products-grid3.jpg
+        subsection: >-
+          * The line drawing of the chair at the top displayed multiple sides of
+          the product, but it took up the entire screen. I simply changed the
+          size of this and made the actual configurator center stage.
+
+          * The widget at the top of the screen showed the chair turn into a sofa, however this was a complete duplication of the configurator towards the end, minus the button overlays. Since it was still just a line drawing, it wasn't providing the customer any more information, so it was removed entirely.
+
+          * Another final things??
     standout: false
   - heading: Research & Discovery phase
     intro: Now I'd fixed some of the more obvious problems I started to look at
@@ -56,6 +64,26 @@ sections:
 
           Since another relatively unique feature of the 620 was it's customisation options, I found the luxury car market to be good case studies to look to.
         image: /img/products-grid1.jpg
+        subsection: >-
+          At almost £7000, the 620 chair really had one main competitor, the
+
+
+          much better known 'Eames chair', retailing at around £5000. The other
+
+
+          key competition were from places like Made.com, and other designer
+
+
+          outlets. However even the most expensive chairs from sites like
+
+
+          Made.com were not directly competing, so I broadened my search to
+
+
+          include other high end luxury good.
+
+
+          Since another relatively unique feature of the 620 was it's customisation options, I found the luxury car market to be good case studies to look to.
     standout: false
     headerimage: /img/research.png
 tags:
