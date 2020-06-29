@@ -5,7 +5,6 @@ import CMSImage from "../CMSImage";
 import { HTMLContent } from "../Content";
 
 const ProjectSubsection = ({ subsection }) => {
-  console.log(subsection);
   return (
     <div className="columns subsection">
       <div className="column is-one-half-mobile is-one-third-tablet">
@@ -17,7 +16,7 @@ const ProjectSubsection = ({ subsection }) => {
             className="subsection-image"
             image={subsection.image}
           />
-          <HTMLContent content={subsection.subsection} className="subsection-body"/>
+          <HTMLContent content={subsection.body} className="subsection-body"/>
         </div>
       )}
     </div>

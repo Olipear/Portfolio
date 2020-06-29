@@ -96,7 +96,7 @@ export const pageQuery = graphql`
             }
           }
           subsections {
-            subsection
+            body
             subheading
             image {
               childImageSharp {

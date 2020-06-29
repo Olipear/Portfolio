@@ -88,5 +88,6 @@ collections:
             required: false
             fields:
               - {label: "Subheading", name: "subheading", widget: "string"}
-              - {label: "Body", name: "subsection", widget: "markdown", required: false}
+              - {label: "Body", name: "body", widget: "markdown", required: false}
+              - {label: "Body", name: "body_html", widget: "hidden", required: false}
               - {label: "Subsection image", name: "image", widget: "image", required: false}
