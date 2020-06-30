@@ -1,30 +1,25 @@
 import React from "react";
 import { Link } from "gatsby";
-import ProjectSubsection from "./ProjectSubsection";
 import _ from "lodash";
 import CMSImage from "../CMSImage";
+import { HTMLContent } from "../Content";
 
 const ProjectSection = ({ section }) => {
   return (
     <section className="section is-medium project">
       <div className="container">
-        <div className="columns section-heading">
+        <div className="columns">
           <div className="column is-one-half-mobile is-one-third-tablet">
-            <h2>{section.heading}</h2>
+            <h2 className="section-heading">{section.heading}</h2>
           </div>
-          {section.headerimage && (
-            <div className="column">
-              <CMSImage
-                className="section-heading-image"
-                image={section.headerimage}
-              />
-              <p>{section.intro}</p>
-              <HTMLContent
-                content={section.body_html}
-                className="subsection-body"
-              />
-            </div>
-          )}
+          <h4></h4>
+          <div className="column">
+            {section.headerimage && (
+              <CMSImage className="section-image" image={section.headerimage} />
+            )}
+            <h3 className="section-intro">{section.intro}</h3>
+            <HTMLContent content={section.body_html} className="section-body" />
+          </div>
         </div>
       </div>
     </section>

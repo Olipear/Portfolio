@@ -63,7 +63,7 @@ section.project
     &.hero
         padding: 4rem 0 0 0
         +tablet
-            padding: 0
+            padding: 6rem 0
         .hero-body
             +tablet
                 padding: 5rem 1.5rem 0 1.5rem
@@ -90,23 +90,24 @@ section.project
                         flex-shrink: 0
                         max-height: unset
                         width: 37%
-    .section-heading
-        text-align: center
-        +tablet
-            h2
-            text-align: right
-            p
-                text-align: left
-                margin-right: 6rem
+    .section
+        &-heading
+            text-align: center
+            margin: 0
+            +tablet 
+                text-align: right
         &-image
             width: 100%
             max-width: 280px
+            margin-right: auto
             +mobile
                 margin: 0 auto
-    .subsection
-        &-image
-            width: 100%
-            margin-bottom: 1.5rem
-        &-body
+        &-intro
+            text-align: center
+            max-width: 600px
+            margin: 0 auto 4rem auto
             +tablet
-                margin-right: 6rem
+                text-align: left
+                margin: 0 auto 4rem 0
+        &-body
+            max-width: 550px
