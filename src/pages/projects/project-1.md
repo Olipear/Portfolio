@@ -19,27 +19,6 @@ sections:
       Due to the product's nature, this isn't especially unusual, since most people would want to sit in one before purchase. However, since Vitsoe only operated 4 physical shops worldwide, improving online sales was important. 
     headerimage: /img/brief-_-problem.png
     standout: false
-  - heading: Immediate improvements
-    intro: >-
-      The existing product page had clear problems that I identified could be
-      vastly improved with simple CSS and markup changes. These changes took an
-      afternoon to make, but could make a significant improvement without
-      needing to have gone through the usual design process. 
-
-
-      I also used this as a way of testing my initial assumptions about why the product page was performing poorly, and feed any findings into my design process.
-    subsections:
-      - subheading: Initial quick fixes
-        body: >-
-          * The line drawing of the chair at the top displayed multiple sides of
-          the product, but it took up the entire screen. I simply changed the
-          size of this and made the actual configurator center stage.
-
-          * The widget at the top of the screen showed the chair turn into a sofa, however this was a complete duplication of the configurator towards the end, minus the button overlays. Since it was still just a line drawing, it wasn't providing the customer any more information, so it was removed entirely. 
-
-          * Another final things??
-        image: /img/products-grid3.jpg
-    standout: false
   - heading: Research & Discovery phase
     intro: Now I'd fixed some of the more obvious problems I started to look at
       larger improvements that could be made.
