@@ -19,24 +19,19 @@ sections:
 
 
       Due to the product's nature, this isn't especially unusual, since most people would want to sit in one before purchase. However, since Vitsoe only operated 4 physical shops worldwide, improving online sales was important. 
-    
   - heading: Research & Discovery phase
     intro: Now I'd fixed some of the more obvious problems I started to look at
       larger improvements that could be made.
     standout: false
     headerimage: /img/research.png
     body: >-
-          #### Competitor evaluation
-          At almost £7000, the 620 chair really had one main competitor, the
-          much better known 'Eames chair', retailing at around £5000. The other
-          key competition were from places like Made.com, and other designer
-          outlets. However even the most expensive chairs from sites like
-          Made.com were not directly competing, so I broadened my search to
-          include other high end luxury good. 
+      #### Competitor evaluation
 
 
-          Since another relatively unique feature of the 620 was it's customisation options, I found the luxury car market to be good case studies to look to.
-    
+      At almost £7000, the 620 chair really had one main competitor, the much better known 'Eames chair', retailing at around £5000. The other key competition were from places like Made.com, and other designer outlets. However even the most expensive chairs from sites like Made.com were not directly competing, so I broadened my search to include other high end luxury good. 
+
+
+      Since another relatively unique feature of the 620 was it's customisation options, I found the luxury car market to be good case studies to look to.
   - heading: Wireframing and design
     intro: After identifying some of the key use cases and looking closely at how
       our competitors handled similar UI challenges I moved on to creating
@@ -44,9 +39,11 @@ sections:
     headerimage: /img/design-_-solution.png
     standout: false
     body: >-
-      #### Features
-      I had come up with the following list of features that should be included in the new interface. 
-      * The product needed to be shown either from multiple angles or with a 360 spin
+      #### Features 
+
+
+      I had come up with the following list of features that should be included in the new interface.  * The product needed to be shown either from multiple angles or with a 360 spin
+
 
       * The texture of the product was crucial, close up images of the leather needed to be included when choosing colour
 
@@ -57,7 +54,6 @@ sections:
       * Clear indication of product dimensions.
 
       * Clear indication of lead times for delivery.
-        
   - heading: "Implementation "
     intro: "Once the final design was agreed upon I looked to designing the
       architecture of the page. "
@@ -65,9 +61,9 @@ sections:
     standout: false
     body: >-
       #### Background
-      The existing vitsoe website was built on an outdated PHP framework
-      called Yii, we were running Yii 1.1, which was already several years
-      surpassed by Yii 2.XX (TODO lookup version).
+
+
+      The existing vitsoe website was built on an outdated PHP framework called Yii, we were running Yii 1.1, which was already several years surpassed by Yii 2.XX (TODO lookup version).
 
 
       So from the outset of the project, and when coming up with the design it had already been decided we would build the new page in React. We would be building all the functionality required as a self-contained app. In future it was planned that the website would be moved to a new platform and the react app would be easier to migrate in this form. 
@@ -75,9 +71,11 @@ sections:
 
       Knowing this my final design for the page was quite ambitious; I would certainly have approached the project differently had it not been decided early on that we would be building it in a new framework.
 
+
       #### 3D spinner functionality
-      During the design process I had decided early on that visualisation of
-      the product was a major point for improvement.
+
+
+      During the design process I had decided early on that visualisation of the product was a major point for improvement.
 
 
       I came up with several proposals for how we could achieve these improvements, and worked closely with the creative director to ensure that we would be able to source media for this. 
