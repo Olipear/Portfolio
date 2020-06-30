@@ -81,13 +81,5 @@ collections:
           - {label: "Introduction text", name: "intro", widget: "text"}
           - {label: "Section image", name: "headerimage", widget: "image", required: false}
           - {label: "Is standout section", name: "standout", widget: "boolean", required: false}
-          - label: "Subsections"
-            name: "subsections"
-            widget: "list"
-            create: true
-            required: false
-            fields:
-              - {label: "Subheading", name: "subheading", widget: "string"}
-              - {label: "Body", name: "body", widget: "markdown", required: false}
-              - {label: "Body", name: "body_html", widget: "hidden", required: false}
-              - {label: "Subsection image", name: "image", widget: "image", required: false}
+          - {label: "Body", name: "body", widget: "markdown", required: false}
+          - {label: "Body HTML (hidden)", name: "body_html", widget: "hidden", required: false}

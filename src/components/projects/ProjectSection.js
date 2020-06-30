@@ -19,18 +19,13 @@ const ProjectSection = ({ section }) => {
                 image={section.headerimage}
               />
               <p>{section.intro}</p>
+              <HTMLContent
+                content={section.body_html}
+                className="subsection-body"
+              />
             </div>
           )}
         </div>
-        {section.subsections &&
-          section.subsections.map((subsection) => {
-            return (
-              <ProjectSubsection
-                key={_.trim(subsection.subheading.substring(0, 5))}
-                subsection={subsection}
-              />
-            );
-          })}
       </div>
     </section>
   );

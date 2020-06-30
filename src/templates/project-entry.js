@@ -34,7 +34,7 @@ export const ProjectEntryTemplate = ({ project }) => {
 };
 
 ProjectEntryTemplate.propTypes = {
-  content: PropTypes.shape({
+  project: PropTypes.shape({
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     sections: PropTypes.array.isRequired,
@@ -95,17 +95,7 @@ export const pageQuery = graphql`
               }
             }
           }
-          subsections {
-            body
-            subheading
-            image {
-              childImageSharp {
-                fluid(maxWidth: 760, quality: 100) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
+          body_html
         }
       }
     }
