@@ -58,6 +58,62 @@ sections:
         image: /img/products-grid1.jpg
     standout: false
     headerimage: /img/research.png
+  - heading: Wireframing and design
+    intro: After identifying some of the key use cases and looking closely at how
+      our competitors handled similar UI challenges I moved on to creating
+      several wireframes
+    headerimage: /img/design-_-solution.png
+    subsections:
+      - subheading: Features
+        body: >-
+          I had come up with the following list of features that should be
+          included in the new interface. 
+
+
+          * The product needed to be shown either from multiple angles or with a 360 spin
+
+          * The texture of the product was crucial, close up images of the leather needed to be included when choosing colour
+
+          * Footstools should be their own product on *equal footing* (heh) to the chair.
+
+          * Clear indication of price for the different customisation options available. 
+
+          * Clear indication of product dimensions.
+
+          * Clear indication of lead times for delivery.
+  - heading: "Implementation "
+    intro: "Once the final design was agreed upon I looked to designing the
+      architecture of the page. "
+    subsections:
+      - subheading: Background
+        body: >-
+          The existing vitsoe website was built on an outdated PHP framework
+          called Yii, we were running Yii 1.1, which was already several years
+          surpassed by Yii 2.XX (TODO lookup version).
+
+
+          So from the outset of the project, and when coming up with the design it had already been decided we would build the new page in React. We would be building all the functionality required as a self-contained app. In future it was planned that the website would be moved to a new platform and the react app would be easier to migrate in this form. 
+
+
+          Knowing this my final design for the page was quite ambitious; I would certainly have approached the project differently had it not been decided early on that we would be building it in a new framework.
+      - subheading: "3D spinner functionality "
+        body: >-
+          During the design process I had decided early on that visualisation of
+          the product was a major point for improvement.
+
+
+          I came up with several proposals for how we could achieve these improvements, and worked closely with the creative director to ensure that we would be able to source media for this. 
+
+
+          In the end, renders were decided upon for the following reasons: 
+
+
+          * It was more practical to generate the huge number of images required to create a smooth spinner. with photography we could have only realistically done a maximum of 8 angles, and that would have been 384 photos. 
+
+          * For photography of all the 48 different chair combinations, either thousands of pounds worth of stock would be needed. Because of Vitsoe's standards, this wouldn't have been used for resale. At best, if the one chair was disassembled and rebuilt, it would tie up several assembly team members and days worth of photographer's and studio time. 
+
+          * It was an investment, the 3D models could be rendered in multiple contexts for different use cases. - After the project was complete they were used in an instagram story promotion for example.
+    headerimage: /img/implementation.png
 tags:
   - flavor
   - tasting
