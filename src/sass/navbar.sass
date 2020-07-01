@@ -64,7 +64,7 @@
         transition-duration: $speed
         transition-property: margin-top, max-height
         transition-timing-function: $easing
-        width: 10rem
+        overflow: hidden
         +tablet
             position: relative
             max-height: unset
@@ -72,10 +72,12 @@
             align-items: center
             justify-content: flex-end
             flex-shrink: 0
+            overflow: visible
         .menu-item
             display: block
-            margin-left: -24px
             opacity: 0
+            h4
+                margin: 0 1rem 0 0
             +mobile
                 transition-duration: $speed
                 transition-property: margin-top, opacity
@@ -83,14 +85,15 @@
             +tablet
                 margin-left: 1.5rem
                 opacity: 1
-                h5
+                h4
                     display: none
             .icon
                 display: flex
-                justify-content: space-between
+                justify-content: flex-end
                 padding: 0.2rem
         &.is-open
             +mobile
+                overflow: visible
                 margin-top: 3rem
                 .menu-item
                     opacity: 1

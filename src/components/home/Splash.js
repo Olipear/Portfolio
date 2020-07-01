@@ -29,6 +29,7 @@ const Splash = ({ content, motionProgress }) => {
             <CMSImage
               image={content.image}
               imgStyle={{ objectFit: "contain" }}
+              style={{width: "100%"}}
             />
           </motion.div>
         </div>

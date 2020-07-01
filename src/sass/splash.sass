@@ -6,25 +6,29 @@
     .hero
         &-body
             height: 100%
+            +mobile
+                padding: 0 1.5rem
             .container
                 display: flex
                 flex-direction: column
-                justify-content: space-evenly                
+                justify-content: space-between              
                 align-items: center
                 height: 100%
                 +tablet
                     flex-direction: row
                 .title
-                    font-size: 2rem
-                    line-height: 3.5rem
+                    flex-shrink: 0
                     +tablet
-                        flex-shrink: 1
+                        margin-right: 1rem
+                        flex-shrink: 2
                 .image-wrapper
+                    display: contents
                     flex-shrink: 1
                     width: 100%
                     max-width: 23rem
                     margin: 0 auto
                     +tablet
+                        display: block
                         flex-shrink: 0
                         max-height: unset
                         width: 37%

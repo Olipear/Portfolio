@@ -31,7 +31,7 @@ const NavMenuItem = ({
       onFocus={onFocusHandler}
     >
       <div className={`icon ${!disabled ? "" : "disabled"}`}>
-        <h5>{alt}</h5>
+        <h4>{alt}</h4>
         <motion.span initial={{ width: "24px" }} whileHover={{ wdith: "27px" }}>
           <Icon width="100%" />
         </motion.span>
