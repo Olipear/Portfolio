@@ -2,7 +2,12 @@ import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import useWindowDimensions from "../components/UseWindowDimensions";
-import { useTransform, useViewportScroll } from "framer-motion";
+import {
+  useTransform,
+  useViewportScroll,
+  AnimatePresence,
+  motion,
+} from "framer-motion";
 import Layout from "../components/Layout";
 import Splash from "../components/home/Splash";
 import Blurbs from "../components/home/Blurbs";
@@ -29,12 +34,12 @@ export const IndexPageTemplate = ({ data }) => {
   }, [scrollOffSplashProgress]);
 
   return (
-    <div className="content">
+    <>
       <Splash content={data.splash} motionProgress={scrollOffSplashProgress} />
       <Blurbs content={data.blurbs} triggerIn={offSplash} />
       <ProjectRoll />
       <About content={data.about} />
-    </div>
+    </>
   );
 };
 
@@ -61,9 +66,18 @@ const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
   return (
-    <Layout splash={true}>
-      <IndexPageTemplate data={frontmatter || {}} />
-    </Layout>
+    <AnimatePresence>
+      <Layout splash={true}>
+        <motion.div
+          key="content"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
+          <IndexPageTemplate data={frontmatter || {}} />
+        </motion.div>
+      </Layout>
+    </AnimatePresence>
   );
 };
 

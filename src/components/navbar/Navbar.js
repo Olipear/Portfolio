@@ -1,68 +1,71 @@
-import React, { useState } from "react";
-import { Link, graphql, useStaticQuery } from "gatsby";
-import NavMenu from "./NavMenu";
-import NavMenuButton from "./NavMenuButton";
-import logo from "../../img/logo.svg";
-import NavOverlay from "./NavOverlay";
-import NavBarSplash from "./NavBarSplash";
+import React from "react";
+import { graphql } from "gatsby";
+import {
+  motion,
+  useViewportScroll,
+  useTransform,
+} from "framer-motion";
+import useWindowDimensions from "../UseWindowDimensions";
+import NavbarContent from "./NavbarContent";
 
+const navbarVariants = {
+  splash: {
+    padding: "1.5rem 0 1.5rem 0",
+    height: "7rem",
+    boxShadow: "rgba(0, 0, 0, 0) 0px 1px 5px",
+    background: "rgba(248,248,248,0)",
+  },
+  small: {
+    padding: "0.8rem 0 0.8rem 0",
+    height: "3.4rem",
+    boxShadow: "rgba(0, 0, 0, 0.2) 0px 1px 5px",
+    background: "rgba(248,248,248,0.95)",
+  },
+};
 
 const Navbar = ({ splash }) => {
-  const data = useStaticQuery(
-    graphql`
-      query navigationQuery {
-        markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
-          frontmatter {
-            navigation {
-              githuburl
-              githublabel
-              linkedinurl
-              linkedinlabel
-              cv_pdf
-              cv_pdflabel
-            }
-          }
-        }
-      }
-    `
-  ).markdownRemark.frontmatter.navigation;
+  const { windowHeight } = useWindowDimensions();
+  const { scrollY } = useViewportScroll();
 
-  const [open, setOpen] = useState(false);
+  const height = useTransform(
+    scrollY,
+    [0, windowHeight],
+    [navbarVariants.splash.height, navbarVariants.small.height]
+  );
+  const padding = useTransform(
+    scrollY,
+    [0, windowHeight],
+    [navbarVariants.splash.padding, navbarVariants.small.padding]
+  );
+  const boxShadow = useTransform(
+    scrollY,
+    [0, windowHeight],
+    [navbarVariants.splash.boxShadow, navbarVariants.small.boxShadow]
+  );
+  const background = useTransform(
+    scrollY,
+    [0, windowHeight / 2],
+    [navbarVariants.splash.background, navbarVariants.small.background]
+  );
 
-  const navContent = (
-    <div className="container">
-      <NavOverlay open={open} />
-      <div className="navbar-brand">
-        <Link to="/" className="navbar-item" title="home">
-          <img src={logo} style={{height: "100%"}} alt="olipear" />
-        </Link>
-      </div>
-      
-      <NavMenu data={data} open={open} setOpen={setOpen} />
-      <NavMenuButton open={open} setOpen={setOpen} />
-    </div>
-  )
+  const style = {
+    height,
+    padding,
+    boxShadow,
+    background,
+  };
 
-  if (splash) {
-    return (
-      <NavBarSplash>
-        {navContent}
-      </NavBarSplash>
-    );
-  } else {
-    return (
-      <nav
-        className="navbar"
-        role="navigation"
-        aria-label="main-navigation"
-        id="navigation"
-      >
-        {navContent}
-      </nav>
-    );
-  }
-
-  
+  return (
+    <motion.nav
+      className="navbar"
+      style={splash?style:navbarVariants.small}
+      role="navigation"
+      aria-label="main-navigation"
+      id="navigation"
+    >
+      <NavbarContent/>
+    </motion.nav>
+  );
 };
 
 export default Navbar;

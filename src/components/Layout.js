@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Helmet } from 'react-helmet'
 import '../sass/all.sass'
 import useSiteMetadata from './SiteMetadata'
@@ -6,14 +6,15 @@ import { withPrefix } from 'gatsby'
 import Navbar from './navbar/Navbar'
 import Footer from './Footer'
 
-const TemplateWrapper = ({ splash = false, children }) => {
-  const { title, description } = useSiteMetadata()
+const TemplateWrapper = ({ splash = false, children, title = false }) => {
+  const SiteMetadata = useSiteMetadata()
+
   return (
     <div>
       <Helmet>
         <html lang="en" />
-        <title>{title}</title>
-        <meta name="description" content={description} />
+        <title>{title?title:SiteMetadata.title}</title>
+        <meta name="description" content={SiteMetadata.description} />
 
         <link
           rel="apple-touch-icon"
@@ -41,7 +42,7 @@ const TemplateWrapper = ({ splash = false, children }) => {
         <meta name="theme-color" content="#fff" />
 
         <meta property="og:type" content="business.business" />
-        <meta property="og:title" content={title} />
+        <meta property="og:title" content={title?title:SiteMetadata.title} />
         <meta property="og:url" content="/" />
         <meta
           property="og:image"
@@ -49,7 +50,7 @@ const TemplateWrapper = ({ splash = false, children }) => {
         />
       </Helmet>
       <Navbar splash={splash} />
-      <div>{children}</div>
+      <div className="content">{children}</div>
       <Footer/>
     </div>
   )

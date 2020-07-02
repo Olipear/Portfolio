@@ -1,6 +1,6 @@
 
 
-$title-padding-height: 0.4
+$title-padding-height: 0.8
 $title-height: ($title-padding-height*2)+1.5
 $tile-image-height: 18
 $tile-padding: 1
@@ -9,6 +9,7 @@ $total-tile-height: $title-height + $tile-image-height + ($tile-padding*2)
 .project.tile.is-ancestor            
     .tile.is-child
         position: relative
+        padding: $tile-padding+rem 0
         +tablet
             padding: $tile-padding+rem
         .image
@@ -17,7 +18,6 @@ $total-tile-height: $title-height + $tile-image-height + ($tile-padding*2)
                 height: $tile-image-height+rem
                 position: relative
                 overflow: hidden
-                border-radius: 2px
             &-inner-container
                 width: 100%
                 height: 200%
@@ -36,15 +36,25 @@ $total-tile-height: $title-height + $tile-image-height + ($tile-padding*2)
                 transition-duration: $speed
                 transition-property: opacity
                 transition-timing-function: ease-in-out
-        a:hover, a:focus
-            .image-inner-container
-                transform: translate(0%,-50%) scale(1)
-                transition-duration: 2s
-            .image-overlay
-                opacity: 0.2
-        h1
-            padding: $title-padding-height+rem 0
-        
+        a
+            display: block
+            background: $bg-light
+            overflow: hidden
+            border-radius: 2px
+            box-shadow: -1px 1px 4px 0px $shadow
+            transition-duration: $speed/2
+            transition-property: box-shadow
+            transition-timing-function: ease-in-out
+            &:hover, &:focus
+                box-shadow: -5px 5px 6px 2px $shadow
+                .image-inner-container
+                    transform: translate(0%,-50%) scale(1)
+                    transition-duration: 2s
+                .image-overlay
+                    opacity: 0.2
+        h3
+            padding: $title-padding-height+rem
+            margin: 0
         &:only-child
             +tablet
                 .image-outer-container
@@ -61,35 +71,8 @@ $total-tile-height: $title-height + $tile-image-height + ($tile-padding*2)
         
 section.project
     &.hero
-        padding: 4rem 0 0 0
-        +tablet
-            padding: 6rem 0
-        .hero-body
-            +tablet
-                padding: 5rem 1.5rem 0 1.5rem
-            .container
-                display: flex
-                flex-direction: column
-                justify-content: space-evenly                
-                align-items: center
-                height: 100%
-                +tablet
-                    flex-direction: row
-                .title-container
-                    flex-grow: 0
-                    flex-shrink: 0
-                    width: 100%
-                    margin-bottom: 1rem
-                    +tablet
-                        width: 50%
-                .image-container   
-                    flex-shrink: 1
-                    width: 100%
-                    margin: 1rem auto
-                    +tablet
-                        flex-shrink: 0
-                        max-height: unset
-                        width: 37%
+        .title
+            max-width: calc(30vw + 550px )
     .section
         &-heading
             text-align: center
@@ -110,4 +93,5 @@ section.project
                 text-align: left
                 margin: 0 auto 4rem 0
         &-body
-            max-width: 550px
+            > *:not(img)
+                max-width: 550px

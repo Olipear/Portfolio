@@ -7,17 +7,15 @@ import Layout from "../components/Layout";
 import ProjectSection from "../components/projects/ProjectSection";
 import _ from "lodash";
 import CMSImage from "../components/CMSImage";
+import { AnimatePresence, motion } from "framer-motion";
 
 export const ProjectEntryTemplate = ({ project }) => {
   return (
     <>
-      <section
-        className="hero is-medium project"
-        style={{ zIndex: -1 }}
-      >
+      <section className="hero is-medium project" style={{ zIndex: -1 }}>
         <div className="hero-body">
           <div className="container">
-              <h1 className="title">{project.description}</h1>
+            <h1 className="title">{project.description}</h1>
           </div>
         </div>
       </section>
@@ -45,20 +43,18 @@ const ProjectEntry = ({ data }) => {
   const { markdownRemark: project } = data;
 
   return (
-    <Layout>
-      <ProjectEntryTemplate
-        project={project.frontmatter}
-        helmet={
-          <Helmet titleTemplate="%s | Project">
-            <title>{`${project.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${project.frontmatter.description}`}
-            />
-          </Helmet>
-        }
-      />
-    </Layout>
+    <AnimatePresence>
+      <Layout splash={false} title={project.frontmatter.title}>
+        <motion.div
+          key="content"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
+          <ProjectEntryTemplate project={project.frontmatter} />
+        </motion.div>
+      </Layout>
+    </AnimatePresence>
   );
 };
 
