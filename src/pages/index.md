@@ -1,9 +1,8 @@
 ---
 templateKey: index-page
-title: Oliver Pearson's portfolio
+title: Olipear home
 splash:
-  intro: |
-    I'm a designer who knows code
+  intro: I'm a designer who knows code
   image: /img/paper-illustrations-stack.png
   buttontext: Read more
 navigation:
@@ -34,11 +33,9 @@ footer:
   email: olipear@gmail.com
   map_link: https://goo.gl/maps/nnMSXwqwRoo5iPS19
   map_label: Leamington Spa, UK
-  bottom_text: >-
-    This site was made using gatsby, with netlify CMS. If you like this
-    portfolio, fork on Github. Please give credit where due.
-
-    Original splash artwork not for reuse.
+  bottom_text: This site was made using gatsby, with netlify CMS. If you like this
+    portfolio, fork on Github. Please give credit where due. Original splash
+    artwork not for reuse.
 notfound:
   text: "404: There's no page here, but there is a picture of my cat!"
   image: /img/mushu.jpg
