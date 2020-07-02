@@ -76,7 +76,7 @@ collections:
             widget: "object"
             fields:
               - {label: "404 text" , name: "text", widget: "string"}
-              - {label: "404 image" , name: "image", widget: "string"}
+              - {label: "404 image" , name: "image", widget: "image"}
   - name: "projects"
     label: "Project"
     folder: "src/pages/projects"
