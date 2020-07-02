@@ -77,7 +77,7 @@ const Footer = () => {
 export default Footer;
 
 const footerQuery = graphql`
-  query navigationQuery {
+  query footerQuery {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         footer {
