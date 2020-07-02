@@ -1,7 +1,8 @@
 import React from "react";
 import Layout from "../components/Layout";
-import { useStaticQuery } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 import CMSImage from "../components/CMSImage";
+
 
 const NotFoundPage = () => {
   const data = useStaticQuery(NotFoundQuery).markdownRemark.frontmatter.notfound;

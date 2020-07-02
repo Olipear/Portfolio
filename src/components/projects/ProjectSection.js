@@ -1,6 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
-import _ from "lodash";
 import CMSImage from "../CMSImage";
 import { HTMLContent } from "../Content";
 
@@ -12,7 +10,6 @@ const ProjectSection = ({ section }) => {
           <div className="column is-one-half-mobile is-one-third-tablet">
             <h2 className="section-heading">{section.heading}</h2>
           </div>
-          <h4></h4>
           <div className="column">
             {section.headerimage && (
               <CMSImage className="section-image" image={section.headerimage} />

@@ -24,7 +24,7 @@ const Footer = () => {
         </motion.div>
         <div className="columns">
           <div className="column is-one-third logo">
-            <Link to="/" className="navbar-item" title="home">
+            <Link to="/" title="home">
               <Logo />
             </Link>
             <h4>{data.logo_strapline}</h4>

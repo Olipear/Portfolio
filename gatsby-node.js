@@ -20,7 +20,6 @@ exports.createPages = ({ actions, graphql }) => {
               slug
             }
             frontmatter {
-              tags
               templateKey
             }
           }
@@ -39,7 +38,6 @@ exports.createPages = ({ actions, graphql }) => {
       const id = edge.node.id;
       createPage({
         path: edge.node.fields.slug,
-        tags: edge.node.frontmatter.tags,
         component: path.resolve(
           `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
         ),
@@ -60,7 +58,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   if (node.frontmatter && node.frontmatter.templateKey == 'project-entry') {
     if (node.frontmatter.sections) {
       node.frontmatter.sections.map(section =>{
-        if (section.body) {
+        if (section.body !== null) {
           section.body_html = remark().use(remarkHTML).processSync(section.body).toString();
         }
       })

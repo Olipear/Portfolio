@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import ProjectSection from "../components/projects/ProjectSection";
 import _ from "lodash";
 import { AnimatePresence, motion } from "framer-motion";
 import ProjectRoll from "../components/projects/ProjectRoll";
-import { OutboundLink } from "gatsby-plugin-google-analytics"
+import { OutboundLink } from "gatsby-plugin-google-analytics";
 
 export const ProjectEntryTemplate = ({ project }) => {
   return (
@@ -48,9 +48,12 @@ export const ProjectEntryTemplate = ({ project }) => {
 
 ProjectEntryTemplate.propTypes = {
   project: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    sections: PropTypes.array.isRequired,
+    id: PropTypes.string.isRequired,
+    frontmatter: PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+      sections: PropTypes.array,
+    }),
   }).isRequired,
 };
 

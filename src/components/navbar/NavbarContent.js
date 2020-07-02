@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link, graphql, useStaticQuery } from "gatsby";
 import NavMenu from "./NavMenu";
 import NavMenuButton from "./NavMenuButton";
@@ -6,7 +6,7 @@ import logo from "../../img/logo.svg";
 import NavOverlay from "./NavOverlay";
 import { motion } from "framer-motion";
 
-const NavbarContent = ({ splash }) => {
+const NavbarContent = () => {
   const data = useStaticQuery(navigationQuery).markdownRemark.frontmatter
     .navigation;
 
@@ -16,7 +16,7 @@ const NavbarContent = ({ splash }) => {
     <div className="container">
       <NavOverlay open={open} />
       <div className="navbar-brand">
-        <Link to="/" title="home" className="navbar-item">
+        <Link to="/" title="home" className="navbar-brand">
           <motion.div style={{height: "100%"}} whileHover={{ scale: 1.1}}>
             <img src={logo} style={{ height: "100%" }} alt="olipear" />
           </motion.div>

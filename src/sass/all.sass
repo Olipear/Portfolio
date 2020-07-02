@@ -26,9 +26,10 @@ $hover: #24252e
 $disabled: #B8B9C2
 
 //olipear styles
-
+/* purgecss start ignore */
 
 // ---- base ----
+
 html
   background-color: $bg-light
   -moz-osx-font-smoothing: grayscale
@@ -124,23 +125,22 @@ a
   transition-property: box-shadow
   transition-timing-function: ease-in-out
   &:hover, &:focus
-      box-shadow: -4px 4px 5px 1px $shadow
-  & >
-    & h1, h2, h3, h4, h5, p
-      &::after
-        content: ''
-        display: inline-block
-        width: 0.5em
-        height: 0.5em
-        border-right: 3px solid currentcolor
-        border-top: 3px solid currentcolor
-        border-radius: 2px
-        transform: rotate(45deg)
-        margin-left: 0.4em
-        margin-bottom: 1px
-        transition: margin $speed/2 $easing
-  &:hover >
-    & h1, h2, h3, h4, h5, p
+    box-shadow: -4px 4px 5px 1px $shadow
+  & > h1, & > h2, & > h3, & > h4, & > h5, & > p
+    &::after
+      content: ''
+      display: inline-block
+      width: 0.5em
+      height: 0.5em
+      border-right: 3px solid currentcolor
+      border-top: 3px solid currentcolor
+      border-radius: 2px
+      transform: rotate(45deg)
+      margin-left: 0.4em
+      margin-bottom: 1px
+      transition: margin $speed/2 $easing
+  &:hover
+    & > h1, & > h2, & > h3, & > h4, & > h5, & > p
       &::after
         margin-left: 0.6em
 
@@ -277,7 +277,9 @@ section, .section
     margin: 0 auto
     
 
+
 @import "./navbar.sass"
 @import "./splash.sass"
 @import "./projects.sass"
 @import "./footer.sass"
+/* purgecss end ignore */
