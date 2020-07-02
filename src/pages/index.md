@@ -19,11 +19,12 @@ blurbs:
       project, or need someone who can bring your design and dev teams together,
       look no further.
 about:
-  aboutbody: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-    esse cillum dolore eu fugiat nulla pariatur.
+  aboutbody: >
+    I currently live in Leamington Spa with my partner Merle. I carry on with
+    computer animation as a hobby, practicing with 3D models to create concept
+    art. I like to read science fiction and create sci-fi artwork, I find work
+    of Simon Stålenhag a great inspiration and you'll probably see his work on
+    my desktop backgrounds. 
   image: /img/profile-pic.jpg
 footer:
   logo_strapline: Oliver Pearson
@@ -32,8 +33,9 @@ footer:
   email: olipear@gmail.com
   map_link: https://goo.gl/maps/nnMSXwqwRoo5iPS19
   map_label: Leamington Spa, UK
-  bottom_text: |-
-    This site was made using gatsby, with netlify CMS. If you like
-                  this portfolio, fork on Github. Please give credit where due.
-                  Original splash artwork not for reuse.
+  bottom_text: >-
+    This site was made using gatsby, with netlify CMS. If you like this
+    portfolio, fork on Github. Please give credit where due.
+
+    Original splash artwork not for reuse.
 ---
