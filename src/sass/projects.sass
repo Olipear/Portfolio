@@ -2,7 +2,7 @@
 
 $title-padding-height: 0.8
 $title-height: ($title-padding-height*2)+1.5
-$tile-image-height: 18
+$tile-image-height: 16
 $tile-padding: 1
 $total-tile-height: $title-height + $tile-image-height + ($tile-padding*2)
     
@@ -38,15 +38,7 @@ $total-tile-height: $title-height + $tile-image-height + ($tile-padding*2)
                 transition-timing-function: ease-in-out
         a
             display: block
-            background: $bg-light
-            overflow: hidden
-            border-radius: 2px
-            box-shadow: -1px 1px 4px 0px $shadow
-            transition-duration: $speed/2
-            transition-property: box-shadow
-            transition-timing-function: ease-in-out
             &:hover, &:focus
-                box-shadow: -5px 5px 6px 2px $shadow
                 .image-inner-container
                     transform: translate(0%,-50%) scale(1)
                     transition-duration: 2s
@@ -68,11 +60,22 @@ $total-tile-height: $title-height + $tile-image-height + ($tile-padding*2)
                         transition-duration: 2s
                     .image-overlay
                         opacity: 0.2
+    .is-parent:only-child .is-child:only-child
+        +tablet
+            padding-left: 33%
+            .image-outer-container
+                height: $tile-image-height+rem
+                
         
 section.project
     &.hero
         .title
             max-width: calc(30vw + 550px )
+        a.interactive
+            padding: 0.5rem 2rem
+            & > *
+                display: inline
+                
     .section
         &-heading
             text-align: center

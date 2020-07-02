@@ -107,11 +107,42 @@ ul
 a
   color: $interact
   cursor: pointer
-  text-decoration: none
+  text-decoration: underline
   strong
     color: currentColor
   &:hover
     color: $hover
+    
+.interactive
+  text-decoration: none
+  display: inline-block
+  background: $bg-light
+  overflow: hidden
+  border-radius: 2px
+  box-shadow: -1px 1px 4px 0px $shadow
+  transition-duration: $speed/2
+  transition-property: box-shadow
+  transition-timing-function: ease-in-out
+  &:hover, &:focus
+      box-shadow: -4px 4px 5px 1px $shadow
+  & >
+    & h1, h2, h3, h4, h5, p
+      &::after
+        content: ''
+        display: inline-block
+        width: 0.5em
+        height: 0.5em
+        border-right: 3px solid currentcolor
+        border-top: 3px solid currentcolor
+        border-radius: 2px
+        transform: rotate(45deg)
+        margin-left: 0.4em
+        margin-bottom: 1px
+        transition: margin $speed/2 $easing
+  &:hover >
+    & h1, h2, h3, h4, h5, p
+      &::after
+        margin-left: 0.6em
 
 .icon 
   color: $interact
