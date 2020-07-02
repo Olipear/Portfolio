@@ -6,6 +6,7 @@ title: UX case study
 description: In conjunction with the implementation of a new VoIP phone system,
   I redesigned the means of contacting the company.
 featuredimage: /img/products-grid2.jpg
+other_projects: More Projects
 featuredpost: false
 sections:
   - heading: Heading
