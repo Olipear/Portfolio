@@ -58,7 +58,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   if (node.frontmatter && node.frontmatter.templateKey == 'project-entry') {
     if (node.frontmatter.sections) {
       node.frontmatter.sections.map(section =>{
-        if (section.body !== null) {
+        if (section.body) {
           section.body_html = remark().use(remarkHTML).processSync(section.body).toString();
         }
       })
