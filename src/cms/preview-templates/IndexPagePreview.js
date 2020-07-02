@@ -8,6 +8,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
     return (
       <IndexPageTemplate
       data={data}
+      previewMode={true}
       />
     )
   } else {

@@ -14,10 +14,10 @@ import Blurbs from "../components/home/Blurbs";
 import ProjectRoll from "../components/projects/ProjectRoll";
 import About from "../components/home/About";
 
-export const IndexPageTemplate = ({ data }) => {
+export const IndexPageTemplate = ({ data, previewMode = false }) => {
   const { windowHeight } = useWindowDimensions();
   const { scrollY } = useViewportScroll();
-  const [offSplash, setOffSplash] = useState(false);
+  const [offSplash, setOffSplash] = useState(previewMode);
 
   const scrollOffSplashProgress = useTransform(
     scrollY,
