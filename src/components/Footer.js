@@ -9,8 +9,7 @@ import { OutboundLink } from "gatsby-plugin-google-analytics";
 import { Link, graphql, useStaticQuery } from "gatsby";
 
 const Footer = () => {
-  const data = useStaticQuery(footerQuery).markdownRemark.frontmatter
-    .navigation;
+  const data = useStaticQuery(footerQuery).markdownRemark.frontmatter.footer;
 
   return (
     <footer className="footer">
@@ -28,38 +27,38 @@ const Footer = () => {
             <Link to="/" className="navbar-item" title="home">
               <Logo />
             </Link>
-            <h4>Oliver Pearson</h4>
+            <h4>{data.logo_strapline}</h4>
           </div>
           <div className="column is-offset-4 contact">
             <ul className="contact-items">
               <li>
                 <OutboundLink
-                  href="tel:+447787385189"
+                  href={`tel:${data.telephone}`}
                   eventCategory="footer-contact-link"
                 >
                   <Phone width="24" height="24" />
-                  +44 (0)7787 385 189
+                  {data.telephone_label}
                 </OutboundLink>
               </li>
               <li>
                 <OutboundLink
-                  href="mailto:olipear@gmail.com"
+                  href={`mailto:${data.email}`}
                   rel="noopener noreferrer"
                   eventCategory="footer-contact-link"
                 >
                   <Email width="24" height="24" />
-                  olipear@gmail.com
+                  {data.email}
                 </OutboundLink>
               </li>
               <li>
                 <OutboundLink
-                  href="https://goo.gl/maps/nnMSXwqwRoo5iPS19"
+                  href={data.map_link}
                   target="_blank"
                   rel="noopener noreferrer"
                   eventCategory="footer-contact-link"
                 >
                   <Location width="24" height="24" />
-                  Leamington Spa, UK
+                  {data.map_label}
                 </OutboundLink>
               </li>
             </ul>
@@ -67,11 +66,7 @@ const Footer = () => {
         </div>
         <div className="columns">
           <div className="column is-one-third bottom-text">
-            <p>
-              This site was made using gatsby, with netlify CMS. If you like
-              this portfolio, fork on Github. Please give credit where due.
-              Original splash artwork not for reuse.
-            </p>
+            <p>{data.bottom_text}</p>
           </div>
         </div>
       </div>
