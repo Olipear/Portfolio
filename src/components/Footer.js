@@ -6,10 +6,9 @@ import { ReactComponent as Logo } from "../img/logo-mono.svg";
 import { motion } from "framer-motion";
 import scrollToSmooth from "./SmoothScroll";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
-import { Link, graphql, useStaticQuery } from "gatsby";
+import { Link, graphql, StaticQuery } from "gatsby";
 
-const Footer = () => {
-  const data = useStaticQuery(footerQuery).markdownRemark.frontmatter.footer;
+const Footer = ({data}) => {
 
   return (
     <footer className="footer">
@@ -74,9 +73,9 @@ const Footer = () => {
   );
 };
 
-export default Footer;
-
-const footerQuery = graphql`
+export default () => (
+  <StaticQuery
+  query={graphql`
   query footerQuery {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
@@ -92,4 +91,6 @@ const footerQuery = graphql`
       }
     }
   }
-`;
+`} render={(data) => <Footer data={data.markdownRemark.frontmatter.footer} />}/>
+);
+
