@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, StaticQuery } from "gatsby";
 import ProjectTile from "./ProjectTile";
 
 // array to determine how many tiles per row to place
@@ -23,29 +23,16 @@ const tileLayouts = [
   [{ parent: [0, 1] }, { parent: [2, 3, 4] }],
 ];
 
-const ProjectRoll = ({ excludeSelfByID = false }) => {
-  const { edges: projects } = useStaticQuery(ProjectsQuery).allMarkdownRemark;
-  const [filteredProjects, filterProjects] = useState(projects);
-
-  useEffect(() => {
-    if (excludeSelfByID) {
-      let projectsTmp = [];
-      projects.map((project) => {
-        if (project.node.id !== excludeSelfByID) {
-          projectsTmp.push(project);
-        }
-      });
-      filterProjects(projectsTmp);
-    }
-  }, [excludeSelfByID, projects]);
+const ProjectRoll = ({ data, excludeSelfByID = false }) => {
+  const { edges: projects } = data.allMarkdownRemark;
 
   const buildProjectTiles = (obj) => {
     if (Array.isArray(obj)) {
       return obj.map((projectIndex) => {
         return (
           <ProjectTile
-            key={filteredProjects[projectIndex].node.id}
-            project={filteredProjects[projectIndex].node}
+            key={projects[projectIndex].node.id}
+            project={projects[projectIndex].node}
           />
         );
       });
@@ -70,10 +57,10 @@ const ProjectRoll = ({ excludeSelfByID = false }) => {
     }
   };
 
-  if (filteredProjects.length > 0) {
+  if (projects.length > 0) {
     return (
       <div className="tile is-ancestor project">
-        {tileLayouts[Math.min(filteredProjects.length - 1, 4)].map((layout) =>
+        {tileLayouts[Math.min(projects.length - 1, 4)].map((layout) =>
           buildProjectGrid(layout)
         )}
       </div>
@@ -83,9 +70,10 @@ const ProjectRoll = ({ excludeSelfByID = false }) => {
   }
 };
 
-export default ProjectRoll;
-
-const ProjectsQuery = graphql`
+export default () => (
+  
+  <StaticQuery 
+  query={graphql`
   query ProjectRollQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
@@ -118,4 +106,7 @@ const ProjectsQuery = graphql`
       }
     }
   }
-`;
+`}
+  render={(data, excludeSelfByID) => <ProjectRoll data={data} excludeSelfByID={excludeSelfByID} />}
+  />
+)
