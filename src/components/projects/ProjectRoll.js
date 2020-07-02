@@ -37,7 +37,7 @@ const ProjectRoll = ({ excludeSelfByID = false }) => {
       });
       filterProjects(projectsTmp);
     }
-  }, [excludeSelfByID]);
+  }, [excludeSelfByID, projects]);
 
   const buildProjectTiles = (obj) => {
     if (Array.isArray(obj)) {

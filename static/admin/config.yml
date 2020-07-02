@@ -101,5 +101,5 @@ collections:
           - {label: "Section image", name: "headerimage", widget: "image", required: false}
           - {label: "Is standout section", name: "standout", widget: "boolean", required: false}
           - {label: "Body", name: "body", widget: "markdown", required: false}
-          - {label: "Body HTML (hidden)", name: "body_html", widget: "hidden", required: false}
+          - {label: "Body HTML (hidden)", name: "body_html", widget: hidden, required: false, default: " "}
       - {label: "Other projects heading", name: "other_projects", widget: string}

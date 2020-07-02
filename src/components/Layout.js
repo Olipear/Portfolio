@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Helmet } from 'react-helmet'
 import '../sass/all.sass'
 import useSiteMetadata from './SiteMetadata'
@@ -13,7 +13,7 @@ const TemplateWrapper = ({ splash = false, children, title = false }) => {
     <div>
       <Helmet>
         <html lang="en" />
-        <title>{title?title:SiteMetadata.title}</title>
+        <title>{SiteMetadata.title}</title>
         <meta name="description" content={SiteMetadata.description} />
 
         <link
@@ -42,7 +42,7 @@ const TemplateWrapper = ({ splash = false, children, title = false }) => {
         <meta name="theme-color" content="#fff" />
 
         <meta property="og:type" content="business.business" />
-        <meta property="og:title" content={title?title:SiteMetadata.title} />
+        <meta property="og:title" content={SiteMetadata.title} />
         <meta property="og:url" content="/" />
         <meta
           property="og:image"
