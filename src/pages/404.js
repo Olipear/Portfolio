@@ -1,13 +1,41 @@
-import React from 'react'
-import Layout from '../components/Layout'
+import React from "react";
+import Layout from "../components/Layout";
+import { useStaticQuery } from "gatsby";
+import CMSImage from "../components/CMSImage";
 
-const NotFoundPage = () => (
-  <Layout>
-    <div>
-      <h1>NOT FOUND</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-    </div>
-  </Layout>
-)
+const NotFoundPage = () => {
+  const data = useStaticQuery(NotFoundQuery).markdownRemark.frontmatter.notfound;
+  return (
+    <Layout>
+      <section className="hero is-medium">
+        <div className="hero-body">
+          <div className="container">
+            <h1 className="title">{data.text}</h1>
+            <CMSImage image={data.image} />
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+};
 
-export default NotFoundPage
+export default NotFoundPage;
+
+const NotFoundQuery = graphql`
+  query notFoundQuery {
+    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+      frontmatter {
+        notfound {
+          text
+          image {
+            childImageSharp {
+              fluid(maxWidth: 500, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;

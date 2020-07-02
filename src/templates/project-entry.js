@@ -4,7 +4,6 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import ProjectSection from "../components/projects/ProjectSection";
 import _ from "lodash";
-import CMSImage from "../components/CMSImage";
 import { AnimatePresence, motion } from "framer-motion";
 import ProjectRoll from "../components/projects/ProjectRoll";
 import { OutboundLink } from "gatsby-plugin-google-analytics"
@@ -89,13 +88,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
-        featuredimage {
-          childImageSharp {
-            fluid(maxWidth: 600, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
         featuredlink
         featuredlinklabel
         sections {

@@ -71,6 +71,12 @@ collections:
               - {label: "Maps Link", name: "map_link", widget: "string"}
               - {label: "Maps Label", name: "map_label", widget: "string"}
               - {label: "Bottom text", name: "bottom_text", widget: "text"}
+          - label: "404"
+            name: "notfound"
+            widget: "object"
+            fields:
+              - {label: "404 text" , name: "text", widget: "string"}
+              - {label: "404 image" , name: "image", widget: "string"}
   - name: "projects"
     label: "Project"
     folder: "src/pages/projects"
