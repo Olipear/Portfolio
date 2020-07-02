@@ -40,5 +40,5 @@ footer:
     Original splash artwork not for reuse.
 notfound:
   text: "404: There's no page here, but there is a picture of my cat!"
-  image: /img/404.jpg
+  image: /img/mushu.jpg
 ---
