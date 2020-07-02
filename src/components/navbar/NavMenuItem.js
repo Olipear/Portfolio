@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 const NavMenuItem = ({
   url,
@@ -21,7 +22,7 @@ const NavMenuItem = ({
   }
 
   return (
-    <a
+    <OutboundLink
       className="menu-item"
       href={url}
       target={!disabled ? "_blank" : ""}
@@ -29,14 +30,15 @@ const NavMenuItem = ({
       title={alt}
       onBlur={onBlurHandler}
       onFocus={onFocusHandler}
+      eventCategory="header-menu-link"
     >
       <div className={`icon ${!disabled ? "" : "disabled"}`}>
         <h4>{alt}</h4>
-        <motion.span initial={{ width: "24px" }} whileHover={{ wdith: "27px" }}>
+        <motion.span initial={{ width: "24px", height: "24px" }} whileHover={{ wdith: "27px" }}>
           <Icon width="100%" />
         </motion.span>
       </div>
-    </a>
+    </OutboundLink>
   );
 };
 

@@ -11,7 +11,7 @@ import {
 import Layout from "../components/Layout";
 import Splash from "../components/home/Splash";
 import Blurbs from "../components/home/Blurbs";
-import ProjectRoll from "../components/home/ProjectRoll";
+import ProjectRoll from "../components/projects/ProjectRoll";
 import About from "../components/home/About";
 
 export const IndexPageTemplate = ({ data }) => {
@@ -37,7 +37,11 @@ export const IndexPageTemplate = ({ data }) => {
     <>
       <Splash content={data.splash} motionProgress={scrollOffSplashProgress} />
       <Blurbs content={data.blurbs} triggerIn={offSplash} />
-      <ProjectRoll />
+      <section className="section is-medium" id="projects">
+        <div className="container">
+          <ProjectRoll />
+        </div>
+      </section>
       <About content={data.about} />
     </>
   );

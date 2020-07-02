@@ -60,6 +60,17 @@ collections:
             fields:
               - {label: "About me", name: "aboutbody", widget: "text"}
               - {label: "Profile Pic", name: "image", widget: "image"}
+          - label: "footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - {label: "Logo strapline" , name: "logo_strapline", widget: "string"}
+              - {label: "Telephone number" , name: "telephone", widget: "string"}
+              - {label: "Telephone number label" , name: "telephone_label", widget: "string"}
+              - {label: "Email address", name: "email", widget: "string"}
+              - {label: "Maps Link", name: "map_link", widget: "string"}
+              - {label: "Maps Label", name: "map_label", widget: "string"}
+              - {label: "Bottom text", name: "bottom_text", widget: "text"}
   - name: "projects"
     label: "Project"
     folder: "src/pages/projects"
@@ -72,6 +83,8 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Overview description", name: "description", widget: "text"}
       - {label: "Featured Image", name: "featuredimage", widget: image}
+      - {label: "Featured link", name: "featuredlink", widget: string, required: false}
+      - {label: "Featured link label", name: "featuredlinklabel", widget: string, required: false}
       - label: "Sections"
         name: "sections"
         widget: "list"
@@ -83,3 +96,4 @@ collections:
           - {label: "Is standout section", name: "standout", widget: "boolean", required: false}
           - {label: "Body", name: "body", widget: "markdown", required: false}
           - {label: "Body HTML (hidden)", name: "body_html", widget: "hidden", required: false}
+      - {label: "Other projects heading", name: "other_projects", widget: string}

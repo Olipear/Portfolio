@@ -7,7 +7,7 @@ const ProjectTile = ({ project }) => {
   
   return (
     <div className="tile is-child">
-      <Link to={project.fields.slug}>
+      <Link to={project.fields.slug} className="interactive">
         <div className="image-outer-container">
           
           {project.frontmatter.featuredimage ? (
@@ -21,9 +21,9 @@ const ProjectTile = ({ project }) => {
           ) : null}
           <div className="image-overlay"></div>
         </div>
-        
+        <h3>{project.frontmatter.title}</h3>
       </Link>
-      <h1>{project.frontmatter.title}</h1>
+      
     </div>
   );
 };

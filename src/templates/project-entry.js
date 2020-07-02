@@ -1,25 +1,35 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { kebabCase } from "lodash";
-import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import ProjectSection from "../components/projects/ProjectSection";
 import _ from "lodash";
 import CMSImage from "../components/CMSImage";
 import { AnimatePresence, motion } from "framer-motion";
+import ProjectRoll from "../components/projects/ProjectRoll";
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 export const ProjectEntryTemplate = ({ project }) => {
   return (
     <>
-      <section className="hero is-medium project" style={{ zIndex: -1 }}>
+      <section className="hero is-medium project">
         <div className="hero-body">
           <div className="container">
-            <h1 className="title">{project.description}</h1>
+            <h1 className="title">{project.frontmatter.description}</h1>
+            {project.frontmatter.featuredlink ? (
+              <OutboundLink
+                href={project.frontmatter.featuredlink}
+                className="interactive"
+                target="_blank"
+                eventCategory="project-preview"
+              >
+                <h3>{project.frontmatter.featuredlinklabel}</h3>
+              </OutboundLink>
+            ) : null}
           </div>
         </div>
       </section>
-      {project.sections.map((section) => {
+      {project.frontmatter.sections.map((section) => {
         return (
           <ProjectSection
             key={_.trim(section.heading.substring(0, 5))}
@@ -27,6 +37,12 @@ export const ProjectEntryTemplate = ({ project }) => {
           />
         );
       })}
+      <section className="section" id="projects">
+        <div className="container">
+          <h1>{project.frontmatter.other_projects}</h1>
+          <ProjectRoll excludeSelfByID={project.id} />
+        </div>
+      </section>
     </>
   );
 };
@@ -51,7 +67,7 @@ const ProjectEntry = ({ data }) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
-          <ProjectEntryTemplate project={project.frontmatter} />
+          <ProjectEntryTemplate project={project} />
         </motion.div>
       </Layout>
     </AnimatePresence>
@@ -80,6 +96,8 @@ export const pageQuery = graphql`
             }
           }
         }
+        featuredlink
+        featuredlinklabel
         sections {
           intro
           standout
@@ -93,6 +111,7 @@ export const pageQuery = graphql`
           }
           body_html
         }
+        other_projects
       }
     }
   }
