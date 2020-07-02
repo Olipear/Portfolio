@@ -23,16 +23,27 @@ const tileLayouts = [
   [{ parent: [0, 1] }, { parent: [2, 3, 4] }],
 ];
 
-const ProjectRoll = ({ data, excludeSelfByID = false }) => {
+const ProjectRoll = ({ data}) => {
   const { edges: projects } = data.allMarkdownRemark;
+  const [projectsToShow, filterProjectsToShow] = useState(projects);
+
+  useEffect(() => {
+    let projectsTmp = [];
+    projects.map((project) => {
+      if (!window.location.pathname.includes(project.node.fields.slug)) {
+        projectsTmp.push(project)
+      }
+    })
+    filterProjectsToShow(projectsTmp);
+  }, [])
 
   const buildProjectTiles = (obj) => {
     if (Array.isArray(obj)) {
       return obj.map((projectIndex) => {
         return (
           <ProjectTile
-            key={projects[projectIndex].node.id}
-            project={projects[projectIndex].node}
+            key={projectsToShow[projectIndex].node.id}
+            project={projectsToShow[projectIndex].node}
           />
         );
       });
@@ -57,10 +68,10 @@ const ProjectRoll = ({ data, excludeSelfByID = false }) => {
     }
   };
 
-  if (projects.length > 0) {
+  if (projectsToShow.length > 0) {
     return (
       <div className="tile is-ancestor project">
-        {tileLayouts[Math.min(projects.length - 1, 4)].map((layout) =>
+        {tileLayouts[Math.min(projectsToShow.length - 1, 4)].map((layout) =>
           buildProjectGrid(layout)
         )}
       </div>
