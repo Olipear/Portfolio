@@ -2,7 +2,8 @@
 templateKey: index-page
 title: Oliver Pearson's portfolio
 splash:
-  intro: I'm a designer who knows code
+  intro: |
+    I'm a designer who knows code
   image: /img/paper-illustrations-stack.png
   buttontext: Read more
 navigation:
