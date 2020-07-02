@@ -7,7 +7,8 @@ description: In selling this design icon I went for an adaptive interface design
   and was very sucessful in improving sales. I also had fun making those lovely
   renders!
 featuredimage: /img/620-image.jpg
-featuredpost: false
+featuredlink: https://www.vitsoe.com/gb/620/buy
+featuredlinklabel: See it live
 sections:
   - heading: Brief
     headerimage: /img/brief-_-problem.png
@@ -89,4 +90,6 @@ sections:
       * For photography of all the 48 different chair combinations, either thousands of pounds worth of stock would be needed. Because of Vitsoe's standards, this wouldn't have been used for resale. At best, if the one chair was disassembled and rebuilt, it would tie up several assembly team members and days worth of photographer's and studio time. 
 
       * It was an investment, the 3D models could be rendered in multiple contexts for different use cases. - After the project was complete they were used in an instagram story promotion for example.
+other_projects: More projects
+featuredpost: false
 ---
