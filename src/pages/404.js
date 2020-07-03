@@ -3,16 +3,20 @@ import Layout from "../components/Layout";
 import { useStaticQuery, graphql } from "gatsby";
 import CMSImage from "../components/CMSImage";
 
-
 const NotFoundPage = () => {
-  const data = useStaticQuery(NotFoundQuery).markdownRemark.frontmatter.notfound;
+  const data = useStaticQuery(NotFoundQuery).markdownRemark.frontmatter
+    .notfound;
   return (
     <Layout>
-      <section className="hero is-medium">
+      <section className="splash hero">
         <div className="hero-body">
           <div className="container">
             <h1 className="title">{data.text}</h1>
-            <CMSImage image={data.image} />
+            <CMSImage
+              image={data.image}
+              imgStyle={{ objectFit: "contain" }}
+              style={{ width: "100%", height: "80%" }}
+            />
           </div>
         </div>
       </section>
@@ -30,7 +34,12 @@ const NotFoundQuery = graphql`
           text
           image {
             childImageSharp {
-              fluid(maxWidth: 500, quality: 100) {
+              fluid(
+                maxWidth: 500
+                maxHeight: 500
+                quality: 100
+                cropFocus: ENTROPY
+              ) {
                 ...GatsbyImageSharpFluid
               }
             }
