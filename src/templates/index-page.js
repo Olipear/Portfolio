@@ -137,8 +137,8 @@ export const pageQuery = graphql`
           image {
             childImageSharp {
               fluid(
-                maxWidth: 300
-                maxHeight: 300
+                maxWidth: 200
+                maxHeight: 200
                 quality: 100
                 cropFocus: ENTROPY
               ) {
