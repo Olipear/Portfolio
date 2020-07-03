@@ -33,7 +33,7 @@ $disabled: #B8B9C2
 /* purgecss start ignore */
 // ---- base ----
 
-html, body
+html
   background-color: $bg-light
   -moz-osx-font-smoothing: grayscale
   -webkit-font-smoothing: antialiased
@@ -42,12 +42,14 @@ html, body
   overflow-y: scroll
   text-rendering: optimizeLegibility
   text-size-adjust: 100%
+  +darkmode
+    background-color: $text
+body
   color: $text
   font-size: 1rem
   font-weight: 300
   line-height: 1.5rem
   +darkmode
-    background-color: $text
     color: $bg-medium
 
 hr
