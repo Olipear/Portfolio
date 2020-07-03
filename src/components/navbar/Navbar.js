@@ -12,13 +12,13 @@ const navbarVariants = {
     padding: "1.5rem 0 1.5rem 0",
     height: "7rem",
     boxShadow: "rgba(0, 0, 0, 0) 0px 1px 5px",
-    background: "rgba(248,248,248,0)",
+    //background: "rgba(248,248,248,0)",
   },
   small: {
     padding: "0.8rem 0 0.8rem 0",
     height: "3.4rem",
     boxShadow: "rgba(0, 0, 0, 0.2) 0px 1px 5px",
-    background: "rgba(248,248,248,0.95)",
+    //background: "rgba(248,248,248,0.95)",
   },
 };
 
@@ -41,17 +41,17 @@ const Navbar = ({ splash }) => {
     [0, windowHeight],
     [navbarVariants.splash.boxShadow, navbarVariants.small.boxShadow]
   );
-  const background = useTransform(
+ /*  const background = useTransform(
     scrollY,
     [0, windowHeight / 2],
     [navbarVariants.splash.background, navbarVariants.small.background]
-  );
+  ); */
 
   const style = {
     height,
     padding,
     boxShadow,
-    background,
+   // background,
   };
 
   return (

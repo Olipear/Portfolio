@@ -11,6 +11,10 @@ $section-padding-medium: 5rem 1.5rem
 @import "~bulma/sass/components/level.sass"
 @import "~bulma/sass/layout/_all.sass"
 
+//mixins
+=darkmode
+  @media screen and (prefers-color-scheme: dark)
+    @content
 
 // Olipear colours
 $bg-light: #F8F8F8
@@ -27,10 +31,9 @@ $disabled: #B8B9C2
 
 //olipear styles
 /* purgecss start ignore */
-
 // ---- base ----
 
-html
+html, body
   background-color: $bg-light
   -moz-osx-font-smoothing: grayscale
   -webkit-font-smoothing: antialiased
@@ -39,12 +42,13 @@ html
   overflow-y: scroll
   text-rendering: optimizeLegibility
   text-size-adjust: 100%
-
-body
   color: $text
   font-size: 1rem
   font-weight: 300
   line-height: 1.5rem
+  +darkmode
+    background-color: $text
+    color: $bg-medium
 
 hr
   background-color: $bg-dark
@@ -113,6 +117,10 @@ a
     color: currentColor
   &:hover
     color: $hover
+  +darkmode
+    color: $primary
+    &:hover
+      color: $secondary
     
 .interactive
   text-decoration: none
@@ -143,7 +151,9 @@ a
     & > h1, & > h2, & > h3, & > h4, & > h5, & > p
       &::after
         margin-left: 0.6em
-
+  +darkmode
+    background: $bg-dark
+    box-shadow: -1px 1px 4px 0px black
 .icon 
   color: $interact
   svg
@@ -156,6 +166,11 @@ a
   &:disabled, &.disabled
     cursor: default
     color: $disabled
+  +darkmode
+    color: $primary
+    &:hover:not(.disabled)
+      color: $secondary
+
 
 svg
   fill: currentcolor
@@ -193,7 +208,12 @@ svg
     span
       height: 14px
       width: 14px
-
+  +darkmode
+    background: $primary
+    span
+      border-color: $text
+    &:hover
+      background: $secondary
 // ---- layout -----
 .content
   z-index: 1

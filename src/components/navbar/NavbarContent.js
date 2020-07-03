@@ -16,7 +16,7 @@ const NavbarContent = () => {
     <div className="container">
       <NavOverlay open={open} />
       <div className="navbar-brand">
-        <Link to="/" title="home" className="navbar-brand">
+        <Link to="/" title="home">
           <motion.div style={{height: "100%"}} whileHover={{ scale: 1.1}}>
             <img src={logo} style={{ height: "100%" }} alt="olipear" />
           </motion.div>

@@ -36,13 +36,18 @@
             width: 2rem
             height: 3px
             border-radius: 2px
-        &:hover
-            > span
-                background: $hover
+            +darkmode
+                background: $primary
+        &:hover > span
+            background: $hover
+            +darkmode
+                background: $secondary
+    +darkmode
+        background: $text
     &-brand
         align-items: center
         display: flex
-        flex-shrink: 0
+        flex-shrink: 1
         flex-grow: 1
         height: 100%
         z-index: 30
@@ -53,6 +58,8 @@
         img
             height: 100%
             width: auto
+            +darkmode
+                filter: brightness(3)
     &-menu
         position: absolute
         right: .75rem
@@ -109,3 +116,5 @@
         top: 0
         +tablet
             display: none
+        +darkmode
+            background: $bg-dark
