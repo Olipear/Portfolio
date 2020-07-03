@@ -17,7 +17,7 @@ const Splash = ({ content, motionProgress }) => {
       "ease-out-quart"
     );
   };
-
+  
   return (
     <section ref={splashElement} className="splash hero">
       <div className="hero-body">
@@ -45,7 +45,8 @@ const Splash = ({ content, motionProgress }) => {
             role="button"
             onClick={scrollOffSplash}
             className="scroll-btn down big"
-            style={{ opacity: buttonOpacity ? buttonOpacity : 1 }}
+            initial={{opacity: 1}}
+            style={{ opacity: buttonOpacity? buttonOpacity : 1 }}
             whileHover={{ scale: 1.1 }}
           >
             <span></span>

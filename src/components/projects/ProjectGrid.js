@@ -24,33 +24,34 @@ const tileLayouts = [
 
 const ProjectGrid = ({ projects }) => {
 
-  const buildProjectTiles = (layout) => {
+  const buildProjectTiles = (layout, lvlKey) => {
+    lvlKey++;
     if (Array.isArray(layout)) {
       return layout.map((projectIndex) => {
         return (
           <ProjectTile
-            key={projects[projectIndex].node.id}
+            key={toString(projects[projectIndex].node.id)}
             project={projects[projectIndex].node}
           />
         );
       });
     } else {
       return layout.map((container) => {
-        return buildProjectGrid(container);
+        return buildProjectGrid(container, lvlKey);
       });
     }
   };
 
-  const buildProjectGrid = (layout) => {
+  const buildProjectGrid = (layout, lvlKey) => {
     if (layout.hasOwnProperty("parentV")) {
       return (
-        <div className="tile is-parent is-vertical">
+        <div key={'level-'+toString(lvlKey)} className="tile is-parent is-vertical">
           {buildProjectTiles(layout.parentV)}
         </div>
       );
     } else {
       return (
-        <div className="tile is-parent">{buildProjectTiles(layout.parent)}</div>
+        <div key={'level-'+toString(lvlKey)} className="tile is-parent">{buildProjectTiles(layout.parent)}</div>
       );
     }
   };
@@ -59,7 +60,7 @@ const ProjectGrid = ({ projects }) => {
     return (
       <div className="tile is-ancestor project">
         {tileLayouts[Math.min(projects.length - 1, 4)].map((layout) =>
-          buildProjectGrid(layout)
+          buildProjectGrid(layout, 0)
         )}
       </div>
     );

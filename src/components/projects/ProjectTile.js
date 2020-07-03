@@ -6,7 +6,7 @@ const ProjectTile = ({ project }) => {
 
   
   return (
-    <div className="tile is-child">
+    <div className="tile is-child" >
       <Link to={project.fields.slug} className="interactive">
         <div className="image-outer-container">
           
