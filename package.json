@@ -40,6 +40,7 @@
     "react-refresh": "^0.8.3",
     "redux": "^3.7.2",
     "remark-html": "^11.0.2",
+    "showdown": "^1.9.1",
     "uuid": "^3.4.0"
   },
   "keywords": [

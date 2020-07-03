@@ -9,6 +9,9 @@ const IndexPagePreview = ({ entry, getAsset }) => {
     const dummyQuery = {
       markdownRemark: {
         frontmatter: data
+      },
+      allMarkdownRemark: {
+        edges: []
       }
     }
     return (

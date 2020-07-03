@@ -15,7 +15,7 @@ const ProjectSection = ({ section }) => {
               <CMSImage className="section-image" image={section.headerimage} />
             )}
             <h3 className="section-intro">{section.intro}</h3>
-            <HTMLContent content={section.body_html} className="section-body" />
+            <HTMLContent content={section.body_html?section.body_html:section.body} className="section-body" />
           </div>
         </div>
       </div>
