@@ -5,7 +5,13 @@ import { ProjectEntryTemplate } from "../../templates/project-entry";
 const ProjectEntryPreview = ({ entry, widgetFor }) => {
   const data = entry.getIn(["data"]).toJS()
   if (data) {
-    return <ProjectEntryTemplate project={{frontmatter: data}} />;
+    const dummyQuery = {
+      markdownRemark: {
+        frontmatter: data
+      },
+      allMarkdownRemark: { edges: []}
+    }
+    return <ProjectEntryTemplate project={dummyQuery} />;
   } else {
     return <div>loading...</div>;
   }

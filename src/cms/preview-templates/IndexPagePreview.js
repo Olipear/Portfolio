@@ -4,10 +4,16 @@ import { IndexPageTemplate } from '../../templates/index-page'
 
 const IndexPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(['data']).toJS()
+  
   if (data) {
+    const dummyQuery = {
+      markdownRemark: {
+        frontmatter: data
+      }
+    }
     return (
       <IndexPageTemplate
-      data={data}
+      data={dummyQuery}
       previewMode={true}
       />
     )

@@ -5,30 +5,32 @@ import Layout from "../components/Layout";
 import ProjectSection from "../components/projects/ProjectSection";
 import _ from "lodash";
 import { AnimatePresence, motion } from "framer-motion";
-import ProjectRoll from "../components/projects/ProjectRoll";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
+import ProjectGrid from "../components/projects/ProjectGrid";
 
-export const ProjectEntryTemplate = ({ project }) => {
+export const ProjectEntryTemplate = ({ data }) => {
+  const thisProject = data.markdownRemark.frontmatter;
+  const otherProjects = data.allMarkdownRemark.edges;
   return (
     <>
       <section className="hero is-medium project">
         <div className="hero-body">
           <div className="container">
-            <h1 className="title">{project.frontmatter.description}</h1>
-            {project.frontmatter.featuredlink ? (
+            <h1 className="title">{thisProject.description}</h1>
+            {thisProject.featuredlink ? (
               <OutboundLink
-                href={project.frontmatter.featuredlink}
+                href={thisProject.featuredlink}
                 className="interactive"
                 target="_blank"
                 eventCategory="project-preview"
               >
-                <h3>{project.frontmatter.featuredlinklabel}</h3>
+                <h3>{thisProject.featuredlinklabel}</h3>
               </OutboundLink>
             ) : null}
           </div>
         </div>
       </section>
-      {project.frontmatter.sections.map((section) => {
+      {thisProject.sections.map((section) => {
         return (
           <ProjectSection
             key={_.trim(section.heading.substring(0, 5))}
@@ -36,40 +38,42 @@ export const ProjectEntryTemplate = ({ project }) => {
           />
         );
       })}
-      <section className="section" id="projects">
-        <div className="container">
-          <h1>{project.frontmatter.other_projects}</h1>
-          <ProjectRoll excludeSelfByID={project.id} />
-        </div>
-      </section>
+      {otherProjects.length > 0 ? (
+        <section className="section" id="projects">
+          <div className="container">
+            <h1>{thisProject.other_projects}</h1>
+            <ProjectGrid projects={otherProjects} />
+          </div>
+        </section>
+      ) : null}
     </>
   );
 };
 
 ProjectEntryTemplate.propTypes = {
-  project: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    frontmatter: PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
-      sections: PropTypes.array,
-    }),
-  }).isRequired,
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        sections: PropTypes.array,
+      }),
+    }).isRequired,
+    allMarkdownRemark: PropTypes.object,
+  }),
 };
 
 const ProjectEntry = ({ data }) => {
-  const { markdownRemark: project } = data;
-
   return (
     <AnimatePresence>
-      <Layout splash={false} title={project.frontmatter.title}>
+      <Layout splash={false} title={data.markdownRemark.frontmatter.title}>
         <motion.div
           key="content"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
-          <ProjectEntryTemplate project={project} />
+          <ProjectEntryTemplate data={data} />
         </motion.div>
       </Layout>
     </AnimatePresence>
@@ -79,6 +83,7 @@ const ProjectEntry = ({ data }) => {
 ProjectEntry.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
+    allMarkdownRemark: PropTypes.object,
   }),
 };
 
@@ -87,7 +92,6 @@ export default ProjectEntry;
 export const pageQuery = graphql`
   query ProjectEntryByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      id
       frontmatter {
         title
         description
@@ -107,6 +111,35 @@ export const pageQuery = graphql`
           body_html
         }
         other_projects
+      }
+    }
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: {
+        frontmatter: {
+          templateKey: { eq: "project-entry" }
+          featuredproject: { eq: true }
+        }
+        id: { nin: [$id] }
+      }
+    ) {
+      edges {
+        node {
+          excerpt(pruneLength: 400)
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            featuredimage {
+              childImageSharp {
+                fluid(maxWidth: 650, maxHeight: 650, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
