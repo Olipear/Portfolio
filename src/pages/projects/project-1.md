@@ -51,222 +51,128 @@ sections:
       what we had, and where it was failing.
     standout: false
     headerimage: /img/research.png
-    body: "#### Previous page\r
+    body: >-
+      #### Previous page
 
-      \r
 
-      ![Previous buy page for the 620 chair](/img/original-page.jpg \"The
-      previous buy page for the 620 chair\")\r
+      ![Previous buy page for the 620 chair](/img/original-page.jpg "The previous buy page for the 620 chair")
 
-      \r
 
-      ### The Most obvious issue was poor product visualisation.\r
+      ### The Most obvious issue was poor product visualisation.
 
-      \r
 
-      The initial line drawing was taking up the entire page upon opening,
-      which could explain the high bounce rate on this page. It was also a
-      duplication of the seat picker element below.\r
+      The initial line drawing was taking up the entire page upon opening, which could explain the high bounce rate on this page. It was also a duplication of the seat picker element below.
 
-      \r
 
-      The seat picker element worked well however, it communicated the
-      modularity of the product clearly, and succinctly.\r
+      The seat picker element worked well however, it communicated the modularity of the product clearly, and succinctly.
 
-      \r
 
-      The one image of the chair was from an odd angle, but it did at
-      least show a close up of the leather texture. \r
+      The one image of the chair was from an odd angle, but it did at least show a close up of the leather texture. 
 
-      \r
 
-      The footstool could not be purchased on it's own, and had no
-      photograph at all. Sales of the footstool were extremely low, less than
-      one every 2 months. \r
+      The footstool could not be purchased on it's own, and had no photograph at all. Sales of the footstool were extremely low, less than one every 2 months. 
 
-      \r
 
-      The mobile version was responsive, so this page was very long, and
-      the summary with price breakdown was right at the bottom of the page.\r
+      The mobile version was responsive, so this page was very long, and the summary with price breakdown was right at the bottom of the page.
 
-      \r
 
-      #### Quick fixes\r
+      #### Quick fixes
 
-      \r
 
-      Realising that this project would take some time, I looked at what
-      could be done in the short term.\r
+      Realising that this project would take some time, I looked at what could be done in the short term.
 
-      \r
 
-      ![Screenshot of page with some quick improvements
-      added.](/img/low-effort-improvements.jpg \"A few minor improvements.\")\r
+      ![Screenshot of page with some quick improvements added.](/img/low-effort-improvements.jpg "A few minor improvements.")
 
-      \r
 
-      ### It took me an afternoon to make these simple css and HTML
-      changes.\r
+      ### It took me an afternoon to make these simple css and HTML changes.
 
-      \r
 
-      * Increased the right column from 3 to 4 columns (of 12). \r
+      * Increased the right column from 3 to 4 columns (of 12). 
 
-      * Got rid of the other two line drawings at the top, and moved the
-      preview photo to the right column. \r
+      * Removed the other two line drawings at the top, and moved the preview photo to the right column. 
 
-      \r
 
-      Implementing these changes straight away also gave me further
-      opportunity to measure any improvements and see if my assumptions were
-      correct. \r
+      Implementing these changes straight away also gave me further opportunity to measure any improvements and see if my assumptions were correct. 
 
-      \r
 
-      #### Behaviour analysis\r
+      #### Behaviour analysis
 
-      \r
 
-      The low sales meant it was difficult to look at page statistics when
-      trying to see what lead to goal completions. However this made it
-      practicable to use the user explorer in google analytics to look at each
-      user's journey through the site. \r
+      The low sales meant it was difficult to look at page statistics when trying to see what lead to goal completions. However this made it practicable to use the user explorer in google analytics to look at each user's journey through the site. 
 
-      \r
 
-      * Purchasers would spend weeks deliberating over their purchase,
-      this made sense for such an expensive purchase. \r
+      * Purchasers would spend weeks deliberating over their purchase, this made sense for such an expensive purchase. 
 
-      * The most popular page in the 620 area was the gallery page, this
-      supported my theory that better product visualisation was crucial for
-      improving sales.\r
+      * The most popular page in the 620 area was the gallery page, this supported my theory that better product visualisation was crucial for improving sales.
 
-      * No purchases were made on mobile, but the gallery was popular here
-      too. I noticed that purchasers would use the mobile gallery during their
-      deliberation phase. \r
+      * No purchases were made on mobile, but the gallery was popular here too. I noticed that purchasers would use the mobile gallery during their deliberation phase. 
 
-      * Unlike the [621 table](olipear.com), the initial introduction page
-      didn't seem to be a point of abandonment. This was unexpected, and stopped
-      me from emulating the page structure I had used there as I originally
-      planned. \r
+      * Unlike the [621 table](olipear.com), the initial introduction page didn't seem to be a point of abandonment. This was unexpected, and stopped me from emulating the page structure I had used there as I originally planned. 
 
-      \r
 
-      #### Competitor evaluation\r
+      #### Competitor evaluation
 
-      \r
 
-      The 620 chair really has one key competitor, the better known [Eames
-      chair](https://www.vitra.com/en-gb/product/lounge-chair). The other
-      competition is designer furniture from places like Made.com. \r
+      The 620 chair really has one key competitor, the better known [Eames chair](https://www.vitra.com/en-gb/product/lounge-chair). The other competition is designer furniture from places like Made.com. 
 
-      \r
 
-      For a chair, the seat customisation options were relatively unique,
-      most just dealt with colour variations. So I also looked at more complex
-      examples outside of furniture such as the [Ray-Ban
-      configurator](https://www.ray-ban.com/uk/customise) tool. \r
+      For a chair, the seat customisation options were relatively unique, most just dealt with colour variations. So I also looked at more complex examples outside of furniture such as the [Ray-Ban configurator](https://www.ray-ban.com/uk/customise) tool. 
 
-      \r
 
-      * All similar products had far more product visualisation, most had
-      360deg views, and / or high resolution photography which could be zoomed
-      in on. The Eames chair had very good renders.\r
+      * All similar products had far more product visualisation, most had 360deg views, and / or high resolution photography which could be zoomed in on. The Eames chair had very good renders.
 
-      * Similar customisable products often broke up the process into
-      stages, this was especially popular in the car examples I looked at.
-      Furniture examples tended to use dropdown sections, so one decision was
-      being made at a time. \r
+      * Similar customisable products often broke up the process into stages, this was especially popular in the car examples I looked at. Furniture examples tended to use dropdown sections, so one decision was being made at a time. 
 
-      \r
 
-      \r
+      #### Product visualisation
 
-      \r
 
-      #### Product visualisation\r
+      My research was all pointing me towards this being the most significant improvement I could make. Before getting further into the design process I wanted to know we had to work with.
 
-      \r
 
-      My research was all pointing me towards this being the most
-      significant improvement I could make. Before getting further into the
-      design process I wanted to know we had to work with.\r
+      The existing images in the gallery and the buy page, were the only product photography the company had.
 
-      \r
 
-      The existing images in the gallery and the buy page, were the only
-      product photography the company had.\r
+      Therefore any improvement would require an investment in new photography or product renders. 
 
-      \r
 
-      Therefore any improvement would require an investment in new
-      photography or product renders. \r
+      One of the major issues was that the 620 chair, had 48 different combinations for a single chair. That's excluding the possible combinations for sofas and footstools. 
 
-      \r
 
-      One of the major issues was that the 620 chair, had 48 different
-      combinations for a single chair. That's excluding the possible
-      combinations for sofas and footstools. \r
+      So early on the idea of visualising sofa combinations was discarded, we would focus on the single chair, and rely on the gallery for visualisation of sofas. 
 
-      \r
 
-      So early on the idea of visualising sofa combinations was discarded,
-      we would focus on the single chair, and rely on the gallery for
-      visualisation of sofas. \r
+      Next was the question of whether it was possible to create a spinner. 
 
-      \r
 
-      Next was the question of whether it was possible to create a
-      spinner. \r
+      ### In order to assess this, we created a [quick proof of concept](http://620poc.s3-website.eu-west-2.amazonaws.com/).
 
-      \r
 
-      ### In order to assess this, we created a [quick proof of
-      concept](http://620poc.s3-website.eu-west-2.amazonaws.com/). \r
+      This piece of work, completed in a two week sprint, helped us decide on the next steps.
 
-      \r
 
-      This piece of work, completed in a two week sprint, helped us decide
-      on the next steps.\r
+      * Initially using a single 3D model to render in browser seemed like a good option. However the browser plugins we looked at couldn't achieve the quality we were looking for.
 
-      \r
+      * We looked at several libraries to create spinner functionality, but they fell apart when we introduced product customisation. It was actually quite straightforward to create that functionality in React ourselves. 
 
-      * Initially using a single 3D model to render in browser seemed like
-      a good option. However the browser plugins we looked at couldn't achieve
-      the quality we were looking for.\r
+      * We quickly realised that managing these images was going to be challenging. With 8 angles per chair, it would be 384 images, before optimising into different resolutions. 
 
-      * We looked at several libraries to create spinner functionality,
-      but they fell apart when we introduced product customisation. It was
-      actually quite straightforward to create that functionality in React
-      ourselves. \r
+      * Even with images taken using my phone, it looked great. It sold the idea of a spinner to management.
 
-      * We quickly realised that managing these images was going to be
-      challenging. With 8 angles per chair, it would be 384 images, before
-      optimising into different resolutions. \r
 
-      * Even with images taken using my phone, it looked great. It sold
-      the idea of a spinner to management.\r
+      We decided ro use renders for several reasons. 
 
-      \r
 
-      We decided ro use renders for several reasons. \r
+      * Taking product photography of the various chair options would require a lot of stock worth thousands of pounds. 
 
-      \r
+      * The company had CAD models of all their products, so all that would need to be done is texturing the model.
 
-      * Taking product photography of the various chair options would
-      require a lot of stock worth thousands of pounds. \r
+      * Once the textured model was created it would be an asset which could be reused in future marketing and other visualisations. 
 
-      * The company had CAD models of all their products, so all that
-      would need to be done is texturing the model.\r
+      * Renders could be changed and adjusted, if new colours or variations on the product were introduced for example. 
 
-      * Once the textured model was created it would be an asset which
-      could be reused in future marketing and other visualisations. \r
-
-      * Renders could be changed and adjusted, if new colours or
-      variations on the product were introduced for example. \r
-
-      * I had the skills necessary to create the renders, eliminating the
-      need for external resource.\r\n"
+      * I had the skills necessary to create the renders, eliminating the need for external resource.
   - heading: Wireframing and design
     intro: "Now I had a good idea of the key aspects that needed to be included in
       my design. "
@@ -289,6 +195,8 @@ sections:
 
       * The mobile experience is mostly in support of a later purchase on desktop, the spinner needs to work well on mobile devices. 
 
+      * The configurator should save the current selection in a cookie so a returning user does not lose their selections.
+
 
       #### Initial wireframes
 
@@ -299,7 +207,7 @@ sections:
       ![Wireframe of a staged configurator](/img/wireframe-staged.png "Wireframe of a staged configurator")
 
 
-      I looked at staging the configurator, but this means impedes the informative aspects of the seat picker. Users might not initially realise the chair can be turned into a sofa if it was split out like this. 
+      I looked at staging the configurator, but this impeded the informative aspects of the seat picker. Users might not initially realise the chair can be turned into a sofa if it was split out like this. 
 
 
       ![Wireframe showing controls in nested accordions](/img/wireframeaccoridans.png "Wireframe showing controls in nested accordions")
@@ -326,67 +234,114 @@ sections:
       At this stage I had the decided to take the following ideas forward to prototype in higher fidelity: 
 
 
-      * I was going to leave the seat picker mostly as it is, and directly beneath the spinner.
+      * I was going to leave the seat picker mostly as it was. 
 
-      * I wanted to have the controls on desktop scroll along the right to make it easier to see how customisation changed pricing. 
+      * I wanted to have the cost and buy button always visible whilst customising the chair - on desktop at least.
 
-      * The footstool couldn't be equal as a section on the page even if it could be bought separately. It needed to have it's own page. 
+      * When selecting anything to do with colour, a preview or visualisation needed to be shown alongside it. The shell and leather colour needed to be shown together.
+
+      * The footstool picker would be a mirror of the chair picker, with all relevant UI elements duplicated entirely.
 
 
-      As always, the best place to start is on mobile. It's not just about screen size, but designing for mobile first really forces you to cut everything down to what's absolutely necessary in a design. 
+      Although I'd decided against a fully staged approach, at this point I knew the order I wanted the configurator to be used.
+
+
+      1. Customise the colour, back, and feet options 
+
+      2. Move on to pick the number of seats
+
+      3. Show gallery links and further information to help deliberation.
+
+      4. At all times show the selection, price and buy button. 
+
+         <br/>
+
+      As always, the best place to start is on mobile. Designing for mobile first really forces you to cut everything down to what's absolutely necessary in a design. 
 
 
       ![Image of prototype for mobile which uses accordion section that can be scrolled](/img/prototype-acordion-scrolling-section.jpg "Prototype for mobile version")
 
 
-      This prototype was a result of trying to ensure the configuration controls could be used without excessive scrolling. In an earlier version you would need to scroll up and down the page excessively, to see how your selection changed the visualisation. 
+      This prototype was a result of trying to ensure the configuration controls could be used whilst keeping the visualisation in view. 
 
 
-      The scrollable area was much too small to work properly on mobile, even with scroll-snapping. Users would unintentionally begin page scrolling. 
+      Even when I later expanded the scrollable area, users would unintentionally begin page scrolling when selecting different customisation options. 
 
 
       It also didn't show all of the customisation options available, something I'd wanted the layout to do. 
 
 
-      From here, I tried splitting them out into their own accordions, but that lead back around to the initial problem of page scrolling. 
+      Then I hit on a solution that would show all the options available whilst giving enough space to work properly on mobile. Modal overlays.
 
 
-      I started to consider the possibility of a staged configurator on mobile, but then I hit on a solution that was the best of both worlds: Modal overlays.
+
+
+      TODO (image of inbetween mockup)
+
+
+
+
+      Although it stopped the user from seeing a live update of the visualisation, using a fullscreen modal meant I could show them the close up image of the leather texture when selecting a colour, the existing images were well suited for this. 
+
+
+      There were no other modals on the site at the time, so I ensured the button style adhered to the established visual language used elsewhere for in-page navigation. [The contact page was the main previous example of it's usage.](https://www.vitsoe.com/contactus) 
+
+
+      I started on the desktop layout now.
+
+
+      TODO (desktop hi-fi mockup)
+
+
+      Using the extra space available on desktop, I put all colour decisions into one modal, again showing the close up photography to inform the decision. 
+
+
+      I decided to treat high-back and swivel base, as add-on items with a checkbox - as the footstool had been previously. This was a representation of the choice, since they were an additional cost. I did consider using these on mobile, but I didn't want to reduce visibility of the seat picker.
+
+
+      #### Testing & refinement
+
+
+      The testing we carried out was internal, we also sent out hi-fi mockups of the design to remote sales teams for feedback. 
+
+
+      The most valuable feedback was for the copy. The majority of the labelling for this page was directed by this feedback. 
+
+
+      Other small changes we made at this stage were: 
+
+
+      * Added in help text next to the seat picker - to direct customers to planners where they had an existing seat they wanted to extend, or for larger commercial orders.
+
+      * The inclusion of the 621 table alongside the footstool, since it is a companion to the 620 chair.
   - heading: "Implementation "
-    intro: "Once the final design was agreed upon I looked to designing the
-      architecture of the page. "
+    intro: "Once the final design was agreed upon, I could join the other two
+      developers on our team to look at implementation. "
     headerimage: /img/implementation.png
     standout: false
     body: >-
-      #### Background
+      #### Technology 
 
 
-      The existing vitsoe website was built on an outdated PHP framework called Yii, we were running Yii 1.1, which was already several years surpassed by Yii 2.XX (TODO lookup version).
+      From the earlier prototype and research, the team decided that the configurator page would be built in a self-contained react app. This would make it easier to migrate when eventually the website was moved away from the custom implementation of Yii 1.1 php framework.
 
 
-      So from the outset of the project, and when coming up with the design it had already been decided we would build the new page in React. We would be building all the functionality required as a self-contained app. In future it was planned that the website would be moved to a new platform and the react app would be easier to migrate in this form. 
+      Keeping this longer term ambition in mind, we wanted to make sure we built everything to scale. New apis, data transport structures, components etc would need to work for all of Vitsoe's products. 
 
 
-      Knowing this my final design for the page was quite ambitious; I would certainly have approached the project differently had it not been decided early on that we would be building it in a new framework.
+      The prototype had also ruled out using a library for the spinner functionality because of the level of customisation the product needed to visualise. 
 
 
-      #### 3D spinner functionality
+      #### Data transport design
 
 
-      During the design process I had decided early on that visualisation of the product was a major point for improvement.
+      We wanted to make sure the front-end was data driven, to support scalability, for this reason throughout this process I was constantly checking that this structure could be applied to vitsoe's other products. 
 
 
-      I came up with several proposals for how we could achieve these improvements, and worked closely with the creative director to ensure that we would be able to source media for this. 
+      ![Snapshot of whiteboard showing ideas for data transport structure](/img/data-design-discussion.jpg "Whiteboard excerpt showing discussion of data transport structures")
 
 
-      In the end, renders were decided upon for the following reasons: 
-
-
-      * It was more practical to generate the huge number of images required to create a smooth spinner. with photography we could have only realistically done a maximum of 8 angles, and that would have been 384 photos. 
-
-      * For photography of all the 48 different chair combinations, either thousands of pounds worth of stock would be needed. Because of Vitsoe's standards, this wouldn't have been used for resale. At best, if the one chair was disassembled and rebuilt, it would tie up several assembly team members and days worth of photographer's and studio time. 
-
-      * It was an investment, the 3D models could be rendered in multiple contexts for different use cases. - After the project was complete they were used in an instagram story promotion for example.
+      Sitting around a large screen with my graphics tablet was a great substitute for an interactive whiteboard, and really sped up the process of agreeing upon a structure.
 other_projects: More projects
 featuredpost: false
 ---
