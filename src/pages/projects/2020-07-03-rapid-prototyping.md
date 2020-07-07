@@ -3,11 +3,11 @@ templateKey: project-entry
 date: 2020-07-03T16:06:08.432Z
 featuredproject: true
 title: Rapid prototyping
-description: "In this short proof of concept project I explored what the future
-  of Vitsoe's furniture tool. "
+description: This short proof of concept was part of a wider investigation into
+  how vitsoe could improve the purchase process for the 606 Shelving System.
 featuredimage: /img/furnituretoolfeatured.jpg
 featuredlink: https://www.youtube.com/watch?v=8SOaF-Motuo&feature=youtu.be
-featuredlinklabel: See the prototype
+featuredlinklabel: See my presentation
 sections:
   - heading: Brief
     headerimage: /img/brief-_-problem.png
