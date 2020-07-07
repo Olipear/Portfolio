@@ -272,165 +272,86 @@ sections:
       my design. "
     headerimage: /img/design-_-solution.png
     standout: false
-    body: "#### Features\r
+    body: >-
+      #### Features
 
-      \r
 
-      From the user stories and research I came up with a list of
-      features, the key additions were:\r
+      From the user stories and research I came up with a list of features, the key additions were:
 
-      \r
 
-      * A 360deg spinner would be used to visualise the product.\r
+      * A 360deg spinner would be used to visualise the product.
 
-      * Each customisation decision should be made in a distinct section\r
+      * Each customisation decision should be made in a distinct section
 
-      * The texture of the product was crucial, close up images of the
-      leather needed to be included when choosing colour\r
+      * The texture of the product was crucial, close up images of the leather needed to be included when choosing colour
 
-      * Footstools should be their own product on equal footing *(hurhur)*
-      to the chair.\r
+      * Footstools should be their own product on equal footing *(hurhur)* to the chair.
 
-      * The mobile experience is mostly in support of a later purchase on
-      desktop, the spinner needs to work well on mobile devices. \r
+      * The mobile experience is mostly in support of a later purchase on desktop, the spinner needs to work well on mobile devices. 
 
-      \r
 
-      \r
+      #### Initial wireframes
 
-      \r
 
-      #### Initial wireframes\r
+      My very first wireframes are usually on paper, but to discuss more developed ideas I draw them digitally. 
 
-      \r
 
-      My very first wireframes are usually on paper, but to discuss more
-      developed ideas I draw them digitally. \r
+      ![Wireframe of a staged configurator](/img/wireframe-staged.png "Wireframe of a staged configurator")
 
-      \r
 
-      ![Wireframe of a staged configurator](/img/wireframe-staged.png
-      \"Wireframe of a staged configurator\")\r
+      I looked at staging the configurator, but this means impedes the informative aspects of the seat picker. Users might not initially realise the chair can be turned into a sofa if it was split out like this. 
 
-      \r
 
-      I looked at staging the configurator, but this means impedes the
-      informative aspects of the seat picker. Users might not initially realise
-      the chair can be turned into a sofa if it was split out like this. \r
+      ![Wireframe showing controls in nested accordions](/img/wireframeaccoridans.png "Wireframe showing controls in nested accordions")
 
-      \r
 
-      \r
+      For discrete sections, I started out exploring an accordion layout. I also considered a pills option, where the customisation headings could be easily visible on mobile, but the options were still hidden. 
 
-      \r
 
-      ![Wireframe showing controls in nested
-      accordions](/img/wireframeaccoridans.png \"Wireframe showing controls in
-      nested accordions\")\r
+      ![Wireframe with toggles](/img/wireframe-binary-toggles.jpg "Wireframe with toggles")
 
-      \r
 
-      For discrete sections, I started out exploring an accordion
-      layout.\r
+      I looked at how simplifying the controls for customisation might be made more compact by changing binary choices into toggles. 
 
-      \r
 
-      ![Wireframe that uses a pills dropdown
-      menu](/img/wireframe-pills.png \"Wireframe that uses a pills dropdown
-      menu\")\r
+      ![Wireframe show controls which scroll with page](/img/wireframe-scrolling-controls.png "Wireframe show controls which scroll with page")
 
-      \r
 
-      I also considered a pills option, where the customisation headings
-      could be easily visible on mobile, but the options were still hidden. \r
+      This is one of the later wireframes I made, where I decided that controls should scroll with the rest of the content on the page. Allowing the user to see the price and selection changes they were making at all times. 
 
-      \r
 
-      ![Wireframe with toggles](/img/wireframe-binary-toggles.jpg
-      \"Wireframe with toggles\")\r
+      #### Moving to hi-fi prototypes
 
-      \r
 
-      I looked at how simplifying the controls for customisation might be
-      made more compact by changing binary choices into toggles. \r
+      At this stage I had the decided to take the following ideas forward to prototype in higher fidelity: 
 
-      \r
 
-      ![Wireframe show controls which scroll with
-      page](/img/wireframe-scrolling-controls.png \"Wireframe show controls
-      which scroll with page\")\r
+      * I was going to leave the seat picker mostly as it is, and directly beneath the spinner.
 
-      \r
+      * I wanted to have the controls on desktop scroll along the right to make it easier to see how customisation changed pricing. 
 
-      This is one of the later wireframes I made, where I decided that
-      controls should scroll with the rest of the content on the page. Allowing
-      the user to see the price and selection changes they were making at all
-      times. \r
+      * The footstool couldn't be equal as a section on the page even if it could be bought separately. It needed to have it's own page. 
 
-      \r
 
-      \r
+      As always, the best place to start is on mobile. It's not just about screen size, but designing for mobile first really forces you to cut everything down to what's absolutely necessary in a design. 
 
-      \r
 
-      #### Moving to hi-fi prototypes\r
+      ![Image of prototype for mobile which uses accordion section that can be scrolled](/img/prototype-acordion-scrolling-section.jpg "Prototype for mobile version")
 
-      \r
 
-      At this stage I had the decided to take the following ideas forward
-      to prototype in higher fidelity: \r
+      This prototype was a result of trying to ensure the configuration controls could be used without excessive scrolling. In an earlier version you would need to scroll up and down the page excessively, to see how your selection changed the visualisation. 
 
-      \r
 
-      * I was going to leave the seat picker mostly as it is, and directly
-      beneath the spinner.\r
+      The scrollable area was much too small to work properly on mobile, even with scroll-snapping. Users would unintentionally begin page scrolling. 
 
-      * I wanted to have the controls on desktop scroll along the right to
-      make it easier to see how customisation changed pricing. \r
 
-      * The footstool couldn't be equal as a section on the page even if
-      it could be bought separately. It needed to have it's own page. \r
+      It also didn't show all of the customisation options available, something I'd wanted the layout to do. 
 
-      \r
 
-      As always, the best place to start is on mobile. It's not just about
-      screen size, but designing for mobile first really forces you to cut
-      everything down to what's absolutely necessary in a design. \r
+      From here, I tried splitting them out into their own accordions, but that lead back around to the initial problem of page scrolling. 
 
-      \r
 
-      ![Image of prototype for mobile which uses accordion section that
-      can be scrolled](/img/prototype-acordion-scrolling-section.jpg \"Prototype
-      for mobile version\")\r
-
-      \r
-
-      This prototype was a result of trying to ensure the configuration
-      controls could be used without excessive scrolling. In an earlier version
-      you would need to scroll up and down the page excessively, to see how your
-      selection changed the visualisation. \r
-
-      \r
-
-      The scrollable area was much too small to work properly on mobile,
-      even with scroll-snapping. Users would unintentionally begin page
-      scrolling. \r
-
-      \r
-
-      It also didn't show all of the customisation options available,
-      something I'd wanted the layout to do. \r
-
-      \r
-
-      From here, I tried splitting them out into their own accordions, but
-      that lead back around to the initial problem of page scrolling. \r
-
-      \r
-
-      I started to consider the possibility of a staged configurator on
-      mobile, but then I hit on a solution that was the best of both worlds:
-      Modal overlays.\r\n"
+      I started to consider the possibility of a staged configurator on mobile, but then I hit on a solution that was the best of both worlds: Modal overlays.
   - heading: "Implementation "
     intro: "Once the final design was agreed upon I looked to designing the
       architecture of the page. "
