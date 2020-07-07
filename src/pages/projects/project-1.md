@@ -254,7 +254,6 @@ sections:
 
       4. At all times show the selection, price and buy button. 
 
-         <br/>
 
       As always, the best place to start is on mobile. Designing for mobile first really forces you to cut everything down to what's absolutely necessary in a design. 
 
@@ -274,11 +273,7 @@ sections:
       Then I hit on a solution that would show all the options available whilst giving enough space to work properly on mobile. Modal overlays.
 
 
-
-
       TODO (image of inbetween mockup)
-
-
 
 
       Although it stopped the user from seeing a live update of the visualisation, using a fullscreen modal meant I could show them the close up image of the leather texture when selecting a colour, the existing images were well suited for this. 
@@ -320,7 +315,7 @@ sections:
     headerimage: /img/implementation.png
     standout: false
     body: >-
-      #### Technology 
+      #### Technology
 
 
       From the earlier prototype and research, the team decided that the configurator page would be built in a self-contained react app. This would make it easier to migrate when eventually the website was moved away from the custom implementation of Yii 1.1 php framework.
@@ -342,6 +337,148 @@ sections:
 
 
       Sitting around a large screen with my graphics tablet was a great substitute for an interactive whiteboard, and really sped up the process of agreeing upon a structure.
+
+
+      Below is the initial version of the data transport structure which would drive the front-end components.
+
+
+      ```
+
+      {
+          "name": "620_chair",
+          "category": "620 Chair Programme",
+          "family": "620 Chair Programme",
+      	"options": [
+      		{
+      			"name": "back",
+      			"type": "binary",
+      			"values": [
+      				{ "lowback": "620 1" },
+      				{ "highback": "620 2" }
+      			],
+      			"dimensions_affect": "height"
+      		},
+      		{
+      			"name": "base",
+      			"type": "binary",
+      			"values": [
+      				{ "feet": "010" },
+      				{ "swivel": "020" }
+      			]
+      		},
+      		{
+      			"name": "additional_seats",
+                  "type": "seat_picker",
+      			"values": [1, 2, 3, 4],
+      			"rules": [
+      				{
+      					"condition": [ 2, 3, 4 ],
+      					"exclude": [
+      						{ "base": ["2"] }
+      					]
+      				}
+      			],
+      			"dimensions_affect": "width"
+      		},
+      		{
+      			"name": "Shell_colour",
+      			"type": "colour_picker",
+      			"values": [
+      				{ "Off-white": " W " },
+      				{ "Black":  " M " }
+      			]
+      		},
+      		{
+      			"name": "upholstery",
+      			"type": "suboption",
+      			"values": [
+      				{
+      					"name": "leather",
+      					"type": "colour_picker",
+      					"values": [
+      						{ "red": "RED" },
+                              { "olive_green": "OLI" },
+                              { "cinnamon": "CIN" },
+                              { "chocolate": "CHO" },
+                              { "black": "BLA" }
+      					]
+      				},
+      				{
+      					"name": "linen",
+      					"type": "colour_picker",
+      					"values": [
+                              { "natural": "NAT" },
+                              { "loaden": "LOD" }
+      					]
+      				}
+      			]
+      		}
+      		]
+      }
+
+      ```
+
+
+      This format could tell the react app exactly how to structure the product customisation options. 
+
+
+      Prices and stock could be retrieved by adding all the values of the options together to make a product SKU. 
+
+
+      All the CMS content was written with the values as keys, so it could be easily accessed.
+
+
+      #### Adaptive, data driven UI
+
+
+      Each option has a type, which has a corresponding react component. 
+
+
+      When the type was 'group' the control would be displayed inside a modal. On mobile groups are ignored, all controls were put inside a modal. 
+
+
+      For 'binary' type options a checkbox is used on desktop, and a radio input with images is used on mobile. And so on for colour pickers.
+
+
+      All of these product configuration controls are reusable, and can be applied to all of vitsoe's products. The exception to this is the seat_picker type, which would only ever be used in this context. 
+
+
+      #### Optimisation 
+
+
+      From the earlier prototype we knew optimisation of the large number of images would be challenging. Being renders, I was able to programatically save the output into several resolutions, including a 50px thumbnail. 
+
+
+      The multiple resolutions allowed me to implement lazy loading, but I had to try a few different strategies to get good results. 
+
+
+      Initially I had all the images for a specific configuration load together, lazy loading in at 50px then to the correct high resolution images. With 16 images in a rotation, this was still far too slow. 
+
+
+      The solution was to carefully manage the order in which the images loaded. 
+
+
+      1.  The current image (wherever it is in the rotation) loads its 50px thumbnail.
+
+      2. Once the first is loaded, it triggers the two adjacent images to load their thumbnail, and so on around the rotation.
+
+      3. Once all thumbnails are loaded, the same process is repeated for the full resolution images
+
+
+      TODO (replace with diagram)
+
+
+      This meant:
+
+
+      * The user was never shown a blank space, the thumbnails loaded very quickly.
+
+      * The user could immediately begin to spin the image even if the full resolution images weren't loaded. Reducing any confusion around the functionality of the spinner. 
+
+      * When changing configuration options the interface responded promptly.
+
+
+      To make this clearer, I added in a small loading bar along the top of the frame. The loading bar goes to 50% on the thumbnails, and the remainder when the full resolution is loaded. The loading bar then fades out after a couple of seconds so it's not distracting.
 other_projects: More projects
 featuredpost: false
 ---
