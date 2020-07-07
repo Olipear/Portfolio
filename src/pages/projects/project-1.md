@@ -479,6 +479,64 @@ sections:
 
 
       To make this clearer, I added in a small loading bar along the top of the frame. The loading bar goes to 50% on the thumbnails, and the remainder when the full resolution is loaded. The loading bar then fades out after a couple of seconds so it's not distracting.
+  - body_html: " "
+    heading: Testing
+    intro: "Since the previous prototypes could not emulate the spinner
+      functionality, this round of testing was important for evaluating it's
+      functionality. "
+    headerimage: /img/research.png
+    body: >-
+      As well as device testing, I created a short test in which users needed to
+      carry out specific tasks to evaluate the interface. I intentionally chose
+      subjects who were outside of the sales team and were recent hires, so that
+      their knowledge of the product was comparatively limited.  
+
+
+      Starting from the home page of the site I asked them to buy specific configurations of chairs, footstools and sofas. After observing them complete the tasks, I asked them a few simple questions about the product, such as whether specific combinations were possible (e.g. swivel bases are not compatible with sofa configurations). 
+
+
+      * One user completed the task without interacting with the spinner at all, not realising it was interactive. This resulted in the addition of the 3D icon in the lower left corner. 
+
+      * During device testing I found on the smallest devices the confirm button was below the fold. I decided to move this to the top of the screen so that it would always be visible and in the same place.
+
+      * Again during device testing, laptops with smaller screens could not display the full height of the current selection. We had to limit it's movement so that it would stop scrolling level with the informational content below the product configurator. 
+
+      * Overall the feedback was very positive. Most users enjoyed interacting with the spinner, and immediately opened the correct modals when customising the product.
+  - body_html: " "
+    heading: Results
+    intro: "Sales of the 620 chair increased by xx% in the following 5 months
+      compared to the previous period. "
+    headerimage: /img/brief-_-problem.png
+    body: >-
+      #### Sales of 620 chair
+
+
+      In the 4 months following these changes, compared to the previous 4 months...
+
+
+      620 chair:
+
+
+      * Order volume increased by X%
+
+      * With an increased value of X%
+
+
+      620 footstool
+
+
+      * Order volume increased by X%
+
+      * With and increased value of X%
+
+
+      Including a link to the 621 table has seen
+
+
+      * X% more 620 chair orders included a table
+
+
+      Furthermore, the renders created for this project were successfully used for instagram promotions which helped drive these improved sales.
 other_projects: More projects
 featuredpost: false
 ---
