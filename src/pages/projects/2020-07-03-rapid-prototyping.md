@@ -126,12 +126,26 @@ sections:
 
       * The Kriptonite configurator was incredibly frustrating to use although aesthetically it was very pretty. Moving components on bays required users to click arrows repeatedly, you were not able to drag and drop items.
   - heading: Wireframing and design
-    intro: After identifying some of the key use cases and looking closely at how
-      our competitors handled similar UI challenges I moved on to creating
-      several wireframes
+    intro: "The prototype evolved continually as we built it. Adding features in
+      series to avoid leaving anything half finished. "
     headerimage: /img/design-_-solution.png
     standout: false
-    body: ""
+    body: >-
+      #### Initial features
+
+
+      For the initial 2 week project I had decided the tool would: 
+
+
+      * Be staged in three sections - wall dimensions - track placement - component placement
+
+      * Adding tracks and components should use drag and drop functionality
+
+
+      #### Three step process
+
+
+      Staging the configurator was unquestionably going to be the most effective way of
 other_projects: More projects
 featuredpost: false
 ---
