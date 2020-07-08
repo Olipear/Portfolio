@@ -504,39 +504,56 @@ sections:
       * Overall the feedback was very positive. Most users enjoyed interacting with the spinner, and immediately opened the correct modals when customising the product.
   - body_html: " "
     heading: Results
-    intro: "Sales of the 620 chair increased by xx% in the following 5 months
-      compared to the previous period. "
+    intro: Launching the changes in February 2020, it's difficult to gauge the
+      results at time of writing.
     headerimage: /img/brief-_-problem.png
     body: >-
-      #### Sales of 620 chair
+      #### What I've heard
 
 
-      In the 4 months following these changes, compared to the previous 4 months...
+      This project was my last with vitsoe, leaving just a few weeks after putting this page live. Therefore I don't have access to the same level of data I did on projects like the 621 table redesign TODO (add link). 
 
 
-      620 chair:
+      There's also the global pandemic and subsequent global economic crisis which has seen a reduction in sales everywhere. 
 
 
-      * Order volume increased by X%
-
-      * With an increased value of X%
+      What I have been passed on by ex-colleagues is that:
 
 
-      620 footstool
+      * Despite the pandemic, Footstools have sold ~38% more over the same period this year that last year.
+
+      * 620 chair sales have fallen slightly*
+
+      * Anecdotally, sales have shifted from shops/ salespersons to online. Even those who visit shops, tend to buy later using the online tool rather than through a salesperson *(to their dismay)*. 
 
 
-      * Order volume increased by X%
-
-      * With and increased value of X%
+      *\*This was not split for online / offline sales. I recall in March 2019 there was a large commercial order which would throw these numbers off . Also the pandemic is likely to have affected sales.*
 
 
-      Including a link to the 621 table has seen
+      Additionally, I've seen the renders I created show up in instagram stories, promoting the 620 chair. So those assets are already being utilised outside of their primary purpose. 
 
 
-      * X% more 620 chair orders included a table
 
 
-      Furthermore, the renders created for this project were successfully used for instagram promotions which helped drive these improved sales.
+      #### What I'd be measuring if I were still with Vitsoe
+
+
+      I would be looking at the custom events I put in, to see that the spinner was being used by most visitors, particularly on mobile. Then if they were subsequently more or less likely to move further along the purchase journey as a result of using this feature.
+
+
+      I would be using the events to check that all the controls were being and used across devices. 
+
+
+      I would want to check the rate that users found their way to the footstool configurator. Having removed the initial switch at the top of the page I'd want to see that the link below had enough visibility.
+
+
+      Behavioural data like this can reveal problems or user behaviours that are totally unexpected, these are often the most valuable insights. 
+
+
+      I'd also want to take a better look at sales. I'd want to see those anecdotes about the shift in sales backed up with data. I would also be looking at the rate of sales across all products, to see if the drop in 620 was more or less than the drop in sales of other products. I would be tracking marketing efforts to account for the effects of they might have had.
+
+
+      All of this would inform further potential improvements to the existing interface.
 other_projects: More projects
 featuredpost: false
 ---
