@@ -271,7 +271,27 @@ sections:
       This wasn't consistent with the behaviour in the components stage, even though it was easier to use. Reducing the snapping area to match the components section teaches the user what to expect later. 
 
 
-      We had already added validation to each stage, so that a user could not continue without having created at least one bay. To complete the section a user must have at dragged and dropped more than one track onto the green target area. They would be unable to continue until this was successfully done.
+      We had already added validation to each stage, so that a user could not continue without having created at least one bay. To complete the section a user must have at dragged and dropped more than one track onto the green target area. 
+
+
+      This was a guarantee: 
+
+
+      * They had selected an item from the list. Learning blue meant selection
+
+      * They had dragged and dropped a track into the green area. Learning the function of the green drop targets. 
+
+      * They had seen the colour change from red to unshaded as they dragged it into the green area. Learning that the illustration changes from red when placed correctly. 
+
+
+      At one stage, I had made it a requirement that the user must delete at least one track, with accompanying instruction messages. This would guarantee they understood the deletion functionality. However when testing this quickly became annoying, it was removed because we could not guarantee a user would go through this task only once. 
+
+
+      Another idea was to force the first track being dragged to be dropped in an incorrect location. The user would see that dropping a component when red deletes it. However again we couldn't guarantee this would be a one off experience.
+
+       
+
+      #### Tool tips & guidance
 other_projects: More projects
 featuredpost: false
 ---
