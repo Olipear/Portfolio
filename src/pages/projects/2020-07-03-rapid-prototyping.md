@@ -121,10 +121,10 @@ sections:
       * Once complete, a unique sharable link was generated so that is could be shared with a partner or housemate. 
 
 
-      Other competitor tools provided examples of pitfalls to avoid: 
+      The Atlas A4S builder unlike the the Algot planner did not take into account wall dimensions, or positioning on the wall. Instead it displayed system dimensions, and let the user decide what would fit. I could see this would be advantageous not just because it removes an unnecessary decision, but it would make the interface much simpler. 
 
 
-      * The Kriptonite configurator was incredibly frustrating to use although aesthetically it was very pretty. Moving components on bays required users to click arrows repeatedly, you were not able to drag and drop items.
+      Other competitor tools provided examples of pitfalls to avoid. The Kriptonite configurator was incredibly frustrating to use although aesthetically it was very pretty. Moving components on bays required users to click arrows repeatedly. Drag and drop functionality is far superior.
   - heading: Wireframing and design
     intro: "The prototype evolved continually as we built it. Adding features in
       series to avoid leaving anything half finished. "
@@ -141,11 +141,137 @@ sections:
 
       * Adding tracks and components should use drag and drop functionality
 
+      * The list of components should be filterable 
 
-      #### Three step process
+
+      #### Wireframes
 
 
-      Staging the configurator was unquestionably going to be the most effective way of
+      After sketching out some ideas, I went straight into XD to create low-fi mockups. One of our development team was remote, so it made it easy to share and keep updated with any changes I made. I also made sure that any interaction and frontend elements I wasn't working on myself, were handled by a dev who could be physically present, so I could use pen and paper to sketch out ideas that weren't covered in the mockups. 
+
+
+      ![Mockup of dimensions screen](/img/screen-2.jpg "Mockup of dimensions screen")
+
+
+      The wall dimensions needed to be exact for Vitsoe's planning process, having a draggable wall size was probably not desirable, and I wanted to save our efforts for the following, more complex sections. 
+
+
+      ![Mockup of tracks screen](/img/screen-2-1.jpg "Mockup of tracks screen")
+
+
+      Using system dimensions rather than measurements from walls, would allow us to ignore the placement on walls altogether, the tracks would always be centered. 
+
+
+      The wall dimensions were still useful for the planning process, but also allowed the tracks to be filtered down by height, and limited the with of the system including safe space either side for accessing pins. 
+
+
+      I think this was the right balance to take between AS4 and Algot's approaches. 
+
+
+      ![Mockup of tracks screen part 2](/img/screen-2-1-–-1.jpg "Mockup of tracks screen")
+
+
+      For this initial version, we would allow placement of the tacks anywhere. Tracks placed far away would snap to 90, and when placed closer would snap to 65.
+
+
+      I also started wanted to introduce some guidance here, making sure the user was unable to continue without at least one bay. 
+
+
+      ![Mockup of tracks screen part 3](/img/screen-2-1-–-2.jpg "Mockup of tracks screen")
+
+
+      Editing the tracks by dragging them out of the wall area was one of the reasons we decided against adding entire bays as with the Algot planner. 
+
+
+      An earlier sketch used buttons to add and remove additional bays, but I wanted to avoid the poor experience the Kyriptonite tool had, and stick to drag and drop.
+
+
+      ![Mockup of components screen](/img/screen-3.jpg "Mockup of components screen")
+
+
+      Again components would be added to the bays with drag and drop functionality. We initially used colour coding to indicate whether a component would be allowed 
+
+
+      These were light on detail, but by the end of the two weeks we had built these mockups with the core functionality. Using libraries for both the drag and drop functionality, and the rules engine saved us a lot of time.
+
+
+      The prototype at this point could validate E-track placement using the wall dimensions, and component placement using a rules engine. It showed prices, used drag and drop, and allowed filtering of components by type. 
+
+
+      We had met the basic requirements, but the informative aspect was still lacking.
+
+
+      #### Two week extension
+
+
+      Having the core functionality in place meant we could start to be more ambitious with our goals. My mockups became more detailed, and we looked at some of the features we'd initially pegged as 'nice to have'. 
+
+
+      * Much more guidance would be provided, tooltips, warnings, and instructions for each stage. 
+
+      * We would add in colour customisation
+
+      * We would add an additional category for validation. Warnings would be included separately to errors. 
+
+      * We would add the option to switch to inches.
+
+      * We would add the ability to change currency
+
+      * We would generate a sharable link
+
+
+      Features such as multiple currencies and the shareable link were tasks I could leave to our senior developers. Importantly they could get to work on these features without having to wait for me to come up with a visual design. 
+
+
+      This allowed me a bit of time to put more thought into the UX of the tool. 
+
+
+      ![Mockup of new layout](/img/your-space-landing-–-3.jpg "Mockup of new layout")
+
+
+      The grey bar was to be used for all instructional and informational messages. Initially it would drop down when required, but later I decided to have it visible all the time so that users would always know where to look for guidance. 
+
+
+      I also decided at this stage to make the components list vertical. This provided a better aspect ratio for the active area. The horizontal list provided an area that was wide and short, but entering sensible wall dimensions required a rectangular wall to be significantly scaled down to fit. 
+
+
+      The major focus was the drag and drop functionality and deciding how to explain to users why certain components couldn't or shouldn't be placed in specific places. 
+
+
+      #### Drag and drop interactions
+
+
+      Components already snapped to the tracks as they were placed, but I wanted to make it visually clear where they could be placed. 
+
+
+      ![Interaction designs](/img/interaction-options.jpg "Interaction designs")
+
+
+      The first panel were initial ideas of how to show various interactions. I decided against using green for valid placements so I could reserve that colour for drop targets. Each colour is then exclusive to its function.
+
+
+      Custom cursors were another option I explored, iconography reinforced the colour coding. However once I started adding in tooltips they became a distraction. 
+
+
+      Drop targets were copied from the Algot planner at first; the arrow elements were good visual clues. But when applied to the etrack drop targets this style no longer worked. So I changed it to simple semi-transparent blocks with Strong borders.  
+
+
+      #### Gamification
+
+
+      Once I had defined the visual language to be used on the more involved components stage, I wanted to let users learn it without excessive guidance messaging. Treating the multiple stages as levels of a game was the answer; essentially a user should learn mechanics needed in later levels from trial and error in earlier levels.
+
+
+      To do this, I used the same visual language on the tracks stage, and made it functionally closer to the components stage. In the first prototype the tracks could be snapped into bays from anywhere in the wall area. 
+
+
+      TODO insert diagram showing change of soft drop targets to hard drop targets.
+
+
+      This wasn't consistent with the behaviour in the components stage, even though it was easier to use. Reducing the snapping area to match the components section teaches the user what to expect later. 
+
+
+      We had already added validation to each stage, so that a user could not continue without having created at least one bay. To complete the section a user must have at dragged and dropped more than one track onto the green target area. They would be unable to continue until this was successfully done.
 other_projects: More projects
 featuredpost: false
 ---
