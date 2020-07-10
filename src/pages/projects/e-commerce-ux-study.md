@@ -211,5 +211,68 @@ sections:
 
 
       With the benefit of hindsight, the removal of the gallery should have been a change which followed on later. Even without A/B testing being functionally available on the website, making this changes separately would have made it easier to measure its effects.
+  - body_html: " "
+    heading: Follow up
+    intro: "UX design is a process that doesn't really end. Measuring the effects I
+      was having at each stage, I continued to make improvements to the initial
+      design. "
+    headerimage: /img/brief-_-problem.png
+    body: >-
+      #### Acquisition
+
+
+      Instagram was prioritised by the company as I had shown that the ecommerce conversion rate was significantly higher from these sources. 
+
+
+      When I compared the four months either side of the homepage and 621 area changes being launched:
+
+
+      * Vitsoe Voice readership was slightly higher. As my research showed, it was mostly being read by existing customers, so moving it further down the page did not damage it. 
+
+      * Navigation from the homepage to product pages only increased by 2%. In raw numbers this account for an additional ~4,000 pageviews for 612.
+
+      * Views for the buy page increased by 535%, and all key page metrics improved significantly.
+
+
+      The direct affect these changes made on sales was very difficult to measure.
+
+
+      TODO: insert chart of sales
+
+
+      This graph looks fantastic on the face of it. However adding context shows how the changes I made might not be fully responsible for the increase in sales.
+
+
+      TODO: insert chart of sales with annotations
+
+
+      Improving the user experience on the website didn't end the production problems the company had, and the refocusing of marketing efforts could easily have had a larger impact. 
+
+
+      Looking at this further in the future using much longer time periods would make this more clear. However the website behaviour data I had seemed to indicate what I'd done was working. 
+
+
+      #### Galleries
+
+
+      I was aware the decision to double up gallery functionality with the product visualisation was a gamble. When I implemented the changes I made sure that opening, and navigating through the lightbox would trigger custom events. 
+
+
+      In the four months before and after launching the changes; there were 9,780 unique events for opening the gallery vs 1,254 unique pageview for the previous pageviews. An increase of 780%!
+
+
+      This was of course mostly because the page the lightbox was in had also had a large increase in views. So I also looked at the % of pageviews that resulted in a gallery open event. Excluding those who bounced, 95% of users opened the gallery lightbox. 
+
+
+      In this instance the gamble paid off.
+
+
+      I would later make further improvements to the gallery, and updated the custom icon to the material design gallery icon - along with using material design icons across other areas of the site.
+
+
+      TODO: add gallery lightbox screenshot. 
+
+
+      This redesign could have a project write up of its own. But importantly, even though it was made a year later, I was still using the research I did for this project. Adding social media sharing links to allow users to save it on their pinterest board.
 other_projects: More projects
 ---
