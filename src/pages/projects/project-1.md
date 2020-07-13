@@ -16,30 +16,19 @@ sections:
       620 chair and footstool. Online purchases were often preceded by a shop
       visit.
     body: >-
-      #### Background
-
-
-      The Vitsoe 620 chair and footstool is a modular system; multiple chairs can be affixed together to create sofas. The chair comes in six leather colours, two plastic colours, and high-back or low-back. A swivel can be added to single chairs but not sofas. 
-
-
       #### Business goals
 
 
-      In addition to increasing sales of their product; it was also to allow their salespeople to concentrate on the more complex sales process of their modular shelving system, 606. 
+      In addition to increasing sales of their product; they wanted to move existing offline sales online. This was for salespeople to focus on the more complex sales process of their modular shelving system. 
 
 
-      Furthermore, the company planned on launching a new linen upholstery option in 2020. We would need to update the UI of the configurator to account for this.
-  - heading: Research & Discovery phase
-    intro: >
-      Now I had a clear idea of what needed to be done, I started by looking at
-      what we had, and where it was failing.
-    standout: false
-    headerimage: /img/research.png
-    body: >-
+      Furthermore, the company planned on launching a new upholstery option in 2020. So the solution would have to be flexible enough to account for this.
+
+
       #### User stories
 
 
-      Having previously created personas, I spoke to Vitsoe's sales teams to identify pain points for both the customer and business. Using these I then defined an exhaustive list of user stories the new interface would need to satisfy. 
+      Having created personas for previous UX projects, I spoke to Vitsoe's sales teams to identify pain points in the 620 sales process. Using these I then defined an exhaustive list of user stories the new interface would need to satisfy. 
 
 
       These are some of the stories which would address the biggest pain points: 
@@ -52,8 +41,13 @@ sections:
       * An existing customer should be able to buy a footstool separately.
 
       * Customers should be comfortable buying the chair without seeing one in person.
-
-
+  - heading: Research & Discovery phase
+    intro: >
+      Now I had a clear idea of what needed to be done, I started by looking at
+      what we had, and where it was failing.
+    standout: false
+    headerimage: /img/research.png
+    body: >-
       #### Previous product page
 
 
@@ -298,7 +292,7 @@ sections:
       ### The use of this system across other products will greatly improve the UX of the site.
 
 
-      For example; once all colour customisation interfaces use the same react component, it guarantees a consistent user experience for users when selecting colour on any of vitsoe's products. 
+      For example; when all colour selection interfaces use the same component, it guarantees a consistent user experience for users when selecting colour on any of vitsoe's products. Additionally it makes it really easy to update for developers.
 
 
       #### Optimisation
@@ -336,12 +330,12 @@ sections:
       * When changing configuration options the interface responded promptly.
 
 
-      To make this even clearer, I added in a small loading bar along the top of the frame. The loading bar goes to 50% on the thumbnails, and the remainder when the full resolution is loaded. The loading bar then fades out after a couple of seconds so it's not distracting.
+      To make this even clearer, I added in a small loading bar along the top of the frame. The loading bar goes to 50% on the thumbnails, and the remainder when the full resolution is loaded.
   - body_html: " "
     heading: Testing
     intro: "Since the previous prototypes could not emulate the spinner
-      functionality, this round of testing was important for evaluating it's
-      functionality. "
+      functionality, this round of usability testing was important for
+      evaluating its functionality. "
     headerimage: /img/research.png
     body: >-
       As well as device testing, I carried out task-driven usability testing.
