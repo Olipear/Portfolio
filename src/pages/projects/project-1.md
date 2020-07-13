@@ -3,8 +3,7 @@ templateKey: project-entry
 date: 2020-06-22T13:16:57.702Z
 featuredproject: true
 title: Adaptive UI example
-description: In selling this design icon I went for an adaptive interface design
-  and was very successful in improving sales.
+description: "In this project improving the UI would have the largest impact. "
 featuredimage: /img/620-image.jpg
 featuredlink: https://www.vitsoe.com/gb/620/buy
 featuredlinklabel: See it live
@@ -12,39 +11,24 @@ sections:
   - heading: Brief
     headerimage: /img/brief-_-problem.png
     standout: false
-    intro: Sales of Vitsoe's 620 chair and footstool product were relatively low.
-      The majority of sales were happening in their retail spaces or via
-      salespeople. Since Vitsoe only operated 4 physical shops worldwide,
-      providing a better online experience was the most effective way of
-      improving sales.
-    body: "#### User stories\r
+    intro: >
+      Vitsoe relied on its physical retail spaces for most of the sales of their
+      620 chair and footstool. Online purchases were often preceded by a shop
+      visit.
+    body: >-
+      #### Background
 
-      \r
 
-      Adapting personas I'd made early on during my time at Vitsoe, the
-      first stage was to create, and agree upon a list of user stories I'd be
-      looking to satisfy. \r
+      The Vitsoe 620 chair and footstool is a modular system; multiple chairs can be affixed together to create sofas. The chair comes in six leather colours, two plastic colours, and high-back or low-back. A swivel can be added to single chairs but not sofas. 
 
-      \r
 
-      Some of the most important ones were: \r
+      #### Business goals
 
-      \r
 
-      * A new customer needs to understand the adaptability of the 620
-      (many customers didn't understand extra components were needed to add two
-      chairs together)\r
+      In addition to increasing sales of their product; it was also to allow their salespeople to concentrate on the more complex sales process of their modular shelving system, 606. 
 
-      * A new customer needs to understand the leather texture has natural
-      scarings and patternations. (complaints had been made about scars in the
-      past)\r
 
-      * An existing customer should be able to buy a footstool separately
-      (at the time footstools could only be bought online with a chair, as an
-      addon item)\r
-
-      * Customers should be comfortable buying the chair without seeing
-      one in person. (since there were only four shops worldwide)\r\n"
+      Furthermore, the company planned on launching a new linen upholstery option in 2020. We would need to update the UI of the configurator to account for this.
   - heading: Research & Discovery phase
     intro: >
       Now I had a clear idea of what needed to be done, I started by looking at
@@ -52,28 +36,49 @@ sections:
     standout: false
     headerimage: /img/research.png
     body: >-
-      #### Previous page
+      #### User stories
+
+
+      Having previously created personas, I spoke to Vitsoe's sales teams to identify pain points for both the customer and business. Using these I then defined an exhaustive list of user stories the new interface would need to satisfy. 
+
+
+      These are some of the stories which would address the biggest pain points: 
+
+
+      * A new customer needs to understand the modularity, and customisation options available on the 620
+
+      * A new customer should not be surprised leather texture has natural scarings and patternations.
+
+      * An existing customer should be able to buy a footstool separately.
+
+      * Customers should be comfortable buying the chair without seeing one in person.
+
+
+      #### Previous product page
+
+
+      Looking at the the existing product configuration page it was obvious where some of these paint points were arising. 
 
 
       ![Previous buy page for the 620 chair](/img/original-page.jpg "The previous buy page for the 620 chair")
 
 
-      ### The Most obvious issue was poor product visualisation.
+      ### Poor product visualisation was at the heart of it.
 
 
-      The initial line drawing was taking up the entire page upon opening, which could explain the high bounce rate on this page. It was also a duplication of the seat picker element below.
+      The use of the line drawing here was most culprit when it came to customer confusion on the leather texture.
 
 
-      The seat picker element worked well however, it communicated the modularity of the product clearly, and succinctly.
+      The seat picker communicated the modularity of the product clearly, and succinctly.
 
 
-      The one image of the chair was from an odd angle, but it did at least show a close up of the leather texture. 
+      The one photo of the chair was from an odd angle making it difficult to see the texture clearly. 
 
 
-      The footstool could not be purchased on it's own, and had no photograph at all. Sales of the footstool were extremely low, less than one every 2 months. 
+      There was no photography of the footstool at all, and it could only be added to a chair purchase as an add-on item. 
 
 
-      The mobile version was responsive, so this page was very long, and the summary with price breakdown was right at the bottom of the page.
+      The mobile version was responsive, so this page was very long, and the summary with price breakdown was below all the controls. Most significantly, this meant the Add to basket button was very far down the page. 
 
 
       #### Quick fixes
@@ -93,22 +98,23 @@ sections:
       * Removed the other two line drawings at the top, and moved the preview photo to the right column. 
 
 
-      Implementing these changes straight away also gave me further opportunity to measure any improvements and see if my assumptions were correct. 
+      Implementing these changes straight away gave me an opportunity to measure any improvements. These changes didn't impact sales over four months, however that in itself told me the larger line-drawings were superfluous.
 
 
       #### Behaviour analysis
 
 
-      The low sales meant it was difficult to look at page statistics when trying to see what lead to goal completions. However this made it practicable to use the user explorer in google analytics to look at each user's journey through the site. 
+      With an average of ~2 online sales per month, it was practical to look at each purchase journey over a year long period.
 
 
-      * Purchasers would spend weeks deliberating over their purchase, this made sense for such an expensive purchase. 
+      * Most purchasers would spend weeks deliberating over their purchase, returning to the site many times.
 
-      * The most popular page in the 620 area was the gallery page, this supported my theory that better product visualisation was crucial for improving sales.
+      * During this deliberation the gallery page was the most commonly visited. 
 
-      * No purchases were made on mobile, but the gallery was popular here too. I noticed that purchasers would use the mobile gallery during their deliberation phase. 
+      * No purchases were made on mobile, but the gallery was popular here too.
 
-      * Unlike the [621 table](olipear.com), the initial introduction page didn't seem to be a point of abandonment. This was unexpected, and stopped me from emulating the page structure I had used there as I originally planned. 
+
+      When I looked at the larger sample of non-purchasers, I saw that many people were 
 
 
       #### Competitor evaluation
