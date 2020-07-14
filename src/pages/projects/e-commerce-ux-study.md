@@ -23,7 +23,10 @@ sections:
       #### Objectives
 
 
-      Throughout my time at Vitsoe my brief was broadly unchanged, improving online sales. The 621 table was the first product I was asked to look at. This meant the UX process I went through here was the most comprehensive, and would inform my later work on their other products.
+      The 621 table was the first product I was asked to look at in terms of improving online sales. 
+
+
+      This meant the UX process I went through here was the most comprehensive, and would go on to inform later work on other products.
     headerimage: /img/brief-_-problem.png
   - body_html: " "
     heading: Research
@@ -40,37 +43,22 @@ sections:
       There were some large gaps that I'm aware could have significantly improved my UX process. Social media marketing was untracked, email promotions did not use trackable links, and I would not have access to customers for interviews, focus groups or user testing. 
 
 
-      My window to the customer was via the sales teams, I used experienced salespeople to better understand customer motivations and frustrations. 
+      My window to the customer was via the sales teams, wherever possible I used them to better understand customer motivations and frustrations. 
 
 
       #### Personas
 
 
-      The UX personas I created involved a lot of collaboration with the most experienced Vitsoe salespeople. I used website acquisition and device statistics to decide what technology they used. The majority of Vitsoe customers used apple products for example. 
+      The UX personas I created involved a lot of collaboration with the most experienced Vitsoe salespeople, along with website usage data. 
 
 
       TODO: insert personas here 
 
 
-      These were representative of both Vitsoe's existing customer base, and their target market. The 606 shelving system is Vitsoe's main product, so they are focused on that, with relevant information like their living situation. 
+      These were representative of both Vitsoe's existing customer base, and their target market. The 606 shelving system is Vitsoe's main product, so they are built with this in mind. With information like their living situation being highly relevant. 
 
 
-      I could then adapt these base personas where needed for a specific project. For example, in the base persona Hans owns a shelving system from a competitor, and want to purchase additional components from Vitsoe. For this 621 table project he would own a 620 chair from a competitor and want to buy the table to accompany it.
-
-
-      #### Acquisition
-
-
-      The user journey begins long before they enter the website. I looked at where we were getting our visitors from, and how many. If people weren't seeing or hearing about Vitsoe's products, changes I made on the website couldn't be effective. 
-
-
-      TODO: insert acquisition stats here
-
-
-      Vitsoe had a healthy volume site visitor numbers overall, I passed along social media sites and publications that we being particularly effective for us. 
-
-
-      When I drilled down into where these vitistors were, I found that a 20% were entering to the 'good design page', which explained Dieter Rams's 10 principles of good design. Heatmap research had been conducted 3 years previously, shortly after the section was redesigned. This found that a majority of visitors were coming to copy-paste the principles, and visitors were mostly product design students learning about Dieter Rams. I saw that 80% of visitors to the page didn't visit any other part of the website. 
+      I could then adapt these base personas where needed for a specific project. For example, in the base persona Hans owns a shelving system from a competitor, and wants to purchase additional components from Vitsoe. For this project he would own a 620 chair and want to buy the 621 table to accompany it.
 
 
       #### Conflicting business goals
@@ -79,28 +67,19 @@ sections:
       Vitsoe wanted to be 'the gatekeeper for Dieter Rams'. Large portions of the website are taken up with the career, history and philosophy of the designer's work. These pages were ranked at the top of search engines for 'Dieter Rams', driving a huge volume of traffic to the site. 
 
 
-      Furthermore, the company has a digital magazine 'Vitsoe voice', collection of lifestyle and design articles. Many featured vitsoe products, but they would often be features on an interesting Vitsoe customer, or Rams's design philosophy. 
-
-
-      All of this drove traffic to the site, but I found that in many instances it conflicted with the goals to use the site for e-commerce applications. 
+      The company also has its own publication 'Vitsoe voice'; a collection of lifestyle and design articles. Many featured vitsoe products, but they would often be features on an interesting Vitsoe customer, or Rams's design philosophy. 
 
 
       TODO: Insert homepage.
 
 
-      Vitsoe Voice prominence on the homepage was clearly confusing the perception of Vitsoe as a retailer, and the behaviour tracking backed this up. After the good design page the homepage was the 2nd largest entry point, a quarter of users bounced, of those remaining only just over half moved on to view product pages. Most of the remainder were visiting sections on Dieter Rams. 
+      Vitsoe voice was central on the company's homepage. When I looked into readership, I found most were existing customers, and they were arriving here via email newsletters. My investigations showed these articles were not promoting online sales.
 
 
-      Despite taking pride of place on the homepage, only 4% of visitors were interested in reading Vitsoe Voice. When I looked further at Vitsoe Voice, I found that the overwhelming majority of readers were coming directly, and pageviews spiked whenever the company released a newsletter to existing customers.
+      Meanwhile sales teams were reporting back to me that many customers, even existing customers, were surprised to learn that Vitsoe had an online shop at all. 
 
 
-      This was further evidenced when I looked at conversion ratio vs pageviews to vitsoe voice. 
-
-
-      DOTO: insert diagram here
-
-
-      Spikes in Vitsoe voice were correlating with dips in conversion rate; indicating that these vitisors were less likely to make a purchase and were most probably existing customers. 
+      Some difficult conversations with business owners were needed about what their website should be. I had limited success at getting a decision
 
 
       #### Site behaviour
