@@ -185,7 +185,7 @@ sections:
       ![Wireframe with toggles](/img/wireframe-binary-toggles.jpg "Wireframe with toggles")
 
 
-      In a few of my wireframes I had the footstool as a distinct section underneath the 620, however I decided that the footstool should 
+      Most of my initial wireframes had the footstool as a distinct section, but on the same page as the chair. I decided that the footstool should have it's own configurator, identical to the chair.
 
 
       #### Moving to prototypes
