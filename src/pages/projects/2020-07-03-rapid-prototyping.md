@@ -3,8 +3,8 @@ templateKey: project-entry
 date: 2020-07-03T16:06:08.432Z
 featuredproject: true
 title: Rapid prototyping
-description: This short proof of concept was part of a wider investigation into
-  how vitsoe could improve the purchase process for the 606 Shelving System.
+description: This proof of concept was part of a wider investigation into how
+  vitsoe could improve the purchase process for the 606 Shelving System.
 featuredimage: /img/furnituretoolfeatured.jpg
 featuredlink: https://www.youtube.com/watch?v=8SOaF-Motuo&feature=youtu.be
 featuredlinklabel: See my presentation
@@ -12,21 +12,22 @@ sections:
   - heading: Brief
     headerimage: /img/brief-_-problem.png
     standout: false
-    intro: This prototype was part of a larger effort to improve online sales of the
-      606 Shelving system.
+    intro: This prototype was part of an ongoing UX review of the sales process for
+      their shelving system.
     body: >-
       #### Background
 
 
-      Briefly*:* 606 is a modular shelving system. 'E-tracks' are directly attached to walls or posts. Various components such as shelves, tables, and cabinets are attached to tracks with pins. There are two bay widths for components, 65cm and 90cm.  It's also relevant to mention the system is *very* expensive.
+      Briefly*:* 606 is a modular shelving system. 'E-tracks' are directly attached to walls or posts. Various components such as shelves, tables, and cabinets are attached to tracks with pins. There are two bay widths for components, 65cm and 90cm. 
 
 
-      The sales process for a new shelving system is complex, the majority of the sales process was handled by 'planners' (essentially salespeople). Planners would be trained to understand the limitations of the system, for example specific wall-types would limit the weight the system could hold.
+      The majority of the sales process is handled by 'planners' (essentially salespeople), who would be trained to understand the limitations of the system.
 
 
-      Planners would receive inquiries via a webform on the website, or sometimes via direct email. They then take that inquiry and create a 'drawing' (a plan for the system which includes all measurements). The drawing was made using an outdated, but well built Java desktop application. This application was central to the business, and interfaced with stock systems, their CRM (salesforce), and the website. 
+      Planners would receive inquiries via a webform, or direct email. They used a  Java desktop app to create a plan for the shelving system. 
 
 
+      The entire digital infrastructure of the company is built around this application, interfacing with stock, accounting, customer and account systems.
 
 
       #### Leading up to the prototype
@@ -35,35 +36,24 @@ sections:
       I was researching the entire sales process for 606 in depth. This included interviews with planners, behaviour analysis on the website, and even AI assisted sentiment analysis on the web inquiry form.
 
 
-      I found: 
+      Some of the key pain points were: 
 
 
-      * Planners wasted a lot of time on providing quotes for customers that could never afford the system.
+      * Planners wasted a lot of time on providing quotes for customers that could never afford the system. Customers were often unwilling to provide their budget upfront.
 
-      * Planners found many customers who made inquiries didn't understand the basic concepts of the shelving system. e.g. there are two set bay widths.
+      * Planners found many customers who made inquiries didn't understand the basic concepts of the shelving system. 
 
-      * Users were navigating away from a page called 'what's the cost' to the brochure download page to use a pdf download of the pricelist. The 'what's the cost' page did not have prices for individual components, but instead had example prices for complete systems.
+      * Customers hated the idea of having to go through a salesperson. "Just let me buy it" was a common theme in customer feedback.
 
-      * Users didn't pay much attention to the informational pages in the 606 area of the site, and often skipped straight to the inquiry form. Information was generally poor, for example there was no complete list of components which could be hung on the tracks.
+      * Customers were being put off from buying into a system they could add to over time, because they didn't like the idea of having to call or email someone to do so. 
 
-      * Users were hostile to being asked their budget directly on the webform. Often when they did enter a number, it was too low for even the smallest system.
-
-      * Users would enter impractical wall dimensions in the webform, e.g. 55cm wide, when the smallest bay width is 65cm. 
-
-      * Specific fields on the webform were able to reliably predict when an inquiry would never lead to a sale.
-
-      * Initially most customers hated the idea of having to go through a salesperson. "Just let me buy it" was a common theme in customer feedback. 
-
-      * Customers who went through the process appreciated planner's expertise (there is obvious survivor bias here).
+      * Customers who went through the process appreciated planner's expertise - management were blind to the survivor bias here.
 
 
       #### An exercise in the possible
 
 
-      Creating a new customer-facing tool was not the only option discussed or presented to management. However my research indicated it would have the largest impact in addressing the many issues with the sales experience I found. 
-
-
-      The idea of a customer facing drawing tool was far from a new idea within the business, but had been met with scepticism in the past. The key issue was that the various rules were viewed as too complex to implement in a web based tool. The existing desktop application had been expensive and taken months to build using an external development studio. 
+      The idea of a customer facing drawing tool was far from a new idea within the business, but had been met with scepticism in the past. The key issue was that the various rules were viewed as too complex to implement in a web based tool. 
 
 
       Therefore, the main aim of this prototype was to prove that a sufficiently complex tool could be created to follow these rules.
@@ -72,34 +62,29 @@ sections:
       The requirements of this prototype were explicitly laid out: 
 
 
-      * A list of rules which needed to be followed, for example tables must only be allowed at a specific height etc. 
+      * Rules which planners would apply would need to be followed - for example specific components should not be hung in certain places.
 
-      * It should be educational/ informative. Customers should be able to use the tool with no prior knowledge of the shelving system.
+      * Customers should be able to use the tool with no prior knowledge of the shelving system.
 
-      * It needed to show prices
+      * Having used the tool a customer should understand more about the system. It should be informative and educational.
+
+      * It needed to inform customers of prices.
 
 
-      The project was scheduled to last two weeks, but after progress was shown it was extended an additional two weeks. 
-
-
-      As 'UX developer' I was part of the development team, which consisted of a further 2 senior developers, and a junior developer.
+      As 'UX developer' I also part of the development team, consisting of four developers.
   - heading: Research & Discovery phase
-    intro: "Much of the research was in hand, once the go-ahead was given for the
-      prototype, I conducted further research on what makes a good furniture
-      planner. "
+    intro: "Once the go-ahead was given for the proof of concept, looked at what
+      makes a good furniture planner. "
     standout: false
     headerimage: /img/research.png
     body: >-
       #### Competitor tools
 
 
-      Having researched and understood the problems I was trying to solve, I went straight into examining other similar tools. 
-
-
       I found nearly all of them were staged, allowing users to define the wall area first, pick tracks then place components in separate sections. 
 
 
-      Ikea's Algot planner was really head and shoulders above all the other examples I looked at. Other Ikea planners used a 3D plugin, but the algot used a simpler 2D illustrated interface, making it easy to understand. 
+      Ikea's Algot planner was really head and shoulders above all the other examples I looked at.
 
 
       ![Screenshot of Ikea's Algot planner](/img/algot-planner-screenshot.jpg "Screenshot of Ikea's Algot planner")
@@ -121,7 +106,7 @@ sections:
       * Once complete, a unique sharable link was generated so that is could be shared with a partner or housemate. 
 
 
-      The Atlas A4S builder unlike the the Algot planner did not take into account wall dimensions, or positioning on the wall. Instead it displayed system dimensions, and let the user decide what would fit. I could see this would be advantageous not just because it removes an unnecessary decision, but it would make the interface much simpler. 
+      The Atlas A4S builder unlike the the Algot planner did not take into account wall dimensions, or positioning on the wall. Instead it displayed system dimensions, and let the user decide what would fit. This gave the user all the information they needed to make sure it fit, without demanding they had their wall dimensions to hand.
 
 
       Other competitor tools provided examples of pitfalls to avoid. The Kriptonite configurator was incredibly frustrating to use although aesthetically it was very pretty. Moving components on bays required users to click arrows repeatedly. Drag and drop functionality is far superior.
@@ -162,10 +147,7 @@ sections:
       Using system dimensions rather than measurements from walls, would allow us to ignore the placement on walls altogether, the tracks would always be centered. 
 
 
-      The wall dimensions were still useful for the planning process, but also allowed the tracks to be filtered down by height, and limited the with of the system including safe space either side for accessing pins. 
-
-
-      I think this was the right balance to take between AS4 and Algot's approaches. 
+      The wall dimensions were still requirements for the sales process, and they also allowed the tracks to be filtered down by height.
 
 
       ![Mockup of tracks screen part 2](/img/screen-2-1-–-1.jpg "Mockup of tracks screen")
@@ -183,28 +165,25 @@ sections:
       Editing the tracks by dragging them out of the wall area was one of the reasons we decided against adding entire bays as with the Algot planner. 
 
 
-      An earlier sketch used buttons to add and remove additional bays, but I wanted to avoid the poor experience the Kyriptonite tool had, and stick to drag and drop.
-
-
       ![Mockup of components screen](/img/screen-3.jpg "Mockup of components screen")
 
 
       Again components would be added to the bays with drag and drop functionality. We initially used colour coding to indicate whether a component would be allowed 
 
 
-      These were light on detail, but by the end of the two weeks we had built these mockups with the core functionality. Using libraries for both the drag and drop functionality, and the rules engine saved us a lot of time.
+      These were light on detail, but by the end of the two weeks we had built these mockups with this core functionality. Using libraries for both the drag and drop functionality, and the rules engine saved us a lot of time.
 
 
       The prototype at this point could validate E-track placement using the wall dimensions, and component placement using a rules engine. It showed prices, used drag and drop, and allowed filtering of components by type. 
 
 
-      We had met the basic requirements, but the informative aspect was still lacking.
-
-
       #### Two week extension
 
 
-      Having the core functionality in place meant we could start to be more ambitious with our goals. My mockups became more detailed, and we looked at some of the features we'd initially pegged as 'nice to have'. 
+      With such great progress being shown, we were given another two weeks to work on it. 
+
+
+      Having the core functionality in place meant we could start to be more ambitious, especially with the informative aspects. My mockups became more detailed, and we looked at some of the features we'd initially marked as 'nice to have'. 
 
 
       * Much more guidance would be provided, tooltips, warnings, and instructions for each stage. 
