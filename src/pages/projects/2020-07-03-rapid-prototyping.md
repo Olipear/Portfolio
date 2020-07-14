@@ -199,10 +199,10 @@ sections:
       * We would generate a sharable link
 
 
-      Features such as multiple currencies and the shareable link were tasks I could leave to our senior developers. Importantly they could get to work on these features without having to wait for me to come up with a visual design. 
+      Features such as multiple currencies and the shareable link were tasks I gave to our senior developers. Importantly they could get to work on these features without having to wait for me to come up with a visual design. 
 
 
-      This allowed me a bit of time to put more thought into the UX of the tool. 
+      This provided me a bit of breathing space to put more thought into the UX of the tool. 
 
 
       ![Mockup of new layout](/img/your-space-landing-–-3.jpg "Mockup of new layout")
@@ -211,37 +211,19 @@ sections:
       The grey bar was to be used for all instructional and informational messages. Initially it would drop down when required, but later I decided to have it visible all the time so that users would always know where to look for guidance. 
 
 
-      I also decided at this stage to make the components list vertical. This provided a better aspect ratio for the active area. The horizontal list provided an area that was wide and short, but entering sensible wall dimensions required a rectangular wall to be significantly scaled down to fit. 
-
-
-      The major focus was the drag and drop functionality and deciding how to explain to users why certain components couldn't or shouldn't be placed in specific places. 
-
-
-      #### Drag and drop interactions
-
-
-      Components already snapped to the tracks as they were placed, but I wanted to make it visually clear where they could be placed. 
-
-
-      ![Interaction designs](/img/interaction-options.jpg "Interaction designs")
-
-
-      The first panel were initial ideas of how to show various interactions. I decided against using green for valid placements so I could reserve that colour for drop targets. Each colour is then exclusive to its function.
-
-
-      Custom cursors were another option I explored, iconography reinforced the colour coding. However once I started adding in tooltips they became a distraction. 
-
-
-      Drop targets were copied from the Algot planner at first; the arrow elements were good visual clues. But when applied to the etrack drop targets this style no longer worked. So I changed it to simple semi-transparent blocks with Strong borders.  
-
-
       #### Gamification
 
 
       In games, mechanics are introduced early on that are then built upon  later in the game. For example a gap in an early level can only be passed by jumping. In later levels the designer knows that the player understands how to jump, and can rely on this when adding in other mechanics and challenges. 
 
 
-      Applying this concept to the tool, I ensured there was a consistent visual language for interactions. Allowing the configurator to build up complexity without over-reliance on instruction messages and hints, which are often overlooked by users.
+      Applying this concept to the tool, I ensured there was a consistent visual language for interactions. 
+
+
+      ![Consistent visual language ](/img/interaction-options.jpg "Consistent visual language ")
+
+
+      This let the configurator to build up complexity without over-reliance on instruction messages and hints, which are often overlooked by users.
 
 
       In the first prototype the tracks could be snapped into bays from anywhere in the wall area. 
@@ -253,10 +235,7 @@ sections:
       This wasn't consistent with the behaviour in the components stage, even though it made it easier to use. Reducing the snapping area to match the components section taught the user how to use the next section, where large snapping areas weren't practical or desirable.
 
 
-      We had already added validation to each stage, so that a user could not continue without having created at least one bay. To complete the section a user must have at dragged and dropped more than one track onto the green target area. 
-
-
-      This validation now guaranteed: 
+      To complete the section a user must have at dragged and dropped more than one track onto the green target area. So I could guarantee by the third stage:  
 
 
       * They had selected an item from the list. Learning blue meant selection.
@@ -266,13 +245,10 @@ sections:
       * They had seen the colour change from red to unshaded as they dragged it into the green area. Learning that the illustration changes from red when placed correctly. 
 
 
-      At one point, I made it a requirement that the user must delete at least one track, with accompanying instruction messages. This would guarantee they understood how to delete a component. However when testing this quickly became irritating, it was removed because we could not guarantee a user would go through this task only once. 
-
-
       #### Tool tips & instructions
 
 
-      Instructions were added to instruct users what they should be doing at each step of the process, tool tips would be used to explain the product. 
+      Instruction messages were added to tell users what they should be doing at each step of the process, contextual labels would be used to explain the product. 
 
 
       Keeping these two functions separate, all instructions would appear in the same place in the grey header bar. To draw attention to these messages, I added the animated the pointing hand. 
@@ -295,22 +271,22 @@ sections:
       Ensuring the features were always achievable, and relying on libraries to do the heavy lifting meant there were no half finished features in the prototype.
 
 
-      The visual design is very minimalist, giving it the look of a finished product, without a great deal of effort put into styling. The most time consuming aesthetic feature were important functional elements such as the drag and drop interactions and tooltips. 
+      The visual design is minimalist, giving it the look of a finished product, without a great deal of effort put into styling. The most time consuming aesthetic feature were important functional elements such as the drag and drop interactions and tooltips. 
 
 
-      Upper-management can often lack imagination when evaluating prototypes such as these, especially when coming from a non-technical background. Presenting the prototype in this state avoided common distractions on 'why it looks funny?', and kept focus on the business objectives it fulfilled. Of course this can still be a double edged sword, with management and stakeholders asking, 'why can't we launch this?'. 
+      Upper-management can often lack imagination when evaluating prototypes such as these, especially when coming from a non-technical background. Presenting the prototype in this state avoided common distractions on 'why it looks funny?', and kept focus on the business objectives it fulfilled. Of course this can be a double edged sword, with management and stakeholders asking, 'why can't we launch this?'. 
 
 
       #### Long term plans
 
 
-      The tool proved the pointed we wished to make; a web-based planning tool could be sufficiently complex enough to follow as many rules as necessary. It also showed that it was within the reach of even a small development team.
+      The tool proved the point we wished to make; a web-based planning tool could be sufficiently complex to follow as many rules as necessary. It also showed that it was within the reach of even a small development team.
 
 
-      The business however was in no position at the time start to start changing their sales process. As previously mentioned the existing Java app interfaced with every aspect of the company's technology stack, making it extremely difficult to alter. 
+      The business however was in no position to start changing their sales process. As previously mentioned, the existing Java app interfaced with every aspect of the company's technology stack.
 
 
-      The project provided the impetus to prioritise this long overdue infrastructure work.
+      This project, and along with research I carried out, provided the impetus for the company to re-prioritise this crucial infrastructure work. This obviously a huge task and work on this is still ongoing at time of writing.
 other_projects: More projects
 featuredpost: false
 ---
