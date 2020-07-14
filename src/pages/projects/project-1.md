@@ -3,7 +3,7 @@ templateKey: project-entry
 date: 2020-06-22T13:16:57.702Z
 featuredproject: true
 title: Adaptive UI example
-description: "In this project improving the UI would have the largest impact. "
+description: A luxury UI for a luxury product
 featuredimage: /img/620-image.jpg
 featuredlink: https://www.vitsoe.com/gb/620/buy
 featuredlinklabel: See it live
@@ -148,23 +148,20 @@ sections:
 
       Renders would still require the
   - heading: Wireframing and design
-    intro: From the user stories and research I started out with a clear list of
-      features to be included in a new interface.
+    intro: From the user stories and research I had a clear list of features to be
+      included in a new interface.
     headerimage: /img/design-_-solution.png
     standout: false
     body: >-
-      #### Features
-
-
       * A 360deg spinner would use renders to visualise the product.
 
       * Each customisation decision should be made in a distinct section
 
-      * Close up images of the leather needed to be included when choosing colour to show the texture of the leather.
+      * Close up photography needed to be included when choosing colour to show the texture of the leather.
 
       * Footstools should be treated as a separate product, not an addon item.
 
-      * The number of seats should come after the other customisation options.
+      * The number of seats should be selected after the other customisation options.
 
 
       #### Initial wireframes
@@ -188,12 +185,7 @@ sections:
       ![Wireframe with toggles](/img/wireframe-binary-toggles.jpg "Wireframe with toggles")
 
 
-      In this sketch I decided that configuration options should scroll with the rest of the content on the page, allowing the user to see the price and selection changes they were making at all times. 
-
-
-      ![Wireframe show controls which scroll with page](/img/wireframe-scrolling-controls.png "Wireframe show controls which scroll with page")
-
-
+      In a few of my wireframes I had the footstool as a distinct section underneath the 620, however I decided that the footstool should 
 
 
       #### Moving to prototypes
@@ -205,25 +197,19 @@ sections:
       ![Image of prototype for mobile which uses accordion section that can be scrolled](/img/prototype-acordion-scrolling-section.jpg "Prototype for mobile version")
 
 
-      This prototype was a result of trying to ensure the configuration controls could be used whilst keeping the visualisation in view. 
+      Even when expanded the scrollable area, users would unintentionally begin page scrolling when selecting different customisation options. It also didn't show all of the customisation options available, at a glance a user might not realise there were back or feet options.
 
 
-      Even when expanded the scrollable area, users would unintentionally begin page scrolling when selecting different customisation options. 
-
-
-      It also didn't show all of the customisation options available, something I'd wanted the layout to do. 
-
-
-      Then I hit on a solution that would show all the options available whilst giving enough space to work properly on mobile. Modal overlays.
+      The customisation controls needed space, but I didn't want make the user scroll up and down the page to see everything. Using a full screen modal overlay could provide the space needed, but keep the visualisation a button press away.
 
 
       TODO (image of inbetween mockup)
 
 
-      This succinctly showed the user which aspects could be customised, and compartmentalised decision making. Using an image in the colour option gave users the texture and colour information they needed to make a decision.
+      This succinctly showed the user which aspects could be customised, and compartmentalised decision making. Using an image in the colour modal gave users the texture and colour information they needed to make a decision.
 
 
-      The button style adhered to the established visual language used elsewhere for in-page navigation. [The contact page was the main previous example of it's usage.](https://www.vitsoe.com/contactus) 
+      The modal button adhered to the established visual language used elsewhere for in-page navigation. [The contact page was the main previous example of it's usage.](https://www.vitsoe.com/contactus) 
 
 
       TODO (desktop hi-fi mockup)
@@ -232,10 +218,10 @@ sections:
       The modal for colour choices was carried over to the desktop because it forced the user to see photography of the leather texture whilst making a decision about colour. 
 
 
-      High-back, and swivel are options which bear an additional cost, so it made sense to represent these as addons. I also used checkboxes here because it saved some vertical space.
+      This wasn't necessary for the the back and feet options. It made more sense to represent these as addons, and use checkboxes here.
 
 
-      Reducing the size of the controls allowed them to be displayed next to the spinner visualisation on tablet and above. 
+      Now on all screen sizes, the customisation controls could be viewed alongside the spinner visualisation.
 
 
       #### Testing & refinement
@@ -262,7 +248,7 @@ sections:
       #### Technology
 
 
-      From the earlier prototype and research, the team decided that the configurator page would be built in a self-contained react app. This would make it easier to migrate when eventually the website was moved away from the custom implementation of Yii 1.1 php framework.
+      From the earlier prototype and research, the team decided that the configurator page would be built in a self-contained react app. This would make it easier to migrate in a planned upgrade of the website's infrastructure.
 
 
       Keeping this longer term ambition in mind, we wanted to make sure we built everything to scale. New apis, data transport structures, components etc would need to work for all of Vitsoe's products. 
@@ -320,22 +306,12 @@ sections:
       TODO (replace with diagram)
 
 
-      This meant:
-
-
-      * The user was never shown a blank space, the thumbnails loaded very quickly.
-
-      * The user could immediately begin to spin the image even if the full resolution images weren't loaded. Reducing any confusion around the functionality of the spinner. 
-
-      * When changing configuration options the interface responded promptly.
-
-
       To make this even clearer, I added in a small loading bar along the top of the frame. The loading bar goes to 50% on the thumbnails, and the remainder when the full resolution is loaded.
   - body_html: " "
     heading: Testing
     intro: "Since the previous prototypes could not emulate the spinner
       functionality, this round of usability testing was important for
-      evaluating its functionality. "
+      evaluating this functionality. "
     headerimage: /img/research.png
     body: >-
       As well as device testing, I carried out task-driven usability testing.
@@ -380,16 +356,13 @@ sections:
       *\*This was not split for online / offline sales. I recall in March 2019 there was a large commercial order which would throw these numbers off . Also the pandemic is likely to have affected sales.*
 
 
-      Additionally, I've seen the renders I created show up in instagram stories, promoting the 620 chair. So those assets are already being utilised outside of their primary purpose. 
+      Additionally, the renders have already been used in instagram promotions, so the investment in these was worth while. 
 
 
-      #### What I'd be measuring if I were still with Vitsoe
+      #### What I would be measuring
 
 
       I would be looking at the custom events I put in, to see that the spinner was being used by most visitors, particularly on mobile. Then if they were subsequently more or less likely to move further along the purchase journey as a result of using this feature.
-
-
-      I would be using the events to check that all the controls were being and used across devices. 
 
 
       I would want to check the rate that users found their way to the footstool configurator. Having removed the initial switch at the top of the page I'd want to see that the link below had enough visibility.
@@ -398,10 +371,10 @@ sections:
       Behavioural data like this can reveal problems or user behaviours that are totally unexpected, these are often the most valuable insights. 
 
 
-      I'd also want to take a better look at sales. I'd want to see those anecdotes about the shift in sales backed up with data. I would also be looking at the rate of sales across all products, to see if the drop in 620 was more or less than the drop in sales of other products. I would be tracking marketing efforts to account for the effects of they might have had.
+      I'd also want to take a better look at sales. I'd want to see those anecdotes about the shift in sales backed up with data.
 
 
-      All of this would inform further potential improvements to the existing interface.
+      The pandemic can be accounted for by looking at sales across all products, and seeing if the drop in 620 was more or less than everything else.
 other_projects: More projects
 featuredpost: false
 ---
