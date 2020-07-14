@@ -245,7 +245,7 @@ sections:
       * They had seen the colour change from red to unshaded as they dragged it into the green area. Learning that the illustration changes from red when placed correctly. 
 
 
-      #### Tool tips & instructions
+      #### Contextual labels & instructions
 
 
       Instruction messages were added to tell users what they should be doing at each step of the process, contextual labels would be used to explain the product. 
@@ -254,13 +254,7 @@ sections:
       Keeping these two functions separate, all instructions would appear in the same place in the grey header bar. To draw attention to these messages, I added the animated the pointing hand. 
 
 
-      Tooltips appeared first on the wall dimensions stage, since the user could only enter one dimension at a time, the wall would always be either too short or too narrow initially. The red tooltip would always appear at this point, explaining what the bay widths of the shelving system were. 
-
-
-      Of course the tooltips followed the same colour scheme as the the other interactions, with the addition of ubiquitous warning and information icons. 
-
-
-      The tooltips were especially valuable in the components section, teaching users about the rules of the shelving system.
+      The tooltips followed the same colour scheme as the the other interactions, with the addition of ubiquitous warning and information icons.
   - body_html: " "
     heading: Outcomes
     intro: The tool was received well by the company.
