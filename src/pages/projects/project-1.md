@@ -244,9 +244,7 @@ sections:
 
       * Colour select areas would include the wording 'Full grain leather' in a subheading.
 
-      * 621 table would be included alongside the footstool, since it was designed to accompany the chair. 
-
-      * Added in help text above the seat picker 
+      * Added in help text above the seat picker.
 
       * The inclusion of the 621 table alongside the footstool, since it is a companion to the 620 chair.
   - heading: "Implementation "
