@@ -204,7 +204,7 @@ sections:
       I decided to start prototyping with just mobile layouts first, since this presented the largest challenge in terms of keeping the configuration controls as compact as possible. 
 
 
-      ![Image of prototype for mobile which uses accordion section that can be scrolled](/img/prototype-acordion-scrolling-section.jpg "Prototype for mobile version")
+      ![Image of prototype for mobile which uses accordion section that can be scrolled](/img/compact-ui-ideas.jpg "Prototype for mobile version")
 
 
       Even when expanded the scrollable area, users would unintentionally begin page scrolling when selecting different customisation options. It also didn't show all of the customisation options available, at a glance a user might not realise there were back or feet options.
