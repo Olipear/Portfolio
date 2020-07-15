@@ -3,7 +3,7 @@ templateKey: project-entry
 date: 2020-06-22T13:16:57.702Z
 featuredproject: true
 title: Adaptive UI example
-description: A luxury UI for a luxury product
+description: A luxury interface for a luxury product
 featuredimage: /img/620-image.jpg
 featuredlink: https://www.vitsoe.com/gb/620/buy
 featuredlinklabel: See it live
@@ -22,7 +22,7 @@ sections:
       In addition to increasing sales of their product; they wanted to move existing offline sales online. This was for salespeople to focus on the more complex sales process of their modular shelving system. 
 
 
-      Furthermore, the company planned on launching a new upholstery option in 2020. So the solution would have to be flexible enough to account for this.
+      Furthermore, the company planned on launching a new upholstery option in 2020. So a new configurator would be need that could account for this. 
 
 
       #### User stories
@@ -41,6 +41,12 @@ sections:
       * An existing customer should be able to buy a footstool separately.
 
       * Customers should be comfortable buying the chair without seeing one in person.
+
+
+      #### A note on this write-up
+
+
+      Although my work involved broader changes I've tried to keep this write-up focused on the UI design and front-end development of the configuration page.
   - heading: Research & Discovery phase
     intro: >
       Now I had a clear idea of what needed to be done, I started by looking at
@@ -57,7 +63,10 @@ sections:
       ### Poor product visualisation was at the heart of it.
 
 
-      The use of the line drawing here was most culprit when it came to customer confusion on the leather texture. The photography that was present was had poor visibility.
+      The use of the line drawing here was the most likely culprit when it came to customer confusion on the leather texture. The photography that was present had poor visibility.
+
+
+      The full-width images at the start of page also took up the entire screen on every device above mobile. 
 
 
       There was no photography of the footstool at all, and it could only be added to a chair purchase as an add-on item. 
@@ -77,26 +86,28 @@ sections:
       * Removed the other two line drawings at the top, and moved the preview photo to the right column so it was always visible. 
 
 
-      These changes didn't impact sales over four months, however that in itself told me the larger line-drawings were superfluous.
+      These changes didn't impact sales over four months, but that in itself told me the line-drawings I removed were superfluous.
 
 
       #### Behaviour analysis
 
 
-      With an average of ~2 online sales per month, it was practical to look at each purchase journey over a year long period.
+      With an average of ~2 online sales per month, it was practical to look at each purchase journey over a year long period. 
 
 
       * Most purchasers would spend weeks deliberating over their purchase, returning to the site many times.
 
-      * During this deliberation the gallery page was the most commonly visited. 
+      * During this deliberation the gallery page was the most commonly visited.
+
+      * Users would 'play' with the colour configurations after viewing the gallery. It seemed like they were getting ideas for colour combinations from the gallery over the configurator. 
 
       * No purchases were made on mobile, but the gallery was popular here too.
 
 
-      When I looked at the larger sample of non-purchasers, I saw that only 45% of users were interacting with any of the configuration options. The large illustration taking up the entire screen on desktop could be the cause of this. Configuration options should therefore always be visible on first page load. 
+      When I looked at the much larger group of non-purchasers, I saw that only 45% of users were interacting with any of the configuration options. The large illustration taking up the entire screen on desktop could have been the cause of this. I wanted to make sure my design allowed the configuration options to see on page-load. 
 
 
-      Of those 47% adjusted the number of chairs, the next highest interaction rate was changing the leather colour at 20%. Even adding one chair increased the price to almost £14,000. This could be immediately putting people off. For this reason I decided the seat picker should come after other configuration controls in the future UI. 
+      Of those 47% adjusted the number of chairs, but then only 20% went on to change the colour. I hypothesised that this could be because adding even one seat increased the price to almost £14,000. This could easily be putting people off. For this reason I decided the seat picker should come after other configuration controls in the future UI. 
 
 
       #### Competitor evaluation
@@ -107,13 +118,13 @@ sections:
 
       * I noted that products in that price range emphasised high quality product visualisation. With 360deg views, high resolution photography, and zoom features.
 
-      * Similar customisable products often broke up the process into stages. Many examples used dropdowns or accordions, so one decision was being made at a time. 
+      * Similar customisable products often broke up the process into stages. Many examples used accordions. Letting customers make one decision was being made at a time was important. 
 
 
       #### Product visualisation
 
 
-      My research so far was all pointing me towards this being an area in need of significant improvement. 
+      My research so far was pointing me towards this being an area in need of significant improvement. 
 
 
       The existing images in the gallery and the buy page, were the only product photography the company had.
@@ -139,14 +150,11 @@ sections:
 
       * The company had CAD models of all their products, so all that would need to be done is texturing the model.
 
-      * Once the textured model was created it would be an asset which could be reused in future marketing and other visualisations. 
+      * Once a textured model was created it would be an asset which could be reused in future marketing and other visualisations. 
 
       * Renders could be changed and adjusted, the upcoming new upholstery option would be easier to add later. 
 
       * I had the necessary skills, eliminating the need for external resource.
-
-
-      Renders would still require the
   - heading: Wireframing and design
     intro: From the user stories and research I had a clear list of features to be
       included in a new interface.
@@ -155,7 +163,9 @@ sections:
     body: >-
       * A 360deg spinner would use renders to visualise the product.
 
-      * Each customisation decision should be made in a distinct section
+      * Each customisation decision should be made in a distinct section.
+
+      * Customisation options should be visible without needing to scroll further down.
 
       * Close up photography needed to be included when choosing colour to show the texture of the leather.
 
@@ -251,13 +261,13 @@ sections:
       From the earlier prototype and research, the team decided that the configurator page would be built in a self-contained react app. This would make it easier to migrate in a planned upgrade of the website's infrastructure.
 
 
-      Keeping this longer term ambition in mind, we wanted to make sure we built everything to scale. New apis, data transport structures, components etc would need to work for all of Vitsoe's products. 
+      Keeping this longer term ambition in mind, we wanted to make sure we built everything to scale. New apis, data transport structures, components etc would need to scale to all Vitsoe's products. 
 
 
       #### Data transport design
 
 
-      We wanted to make sure the front-end was data driven, to support scalability, for this reason throughout this process I was constantly checking that this structure could be applied to vitsoe's other products. 
+      We wanted to make sure the front-end was data driven, so I was constantly checking that this structure could be applied to vitsoe's other products. 
 
 
       ![Snapshot of whiteboard showing ideas for data transport structure](/img/data-design-discussion.jpg "Whiteboard excerpt showing discussion of data transport structures")
@@ -269,13 +279,16 @@ sections:
       #### Adaptive, data driven UI
 
 
+      TODO: insert diagram of component structure.
+
+
       The JSON data structure we came up with, describes a product and it's customisation options. Each option has a type such as 'colour' or 'binary', to tell the front-end how it should be displayed. In this case, which react component to render.
 
 
       Options can be grouped, for example shell colour and leather colour were grouped into materials. When on a mobile device, groups are ignored, and all child options are put inside a modal. 
 
 
-      ### The use of this system across other products will greatly improve the UX of the site.
+      ### The use of this system across other products would greatly improve the UX of the site.
 
 
       For example; when all colour selection interfaces use the same component, it guarantees a consistent user experience for users when selecting colour on any of vitsoe's products. Additionally it makes it really easy to update for developers.
@@ -307,11 +320,17 @@ sections:
 
 
       To make this even clearer, I added in a small loading bar along the top of the frame. The loading bar goes to 50% on the thumbnails, and the remainder when the full resolution is loaded.
+
+
+      #### For developers
+
+
+      I don't have the source code for this project, but if you have react devtools installed you can check out my component structure on the live site.
   - body_html: " "
     heading: Testing
-    intro: "Since the previous prototypes could not emulate the spinner
-      functionality, this round of usability testing was important for
-      evaluating this functionality. "
+    intro: "Since the previous prototypes did not emulate the spinner functionality,
+      this round of usability testing was important for evaluating this
+      functionality. "
     headerimage: /img/research.png
     body: >-
       As well as device testing, I carried out task-driven usability testing.
@@ -325,6 +344,8 @@ sections:
       * One user completed the task without interacting with the spinner at all, not realising it was interactive. This resulted in the addition of the 3D icon in the lower left corner. 
 
       * During device testing I found on the smallest devices the confirm button in modals was below the fold. I decided to move this to the top of the screen so that it would always be visible and in the same place.
+
+      * The switch to the the footstool in the top left was mis-tapped on touch devices. It was too small and too close to the modal buttons. Since it was linked to on other pages, and beneath the configurator, we decided to remove this navigation. 
 
 
       Overall the feedback was very positive. Most users were quick to complete the tasks and could answer my questions.
