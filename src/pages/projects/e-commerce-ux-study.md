@@ -45,12 +45,9 @@ sections:
 
       The UX personas I created involved a lot of collaboration with the most experienced Vitsoe salespeople, along with website usage data. 
 
-
       ![UX Personas page 1](/img/personas-1.jpg "UX Personas page 1")
 
-
       ![UX Personas page 2](/img/personas-2.jpg "UX Personas page 2")
-
 
       These were representative of both Vitsoe's existing customer base, and their target market. The 606 shelving system is Vitsoe's main product, so they are built with this in mind. With information like their living situation being highly relevant. 
 
@@ -185,9 +182,6 @@ sections:
 
 
       ![](/img/www.vitsoe.com_gb_621.png)
-
-
-      ![](/img/www.vitsoe.com_gb_621-1-.png)
 
 
       If it were available I'd have liked to use A/B testing here, but I had to choose now, and measure later. I decided to use the existing product image for the lightbox but I was aware this was a risky decision. 
