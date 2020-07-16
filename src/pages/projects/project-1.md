@@ -213,7 +213,7 @@ sections:
       The customisation controls needed space, but I didn't want make the user scroll up and down the page to see everything. Using a full screen modal overlay could provide the space needed, but keep the visualisation a button press away.
 
 
-      TODO (image of inbetween mockup)
+      ![](/img/desktop-hi-fi-mockup.jpg)
 
 
       This succinctly showed the user which aspects could be customised, and compartmentalised decision making. Using an image in the colour modal gave users the texture and colour information they needed to make a decision.
