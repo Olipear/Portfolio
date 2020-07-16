@@ -4,6 +4,7 @@ const remark = require("remark");
 const remarkHTML = require("remark-html");
 const { createFilePath } = require("gatsby-source-filesystem");
 const { fmImagesToRelative } = require("gatsby-remark-relative-images");
+const unwrapImages = require('remark-unwrap-images')
 
 
 
@@ -59,7 +60,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     if (node.frontmatter.sections) {
       node.frontmatter.sections.map(section =>{
         if (section.body) {
-          section.body_html = remark().use(remarkHTML).processSync(section.body).toString();
+          section.body_html = remark().use(unwrapImages).use(remarkHTML).processSync(section.body).toString();
         }
       })
     }
