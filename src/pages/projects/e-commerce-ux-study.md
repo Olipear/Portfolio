@@ -215,19 +215,13 @@ sections:
       * Far fewer users reached the details page, but those that did, were more likely to buy, and spent much longer on the page than before.
 
 
-      The direct affect these changes made on sales was difficult to measure.
+      Online sales for the product seemed to be positively affected. Of course the marketing refocus could also take some credit for this. 
 
 
-      TODO: insert chart of sales
+      ![Chart of product performance over a year](/img/621-product-performance.jpg "Chart of product performance over a year")
 
 
-      This graph looks fantastic on the face of it. However adding context shows how the changes I made might not be fully responsible for the increase in sales.
-
-
-      TODO: insert chart of sales with annotations
-
-
-      Improving the user experience on the website didn't end the production problems the company had, and the refocusing of marketing efforts could have had a larger impact. 
+      This chart shows the year before and after in sales; 46% more unique purchases in a year is good, but with such low sales it could take longer to more accurately gauge. 
 
 
       #### Galleries
