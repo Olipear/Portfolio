@@ -175,13 +175,16 @@ sections:
       All the gallery pages at the time had images in a list view, but they also had a fullscreen gallery lightbox which allowed users to scroll through the content. Event tracking showed the lightbox was the preferred method of navigating through them.
 
 
+      ![Old gallery lightbox](/img/old-lightbox.jpg "Old gallery lightbox")
+
+
       Using the existing functionality of the lightbox and inserting it into the purchase page would make the images more accessible, and remove another lengthy page.
 
 
       I had wireframed a some layouts for this on paper; the key decision was whether I could use the existing product image to open the lightbox, or it needed a separate UI element. 
 
 
-      TODO: insert page design
+      TODO insert screenshot
 
 
       If it were available I'd have liked to use A/B testing here, but I had to choose now, and measure later. I decided to use the existing product image for the lightbox but I was aware this was a risky decision. 
@@ -239,7 +242,7 @@ sections:
       I would later make further improvements to the gallery, and updated the custom icon to the material design gallery icon - along with using material design icons across other areas of the site.
 
 
-      TODO: add gallery lightbox screenshot. 
+      ![New gallery lightbox](/img/lightbox-–-27.jpg "New gallery lightbox")
 
 
       This redesign could have a project write up of its own. But importantly, even a year later, I was still refining the design.
