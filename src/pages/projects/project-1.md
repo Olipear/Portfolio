@@ -277,7 +277,7 @@ sections:
       #### Adaptive, data driven UI
 
 
-      TODO: insert diagram of component structure.
+      ![](/img/component-breakdown.jpg)
 
 
       The JSON data structure we came up with, describes a product and it's customisation options. Each option has a type such as 'colour' or 'binary', to tell the front-end how it should be displayed. In this case, which react component to render.
@@ -314,7 +314,7 @@ sections:
       3. Once all thumbnails are loaded, the same process is repeated for the full resolution images
 
 
-      TODO (replace with diagram)
+      ![](/img/image-load-order.jpg)
 
 
       To make this even clearer, I added in a small loading bar along the top of the frame. The loading bar goes to 50% on the thumbnails, and the remainder when the full resolution is loaded.
