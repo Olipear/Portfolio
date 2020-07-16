@@ -277,7 +277,7 @@ sections:
       #### Adaptive, data driven UI
 
 
-      TODO: insert diagram of component structure.
+      ![](/img/component-breakdown.jpg)
 
 
       The JSON data structure we came up with, describes a product and it's customisation options. Each option has a type such as 'colour' or 'binary', to tell the front-end how it should be displayed. In this case, which react component to render.
