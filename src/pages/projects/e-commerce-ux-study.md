@@ -45,12 +45,9 @@ sections:
 
       The UX personas I created involved a lot of collaboration with the most experienced Vitsoe salespeople, along with website usage data. 
 
-
       ![UX Personas page 1](/img/personas-1.jpg "UX Personas page 1")
 
-
       ![UX Personas page 2](/img/personas-2.jpg "UX Personas page 2")
-
 
       These were representative of both Vitsoe's existing customer base, and their target market. The 606 shelving system is Vitsoe's main product, so they are built with this in mind. With information like their living situation being highly relevant. 
 
