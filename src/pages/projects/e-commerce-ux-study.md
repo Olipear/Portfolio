@@ -184,7 +184,10 @@ sections:
       I had wireframed a some layouts for this on paper; the key decision was whether I could use the existing product image to open the lightbox, or it needed a separate UI element. 
 
 
-      TODO insert screenshot
+      ![](/img/www.vitsoe.com_gb_621.png)
+
+
+      ![](/img/www.vitsoe.com_gb_621-1-.png)
 
 
       If it were available I'd have liked to use A/B testing here, but I had to choose now, and measure later. I decided to use the existing product image for the lightbox but I was aware this was a risky decision. 
