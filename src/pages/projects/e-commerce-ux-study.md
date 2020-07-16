@@ -89,7 +89,7 @@ sections:
       Now looking closer at the 621 area, split into four pages, I found this to be a microcosm of the larger issues I'd found. 
 
 
-      TODO: add diagram of original page structure in 621 
+      ![Old page's issues](/img/history-621.jpg "Old page's issues")
 
 
       Links from elsewhere on the site pointed at the introduction section, and with the path /621, it was also the most popular entry point for organic searches for the product. Of the 70% that didn't leave the site from here, less than half visited other pages within the 621 area.
@@ -110,16 +110,7 @@ sections:
       The purchase page was commonly the last page in a user journey, where customers were making a purchase decision. Few people went back to gallery and detail pages, but this was likely because they had already had an opportunity to see these. Of course those who deliberated longer and spent a lot of time circling through the various pages were much more likely to make a purchase. 
 
 
-      The UI itself was well laid out. 90% of those that didn't bounce interacted with the customisation controls, so their purpose seemed to be clear enough. 
-
-
-      #### Stock messages
-
-
-      One area for concern was the delivery information, which gave an estimate, and when stock was below 10, a low stock warning. At the time Vitsoe was struggling with stock levels and production, so this message was often showing. 
-
-
-      I delved into the stock calculations on the backend and found they were being calculated incorrectly. I worked with the production team to rectify this immediately.
+      The UI itself was well laid out. 90% of those that didn't bounce interacted with the customisation controls, so their purpose seemed to be clear enough.
   - body_html: " "
     heading: "Design "
     intro: "This was mostly a UX design, I needed to change very little of the UI
@@ -132,7 +123,7 @@ sections:
       The deeper issues with the perception of the site were the first thing I needed to address. 
 
 
-      TODO: insert homepage mockup here. 
+      ![New homepage](/img/proposed-homepage.jpg "New homepage")
 
 
       This proposed layout simply shifted elements around, meaning it carried a low development cost. 
@@ -141,7 +132,7 @@ sections:
       Other changes that supported this;
 
 
-      *  'Products' was changed to 'Online shop'.
+      * 'Products' was changed to 'Online shop'.
 
       * Links were changed from 'read more' to 'Buy online' or 'Configure and buy'
 
@@ -163,7 +154,7 @@ sections:
       The existing structure was laid out perfectly for users who would visit each page, read all the content contained, and move onto the next section. The reality is that people don't use websites like this.
 
 
-      TODO: insert UX design page here. 
+      ![Page structure changes](/img/page-structure.jpg "Page structure changes")
 
 
       Essentially my strategy was to simplify, following Dieter's own rules, anything that was not strictly supporting the products function should be removed. 
