@@ -192,7 +192,7 @@ sections:
       Wanting to make more use of screen space, I looked at how existing controls could be simplified. Using switches or checkboxes for binary choices for example.
 
 
-      ![Wireframe with toggles](/img/wireframe-binary-toggles.jpg "Wireframe with toggles")
+      ![Wireframe with toggles](/img/compact-ui-ideas.jpg "Wireframe with toggles")
 
 
       Most of my initial wireframes had the footstool as a distinct section, but on the same page as the chair. I decided that the footstool should have it's own configurator, identical to the chair.
@@ -204,7 +204,7 @@ sections:
       I decided to start prototyping with just mobile layouts first, since this presented the largest challenge in terms of keeping the configuration controls as compact as possible. 
 
 
-      ![Image of prototype for mobile which uses accordion section that can be scrolled](/img/compact-ui-ideas.jpg "Prototype for mobile version")
+      ![Image of prototype for mobile which uses accordion section that can be scrolled](/img/prototype-acordion.jpg "Prototype for mobile version")
 
 
       Even when expanded the scrollable area, users would unintentionally begin page scrolling when selecting different customisation options. It also didn't show all of the customisation options available, at a glance a user might not realise there were back or feet options.
@@ -213,7 +213,7 @@ sections:
       The customisation controls needed space, but I didn't want make the user scroll up and down the page to see everything. Using a full screen modal overlay could provide the space needed, but keep the visualisation a button press away.
 
 
-      TODO (image of inbetween mockup)
+      ![](/img/in-between-mockup.jpg)
 
 
       This succinctly showed the user which aspects could be customised, and compartmentalised decision making. Using an image in the colour modal gave users the texture and colour information they needed to make a decision.
@@ -222,7 +222,7 @@ sections:
       The modal button adhered to the established visual language used elsewhere for in-page navigation. [The contact page was the main previous example of it's usage.](https://www.vitsoe.com/contactus) 
 
 
-      TODO (desktop hi-fi mockup)
+      ![](/img/desktop-hi-fi-mockup.jpg)
 
 
       The modal for colour choices was carried over to the desktop because it forced the user to see photography of the leather texture whilst making a decision about colour. 
