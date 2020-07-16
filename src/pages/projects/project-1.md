@@ -213,7 +213,7 @@ sections:
       The customisation controls needed space, but I didn't want make the user scroll up and down the page to see everything. Using a full screen modal overlay could provide the space needed, but keep the visualisation a button press away.
 
 
-      ![](/img/desktop-hi-fi-mockup.jpg)
+      ![](/img/in-between-mockup.jpg)
 
 
       This succinctly showed the user which aspects could be customised, and compartmentalised decision making. Using an image in the colour modal gave users the texture and colour information they needed to make a decision.
@@ -222,7 +222,7 @@ sections:
       The modal button adhered to the established visual language used elsewhere for in-page navigation. [The contact page was the main previous example of it's usage.](https://www.vitsoe.com/contactus) 
 
 
-      TODO (desktop hi-fi mockup)
+      ![](/img/desktop-hi-fi-mockup.jpg)
 
 
       The modal for colour choices was carried over to the desktop because it forced the user to see photography of the leather texture whilst making a decision about colour. 
