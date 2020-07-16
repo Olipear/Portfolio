@@ -46,7 +46,10 @@ sections:
       The UX personas I created involved a lot of collaboration with the most experienced Vitsoe salespeople, along with website usage data. 
 
 
-      TODO: insert personas here 
+      ![](/img/personas-1.jpg)
+
+
+      ![](/img/personas-2.jpg)
 
 
       These were representative of both Vitsoe's existing customer base, and their target market. The 606 shelving system is Vitsoe's main product, so they are built with this in mind. With information like their living situation being highly relevant. 
@@ -74,7 +77,7 @@ sections:
       Meanwhile sales teams were reporting back to me that many customers, even existing customers, were surprised to learn that Vitsoe had an online shop at all. 
 
 
-      ### It was clear that the website was trying to serve several different purposes and not doing any of them well. 
+      ### It was clear that the website was trying to serve several different purposes and not doing any of them well.
 
 
       I had to confront the business owners with some difficult questions about what their business goals for the website were. They reaffirmed that they wanted the site to be first and foremost a tool for selling online.
