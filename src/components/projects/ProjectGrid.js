@@ -30,7 +30,7 @@ const ProjectGrid = ({ projects }) => {
       return layout.map((projectIndex) => {
         return (
           <ProjectTile
-            key={toString(projects[projectIndex].node.id)}
+            key={projects[projectIndex].node.id.toString()}
             project={projects[projectIndex].node}
           />
         );
@@ -45,13 +45,13 @@ const ProjectGrid = ({ projects }) => {
   const buildProjectGrid = (layout, lvlKey) => {
     if (layout.hasOwnProperty("parentV")) {
       return (
-        <div key={'level-'+toString(lvlKey)} className="tile is-parent is-vertical">
+        <div key={'level-'+lvlKey.toString()} className="tile is-parent is-vertical">
           {buildProjectTiles(layout.parentV)}
         </div>
       );
     } else {
       return (
-        <div key={'level-'+toString(lvlKey)} className="tile is-parent">{buildProjectTiles(layout.parent)}</div>
+        <div key={'level-'+lvlKey.toString()} className="tile is-parent">{buildProjectTiles(layout.parent)}</div>
       );
     }
   };
@@ -59,8 +59,8 @@ const ProjectGrid = ({ projects }) => {
   if (projects.length > 0) {
     return (
       <div className="tile is-ancestor project">
-        {tileLayouts[Math.min(projects.length - 1, 4)].map((layout) =>
-          buildProjectGrid(layout, 0)
+        {tileLayouts[Math.min(projects.length - 1, 4)].map((layout, i) =>
+          buildProjectGrid(layout, i)
         )}
       </div>
     );
