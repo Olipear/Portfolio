@@ -9,6 +9,28 @@ featuredimage: /img/furnituretoolfeatured.jpg
 featuredlink: https://www.youtube.com/watch?v=8SOaF-Motuo&feature=youtu.be
 featuredlinklabel: See my presentation
 sections:
+  - body_html: " "
+    heading: Overview
+    intro: "This project was a proof of concept which informed longer term business
+      objectives. "
+    headerimage: /img/about.png
+    body: >-
+      #### Role
+
+
+      In this project I took on a product designer role. Getting stuck into the development work whilst providing direction and design. 
+
+
+      #### Team
+
+
+      In addition to myself, the development team consisted of two senior developers, and a junior dev.
+
+
+      #### Project Length
+
+
+      The project was scheduled for 2 weeks initially, but was extended to 1 month.
   - heading: Brief
     headerimage: /img/brief-_-problem.png
     standout: false
