@@ -215,7 +215,7 @@ sections:
     heading: Follow up
     intro: I continued to make improvements to the initial design long after the
       changes were launched.
-    headerimage: /img/brief-_-problem.png
+    headerimage: /img/outcomes.png
     body: >-
       #### Behaviour changes
 
