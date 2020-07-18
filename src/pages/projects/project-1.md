@@ -72,27 +72,10 @@ sections:
       There was no photography of the footstool at all, and it could only be added to a chair purchase as an add-on item. 
 
 
-      #### Quick improvements
+      #### Purchase journeys 
 
 
-      ![Screenshot of page with some quick improvements added.](/img/low-effort-improvements.jpg "A few minor improvements.")
-
-
-      ### It took me an afternoon to make these simple css and HTML changes.
-
-
-      * Increased the right column from 3 to 4 columns (of 12) on desktop and tablet. 
-
-      * Removed the other two line drawings at the top, and moved the preview photo to the right column so it was always visible. 
-
-
-      These changes didn't impact sales over four months, but that in itself told me the line-drawings I removed were superfluous.
-
-
-      #### Behaviour analysis
-
-
-      With an average of ~2 online sales per month, it was practical to look at each purchase journey over a year long period. 
+      Low sales meant it was practical to look at each purchase journey over a year long period. 
 
 
       * Most purchasers would spend weeks deliberating over their purchase, returning to the site many times.
@@ -102,6 +85,9 @@ sections:
       * Users would 'play' with the colour configurations after viewing the gallery. It seemed like they were getting ideas for colour combinations from the gallery over the configurator. 
 
       * No purchases were made on mobile, but the gallery was popular here too.
+
+
+      #### User behaviour
 
 
       When I looked at the much larger group of non-purchasers, I saw that only 45% of users were interacting with any of the configuration options. The large illustration taking up the entire screen on desktop could have been the cause of this. I wanted to make sure my design allowed the configuration options to see on page-load. 
