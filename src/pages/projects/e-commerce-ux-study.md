@@ -10,6 +10,12 @@ featuredlink: https://www.vitsoe.com/621
 featuredlinklabel: See it live
 sections:
   - body_html: " "
+    heading: Overview
+    intro: "In this write-up I focus more on my UX design process and outcomes.
+      Although some UI was done, the changes to the structure of the site, copy,
+      and digital marketing would have the largest impact. "
+    headerimage: /img/about.png
+  - body_html: " "
     heading: "Brief "
     intro: "As Vitsoe's most accessible product in terms of price point, the 621
       table was a gateway product that led on to further sales. "
