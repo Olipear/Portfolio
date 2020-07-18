@@ -11,10 +11,24 @@ featuredlinklabel: See it live
 sections:
   - body_html: " "
     heading: Overview
-    intro: "In this write-up I focus more on my UX design process and outcomes.
-      Although some UI was done, the changes to the structure of the site, copy,
-      and digital marketing would have the largest impact. "
+    intro: "In this write-up I focus more on my UX design process and outcomes. From
+      initially being asked to look at product performance, my UX research led
+      to some deeper questions about the purpose of the website. "
     headerimage: /img/about.png
+    body: >-
+      #### Role: 
+
+
+      For this work I was largely focused on UX research and design. 
+
+
+      #### Team
+
+
+      I worked closely with the 'communications' team (marketing) for a lot of my research, copy changes, and discussions around digital strategy. 
+
+
+      Some of the front-end development was done by our intern at the time, who I was training in the basics of HTML/CSS.
   - body_html: " "
     heading: "Brief "
     intro: "As Vitsoe's most accessible product in terms of price point, the 621
