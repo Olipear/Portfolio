@@ -17,7 +17,10 @@ sections:
       #### Role
 
 
-      In this project I took on a product designer role. Getting stuck into the development work where needed, whilst providing direction and design. 
+      In this project I took on a product designer role. 
+
+
+      Getting stuck into the development work where needed, whilst providing direction and design for the rest of the team. 
 
 
       #### Team
@@ -42,24 +45,24 @@ sections:
       Briefly*:* 606 is a modular shelving system. 'E-tracks' are directly attached to walls or posts. Various components such as shelves, tables, and cabinets are attached to tracks with pins. 
 
 
-      #### Leading up to the prototype
+      The sales process was inquiry led, planners (salespeople) would design the shelving system on behalf of customers.
 
 
       I was researching the entire sales process for 606 in depth. This included interviews with planners, behaviour analysis on the website, and even AI assisted sentiment analysis on the web inquiry form.
 
 
-      Some of the key pain points were: 
+      #### Pain points
 
 
       * Planners wasted a lot of time on providing quotes for customers that could never afford the system. Customers were often unwilling to provide their budget upfront.
 
       * Planners found many customers who made inquiries didn't understand the basic concepts of the shelving system. 
 
-      * Customers hated the idea of having to go through a salesperson. "Just let me buy it" was a common theme in customer feedback.
+      * Customers were hostile to the planning process. "Just let me buy it" was a common theme in customer feedback.
 
-      * Customers were being put off from buying into a system they could add to over time, because they didn't like the idea of having to call or email someone to do so. 
+      * Customers were being put off from buying into a modular system they could add to over time, because components were not available to purchase online. 
 
-      * Customers who went through the process appreciated planner's expertise - (clear the survivor bias here).
+      * Customers who went through the process appreciated planner's expertise - (clear survivor bias here).
 
 
       #### An exercise in the possible
@@ -71,10 +74,10 @@ sections:
       Therefore, the main aim of this prototype was to prove that a sufficiently complex tool could be created to follow these rules.
 
 
-      The requirements of this prototype were explicitly laid out: 
+      #### Requirements
 
 
-      * Rules which planners would apply would need to be followed - for example specific components should not be hung in certain places.
+      * System rules would need to be applied; for example a table can only be attached at a specific height.
 
       * Customers should be able to use the tool with no prior knowledge of the shelving system.
 
@@ -82,8 +85,8 @@ sections:
 
       * It needed to inform customers of prices.
   - heading: Research & Discovery phase
-    intro: "Once the go-ahead was given for the proof of concept, looked at what
-      makes a good furniture planner. "
+    intro: "Most of my research on the 606 sales process was in hand. Now I focused
+      on what makes a good furniture planner. "
     standout: false
     headerimage: /img/research.png
     body: >-
@@ -113,41 +116,31 @@ sections:
       * I was particularly enamoured with the dynamic illustrations on the component section. It let users know what would fit on different shelves by using common objects rather than relying on measurements. 
 
       * Once complete, a unique sharable link was generated so that is could be shared with a partner or housemate.
+
+
+      I would apply many of these lessons to my work on this prototype.
   - heading: Wireframing and design
     intro: "The prototype evolved continually as we built it. Adding features in
       series to avoid leaving anything half finished. "
     headerimage: /img/design-_-solution.png
     standout: false
     body: >-
-      #### Initial features
-
-
-      For the initial 2 week project I had decided the tool would: 
-
-
-      * Be staged in three sections - wall dimensions - track placement - component placement
-
-      * Adding tracks and components should use drag and drop functionality
-
-      * The list of components should be filterable 
-
-
       #### Wireframes
 
 
-      After sketching out some ideas, I went straight into XD to create low-fi mockups. One of our development team was remote, so it made it easy to share and keep updated with any changes I made. 
+      After sketching out some ideas on paper, I made these low-fi mockups. One of our development team was remote, XD it made it easy to share and keep updated with any changes I made. 
 
 
       ![Mockup of dimensions screen](/img/screen-2.jpg "Mockup of dimensions screen")
 
 
-      The wall dimensions needed to be exact for Vitsoe's planning process, having a draggable wall size was probably not desirable, and I wanted to save our efforts for the following, more complex sections. 
+      The wall dimensions would be entered into simple inputs; the time spent on making this into a draggable area was better spent on the core functionality. 
 
 
       ![Mockup of tracks screen](/img/screen-2-1.jpg "Mockup of tracks screen")
 
 
-      Using total system dimensions rather than measurements from walls would allow us to ignore the placement on walls altogether, e-tracks would always be centered. 
+      Using total system dimensions rather than measurements from walls would allow us to ignore the placement on walls altogether, e-tracks would always be centered.
 
 
       The wall dimensions were still requirements for the sales process, and they also allowed the tracks to be filtered down by height.
@@ -165,7 +158,7 @@ sections:
       ![Mockup of tracks screen part 3](/img/screen-2-1-–-2.jpg "Mockup of tracks screen")
 
 
-      Editing the tracks by dragging them out of the wall area was one of the reasons we decided against adding entire bays as with the Algot planner. 
+      I already had in mind at this stage, that the functionality of the 2nd and 3rd stages should be similar if not identical. This was one of the reasons I decided against having bays. 
 
 
       ![Mockup of components screen](/img/screen-3.jpg "Mockup of components screen")
@@ -177,7 +170,7 @@ sections:
       #### Minimum viable product
 
 
-      These were light on detail, but by the end of the two weeks we had built this design with all the core functionality. Using libraries for both the drag and drop functionality, and the rules engine saved us a lot of time.
+      These were light on detail, but by the end of the two weeks we had built this design with all the basic requirements met. Using libraries for both the drag and drop functionality, and the rules engine saved us a lot of time.
 
 
       The prototype at this point could validate E-track placement using the wall dimensions, and component placement using a rules engine. It showed prices, used drag and drop, and allowed filtering of components by type. 
@@ -189,12 +182,15 @@ sections:
       With such great progress being shown, we were given another two weeks to work on it. 
 
 
-      Having the core functionality in place meant we could start to be more ambitious, especially with the informative aspects. My mockups became more detailed, and we looked at some of the features we'd initially marked as 'nice to have'. 
+      Having the core functionality in place meant I could start to be more ambitious with features, especially with the informative and educational aspects which were lacking in the initial version. 
+
+
+      #### More features
 
 
       * Much more guidance would be provided, tooltips, warnings, and instructions for each stage. 
 
-      * We would add in colour customisation
+      * We would add in colour customisation (the shelving comes in 6 colours)
 
       * We would add an additional category for validation. Warnings would be included separately to errors. 
 
@@ -217,7 +213,7 @@ sections:
       ![Mockup of new layout](/img/your-space-landing-–-3.jpg "Mockup of new layout")
 
 
-      The grey bar was to be used for all instructional and informational messages. Initially it would drop down when required, but later I decided to have it visible all the time so that users would always know where to look for guidance. 
+      This header bar would be consistent across all stages, which one space for informational messages. Breadcrumb navigation would be used so users could see how far along in the process they were.
 
 
       #### Gamification
@@ -235,22 +231,22 @@ sections:
       This let the configurator to build up complexity without over-reliance on instruction messages and hints, which are often overlooked by users.
 
 
-      #### Making it easier by adding difficulty
+      #### Adding difficulty
 
 
-      In the first prototype the tracks could be snapped into bays from anywhere in the wall area. 
+      In the first prototype the tracks could be snapped into bays from anywhere in the wall area. Even though this was much easier, it wasn't consistent with the components stage.
 
 
-      TODO insert diagram showing change of soft drop targets to hard drop targets.
+      ![Illustration of changes to drop targets](/img/drop-targets.jpg "Illustration of changes to drop targets")
 
 
-      This wasn't consistent with the behaviour in the components stage, even though it made it easier to use. Reducing the snapping area to match the components section taught the user how to use the next section, where large snapping areas weren't practical or desirable.
+      Reducing the snapping area to match the components section taught the user how to use the next section, where large snapping areas weren't practical.
 
 
       #### Guarantees
 
 
-      To complete the section a user must have at dragged and dropped more than one track onto the green target area. So I could guarantee by the third stage:  
+      To continue from the second section, a user must have created at least a single bay structure. So I could guarantee by the third stage:  
 
 
       * They had selected an item from the list. Learning blue meant selection.
@@ -260,13 +256,25 @@ sections:
       * They had seen the colour change from red to unshaded as they dragged it into the green area. Learning that the illustration changes from red when placed correctly. 
 
 
+      This was important because the third section would be introducing much more complexity with the number of rules the components should follow. 
+
+
       #### Contextual labels & instructions
 
 
       Instruction messages were added to tell users what they should be doing at each step of the process, contextual labels would be used to explain the product. 
 
 
+      ![Screenshot of instructional messages](/img/instructional-message-example.png "Screenshot of instructional messages")
+
+
       Keeping these two functions separate, all instructions would appear in the same place in the grey header bar. To draw attention to these messages, I added the animated the pointing hand. 
+
+
+      ![Screenshot of warning example](/img/warning-example.png "Screenshot of warning example")
+
+
+      ![Screenshot of invalid example](/img/invalid-example.jpg "Screenshot of invalid example")
 
 
       The tooltips followed the same colour scheme as the the other interactions, with the addition of ubiquitous warning and information icons.
@@ -277,10 +285,10 @@ sections:
       #### Long term plans
 
 
-      The tool proved the point we wished to make; a web-based planning tool could be sufficiently complex to follow as many rules as necessary. It also showed that it was within the reach of even a small development team.
+      The tool proved the point we wished to make; a web-based planning tool could be sufficiently complex, and follow as many rules as necessary. It also showed that it was within the reach of even a small development team.
 
 
-      This project, and along with research I carried out, provided the impetus for the company to re-prioritise crucial digital infrastructure work. This would provide the necessary framework to support a tool such as this.
+      This project, and along with research I carried out, provided the impetus for the company to re-prioritise crucial digital infrastructure work which was still ongoing at time of writing. Eventually this will provide the necessary framework to support a tool such as this.
     headerimage: /img/outcomes.png
 other_projects: More projects
 featuredpost: false
