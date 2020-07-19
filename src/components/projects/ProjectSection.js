@@ -14,8 +14,13 @@ const ProjectSection = ({ section }) => {
             {section.headerimage && (
               <CMSImage className="section-image" image={section.headerimage} />
             )}
-            <h3 className="section-intro">{section.intro}</h3>
-            <HTMLContent content={section.body_html?section.body_html:section.body} className="section-body" />
+            {section.intro && (
+              <h3 className="section-intro">{section.intro}</h3>
+            )}
+            <HTMLContent
+              content={section.body_html ? section.body_html : section.body}
+              className="section-body"
+            />
           </div>
         </div>
       </div>

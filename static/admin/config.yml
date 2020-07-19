@@ -98,7 +98,7 @@ collections:
         create: true
         fields:
           - {label: "Heading", name: "heading", widget: "string"}
-          - {label: "Introduction text", name: "intro", widget: "text"}
+          - {label: "Introduction text", name: "intro", widget: "text", required: false}
           - {label: "Section image", name: "headerimage", widget: "image", required: false}
           - {label: "Is standout section", name: "standout", widget: "boolean", required: false}
           - {label: "Body", name: "body", widget: "markdown", required: false}
