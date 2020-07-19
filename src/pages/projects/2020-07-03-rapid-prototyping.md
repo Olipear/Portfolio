@@ -3,16 +3,15 @@ templateKey: project-entry
 date: 2020-07-03T16:06:08.432Z
 featuredproject: true
 title: Rapid prototyping
-description: This proof of concept was part of a wider investigation into how
-  vitsoe could improve the purchase process for the 606 Shelving System.
+description: "This proof of concept was part of a wider investigation into how
+  vitsoe could improve the purchase process for the 606 Shelving System. "
 featuredimage: /img/furnituretoolfeatured.jpg
 featuredlink: https://www.youtube.com/watch?v=8SOaF-Motuo&feature=youtu.be
 featuredlinklabel: See my presentation
 sections:
   - body_html: " "
     heading: Overview
-    intro: "This project was a proof of concept which informed longer term business
-      objectives. "
+    intro: ""
     headerimage: /img/about.png
     body: >-
       #### Role
