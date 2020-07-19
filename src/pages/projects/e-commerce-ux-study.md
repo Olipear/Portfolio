@@ -11,9 +11,7 @@ featuredlinklabel: See it live
 sections:
   - body_html: " "
     heading: Overview
-    intro: "In this write-up I focus more on my UX design process and outcomes. From
-      initially being asked to look at product performance, my UX research led
-      to some deeper questions about the purpose of the website. "
+    intro: ""
     headerimage: /img/about.png
     body: >-
       #### Role: 
