@@ -64,12 +64,6 @@ sections:
       * An existing customer should be able to buy a footstool separately.
 
       * Customers should be comfortable buying the chair without seeing one in person.
-
-
-      #### A note on this write-up
-
-
-      Although my work involved broader changes I've tried to keep this write-up focused on the UI design and front-end development of the configuration page.
   - heading: Research & Discovery phase
     intro: >
       Now I had a clear idea of what needed to be done, I started by looking at
