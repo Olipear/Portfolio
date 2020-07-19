@@ -8,6 +8,29 @@ featuredimage: /img/620-image.jpg
 featuredlink: https://www.vitsoe.com/gb/620/buy
 featuredlinklabel: See it live
 sections:
+  - body_html: " "
+    heading: Overview
+    body: >-
+      #### Role
+
+
+      UX design, UI design, Front-end development, Information architecture, Product renders
+
+
+      #### Team
+
+
+      One senior developer who worked on the api and server side, one junior who built all the tests.
+
+
+      #### Write-up
+
+
+      In this write up I've chosen to focus on the UI and Front-end development of the chair configurator.
+
+
+      Other work carried out on the 620 area of the site has been intentionally excluded in the interest the reader's time.
+    headerimage: /img/about.png
   - heading: Brief
     headerimage: /img/brief-_-problem.png
     standout: false
