@@ -23,10 +23,10 @@ sections:
       One senior developer who worked on the api and server side, one junior who built all the tests.
 
 
-      #### Write-up
+      #### Write-up focus
 
 
-      In this write up I've chosen to focus on the UI and Front-end development of the chair configurator.
+      In this write up I've chosen to focus on the UI design and Front-end development of the chair configurator.
 
 
       Other work carried out on the 620 area of the site has been intentionally excluded in the interest the reader's time.
