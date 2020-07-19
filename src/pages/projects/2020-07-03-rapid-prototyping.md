@@ -276,10 +276,10 @@ sections:
       #### Long term plans
 
 
-      The tool proved the point we wished to make; a web-based planning tool could be sufficiently complex to follow as many rules as necessary. It also showed that it was within the reach of even a small development team.
+      The tool proved the point we wished to make; a web-based planning tool could be sufficiently complex, and follow as many rules as necessary. It also showed that it was within the reach of even a small development team.
 
 
-      This project, and along with research I carried out, provided the impetus for the company to re-prioritise crucial digital infrastructure work. This would provide the necessary framework to support a tool such as this.
+      This project, and along with research I carried out, provided the impetus for the company to re-prioritise crucial digital infrastructure work which was still ongoing at time of writing. Eventually this will provide the necessary framework to support a tool such as this.
     headerimage: /img/outcomes.png
 other_projects: More projects
 featuredpost: false
