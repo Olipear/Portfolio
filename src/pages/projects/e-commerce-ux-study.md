@@ -10,6 +10,26 @@ featuredlink: https://www.vitsoe.com/621
 featuredlinklabel: See it live
 sections:
   - body_html: " "
+    heading: Overview
+    intro: "In this write-up I focus more on my UX design process and outcomes. From
+      initially being asked to look at product performance, my UX research led
+      to some deeper questions about the purpose of the website. "
+    headerimage: /img/about.png
+    body: >-
+      #### Role: 
+
+
+      For this work I was largely focused on UX research and design. 
+
+
+      #### Team
+
+
+      I worked closely with the 'communications' team (marketing) for a lot of my research, copy changes, and discussions around digital strategy. 
+
+
+      Some of the front-end development was done by our intern at the time, who I was training in the basics of HTML/CSS.
+  - body_html: " "
     heading: "Brief "
     intro: "As Vitsoe's most accessible product in terms of price point, the 621
       table was a gateway product that led on to further sales. "
@@ -195,7 +215,7 @@ sections:
     heading: Follow up
     intro: I continued to make improvements to the initial design long after the
       changes were launched.
-    headerimage: /img/brief-_-problem.png
+    headerimage: /img/outcomes.png
     body: >-
       #### Behaviour changes
 
