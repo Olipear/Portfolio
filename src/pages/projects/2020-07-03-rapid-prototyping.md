@@ -256,6 +256,9 @@ sections:
       * They had seen the colour change from red to unshaded as they dragged it into the green area. Learning that the illustration changes from red when placed correctly. 
 
 
+      This was important because the third section would be introducing much more complexity with the number of rules the components should follow. 
+
+
       #### Contextual labels & instructions
 
 
