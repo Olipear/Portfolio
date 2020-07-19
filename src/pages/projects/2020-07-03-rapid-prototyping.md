@@ -265,7 +265,16 @@ sections:
       Instruction messages were added to tell users what they should be doing at each step of the process, contextual labels would be used to explain the product. 
 
 
+      ![Screenshot of instructional messages](/img/instructional-message-example.png "Screenshot of instructional messages")
+
+
       Keeping these two functions separate, all instructions would appear in the same place in the grey header bar. To draw attention to these messages, I added the animated the pointing hand. 
+
+
+      ![Screenshot of warning example](/img/warning-example.png "Screenshot of warning example")
+
+
+      ![Screenshot of invalid example](/img/invalid-example.jpg "Screenshot of invalid example")
 
 
       The tooltips followed the same colour scheme as the the other interactions, with the addition of ubiquitous warning and information icons.
