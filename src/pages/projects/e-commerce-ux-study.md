@@ -65,8 +65,6 @@ sections:
 
       ![UX Personas page 1](/img/personas-1.jpg "UX Personas page 1")
 
-      ![UX Personas page 2](/img/personas-2.jpg "UX Personas page 2")
-
       These were representative of both Vitsoe's existing customer base, and their target market. The 606 shelving system is Vitsoe's main product, so they are built with this in mind. With information like their living situation being highly relevant. 
 
 
@@ -116,16 +114,16 @@ sections:
       Overall just 9% of users who reached one of the other 621 pages ever reached the buy page. 
 
 
-      The pages were heavy on text were lacking substance on the product itself. With a page titled 'Design and History', it added to the impression this could be an informational site about Dieter Rams rather than an online shop. 
+      The pages were heavy on text but lacking substance on the product itself. A page titled 'Design and History' added to the impression this could be an informational site about Dieter Rams rather than an online shop. 
 
 
       #### Purchase page
 
 
-      The purchase page was commonly the last page in a user journey, where customers were making a purchase decision. Few people went back to gallery and detail pages, but this was likely because they had already had an opportunity to see these. Of course those who deliberated longer and spent a lot of time circling through the various pages were much more likely to make a purchase. 
+      The purchase page was commonly the last page in a user journey, where customers were making a purchase decision. Users that went on to buy would go back into gallery and details pages from here, before returning.
 
 
-      The UI itself was well laid out. 90% of those that didn't bounce interacted with the customisation controls, so their purpose seemed to be clear enough.
+      The UI itself was well laid out. 90% of those that didn't bounce interacted with the customisation controls.
   - body_html: " "
     heading: "Design "
     intro: "This was mostly a UX design, I needed to change very little of the UI
@@ -144,14 +142,17 @@ sections:
       This proposed layout simply shifted elements around, meaning it carried a low development cost. 
 
 
-      Other changes that supported this;
+      * Products were moved to the top of the homepage, with 606 taking pride of place as Vitsoe's most important product. 
 
+      * Vitsoe Voice was moved to the end and the large featured article was removed entirely. 
 
       * 'Products' was changed to 'Online shop'.
 
-      * Links were changed from 'read more' to 'Buy online' or 'Configure and buy'
+      * Links were changed from 'read more' to 'Buy online' or 'Configure and buy'.
 
       * Links for products were pointed at purchase pages, rather than introduction pages.
+
+      * Social media links were added for instagram and pinterest, as I found these were popular among converters. 
 
 
       #### Working with marketing
@@ -172,13 +173,16 @@ sections:
       ![Page structure changes](/img/page-structure.jpg "Page structure changes")
 
 
-      Essentially my strategy was to simplify, following Dieter's own rules, anything that was not strictly supporting the products function should be removed. 
+      Essentially my strategy was to simplify, following Dieter's own rules, anything that was not strictly supporting the purpose of these pages was removed. 
 
 
-      I was able to eliminate one page entirely, with the introduction page and design history page containing mostly duplicated information. 
+      I was able to eliminate one page entirely, with the introduction page and design history page containing mostly duplicate information. 
 
 
-      I also changed the order these pages would appear. Making /621 the purchasing page. The design and details page came after, for those who had seen the product for sale and wished to read more about it.
+      I also changed the order these pages would appear; making /621 the purchasing page, and design and details page second. 
+
+
+      This would let users see that the table was available for online purchase, it's price, and what it looked like immediately. If they were then more interested they could further read about the history and design of the product. 
 
 
       #### Gallery content
@@ -215,6 +219,18 @@ sections:
       changes were launched.
     headerimage: /img/outcomes.png
     body: >-
+      #### Sales
+
+
+      Following up a full year after these changes were launched in september 2018; I found there were 46% more unique purchases, with 25% increase in the number of tables sold.  
+
+
+      The improved sales do not necessarily measure the success of changes on the website however. The work I did to help the marketing team, and push them towards social media might have had a more significant impact. 
+
+
+      For this reason I find checking for expected behavioural changes is a better measure of success. 
+
+
       #### Behaviour changes
 
 
@@ -225,35 +241,28 @@ sections:
 
       * Navigation from the homepage to product pages increased by 2%. In raw numbers this accounted for an additional ~4,000 pageviews.
 
-      * Views for the buy page increased by 535%, and all key page metrics improved significantly.
+      * Views for the 621 buy page increased by 535%.
 
-      * Far fewer users reached the details page, but those that did, were more likely to buy, and spent much longer on the page than before.
+      * Far fewer users reached the details page, but those that did, were more likely to buy.
 
-
-      Online sales for the product seemed to be positively affected. Of course the marketing refocus could also take some credit for this. 
-
-
-      ![Chart of product performance over a year](/img/621-product-performance.jpg "Chart of product performance over a year")
-
-
-      This chart shows the year before and after in sales; 46% more unique purchases in a year is good, but with such low sales it could take longer to more accurately gauge. 
+      * Those that did reach the details, spent much longer here on average. Therefore this information was being read by more people in its condensed form.
 
 
       #### Galleries
 
 
-      In the four months before and after launching the changes; there were 9,780 unique events for opening the gallery vs 1,254 unique pageview for the previous gallery page. An increase of 780%!
+      In the four months before and after launching the changes; there were 9,780 unique events for opening the gallery vs 1,254 unique pageview for the previous gallery page. An increase of 780%, I had increased the visibility of gallery images whilst removing the gallery page.
 
 
-      This was of course mostly because the containing page the lightbox  also had a large increase in views. So I also looked at the % of pageviews that resulted in a gallery open event. Excluding those who bounced, 95% of users opened the gallery lightbox. 
+      Excluding those who bounced, 95% of users opened the gallery lightbox. This didn't guarantee users knew what they expected to open, but I was satisfied enough of them were finding out regardless. 
 
 
-      I would later make further improvements to the gallery, and updated the custom icon to the material design gallery icon - along with using material design icons across other areas of the site.
+      I continued to make improvements to the gallery; the translucent background shows users haven't navigated away, and the shareable links to social media help marketing. 
 
 
       ![New gallery lightbox](/img/lightbox-–-27.jpg "New gallery lightbox")
 
 
-      This redesign could have a project write up of its own. But importantly, even a year later, I was still refining the design.
+      This redesign could have a project write up of its own. But importantly, even a year later I was still refining the design.
 other_projects: More projects
 ---
