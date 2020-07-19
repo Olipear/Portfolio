@@ -3,12 +3,33 @@ templateKey: project-entry
 date: 2020-07-03T16:06:08.432Z
 featuredproject: true
 title: Rapid prototyping
-description: This proof of concept was part of a wider investigation into how
-  vitsoe could improve the purchase process for the 606 Shelving System.
+description: "This proof of concept was part of a wider investigation into how
+  vitsoe could improve the purchase process for the 606 Shelving System. "
 featuredimage: /img/furnituretoolfeatured.jpg
 featuredlink: https://www.youtube.com/watch?v=8SOaF-Motuo&feature=youtu.be
 featuredlinklabel: See my presentation
 sections:
+  - body_html: " "
+    heading: Overview
+    intro: ""
+    headerimage: /img/about.png
+    body: >-
+      #### Role
+
+
+      In this project I took on a product designer role. Getting stuck into the development work where needed, whilst providing direction and design. 
+
+
+      #### Team
+
+
+      In addition to myself, the development team consisted of two senior developers, and a junior dev.
+
+
+      #### Project Length
+
+
+      The project was scheduled for 2 weeks initially, but was extended to 1 month.
   - heading: Brief
     headerimage: /img/brief-_-problem.png
     standout: false
@@ -18,16 +39,7 @@ sections:
       #### Background
 
 
-      Briefly*:* 606 is a modular shelving system. 'E-tracks' are directly attached to walls or posts. Various components such as shelves, tables, and cabinets are attached to tracks with pins. There are two bay widths for components, 65cm and 90cm. 
-
-
-      The majority of the sales process is handled by 'planners' (essentially salespeople), who would be trained to understand the limitations of the system.
-
-
-      Planners would receive inquiries via a webform, or direct email. They used a  Java desktop app to create a plan for the shelving system. 
-
-
-      The entire digital infrastructure of the company is built around this application, interfacing with stock, accounting, customer and account systems.
+      Briefly*:* 606 is a modular shelving system. 'E-tracks' are directly attached to walls or posts. Various components such as shelves, tables, and cabinets are attached to tracks with pins. 
 
 
       #### Leading up to the prototype
@@ -47,7 +59,7 @@ sections:
 
       * Customers were being put off from buying into a system they could add to over time, because they didn't like the idea of having to call or email someone to do so. 
 
-      * Customers who went through the process appreciated planner's expertise - management were blind to the survivor bias here.
+      * Customers who went through the process appreciated planner's expertise - (clear the survivor bias here).
 
 
       #### An exercise in the possible
@@ -69,9 +81,6 @@ sections:
       * Having used the tool a customer should understand more about the system. It should be informative and educational.
 
       * It needed to inform customers of prices.
-
-
-      As 'UX developer' I also part of the development team, consisting of four developers.
   - heading: Research & Discovery phase
     intro: "Once the go-ahead was given for the proof of concept, looked at what
       makes a good furniture planner. "
@@ -84,7 +93,7 @@ sections:
       I found nearly all of them were staged, allowing users to define the wall area first, pick tracks then place components in separate sections. 
 
 
-      Ikea's Algot planner was really head and shoulders above all the other examples I looked at.
+      I looked at many different tools, but Ikea's Algot planner stood head and shoulders above all the other examples I looked at.
 
 
       ![Screenshot of Ikea's Algot planner](/img/algot-planner-screenshot.jpg "Screenshot of Ikea's Algot planner")
@@ -103,13 +112,7 @@ sections:
 
       * I was particularly enamoured with the dynamic illustrations on the component section. It let users know what would fit on different shelves by using common objects rather than relying on measurements. 
 
-      * Once complete, a unique sharable link was generated so that is could be shared with a partner or housemate. 
-
-
-      The Atlas A4S builder unlike the the Algot planner did not take into account wall dimensions, or positioning on the wall. Instead it displayed system dimensions, and let the user decide what would fit. This gave the user all the information they needed to make sure it fit, without demanding they had their wall dimensions to hand.
-
-
-      Other competitor tools provided examples of pitfalls to avoid. The Kriptonite configurator was incredibly frustrating to use although aesthetically it was very pretty. Moving components on bays required users to click arrows repeatedly. Drag and drop functionality is far superior.
+      * Once complete, a unique sharable link was generated so that is could be shared with a partner or housemate.
   - heading: Wireframing and design
     intro: "The prototype evolved continually as we built it. Adding features in
       series to avoid leaving anything half finished. "
@@ -132,7 +135,7 @@ sections:
       #### Wireframes
 
 
-      After sketching out some ideas, I went straight into XD to create low-fi mockups. One of our development team was remote, so it made it easy to share and keep updated with any changes I made. I also made sure that any interaction and frontend elements I wasn't working on myself, were handled by a dev who could be physically present, so I could use pen and paper to sketch out ideas that weren't covered in the mockups. 
+      After sketching out some ideas, I went straight into XD to create low-fi mockups. One of our development team was remote, so it made it easy to share and keep updated with any changes I made. 
 
 
       ![Mockup of dimensions screen](/img/screen-2.jpg "Mockup of dimensions screen")
@@ -144,7 +147,7 @@ sections:
       ![Mockup of tracks screen](/img/screen-2-1.jpg "Mockup of tracks screen")
 
 
-      Using system dimensions rather than measurements from walls, would allow us to ignore the placement on walls altogether, the tracks would always be centered. 
+      Using total system dimensions rather than measurements from walls would allow us to ignore the placement on walls altogether, e-tracks would always be centered. 
 
 
       The wall dimensions were still requirements for the sales process, and they also allowed the tracks to be filtered down by height.
@@ -171,7 +174,10 @@ sections:
       Again components would be added to the bays with drag and drop functionality. We initially used colour coding to indicate whether a component would be allowed 
 
 
-      These were light on detail, but by the end of the two weeks we had built these mockups with this core functionality. Using libraries for both the drag and drop functionality, and the rules engine saved us a lot of time.
+      #### Minimum viable product
+
+
+      These were light on detail, but by the end of the two weeks we had built this design with all the core functionality. Using libraries for both the drag and drop functionality, and the rules engine saved us a lot of time.
 
 
       The prototype at this point could validate E-track placement using the wall dimensions, and component placement using a rules engine. It showed prices, used drag and drop, and allowed filtering of components by type. 
@@ -205,6 +211,9 @@ sections:
       This provided me a bit of breathing space to put more thought into the UX of the tool. 
 
 
+      #### Instruction messages
+
+
       ![Mockup of new layout](/img/your-space-landing-–-3.jpg "Mockup of new layout")
 
 
@@ -226,6 +235,9 @@ sections:
       This let the configurator to build up complexity without over-reliance on instruction messages and hints, which are often overlooked by users.
 
 
+      #### Making it easier by adding difficulty
+
+
       In the first prototype the tracks could be snapped into bays from anywhere in the wall area. 
 
 
@@ -233,6 +245,9 @@ sections:
 
 
       This wasn't consistent with the behaviour in the components stage, even though it made it easier to use. Reducing the snapping area to match the components section taught the user how to use the next section, where large snapping areas weren't practical or desirable.
+
+
+      #### Guarantees
 
 
       To complete the section a user must have at dragged and dropped more than one track onto the green target area. So I could guarantee by the third stage:  
@@ -259,28 +274,14 @@ sections:
     heading: Outcomes
     intro: The tool was received well by the company.
     body: >-
-      #### Well polished for a prototype
-
-
-      Ensuring the features were always achievable, and relying on libraries to do the heavy lifting meant there were no half finished features in the prototype.
-
-
-      The visual design is minimalist, giving it the look of a finished product, without a great deal of effort put into styling. The most time consuming aesthetic feature were important functional elements such as the drag and drop interactions and tooltips. 
-
-
-      Upper-management can often lack imagination when evaluating prototypes such as these, especially when coming from a non-technical background. Presenting the prototype in this state avoided common distractions on 'why it looks funny?', and kept focus on the business objectives it fulfilled. Of course this can be a double edged sword, with management and stakeholders asking, 'why can't we launch this?'. 
-
-
       #### Long term plans
 
 
       The tool proved the point we wished to make; a web-based planning tool could be sufficiently complex to follow as many rules as necessary. It also showed that it was within the reach of even a small development team.
 
 
-      The business however was in no position to start changing their sales process. As previously mentioned, the existing Java app interfaced with every aspect of the company's technology stack.
-
-
-      This project, and along with research I carried out, provided the impetus for the company to re-prioritise this crucial infrastructure work. This obviously a huge task and work on this is still ongoing at time of writing.
+      This project, and along with research I carried out, provided the impetus for the company to re-prioritise crucial digital infrastructure work. This would provide the necessary framework to support a tool such as this.
+    headerimage: /img/outcomes.png
 other_projects: More projects
 featuredpost: false
 ---
