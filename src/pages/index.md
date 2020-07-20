@@ -20,11 +20,11 @@ about:
   aboutbody: >-
     Currently living in Leamington spa with my partner Merle and cat Mushu. 
 
-    I like to read sci-fi, still looking for a book that comes close to Hyperion. 
+    I read a lot of sci-fi in a never-ending search for something as good as Hyperion. 
 
-    I'm slowly learning to make concept art with 3D models and digital painting, I'm a fan of artists like Simon Stalenhag. 
+    Keep up some 3D work as a hobby, I'm slowly learning to use for concept work along with digital painting. 
 
-    Board games beat video games every time but I'm partial to both, carcassonne is my favourite at the moment. 
+    I'm into games, having a board game night at least every fortnight with games Carcassonne.
   image: /img/profile-pic.jpg
 footer:
   logo_strapline: Oliver Pearson
