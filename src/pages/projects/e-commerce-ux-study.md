@@ -5,7 +5,7 @@ featuredproject: true
 title: E-Commerce UX study
 description: "Improving sales for the 621 table involved changes across the the
   website and digital marketing. "
-featuredimage: /img/slide-20-–-1.jpg
+featuredimage: /img/621-featured.jpg
 featuredlink: https://www.vitsoe.com/621
 featuredlinklabel: See it live
 sections:
