@@ -10,7 +10,7 @@ navigation:
   githublabel: Github
   linkedinurl: https://www.linkedin.com/in/oliver-pearson-799140100/
   linkedinlabel: LinkedIn
-  cv_pdf: ""
+  cv_pdf: /img/oliver-pearson-cv-2020.pdf
   cv_pdflabel: Download CV
 blurbs:
   - blurb: I take digital products from research and requirements gathering, all the
@@ -19,12 +19,14 @@ blurbs:
       project, or need someone who can bring your design and dev teams together,
       look no further.
 about:
-  aboutbody: >
-    I currently live in Leamington Spa with my partner Merle. I carry on with
-    computer animation as a hobby, practicing with 3D models to create concept
-    art. I like to read science fiction and create sci-fi artwork, I find work
-    of Simon Stålenhag a great inspiration and you'll probably see his work on
-    my desktop backgrounds. 
+  aboutbody: >-
+    Currently living in Leamington spa with my partner Merle and cat Mushu. 
+
+    I like to read sci-fi, still looking for a book that comes close to Hyperion. 
+
+    I'm slowly learning to make concept art with 3D models and digital painting, I'm a fan of artists like Simon Stalenhag. 
+
+    Board games beat video games every time but I'm partial to both, carcassonne is my favourite at the moment. 
   image: /img/profile-pic.jpg
 footer:
   logo_strapline: Oliver Pearson
