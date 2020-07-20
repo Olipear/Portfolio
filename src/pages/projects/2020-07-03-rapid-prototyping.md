@@ -62,8 +62,6 @@ sections:
 
       * Customers were being put off from buying into a modular system they could add to over time, because components were not available to purchase online. 
 
-      * Customers who went through the process appreciated planner's expertise - (clear survivor bias here).
-
 
       #### An exercise in the possible
 
