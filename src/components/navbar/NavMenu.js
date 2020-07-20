@@ -9,7 +9,7 @@ const NavMenu = ({ open, setOpen, data }) => {
 
   return (
     <div id="navMenu" className={`navbar-menu ${open ? "is-open" : ""}`}>
-      <NavMenuItem setOpenOnFocus={setOpen} url={data.cv_pdf} alt={data.cv_pdflabel} Icon={CirVitae} />
+      <NavMenuItem setOpenOnFocus={setOpen} url={data.cv_pdf?data.cv_pdf.publicURL:''} alt={data.cv_pdflabel} Icon={CirVitae} />
       <NavMenuItem url={data.githuburl} alt={data.githublabel} Icon={Github} />
       <NavMenuItem setClosedOnBlur={setOpen} url={data.linkedinurl} alt={data.linkedinlabel} Icon={Linkedin} />
     </div>
@@ -19,7 +19,9 @@ const NavMenu = ({ open, setOpen, data }) => {
 NavMenu.propTypes = {
   open: PropTypes.bool.isRequired,
   data: PropTypes.shape({
-    cv_pdf: PropTypes.string,
+    cv_pdf: PropTypes.shape({
+      publicURL: PropTypes.string
+    }),
     cv_pdflabel: PropTypes.string,
     githuburl: PropTypes.string,
     githublabel: PropTypes.string,

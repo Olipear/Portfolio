@@ -41,17 +41,11 @@ const Navbar = ({ splash }) => {
     [0, windowHeight],
     [navbarVariants.splash.boxShadow, navbarVariants.small.boxShadow]
   );
- /*  const background = useTransform(
-    scrollY,
-    [0, windowHeight / 2],
-    [navbarVariants.splash.background, navbarVariants.small.background]
-  ); */
 
   const style = {
     height,
     padding,
     boxShadow,
-   // background,
   };
 
   return (

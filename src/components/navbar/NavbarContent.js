@@ -40,7 +40,9 @@ const navigationQuery = graphql`
           githublabel
           linkedinurl
           linkedinlabel
-          cv_pdf
+          cv_pdf {
+            publicURL
+          }
           cv_pdflabel
         }
       }
