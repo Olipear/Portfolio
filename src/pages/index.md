@@ -37,6 +37,6 @@ footer:
     portfolio, fork on Github. Please give credit where due. Original
     illustrations not for reuse.
 notfound:
-  text: Yes, I have a 404 page. Mushu says Hi!
+  text: Yes I have a 404 page. Mushu says Hi!
   image: /img/mushu.jpg
 ---
