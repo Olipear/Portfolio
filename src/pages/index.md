@@ -15,9 +15,7 @@ navigation:
 blurbs:
   - blurb: I take digital products from research and requirements gathering, all the
       way through to protoyping and development.
-  - blurb: So whether you're looking for a flexible team member on a fast moving
-      project, or need someone who can bring your design and dev teams together,
-      look no further.
+  - blurb: I'm available for both development contract work and UX consultancy.
 about:
   aboutbody: >-
     Currently living in Leamington spa with my partner Merle and cat Mushu. 
@@ -36,9 +34,9 @@ footer:
   map_link: https://goo.gl/maps/nnMSXwqwRoo5iPS19
   map_label: Leamington Spa, UK
   bottom_text: This site was made using gatsby, with netlify CMS. If you like this
-    portfolio, fork on Github. Please give credit where due. Original splash
-    artwork not for reuse.
+    portfolio, fork on Github. Please give credit where due. Original
+    illustrations not for reuse.
 notfound:
-  text: "404: There's no page here, but there is a picture of my cat!"
+  text: Yes I have a 404 page. Mushu says Hi!
   image: /img/mushu.jpg
 ---
