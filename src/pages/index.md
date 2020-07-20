@@ -14,8 +14,9 @@ navigation:
   cv_pdflabel: Download CV
 blurbs:
   - blurb: I take digital products from research and requirements gathering, all the
-      way through to protoyping and development.
-  - blurb: I'm available for both development contract work and UX consultancy.
+      way through to prototyping and development.
+  - blurb: I'm currently available for both development contract work and UX
+      consultancy.
 about:
   aboutbody: >-
     Currently living in Leamington spa with my partner Merle and cat Mushu. 
