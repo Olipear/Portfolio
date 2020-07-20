@@ -4,7 +4,7 @@ date: 2020-06-22T13:16:57.702Z
 featuredproject: true
 title: Adaptive UI example
 description: A luxury interface for a luxury product
-featuredimage: /img/620-image.jpg
+featuredimage: /img/620-featured.jpg
 featuredlink: https://www.vitsoe.com/gb/620/buy
 featuredlinklabel: See it live
 sections:
