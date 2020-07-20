@@ -15,7 +15,7 @@ navigation:
 blurbs:
   - blurb: I take digital products from research and requirements gathering, all the
       way through to prototyping and development.
-  - blurb: I'm currently available for both development contract work and UX
+  - blurb: I'm currently available for development and design contract work and UX
       consultancy.
 about:
   aboutbody: >-
