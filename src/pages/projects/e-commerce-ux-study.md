@@ -14,23 +14,23 @@ sections:
     intro: ""
     headerimage: /img/about.png
     body: >-
-      #### Role: 
+      #### Role:
 
 
-      For this work I was largely focused on UX research and design. 
+      UX research and design, front-end development. 
 
 
       #### Team
 
 
-      I worked closely with the 'communications' team (marketing) for a lot of my research, copy changes, and discussions around digital strategy. 
+      I worked closely with the 'communications'(marketing) team for a lot of my research, copy changes, and discussions around digital marketing strategy. 
 
 
       Some of the front-end development was done by our intern at the time, who I was training in the basics of HTML/CSS.
   - body_html: " "
     heading: "Brief "
-    intro: "As Vitsoe's most accessible product in terms of price point, the 621
-      table was a gateway product that led on to further sales. "
+    intro: "As Vitsoe's most accessibly priced product, the 621 table was a gateway
+      product that aimed to encourage further sales. "
     body: >-
       #### Objectives
 
@@ -49,7 +49,7 @@ sections:
       #### Resources
 
 
-      My main resource was google analytics, I had set up custom event tracking on things like product customisation, videos and galleries 6 months earlier.
+      My main resource was google analytics, I had set up custom event tracking on things like product customisation, videos and galleries 4 months before starting this project.
 
 
       There were some large gaps that I'm aware could have significantly improved my UX process. Social media marketing was untracked, email promotions did not use trackable links, and I would not have access to customers for interviews, focus groups or user testing. 
@@ -63,7 +63,9 @@ sections:
 
       The UX personas I created involved a lot of collaboration with the most experienced Vitsoe salespeople, along with website usage data. 
 
-      These were representative of both Vitsoe's existing customer base, and their target market. The 606 shelving system is Vitsoe's main product, so they are built with this in mind. With information like their living situation being highly relevant. 
+
+
+      These were representative of both Vitsoe's existing customer base, and their target market.
 
 
       ![Personas with confidential business information obscured](/img/personas-obscured.jpg "Personas with confidential business information obscured")
@@ -75,23 +77,26 @@ sections:
       #### Conflicting business goals
 
 
+      Early on in my researched I realised there were some fundamental issues with the website that would need to be addressed.
+
+
       Vitsoe wanted to be 'the gatekeeper for Dieter Rams'. Large portions of the website are taken up with the career, history and philosophy of the designer's work. These pages were ranked at the top of search engines for 'Dieter Rams', driving a huge volume of traffic to the site. 
 
 
-      The company also has its own publication 'Vitsoe voice'; a collection of lifestyle and design articles. Many featured vitsoe products, but they would often be features on an interesting Vitsoe customer, or Rams's design philosophy. 
+      The company also has its own publication 'Vitsoe voice'; a collection of lifestyle and design articles. Many featured vitsoe products, but they would more often featured interesting Vitsoe customers, or Rams's design philosophy. 
 
 
       ![Previous homepage layout](/img/previous-homepage.jpg "Previous homepage layout")
 
-       Only 4% of users would navigate to Vitsoe voice from the homepage despite its prominence here. When I looked into readership, I found most were existing customers, and they were arriving here via email newsletters.
+       Only 4% of users would navigate to Vitsoe voice from the homepage despite its prominence here. When I looked into readership, I found most were existing customers.
 
       Website usage showed neither the editorial nor the Rams pages were driving sales. The most popular entry point for the site was a page explaining Rams's 10 principles of design, a mouse heatmap showed most visitors were copy-pasting these principles before leaving the site. Very few of these users ever visited other parts of the site, or returned.
 
 
-      Meanwhile sales teams were reporting back to me that many customers, even existing customers, were surprised to learn that Vitsoe had an online shop at all. 
+      Meanwhile, sales teams were reporting back that many customers, even existing customers; were surprised to learn that Vitsoe had an online shop at all. 
 
 
-      ### It was clear that the website was trying to serve several different purposes and not doing any of them well.
+      ### It was clear that the website was trying to fulfill several different functions and not doing any of them well.
 
 
       I had to confront the business owners with some difficult questions about what their business goals for the website were. They reaffirmed that they wanted the site to be first and foremost a tool for selling online.
@@ -106,10 +111,10 @@ sections:
       ![Old page's issues](/img/history-621.jpg "Old page's issues")
 
 
-      Links from elsewhere on the site pointed at the introduction section, and with the path /621, it was also the most popular entry point for organic searches for the product. Of the 70% that didn't leave the site from here, less than half visited other pages within the 621 area.
+      Links from elsewhere on the site pointed at the introduction section, and with the path /621, it was also the most popular entry point for organic searches on the product. Of the 70% that didn't leave the site from here, less than half visited other pages within the 621 area.
 
 
-      Prominent links took users away of the 621 area entirely, back to pages about Dieter's career and the good design principles. 
+      Prominent links took users away of the 621 area entirely, back to pages about Dieter's career, and the good design principles. 
 
 
       Overall just 9% of users who reached one of the other 621 pages ever reached the buy page. 
@@ -121,14 +126,14 @@ sections:
       #### Purchase page
 
 
-      The purchase page was commonly the last page in a user journey, where customers were making a purchase decision. Users that went on to buy would go back into gallery and details pages from here, before returning.
+      The buy page was commonly the last page in a user journey, where customers were making a purchase decision. Users that went on to buy would often go back into the gallery, and details page before returning.
 
 
-      The UI itself was well laid out. 90% of those that didn't bounce interacted with the customisation controls.
+      The UI itself was well laid out. 90% of those that didn't bounce interacted with the customisation controls. The real problem seemed that not enough users were reaching this page in the first place.
   - body_html: " "
     heading: "Design "
-    intro: "This was mostly a UX design, I needed to change very little of the UI
-      itself. "
+    intro: A lot of my design work was not focused on the 621 product pages
+      themselves.
     headerimage: /img/design-_-solution.png
     body: >-
       #### Making the product center of attention
@@ -153,37 +158,34 @@ sections:
 
       * Links for products were pointed at purchase pages, rather than introduction pages.
 
-      * Social media links were added for instagram and pinterest, as I found these were popular among converters. 
+      * Social media links were added for instagram, and pinterest, as I found these were popular among converters. 
 
 
       #### Working with marketing
 
 
-      Even moving it to the bottom of the page, I never discounted the value the editorial had. I used tracking of ecommerce conversion to highlight specific articles that were driving sales, even with what appeared to be existing customers. Articles that focused on products were better at driving sales.
+      Even moving it to the bottom of the page, I never discounted the value the editorial had. I used tracking of ecommerce conversion to highlight specific articles that were driving sales. Unsurprisingly articles that focused on products were better at driving sales.
 
 
-      I also built the marketing team a dashboard in Google Data Studio. I helped start to measure how effective their newsletters, social media, and articles were at driving sales. 
+      I also built the marketing team a dashboard in Google Data Studio, and helped them begin to measure how effective their newsletters, social media, and articles were. As had been discussed with business owners, online sales needed to take precedence over readership figures.
 
 
       #### Fixing the user flow
 
 
-      The existing structure was laid out perfectly for users who would visit each page, read all the content contained, and move onto the next section. The reality is that people don't use websites like this.
-
-
       ![Page structure changes](/img/page-structure.jpg "Page structure changes")
 
 
-      Essentially my strategy was to simplify, following Dieter's own rules, anything that was not strictly supporting the purpose of these pages was removed. 
+      Essentially my strategy was to simplify, following Dieter's own rules, anything that didn't support the purpose of these pages was removed. 
 
 
-      I was able to eliminate one page entirely, with the introduction page and design history page containing mostly duplicate information. 
+      I was able to eliminate one page entirely, since the introduction page and design history page contained mostly duplicate information. 
 
 
       I also changed the order these pages would appear; making /621 the purchasing page, and design and details page second. 
 
 
-      This would let users see that the table was available for online purchase, it's price, and what it looked like immediately. If they were then more interested they could further read about the history and design of the product. 
+      This would let users see that the table was available for online purchase, it's price, and what it looked like first. If they were then more interested they could further read about the history and design of the product. 
 
 
       #### Gallery content
