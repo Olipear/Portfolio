@@ -15,8 +15,8 @@ navigation:
 blurbs:
   - blurb: I take digital products from research and requirements gathering, all the
       way through to prototyping and development.
-  - blurb: I'm currently available for development and design contract work and UX
-      consultancy.
+  - blurb: "I'm available for UI / UX design and strategy, and front-end development
+      work on a contract basis. "
 about:
   aboutbody: >-
     Currently living in Leamington spa with my partner Merle and cat Mushu. 
