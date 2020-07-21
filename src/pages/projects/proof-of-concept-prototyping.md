@@ -17,16 +17,16 @@ sections:
       #### Role
 
 
-      In this project I took on a product designer role. 
+      In this project I took on more of a product designer role. 
 
 
-      Getting stuck into the development work where needed, whilst providing direction and design for the rest of the team. 
+      Getting stuck into the development work where needed, and providing direction and design for the rest of the team. 
 
 
       #### Team
 
 
-      In addition to myself, the development team consisted of two senior developers, and a junior dev.
+      In addition to myself, the development team consisted of two senior developers, and a part-time intern.
 
 
       #### Project Length
@@ -48,7 +48,7 @@ sections:
       The sales process was inquiry led, planners (salespeople) would design the shelving system on behalf of customers.
 
 
-      I was researching the entire sales process for 606 in depth. This included interviews with planners, behaviour analysis on the website, and even AI assisted sentiment analysis on the web inquiry form.
+      I was researching the entire sales process for 606 in depth. This included interviews with planners, behaviour analysis on the website, and  sentiment analysis on the web inquiry form.
 
 
       #### Pain points
@@ -60,7 +60,7 @@ sections:
 
       * Customers were hostile to the planning process. "Just let me buy it" was a common theme in customer feedback.
 
-      * Customers were being put off from buying into a modular system they could add to over time, because components were not available to purchase online. 
+      * Customers were being put off from buying into this modular system because components were not available to purchase online later. 
 
 
       #### An exercise in the possible
@@ -69,13 +69,13 @@ sections:
       The idea of a customer facing drawing tool was far from a new idea within the business, but had been met with scepticism in the past. The key issue was that the various rules were viewed as too complex to implement in a web based tool. 
 
 
-      Therefore, the main aim of this prototype was to prove that a sufficiently complex tool could be created to follow these rules.
+      Therefore, the main aim of this prototype was to prove that a sufficiently complex tool could be created to follow those rules.
 
 
       #### Requirements
 
 
-      * System rules would need to be applied; for example a table can only be attached at a specific height.
+      * System rules would need to be enforced; for example a table can only be attached at a specific height.
 
       * Customers should be able to use the tool with no prior knowledge of the shelving system.
 
@@ -94,7 +94,7 @@ sections:
       I found nearly all of them were staged, allowing users to define the wall area first, pick tracks then place components in separate sections. 
 
 
-      I looked at many different tools, but Ikea's Algot planner stood head and shoulders above all the other examples I looked at.
+      I looked at many different tools, Ikea's Algot planner stood head and shoulders above all the other examples I investigated.
 
 
       ![Screenshot of Ikea's Algot planner](/img/algot-planner-screenshot.jpg "Screenshot of Ikea's Algot planner")
@@ -103,20 +103,20 @@ sections:
       There were several key features which I recognised as UX design to learn from: 
 
 
-      * Users can skip to step 3 by selecting from a list of templated examples. Giving them an immediate price, and promoting uses of the product a customer might not have considered. These can be filtered by size and room.
+      * Users can skip to step 3 by selecting from a list of templated examples. Giving them an immediate price, and promoting uses of the product a customer might not have considered. 
 
       * The interface is simple, and offers multiple ways for a user to complete a task. For example the wall dimensions can be set by dragging handles, or by clicking on measurement labels and typing in a number.
 
       * Measurements on the system visualisation can be toggled, providing important information without visual clutter.
 
-      * Contextual labels instruct users on the function of each UI element. These shake a couple of times to draw attention, but would disappear once the controls were used.
+      * Contextual labels instruct users on the function of each UI element. These shake a couple of times to draw attention, and would disappear once the controls were used.
 
-      * I was particularly enamoured with the dynamic illustrations on the component section. It let users know what would fit on different shelves by using common objects rather than relying on measurements. 
+      * I was particularly enamoured with the dynamic illustrations on the component section. It let users know what would fit on different shelves using relatable objects, rather than relying on measurements. 
 
-      * Once complete, a unique sharable link was generated so that is could be shared with a partner or housemate.
+      * Once complete, a unique sharable link was generated so that it could be shared with a partner or housemate.
 
 
-      I would apply many of these lessons to my work on this prototype.
+      I applied many of these lessons to my work on this prototype.
   - heading: Wireframing and design
     intro: "The prototype evolved continually as we built it. Adding features in
       series to avoid leaving anything half finished. "
@@ -126,52 +126,52 @@ sections:
       #### Wireframes
 
 
-      After sketching out some ideas on paper, I made these low-fi mockups. One of our development team was remote, XD it made it easy to share and keep updated with any changes I made. 
+      After sketching out some ideas on paper, I made these low-fi mockups. One of our development team was remote, using Adobe XD it made it easy to share and keep updated with any changes I made. 
 
 
       ![Mockup of dimensions screen](/img/screen-2.jpg "Mockup of dimensions screen")
 
 
-      The wall dimensions would be entered into simple inputs; the time spent on making this into a draggable area was better spent on the core functionality. 
+      The wall dimensions would be entered into simple inputs.
 
 
       ![Mockup of tracks screen](/img/screen-2-1.jpg "Mockup of tracks screen")
 
 
-      Using total system dimensions rather than measurements from walls would allow us to ignore the placement on walls altogether, e-tracks would always be centered.
+      Using total system dimensions rather than measurements from walls, made placement much simpler. E-tracks would always be centered.
 
 
-      The wall dimensions were still requirements for the sales process, and they also allowed the tracks to be filtered down by height.
+      Requiring wall dimensions allowed tracks to be filtered down by height.
 
 
       ![Mockup of tracks screen part 2](/img/screen-2-1-–-1.jpg "Mockup of tracks screen")
 
 
-      For this initial version, we would allow placement of the tacks anywhere. Tracks placed far away would snap to 90, and when placed closer would snap to 65.
+      For this initial version, we would allow placement of the tacks anywhere. Tracks placed far away would snap to 90, and when placed closer would snap to 65 width bays.
 
 
-      I also started wanted to introduce some guidance here, making sure the user was unable to continue without at least one bay. 
+      I also started to introduce some guidance here, making sure the user was unable to continue without at least one bay. 
 
 
       ![Mockup of tracks screen part 3](/img/screen-2-1-–-2.jpg "Mockup of tracks screen")
 
 
-      I already had in mind at this stage, that the functionality of the 2nd and 3rd stages should be similar if not identical. This was one of the reasons I decided against having bays. 
+      Adding a bay at a time was considered, but because there were multiple widths, it would require additional buttons on the active area. I wanted to avoid this extra complexity, and use drag and drop for everything. 
 
 
       ![Mockup of components screen](/img/screen-3.jpg "Mockup of components screen")
 
 
-      Again components would be added to the bays with drag and drop functionality. We initially used colour coding to indicate whether a component would be allowed 
+      Again, components would be added to the bays with drag and drop functionality. With so many different components I decided to allow them to be filtered in three categories. We initially used colour coding to indicate whether a component would be allowed 
 
 
       #### Minimum viable product
 
 
-      These were light on detail, but by the end of the two weeks we had built this design with all the basic requirements met. Using libraries for both the drag and drop functionality, and the rules engine saved us a lot of time.
+      These were light on detail, but by the end of the two weeks we had built this design and met all of the basic requirements. Using libraries for both the drag and drop functionality, and the rules engine saved us a lot of time.
 
 
-      The prototype at this point could validate E-track placement using the wall dimensions, and component placement using a rules engine. It showed prices, used drag and drop, and allowed filtering of components by type. 
+      At this stage the prototype could validate E-track placement using the wall dimensions, and component placement using a rules engine. It showed prices, used drag and drop, and allowed filtering of components by type. 
 
 
       #### Two week extension
@@ -180,15 +180,15 @@ sections:
       With such great progress being shown, we were given another two weeks to work on it. 
 
 
-      Having the core functionality in place meant I could start to be more ambitious with features, especially with the informative and educational aspects which were lacking in the initial version. 
+      Since the core functionality was in place, I could start to be more ambitious with features. In this second phase we would focus on the informative and educational aspects which were lacking in the initial version. 
 
 
-      #### More features
+      #### More features+
 
 
-      * Much more guidance would be provided, tooltips, warnings, and instructions for each stage. 
+      * Much more guidance would be provided.
 
-      * We would add in colour customisation (the shelving comes in 6 colours)
+      * We would add in colour customisation (the shelving comes in 6 colours, up until now we'd just used white)
 
       * We would add an additional category for validation. Warnings would be included separately to errors. 
 
@@ -199,7 +199,7 @@ sections:
       * We would generate a sharable link
 
 
-      Features such as multiple currencies and the shareable link were tasks I gave to our senior developers. Importantly they could get to work on these features without having to wait for me to come up with a visual design. 
+      Features such as multiple currencies and the shareable link were tasks I gave to our senior developers. They could get to work on these features without having to wait for me to come up with a visual design. 
 
 
       This provided me a bit of breathing space to put more thought into the UX of the tool. 
@@ -211,7 +211,7 @@ sections:
       ![Mockup of new layout](/img/your-space-landing-–-3.jpg "Mockup of new layout")
 
 
-      This header bar would be consistent across all stages, which one space for informational messages. Breadcrumb navigation would be used so users could see how far along in the process they were.
+      This header bar would be consistent across all stages, which one space for instructional messages. 
 
 
       #### Gamification
@@ -249,33 +249,39 @@ sections:
 
       * They had selected an item from the list. Learning blue meant selection.
 
-      * They had dragged and dropped a track into the green area. Learning the function of the green drop targets. 
+      * They had dragged and dropped a track into the green area. Learning the function of the drop targets, and how to drag and drop. 
 
-      * They had seen the colour change from red to unshaded as they dragged it into the green area. Learning that the illustration changes from red when placed correctly. 
+      * They had seen the colour change from red to unshaded as they dragged it into the drop target. Learning that the illustration changes colour when placed correctly. 
 
 
-      This was important because the third section would be introducing much more complexity with the number of rules the components should follow. 
+      It was much easier to learn this in the second stage, because the third stage would be introducing much more complexity. There were more components to choose from, many more drop targets, and now there would be more rules to follow too. 
 
 
       #### Contextual labels & instructions
 
 
-      Instruction messages were added to tell users what they should be doing at each step of the process, contextual labels would be used to explain the product. 
+      Instruction messages would update after every step of the process was completed. These would always remain in the same place on the screen, and the pointing hand would animate when a new message appeared. 
 
 
       ![Screenshot of instructional messages](/img/instructional-message-example.png "Screenshot of instructional messages")
 
 
-      Keeping these two functions separate, all instructions would appear in the same place in the grey header bar. To draw attention to these messages, I added the animated the pointing hand. 
+      To teach the user about the system, contextual labels would be used to explain when rules were being broken. 
 
 
       ![Screenshot of warning example](/img/warning-example.png "Screenshot of warning example")
 
 
+      Warnings would tell users when they were making choices that were not recommended by a salesperson.
+
+
       ![Screenshot of invalid example](/img/invalid-example.jpg "Screenshot of invalid example")
 
 
-      The tooltips followed the same colour scheme as the the other interactions, with the addition of ubiquitous warning and information icons.
+      Errors would tell users when their placement was invalid, and explain why.
+
+
+      The tooltips followed the same colour scheme as the the other interactions.
   - body_html: " "
     heading: Outcomes
     intro: The tool was received well by the company.
