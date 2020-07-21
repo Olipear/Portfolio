@@ -228,7 +228,7 @@ sections:
       Following up a full year after these changes were launched in september 2018; I found there were 46% more unique purchases, with 25% increase in the number of tables sold.  
 
 
-      The improved sales do not necessarily measure the success of changes on the website however. The work I did to help the marketing team, and push them towards social media might have had a more significant impact. 
+      The improved sales do not necessarily measure the success of changes on the website however. The work I did to help the marketing team, and push them towards social media may have had a more significant impact. 
 
 
       For this reason I find checking for expected behavioural changes is a better measure of success. 
@@ -254,18 +254,18 @@ sections:
       #### Galleries
 
 
-      In the four months before and after launching the changes; there were 9,780 unique events for opening the gallery vs 1,254 unique pageview for the previous gallery page. An increase of 780%, I had increased the visibility of gallery images whilst removing the gallery page.
+      In the four months before and after launching the changes; there were 9,780 unique events for opening the gallery vs 1,254 unique pageviews for the old gallery page. An increase of 780%, so I had increased the visibility of gallery images overall.
 
 
-      Excluding those who bounced, 95% of users opened the gallery lightbox. This didn't guarantee users knew what they expected to open, but I was satisfied enough of them were finding out regardless. 
+      Excluding those who bounced, 95% of users opened the gallery lightbox. 
 
 
-      I continued to make improvements to the gallery; the translucent background shows users haven't navigated away, and the shareable links to social media help marketing. 
+      I would continue to make improvements to the gallery lightbox; adding the translucent background to show users they haven't navigated away, and the shareable links to help social media marketing. 
 
 
       ![New gallery lightbox](/img/lightbox-–-27.jpg "New gallery lightbox")
 
 
-      This redesign could have a project write up of its own. But importantly, even a year later I was still refining the design.
+      This redesign could have a project write up of its own. But importantly, even a year later I was still making improvements from follow up research.
 other_projects: More projects
 ---
