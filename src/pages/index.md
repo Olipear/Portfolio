@@ -19,13 +19,13 @@ blurbs:
       development work. "
 about:
   aboutbody: >-
-    Currently living in Leamington spa with my partner Merle and cat Mushu. 
+    I currently live in Leamington spa with my partner Merle, and cat Mushu. 
 
-    I read a lot of sci-fi in a never-ending search for a series as good as Hyperion. 
 
-    I keep up 3D work as a hobby, I'm slowly learning to use it for concept art along with digital painting. Occasionally I'll start yet another game project in unity.
+    I keep up 3D work as a hobby, I'm slowly learning to use it for concept art along with digital painting.
 
-    I enjoy both PC gaming and board games, I tend to have a game night at least once a fortnight with something like Carcassonne. 
+
+    I enjoy board games, both in cafes and online more recently. I have a game night at least once a fortnight with my friends. 
   image: /img/profile-pic.jpg
 footer:
   logo_strapline: Oliver Pearson
