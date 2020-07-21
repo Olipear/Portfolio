@@ -1,6 +1,6 @@
 ---
 templateKey: project-entry
-date: 2020-06-22T13:16:57.702Z
+date: 2020-07-21T10:03:28.515Z
 featuredproject: true
 title: Adaptive UI example
 description: A luxury interface for a luxury product
