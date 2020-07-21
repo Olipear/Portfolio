@@ -15,11 +15,8 @@ navigation:
 blurbs:
   - blurb: I take digital products from research and requirements gathering, all the
       way through to prototyping and development.
-  - blurb: "I'm available for UI / UX design and strategy, and front-end development
-      work on a contract basis. "
-  - blurb: If you are a local business struggling with the effects of coronavirus,
-      and are looking to  start or expand your online presence; get in touch for
-      a free, no obligation, consultation.
+  - blurb: "Currently available for UI / UX design and strategy, and front-end
+      development work. "
 about:
   aboutbody: >-
     Currently living in Leamington spa with my partner Merle and cat Mushu. 
