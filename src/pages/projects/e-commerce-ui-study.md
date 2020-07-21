@@ -2,7 +2,7 @@
 templateKey: project-entry
 date: 2020-07-21T10:03:28.515Z
 featuredproject: true
-title: Adaptive UI example
+title: UI design and development
 description: A luxury interface for a luxury product
 featuredimage: /img/620-featured.jpg
 featuredlink: https://www.vitsoe.com/gb/620/buy
