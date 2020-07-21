@@ -281,7 +281,7 @@ sections:
       Errors would tell users when their placement was invalid, and explain why.
 
 
-      The tooltips followed the same colour scheme as the the other interactions.
+      The tooltips followed the same colour scheme as the the other interactions. They are first introduced in the wall dimensions page, so their purpose should be understood before adding any of the components.
   - body_html: " "
     heading: Outcomes
     intro: The tool was received well by the company.
