@@ -63,7 +63,10 @@ sections:
       #### Source
 
 
-      ![Previous buy page for the 620 chair](/img/original-page-landing.jpg "Previous buy page for the 620 chair")
+      ![Previous buy page for the 620 chair](/img/620-original-landing-page.jpg "Previous buy page for the 620 chair")
+
+
+      ![Previous buy page for the 620 chair](/img/620-original-landing-page-2.png "Previous buy page for the 620 chair")
 
 
       This was the is what a customer is first presented with when they click 'configure and buy'.
