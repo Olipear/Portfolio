@@ -175,37 +175,40 @@ sections:
       #### Prototyping
 
 
-      I started prototyping with just mobile layouts first, since this presented the greatest challenge.
-
-
       ![Prototypes for mobile version](/img/620-prototypes.jpg "Prototypes for mobile version")
 
 
       ![Prototype for mobile version](/img/620-prototypes-2.jpg "Prototype for mobile version")
 
 
-      I found using a full screen modal overlay could provide the space needed, and more. This allowed me to show an additional close up image of the product, and the full visualisation was still just a button tap away.
+      As I progressed through prototyping, it became clear that keeping the controls visible alongside the visualisation was futile. 
+
+
+      Switching between a configurator view, and a product view lead me to use modal overlays. 
 
 
       ![Mockup of modal design for mobile devices](/img/620-prototype.gif "Mockup of modal design for mobile devices")
 
 
-      This succinctly showed the user which aspects could be customised, and compartmentalised decision making. Using an image in the colour modal gave users both the material, and colour information they needed.
+      Scrolling up and down is much higher effort than tapping a button, this seemed to be a good compromise. 
 
 
-      The modal button adhered to the established visual language used elsewhere for in-page navigation. [The contact page was the main previous example of it's usage.](https://www.vitsoe.com/contactus) So I'd managed to avoid introducing any new UI elements.
+      * All customisation options are shown to the user
+
+      * The additional space using a fullscreen overlay could be used to include product photography
+
+      * Providing this close up photography when selecting colour, would provide the user with much better material and texture information on the product.
+
+      * The modal buttons followed existing visual language used elsewhere on the site. I did not need to introduce new UI elements. 
 
 
       ![Mockup of desktop modal design](/img/intermediate-prototype-desktop.jpg "Mockup of desktop modal design")
 
 
-      The modal for colour choices was carried over to the desktop because of the advantage a close up photograph provided.
+      The modal for colour choices was carried over to the desktop because of the advantage a close up photograph provided. Desktop offered additional space to include shell and upholstery colour in one modal. 
 
 
       This wasn't necessary for the the back and feet options. It made more sense to represent these as addons, and use checkboxes here.
-
-
-      Now on all screen sizes, the customisation controls could be viewed alongside the spinner visualisation.
   - heading: "Implementation "
     intro: "Now the final design and major features were agreed it was time to start
       building. "
@@ -258,10 +261,7 @@ sections:
       From the earlier prototype we knew optimisation of the large number of images would be challenging. 
 
 
-      Rendering out to multiple resolutions allowed me to implement lazy loading, but I had to try a few different strategies to get good results. 
-
-
-      I implemented a custom solution which managed the order the images loaded. As shown below.
+      Rendering out to multiple resolutions allowed me to implement lazy loading, but I had to try a few different strategies to get good results. A custom implementation of lazy-loading managed the order the images loaded. 
 
 
       ![Diagram of image optimisation technique](/img/image-load-order.jpg "Diagram of image optimisation technique")
