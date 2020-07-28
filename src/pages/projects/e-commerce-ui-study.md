@@ -106,21 +106,7 @@ sections:
       * Most users, even purchasers would spend a very brief time on the informational pages accompanying the purchase page. 
 
 
-      #### Competitor evaluation
-
-
-      The 620 chair really has one key competitor, the better known [Eames chair](https://www.vitra.com/en-gb/product/lounge-chair). I also looked at more complex examples outside of furniture such as the [Ray-Ban configurator](https://www.ray-ban.com/uk/customise) tool, and the luxury car market. 
-
-
-      * Products in this price range emphasised high quality product visualisation. With 360deg views, high resolution photography, and zoom features.
-
-      * Similar customisable products often broke up the process into stages. Many examples used accordions, forcing users to make one decision at a time. 
-
-
       #### Key points to address
-
-
-      Having understood where improvements were needed, I defined a list of user stories the new configurator would need to satisfy. These are some of the points:
 
 
       * New product visualisations would be needed. 
@@ -202,7 +188,7 @@ sections:
 
       * Providing this close up photography when selecting colour, would provide the user with much better material and texture information on the product.
 
-      * The modal buttons followed existing visual language used elsewhere on the site. I did not need to introduce new UI elements. 
+      * The modal buttons followed existing visual language used elsewhere on the site. 
 
 
       ![Mockup of desktop modal design](/img/intermediate-prototype-desktop.jpg "Mockup of desktop modal design")
@@ -246,16 +232,7 @@ sections:
       ![](/img/components-split.jpg)
 
 
-      This is how I split up the interface to make reusable components. 
-
-
-      The data structure that describes the product provides the front-end with the information it needs to decide which product configuration control needs to be rendered. 
-
-
-      For example any product with colour customisation would use the same colour picker. This format could then be scaled later to be used on any other vitsoe product. 
-
-
-      This is not just much easier for developers to update and manage, it provides a consistent user experience. 
+      The data structure dictates which component to render, for example any product with colour customisation would use the same colour picker component. This format could then be scaled later to be used on any other vitsoe product. 
 
 
       #### Optimisation
@@ -267,10 +244,10 @@ sections:
       ![Diagram of image optimisation technique](/img/image-load-order.jpg "Diagram of image optimisation technique")
 
 
-      Rendering out to multiple resolutions allowed me to implement lazy loading, but I had to try a few different strategies to get good results. A custom implementation of lazy-loading managed the order the images loaded. 
+      Rendering out to multiple resolutions allowed me to implement lazy loading. With 16 images per rotation, loading these simultaneously took far too long. A custom implementation needed to be used which managed the order in which images loaded.
 
 
-      ![](/img/620-image-loading.gif)
+      ![Animation showing the responsiveness of the spinner when loading](/img/620-image-loading.gif "Animation showing the responsiveness of the spinner when loading")
 
 
       This loading strategy was highly effective, users could interact with the spinner immediately after changing a customisation option. A small loading bar was added along the top of the frame so that users are aware images are loading.
@@ -279,7 +256,7 @@ sections:
       #### For developers
 
 
-      I don't have the source code for this project, but if you have react devtools installed you can check out my component structure on the live site.
+      If you have react devtools installed you can check out my component structure on the live site.
   - body_html: " "
     heading: Testing
     intro: This round of usability testing was important for evaluating and
