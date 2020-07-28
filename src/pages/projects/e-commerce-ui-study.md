@@ -178,10 +178,13 @@ sections:
       ![Prototypes for mobile version](/img/620-prototypes.jpg "Prototypes for mobile version")
 
 
+      Accordions were too small, and required a lot of scrolling. Using a scrollable area with a single accordion didn't improve any of this, but made it harder to scroll. 
+
+
+      It became clear that a larger area should be available for the controls.
+
+
       ![Prototype for mobile version](/img/620-prototypes-2.jpg "Prototype for mobile version")
-
-
-      As I progressed through prototyping, it became clear that keeping the controls visible alongside the visualisation was futile. 
 
 
       Switching between a configurator view, and a product view lead me to use modal overlays. 
@@ -268,6 +271,9 @@ sections:
 
 
       This loading strategy was highly effective, users would only see a pixelated image for up to 2-3 seconds, and could interact with the spinner immediately. At no point does the spinner jump, freeze or otherwise change it's behaviour.
+
+
+      ![](/img/620-image-loading.gif)
 
 
       A small loading bar was added along the top of the frame so that users are aware images are loading. 
