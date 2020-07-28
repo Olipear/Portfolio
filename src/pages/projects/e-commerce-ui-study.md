@@ -207,27 +207,28 @@ sections:
 
       Now on all screen sizes, the customisation controls could be viewed alongside the spinner visualisation.
   - heading: "Implementation "
-    intro: Once the final design was agreed upon, I joined the other two developers
-      on our team to build it.
+    intro: "Now the final design and major features were agreed it was time to start
+      building. "
     headerimage: /img/implementation.png
     standout: false
     body: >-
       #### Technology
 
 
-      From the earlier prototype and research, the team decided that the configurator page would be built in a self-contained react app. This would make it easier to migrate in a planned upgrade of the website's infrastructure.
+      From the earlier prototype the team had agreed how the new configurator would be built. 
 
 
-      Keeping this longer term ambition in mind, we wanted to make sure we built everything to scale. New apis, data transport structures, components etc would need to serve all of Vitsoe's products. 
+      * We would build it as a self-contained React app, and use typescript.
+
+      * It should scale to work on other configurable products in Vitsoe's range
+
+      * Images would be managed outside of the CMS
 
 
       #### Data transport design
 
 
       ![Snapshot of whiteboard showing ideas for data transport structure](/img/data-design-discussion.jpg "Whiteboard excerpt showing discussion of data transport structures")
-
-
-      Sitting around a large screen with my graphics tablet was a great substitute for an interactive whiteboard. It sped up the process of agreeing upon a structure, and kept our remote developer involved. 
 
 
       The structure we came up with described a product and contained all of the information our front-end would need.
@@ -239,13 +240,16 @@ sections:
       ![](/img/component-breakdown.jpg)
 
 
-      The JSON structure we came up with, describes both customisation options, and how they should be displayed. Each option has a type such as 'colour' or 'binary', these directly correlate to a react component to render.
+      This is how I split up the interface to make reusable components. 
 
 
-      Options can be grouped, for example shell colour and leather colour were grouped into materials. When on a mobile device, groups are ignored, and all child options are put inside a modal. The modal components are agnostic to the controls they might contain and simply act as containers. 
+      The data structure that describes the product provides the front-end with the information it needs to decide which product configuration control needs to be rendered. 
 
 
-      ### The use of this system across other products would greatly improve the UX of the site in the future.
+      For example any product with colour customisation would use the same colour picker. This format could then be scaled later to be used on any other vitsoe product. 
+
+
+      This is not just much easier for developers to update and manage, it provides a consistent user experience. 
 
 
       #### Optimisation
@@ -266,7 +270,7 @@ sections:
       This loading strategy was highly effective, users would only see a pixelated image for up to 2-3 seconds, and could interact with the spinner immediately. At no point does the spinner jump, freeze or otherwise change it's behaviour.
 
 
-      To make this even clearer, I added in a small loading bar along the top of the frame. The loading bar goes to 50% on the thumbnails, and the remainder when the full resolution is loaded.
+      A small loading bar was added along the top of the frame so that users are aware images are loading. 
 
 
       #### For developers
@@ -279,12 +283,19 @@ sections:
       this round of usability testing was important for evaluating this. "
     headerimage: /img/outcomes.png
     body: >-
-      As well as device testing, I carried out task-driven usability testing.
-      Although this was internal, I chose subjects who were outside of the sales
-      team, and were more recent hires.
+      #### Methodology
+
+
+      As well as device testing, I carried out task-driven usability testing. Although this was internal, I chose subjects who were outside of the sales team, and were more recent hires.
 
 
       Starting from the home page of the site I asked them to buy specific configurations of chairs, footstools and sofas. After observing them complete the tasks, I asked them a few simple questions about the product, such as whether specific combinations were possible (e.g. swivel bases are not compatible with sofa configurations). 
+
+
+      #### Findings
+
+
+      Overall the feedback was very positive. Most users were quick to complete the tasks, and could answer my questions.
 
 
       * One user completed the task without interacting with the spinner at all, not realising it was interactive. This resulted in the addition of the 3D icon in the lower left corner. 
@@ -292,9 +303,6 @@ sections:
       * During device testing I found on the smallest devices the confirm button in modals was not visible without scrolling. I decided to move this to the top of the screen so that it would always be visible, and in the same place.
 
       * The switch to the the footstool in the top left was often mis-tapped on touch devices. It was too small, and too close to the modal buttons. Since the footstool was linked both on other pages, and beneath the chair configurator, we decided to remove this.
-
-
-      Overall the feedback was very positive. Most users were quick to complete the tasks, and could answer my questions.
 
 
       #### Further results
