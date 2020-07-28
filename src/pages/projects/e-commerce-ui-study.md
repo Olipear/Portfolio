@@ -9,7 +9,7 @@ featuredlink: https://www.vitsoe.com/gb/620/buy
 featuredlinklabel: See it live
 sections:
   - body_html: " "
-    heading: Overview
+    heading: About
     body: >-
       #### Role
 
@@ -20,13 +20,7 @@ sections:
       #### Team
 
 
-      One senior developer who worked on React Redux portions, built the api and server side controller. Our junior developer wrote all the functional and unit tests.
-
-
-      #### Write-up focus
-
-
-      In this write up I've chosen to focus on the UI design and Front-end development of the chair configurator. Other work I carried out on the 620 area of the site has been omitted.
+      The team that worked on this project consisted of myself, one senior developer and one junior developer.
     headerimage: /img/about.png
   - heading: Brief
     headerimage: /img/brief-_-problem.png
@@ -39,39 +33,48 @@ sections:
       #### Business goals
 
 
-      In addition to increasing sales of their product; they wanted to move existing offline sales online. This would allow salespeople to focus on the more labour intensive sales process of their modular shelving system. 
+      * Increase sales of their 620 chair & footstool
+
+      * Shift existing sales online
+
+      * Reduce reliance on salespeople for sales, answer customer questions online.
+
+      * Update the interface to allow the addition of a new upholstery option.
+  - heading: Defining the problem
+    intro: "I started by looking for where the experience needed improvement. "
+    standout: false
+    headerimage: /img/research.png
+    body: >-
+      #### Pain points
 
 
-      Furthermore, the company planned on launching a new upholstery option in 2020. So a new configurator would be needed soon. 
+      I collaborated with sales teams across the company to get an idea of what they were being asked, and why customers were choosing to order  through them rather than online. 
+
+
+      * The modularity was poorly understood
+
+      * Their were often complaints about the leather texture, it was not as uniform as customers expected
+
+      * Some customers were not happy with the colour when they received the product
+
+      * Customers couldn't buy a footstool one it's own
+
+
+      ![Previous buy page for the 620 chair](/img/original-page.jpg "Previous buy page for the 620 chair")
 
 
       #### User stories
 
 
-      Having created personas for previous UX projects, I spoke to Vitsoe's sales teams to identify pain points in the 620 sales process. I defined an exhaustive list of user stories the new interface would need to satisfy. 
+      * A new customer needs to understand the modularity of the chair, that it can be turned into a sofa
 
+      * A new customer needs to understand the customisation options available. 
 
-      These are some of the stories which would address the biggest pain points: 
-
-
-      * A new customer needs to understand the modularity, and customisation options available on the 620
-
-      * A new customer should not be surprised leather texture has natural scarings and patternations.
+      * A new customer should not be surprised that the leather texture has natural scarings and markings.
 
       * An existing customer should be able to buy a footstool separately.
 
       * Customers should be comfortable buying the chair without seeing one in person.
-  - heading: Research & Discovery phase
-    intro: >
-      Now I had a clear idea of what needed to be done, I started by looking at
-      what we had, and where it was failing.
-    standout: false
-    headerimage: /img/research.png
-    body: >-
-      #### Previous product page
-
-
-      ![Previous buy page for the 620 chair](/img/original-page.jpg "The previous buy page for the 620 chair")
 
 
       ### Poor product visualisation was at the heart of it.
