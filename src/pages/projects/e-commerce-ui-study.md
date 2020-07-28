@@ -115,11 +115,11 @@ sections:
 
       * The footstool should have it's own configuration page.
 
-      * The configurator needed to show the modularity and customisation options of the chair; without relying on other supporting pages.
+      * The configurator needed to show the modularity, and customisation options of the chair without relying on other supporting pages.
 
       * Adding additional seats should be the last part of any staged, or segmented purchase process.
   - heading: Design
-    intro: From the user stories and research I had a clear list of features to be
+    intro: The user stories and research provided a clear list of features to be
       included in the new UI.
     headerimage: /img/design-_-solution.png
     standout: false
@@ -266,20 +266,20 @@ sections:
       #### Methodology
 
 
-      Starting from the home page of the site I asked them to buy specific configurations of chairs, footstools and sofas. After observing them complete the tasks, I asked them a few simple questions about the product, such as whether specific combinations were possible (e.g. swivel bases are not compatible with sofa configurations).
+      Starting from the home page of the site participants were asked to buy specific configurations of chairs, footstools and sofas. After observing them complete the tasks, they were a few simple questions about the product.
 
 
       #### Findings
 
 
-      Overall the feedback was very positive. Most users were quick to complete the tasks, and could answer my questions.
+      Overall the feedback was very positive. Most users were quick to complete the tasks, and could answer the questions.
 
 
       * One user completed the task without interacting with the spinner at all, not realising it was interactive. This resulted in the addition of the 3D icon in the lower left corner. 
 
-      * During device testing I found on the smallest devices the confirm button in modals was not visible without scrolling. I decided to move this to the top of the screen so that it would always be visible, and in the same place.
+      * During device testing on smaller devices; the confirm button in modals was not visible without scrolling. It was moved to the top of the overlay so that it would be consistent, and visible.
 
-      * The switch to the the footstool in the top left was often mis-tapped on touch devices. It was too small, and too close to the modal buttons. Since the footstool was linked both on other pages, and beneath the chair configurator, we decided to remove this.
+      * The switch to the the footstool in the top left was often mis-tapped on touch devices. Since the footstool was linked both on other pages, and beneath the chair configurator, we decided to remove this.
 
 
       #### Further results
