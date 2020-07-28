@@ -20,7 +20,7 @@ sections:
       #### Team
 
 
-      The team that worked on this project consisted of myself, one senior developer and one junior developer.
+      Myself, one senior developer and one junior developer.
     headerimage: /img/about.png
   - heading: Brief
     headerimage: /img/brief-_-problem.png
@@ -33,9 +33,9 @@ sections:
       #### Business goals
 
 
-      * Increase sales of their 620 chair & footstool
+      * Increase sales of their 620 chair & footstool.
 
-      * Shift existing sales online
+      * Shift existing sales online.
 
       * Reduce reliance on salespeople for sales, answer customer questions online.
 
@@ -51,42 +51,34 @@ sections:
       I collaborated with sales teams across the company to get an idea of what they were being asked, and why customers were choosing to order  through them rather than online. 
 
 
-      * The modularity was poorly understood
+      * The modularity of the chair was poorly understood.
 
-      * Their were often complaints about the leather texture, it was not as uniform as customers expected
+      * Their were often complaints about the leather texture, it was not as uniform as customers expected.
 
-      * Some customers were not happy with the colour when they received the product
+      * Some customers were not happy with the colour when they received the product.
 
-      * Customers couldn't buy a footstool one it's own
-
-
-      ![Previous buy page for the 620 chair](/img/original-page.jpg "Previous buy page for the 620 chair")
+      * Customers couldn't buy a footstool one it's own.
 
 
-      #### User stories
+      #### Source
 
 
-      * A new customer needs to understand the modularity of the chair, that it can be turned into a sofa
+      ![Previous buy page for the 620 chair](/img/original-page-landing.jpg "Previous buy page for the 620 chair")
 
-      * A new customer needs to understand the customisation options available. 
 
-      * A new customer should not be surprised that the leather texture has natural scarings and markings.
-
-      * An existing customer should be able to buy a footstool separately.
-
-      * Customers should be comfortable buying the chair without seeing one in person.
+      This was the is what a customer is first presented with when they click 'configure and buy'.
 
 
       ### Poor product visualisation was at the heart of it.
 
 
-      The use of the line drawing here was the most likely culprit when it came to customer confusion on the leather texture. The photography that was present had poor visibility.
+      * The line drawing was not suitable for visualising a £6.5k product.
 
+      * The line drawing took up far too much screen space, the configuration options were not visible without scrolling.
 
-      The full-width images at the start of page also took up the entire screen on every device above mobile. 
+      * The photography available was not visible unless it was selected below the main image. 
 
-
-      There was no photography of the footstool at all, and it could only be added to a chair purchase as an add-on item. 
+      * The footstool could only be added to a chair purchase, and had no photography at all. 
 
 
       #### Purchase journeys
@@ -107,16 +99,11 @@ sections:
       #### User behaviour
 
 
-      When I looked at the much larger group of non-purchasers, I saw that only 45% of users were interacting with any of the configuration options. The large illustration taking up the entire screen on desktop could have been the cause of this. 
+      * Most users were not interacting with the configuration options.
 
+      * Users that did configure the chair often stopped after adding an additional seat. - possibly because adding a seat more than doubles the price. 
 
-      I wanted to make sure my design allowed the configuration options to viewed on first page-load. 
-
-
-      Of those, 47% adjusted the number of chairs, but then only 20% went on to change the colour. I hypothesised that this could be because adding even one seat increased the price to almost £14,000. This could easily be putting people off. 
-
-
-      For this reason I decided the seat picker should come after other configuration controls in the future UI. 
+      * Most users, even purchasers would spend a very brief time on the informational pages accompanying the purchase page. 
 
 
       #### Competitor evaluation
@@ -125,21 +112,41 @@ sections:
       The 620 chair really has one key competitor, the better known [Eames chair](https://www.vitra.com/en-gb/product/lounge-chair). I also looked at more complex examples outside of furniture such as the [Ray-Ban configurator](https://www.ray-ban.com/uk/customise) tool, and the luxury car market. 
 
 
-      * I noted that products in this price range emphasised high quality product visualisation. With 360deg views, high resolution photography, and zoom features.
+      * Products in this price range emphasised high quality product visualisation. With 360deg views, high resolution photography, and zoom features.
 
-      * Similar customisable products often broke up the process into stages. Many examples used accordions. Letting customers make one decision was being made at a time was a commonality. 
+      * Similar customisable products often broke up the process into stages. Many examples used accordions, forcing users to make one decision at a time. 
 
 
+
+
+      #### Key points to address
+
+
+      Having understood where improvements were needed, I defined a list of user stories the new configurator would need to satisfy. These are some of the points:
+
+
+      * New product visualisations would be needed. 
+
+      * Photography was needed for colour and texture decisions.
+
+      * The footstool should have it's own configuration page.
+
+      * The configurator needed to show the modularity and customisation options of the chair; without relying on other supporting pages.
+
+      * Adding additional seats should be the last part of any staged, or segmented purchase process.
+  - heading: Design
+    intro: From the user stories and research I had a clear list of features to be
+      included in the new UI.
+    headerimage: /img/design-_-solution.png
+    standout: false
+    body: >-
       #### Product visualisation
 
 
-      My research so far was pointing me towards this being an area in need of significant improvement. 
+      Existing images on the buy page were the only product photography available. Business stakeholders were advised that new photography, or renders were required.
 
 
-      Unfortunately, the existing images on the buy page were the only product photography available. I recommended to business stakeholders that either new photography or renders would be needed to support any new configurator interface.
-
-
-      ### We created a [quick proof of concept](http://620poc.s3-website.eu-west-2.amazonaws.com/), in order to assess the practicality a product spinner.
+      ### Our team created a [quick proof of concept](http://620poc.s3-website.eu-west-2.amazonaws.com/), in order to assess the practicality a product spinner.
 
 
       * Rendering 3D models in-browser couldn't achieve the quality we were looking for. 
@@ -149,24 +156,9 @@ sections:
       * There would be a lot of images per rotation, so optimisation would be crucial.
 
 
-      Renders were chosen over photography, principally because photography would have required a lot of expensive stock, and I had the skills to create renders in-house. A huge cost saving for the company. It would also grant the company a reusable, updatable asset which could be used in marketing.
-  - heading: Design
-    intro: From the user stories and research I had a clear list of features to be
-      included in the new UI.
-    headerimage: /img/design-_-solution.png
-    standout: false
-    body: >-
-      * A 360deg spinner would use renders to visualise the product.
+      It was decided that renders would be preferable to photography, mainly for cost reasons. 
 
-      * Each customisation decision should be made in a distinct section.
 
-      * Customisation options should be visible without needing to scroll further down.
-
-      * Close up photography needed to be included when choosing colour to show the texture of the leather.
-
-      * Footstools should be treated as a separate product, not an addon item.
-
-      * The number of seats should be selected after the other customisation options.
 
 
       #### Initial wireframes
