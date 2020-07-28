@@ -178,19 +178,16 @@ sections:
       I started prototyping with just mobile layouts first, since this presented the greatest challenge.
 
 
-      ![Image of prototype for mobile which uses accordion section that can be scrolled](/img/prototype-acordion.jpg "Prototype for mobile version")
+      ![Prototypes for mobile version](/img/620-prototypes.jpg "Prototypes for mobile version")
 
 
-      Even when I expanded the scrollable area, users would unintentionally begin page scrolling when selecting different customisation options. It also didn't show all of the customisation options available, at a glance a user might not realise there were back or feet options.
-
-
-      When splitting these out into their own accordion sections, it forced users to scroll up and down the page to see the visualisation update.
+      ![Prototype for mobile version](/img/620-prototypes-2.jpg "Prototype for mobile version")
 
 
       I found using a full screen modal overlay could provide the space needed, and more. This allowed me to show an additional close up image of the product, and the full visualisation was still just a button tap away.
 
 
-      ![Mockup of modal design for mobile devices](/img/in-between-mockup.jpg "Mockup of modal design for mobile devices")
+      ![Mockup of modal design for mobile devices](/img/intermediate-prototype-mobile.jpg "Mockup of modal design for mobile devices")
 
 
       This succinctly showed the user which aspects could be customised, and compartmentalised decision making. Using an image in the colour modal gave users both the material, and colour information they needed.
@@ -199,7 +196,7 @@ sections:
       The modal button adhered to the established visual language used elsewhere for in-page navigation. [The contact page was the main previous example of it's usage.](https://www.vitsoe.com/contactus) So I'd managed to avoid introducing any new UI elements.
 
 
-      ![Mockup of desktop modal design](/img/desktop-hi-fi-mockup.jpg "Mockup of desktop modal design")
+      ![Mockup of desktop modal design](/img/intermediate-prototype-desktop.jpg "Mockup of desktop modal design")
 
 
       The modal for colour choices was carried over to the desktop because of the advantage a close up photograph provided.
