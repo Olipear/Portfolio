@@ -266,13 +266,13 @@ sections:
       #### Methodology
 
 
-      Starting from the home page of the site I asked them to buy specific configurations of chairs, footstools and sofas. After observing them complete the tasks, I asked them a few simple questions about the product, such as whether specific combinations were possible (e.g. swivel bases are not compatible with sofa configurations).
+      Starting from the home page of the site participants were asked to buy specific configurations of chairs, footstools and sofas. After observing them complete the tasks, they were a few simple questions about the product.
 
 
       #### Findings
 
 
-      Overall the feedback was very positive. Most users were quick to complete the tasks, and could answer my questions.
+      Overall the feedback was very positive. Most users were quick to complete the tasks, and could answer the questions.
 
 
       * One user completed the task without interacting with the spinner at all, not realising it was interactive. This resulted in the addition of the 3D icon in the lower left corner. 
