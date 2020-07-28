@@ -53,9 +53,9 @@ sections:
 
       * The modularity of the chair was poorly understood.
 
-      * Their were often complaints about the leather texture, it was not as uniform as customers expected.
+      * Customers expected the leather to be more uniform, in fact it had many natural patterns/ scarring. 
 
-      * Some customers were not happy with the colour when they received the product.
+      * Some customers were surprised by colour when they received the product.
 
       * Customers couldn't buy a footstool one it's own.
 
@@ -231,7 +231,7 @@ sections:
       #### Data transport design
 
 
-      ![Snapshot of whiteboard showing ideas for data transport structure](/img/data-design-discussion.jpg "Whiteboard excerpt showing discussion of data transport structures")
+      ![Snapshot of whiteboard showing ideas for data transport structure](/img/620-data-transport-whiteboard.jpg "Whiteboard excerpt showing discussion of data transport structures")
 
 
       The structure we came up with described a product and contained all of the information our front-end would need.
@@ -240,7 +240,7 @@ sections:
       #### Adaptive, data driven UI
 
 
-      ![](/img/component-breakdown.jpg)
+      ![](/img/components-split.jpg)
 
 
       This is how I split up the interface to make reusable components. 
@@ -279,17 +279,14 @@ sections:
       I don't have the source code for this project, but if you have react devtools installed you can check out my component structure on the live site.
   - body_html: " "
     heading: Testing
-    intro: "Since the previous prototypes did not emulate the spinner functionality,
-      this round of usability testing was important for evaluating this. "
+    intro: This round of usability testing was important for evaluating and
+      finalising the spinner functionality.
     headerimage: /img/outcomes.png
     body: >-
       #### Methodology
 
 
-      As well as device testing, I carried out task-driven usability testing. Although this was internal, I chose subjects who were outside of the sales team, and were more recent hires.
-
-
-      Starting from the home page of the site I asked them to buy specific configurations of chairs, footstools and sofas. After observing them complete the tasks, I asked them a few simple questions about the product, such as whether specific combinations were possible (e.g. swivel bases are not compatible with sofa configurations). 
+      Starting from the home page of the site I asked them to buy specific configurations of chairs, footstools and sofas. After observing them complete the tasks, I asked them a few simple questions about the product, such as whether specific combinations were possible (e.g. swivel bases are not compatible with sofa configurations).
 
 
       #### Findings
