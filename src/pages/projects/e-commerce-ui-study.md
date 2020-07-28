@@ -187,7 +187,7 @@ sections:
       I found using a full screen modal overlay could provide the space needed, and more. This allowed me to show an additional close up image of the product, and the full visualisation was still just a button tap away.
 
 
-      ![Mockup of modal design for mobile devices](/img/intermediate-prototype-mobile.jpg "Mockup of modal design for mobile devices")
+      ![Mockup of modal design for mobile devices](/img/620-prototype.gif "Mockup of modal design for mobile devices")
 
 
       This succinctly showed the user which aspects could be customised, and compartmentalised decision making. Using an image in the colour modal gave users both the material, and colour information they needed.
