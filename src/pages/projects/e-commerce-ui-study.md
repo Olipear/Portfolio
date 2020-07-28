@@ -147,6 +147,9 @@ sections:
       ### Our team created a [quick proof of concept](http://620poc.s3-website.eu-west-2.amazonaws.com/), in order to assess the practicality a product spinner.
 
 
+      ![Screenshots of proof of concept](/img/620-poc.jpg "Screenshots of proof of concept")
+
+
       * Rendering 3D models in-browser couldn't achieve the quality we were looking for. 
 
       * Most libraries couldn't support the level of customisation we needed. Using React was the easiest way of building this functionality.
@@ -157,30 +160,19 @@ sections:
       It was decided that renders would be preferable to photography, mainly for cost reasons. 
 
 
-
-
       #### Initial wireframes
 
 
-      I looked at staging the configurator, but this impeded the informative aspects of the seat picker. Users might not initially realise the chair can be turned into a sofa if it was split out like this. 
+      ![Initial wireframing of the 620 configurator](/img/620-initial-wireframes.jpg "Initial wireframing of the 620 configurator")
 
 
-      ![Wireframe of a staged configurator](/img/wireframe-staged.png "Wireframe of a staged configurator")
+      Staging the process was decided to be too restrictive for users. It might stand in the way of customers understanding the modular nature of the product.
 
 
-      I then moved onto accordion layouts. Where the customisation headings could be easily visible, especially on mobile.
+      Condensing the controls was another option explored, this would allow the visualisation to be shown alongside the configuration controls.
 
 
-      ![Wireframe showing controls in nested accordions](/img/wireframeaccoridans.png "Wireframe showing controls in nested accordions")
-
-
-      Wanting to make more use of screen space, I looked at how existing controls could be simplified. Using switches or checkboxes for binary choices for example.
-
-
-      ![Wireframe with toggles](/img/compact-ui-ideas.jpg "Wireframe with toggles")
-
-
-      #### Moving to prototypes
+      #### Prototyping
 
 
       I started prototyping with just mobile layouts first, since this presented the greatest challenge.
