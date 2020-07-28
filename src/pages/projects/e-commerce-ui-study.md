@@ -264,19 +264,16 @@ sections:
       From the earlier prototype we knew optimisation of the large number of images would be challenging. 
 
 
-      Rendering out to multiple resolutions allowed me to implement lazy loading, but I had to try a few different strategies to get good results. A custom implementation of lazy-loading managed the order the images loaded. 
-
-
       ![Diagram of image optimisation technique](/img/image-load-order.jpg "Diagram of image optimisation technique")
 
 
-      This loading strategy was highly effective, users would only see a pixelated image for up to 2-3 seconds, and could interact with the spinner immediately. At no point does the spinner jump, freeze or otherwise change it's behaviour.
+      Rendering out to multiple resolutions allowed me to implement lazy loading, but I had to try a few different strategies to get good results. A custom implementation of lazy-loading managed the order the images loaded. 
 
 
       ![](/img/620-image-loading.gif)
 
 
-      A small loading bar was added along the top of the frame so that users are aware images are loading. 
+      This loading strategy was highly effective, users could interact with the spinner immediately after changing a customisation option. A small loading bar was added along the top of the frame so that users are aware images are loading.
 
 
       #### For developers
