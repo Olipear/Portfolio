@@ -63,10 +63,7 @@ sections:
       #### Source
 
 
-      ![Previous buy page for the 620 chair](/img/620-original-landing-page.jpg "Previous buy page for the 620 chair")
-
-
-      ![Previous buy page for the 620 chair](/img/620-original-landing-page-2.png "Previous buy page for the 620 chair")
+      ![Previous buy page for the 620 chair](/img/original-page-landing.jpg "Previous buy page for the 620 chair")
 
 
       This was the is what a customer is first presented with when they click 'configure and buy'.
@@ -118,8 +115,6 @@ sections:
       * Products in this price range emphasised high quality product visualisation. With 360deg views, high resolution photography, and zoom features.
 
       * Similar customisable products often broke up the process into stages. Many examples used accordions, forcing users to make one decision at a time. 
-
-
 
 
       #### Key points to address
