@@ -198,20 +198,20 @@ sections:
       Since the core functionality was in place, features started to become more ambitious. In this second phase we would focus on the informative and educational aspects which were lacking in the initial version. 
 
 
-      #### More features
+      #### Additional features
 
 
-      * Much more guidance would be provided.
+      * More guidance would be provided.
 
-      * We would add in colour customisation (the shelving comes in 6 colours, up until now we'd just used white)
+      * Colour customisation (the shelving comes in 6 colours, up until now we'd just used white)
 
-      * We would add an additional category for validation. Warnings would be included separately to errors. 
+      * An additional category for validation. Warnings would be included separately to errors. 
 
-      * We would add the option to switch to inches.
+      * The option to switch to inches.
 
-      * We would add the ability to change currency
+      * Multiple currencies 
 
-      * We would generate a sharable link
+      * Generate a unique sharable link
 
 
       Features such as multiple currencies and the shareable link were tasks given to our senior developers. They were able to get to work on these features without having to wait on further mockups or design direction. 
