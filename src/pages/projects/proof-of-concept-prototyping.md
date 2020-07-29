@@ -48,7 +48,7 @@ sections:
       The sales process was inquiry led, planners (salespeople) would design the shelving system on behalf of customers.
 
 
-      I was researching the entire sales process for 606 in depth. This included interviews with planners, behaviour analysis on the website, and  sentiment analysis on the web inquiry form.
+      In depth research on the sales process for 606 was ongoing. This included interviews with planners, behaviour analysis on the website, and sentiment analysis on the web inquiry form.
 
 
       #### Pain points
@@ -82,19 +82,18 @@ sections:
       * Having used the tool a customer should understand more about the system. It should be informative and educational.
 
       * It needed to inform customers of prices.
-  - heading: Research & Discovery phase
-    intro: "Most of my research on the 606 sales process was in hand. Now I focused
-      on what makes a good furniture planner. "
+  - heading: Competitor tools
+    intro: There was limited time to spend on this prototype, focusing on best
+      practices from elsewhere was the most efficient way of understanding the
+      UX/UI challenges involved.
     standout: false
     headerimage: /img/research.png
     body: >-
-      #### Competitor tools
+      Almost all of them were staged, allowing users to define the wall area
+      first, pick tracks then place components in separate sections. 
 
 
-      I found nearly all of them were staged, allowing users to define the wall area first, pick tracks then place components in separate sections. 
-
-
-      I looked at many different tools, Ikea's Algot planner stood head and shoulders above all the other examples I investigated.
+      After assessing many different tools, Ikea's Algot planner came out as an exemplar. 
 
 
       ![Screenshot of Ikea's Algot planner](/img/algot-planner-screenshot.jpg "Screenshot of Ikea's Algot planner")
@@ -111,12 +110,19 @@ sections:
 
       * Contextual labels instruct users on the function of each UI element. These shake a couple of times to draw attention, and would disappear once the controls were used.
 
-      * I was particularly enamoured with the dynamic illustrations on the component section. It let users know what would fit on different shelves using relatable objects, rather than relying on measurements. 
+      * Dynamic illustrations let users know what would fit on different shelves using relatable objects, rather than relying on measurements. 
 
       * Once complete, a unique sharable link was generated so that it could be shared with a partner or housemate.
 
 
-      I applied many of these lessons to my work on this prototype.
+      Notes taken from other competitor tools:
+
+
+      * Providing total system dimensions removed the need for wall measurements entirely.
+
+      * Use of buttons to shift around components or structures was frustrating and repetitive.
+
+      * Colour should be selected separately to components, on the string planner a user would have to remove all the components to change the colour of their design.
   - heading: Wireframing and design
     intro: "The prototype evolved continually as we built it. Adding features in
       series to avoid leaving anything half finished. "
@@ -126,7 +132,7 @@ sections:
       #### Wireframes
 
 
-      After sketching out some ideas on paper, I made these low-fi mockups. One of our development team was remote, using Adobe XD it made it easy to share and keep updated with any changes I made. 
+      One of our development team was remote, using Adobe XD it made it easy to share and keep updated with any changes I made. 
 
 
       ![Mockup of dimensions screen](/img/screen-2.jpg "Mockup of dimensions screen")
@@ -150,25 +156,34 @@ sections:
       For this initial version, we would allow placement of the tacks anywhere. Tracks placed far away would snap to 90, and when placed closer would snap to 65 width bays.
 
 
-      I also started to introduce some guidance here, making sure the user was unable to continue without at least one bay. 
+      Some guidance was introduced here, making sure the user was unable to continue without at least one bay. 
 
 
       ![Mockup of tracks screen part 3](/img/screen-2-1-–-2.jpg "Mockup of tracks screen")
 
 
-      Adding a bay at a time was considered, but because there were multiple widths, it would require additional buttons on the active area. I wanted to avoid this extra complexity, and use drag and drop for everything. 
+      Adding a bay at a time was considered, but because there were multiple widths, it would require additional buttons on the active area. Use drag and drop for everything avoided complexity. 
 
 
       ![Mockup of components screen](/img/screen-3.jpg "Mockup of components screen")
 
 
-      Again, components would be added to the bays with drag and drop functionality. With so many different components I decided to allow them to be filtered in three categories. We initially used colour coding to indicate whether a component would be allowed 
+      Again, components would be added to the bays with drag and drop functionality. 
+
+
+      Components were split into three categories, and could be filtered with pills buttons. 
+
+
+      We initially used colour coding to indicate whether a component would be allowed 
 
 
       #### Minimum viable product
 
 
-      These were light on detail, but by the end of the two weeks we had built this design and met all of the basic requirements. Using libraries for both the drag and drop functionality, and the rules engine saved us a lot of time.
+      These mockups were light on detail, but by the end of the two weeks we had built this design and met all of the basic requirements. Using libraries for both the drag and drop functionality, and the rules engine saved us a lot of time. 
+
+
+      Working closely with the development team was invaluable, wherever some aspect of the design was unclear I could quickly provide additional sketches on paper or on XD.
 
 
       At this stage the prototype could validate E-track placement using the wall dimensions, and component placement using a rules engine. It showed prices, used drag and drop, and allowed filtering of components by type. 
@@ -180,10 +195,10 @@ sections:
       With such great progress being shown, we were given another two weeks to work on it. 
 
 
-      Since the core functionality was in place, I could start to be more ambitious with features. In this second phase we would focus on the informative and educational aspects which were lacking in the initial version. 
+      Since the core functionality was in place, features started to become more ambitious. In this second phase we would focus on the informative and educational aspects which were lacking in the initial version. 
 
 
-      #### More features+
+      #### More features
 
 
       * Much more guidance would be provided.
@@ -199,10 +214,10 @@ sections:
       * We would generate a sharable link
 
 
-      Features such as multiple currencies and the shareable link were tasks I gave to our senior developers. They could get to work on these features without having to wait for me to come up with a visual design. 
+      Features such as multiple currencies and the shareable link were tasks given to our senior developers. They were able to get to work on these features without having to wait on further mockups or design direction. 
 
 
-      This provided me a bit of breathing space to put more thought into the UX of the tool. 
+      This provided a bit of breathing space to put more thought into the UX of the tool. 
 
 
       #### Instruction messages
