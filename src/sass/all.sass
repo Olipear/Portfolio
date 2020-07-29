@@ -262,22 +262,24 @@ section, .section
 
 .quotes
   position: relative
-  padding: 4rem
+  padding: 3rem
+  +desktop
+    padding: 4rem
   &::before, &::after
     content: " "
     background-position-y: center
     background-size: contain
     background-repeat: no-repeat
     position: absolute
-    height: 5rem
-    width: 5rem
+    height: 4rem
+    width: 4rem
     +desktop
-      width: 6rem
-      height: 6rem
+      width: 5rem
+      height: 5rem
   &::before
     background-image: url("../img/quote-open.png")
-    top: 0rem
-    left: 0rem
+    top: -1rem
+    left: -1rem
   &::after
     background-image: url("../img/quote-close.png")
     bottom: 0rem
