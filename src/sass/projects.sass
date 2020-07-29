@@ -92,8 +92,12 @@ section.project
                 text-align: left
                 margin: 0 auto 4rem 0
         &-body
+            width: 100%
             > *:not(img)
                 max-width: 550px
             img
-                margin: 1rem 0 2rem 0
+                margin: 1rem 20px 2rem auto
                 border: 1px solid #dadada
+                & + img
+                    margin-top: -1rem
+                

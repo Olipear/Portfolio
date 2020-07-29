@@ -23,6 +23,7 @@ const ProjectSection = ({ section }) => {
             />
           </div>
         </div>
+        
       </div>
     </section>
   );
