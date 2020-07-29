@@ -40,4 +40,3 @@ footer:
 notfound:
   text: Yes I have a 404 page. Mushu says Hi!
   image: /img/mushu.jpg
----
