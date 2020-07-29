@@ -53,9 +53,9 @@ sections:
 
       * The modularity of the chair was poorly understood.
 
-      * Their were often complaints about the leather texture, it was not as uniform as customers expected.
+      * Customers expected the leather to be more uniform, in fact it had many natural patterns/ scarring. 
 
-      * Some customers were not happy with the colour when they received the product.
+      * Some customers were surprised by colour when they received the product.
 
       * Customers couldn't buy a footstool one it's own.
 
@@ -72,7 +72,7 @@ sections:
       ### Poor product visualisation was at the heart of it.
 
 
-      * The line drawing was not suitable for visualising a £6.5k product.
+      * The line drawing was not suitable for visualising a £3.5k product.
 
       * The line drawing took up far too much screen space, the configuration options were not visible without scrolling.
 
@@ -106,21 +106,7 @@ sections:
       * Most users, even purchasers would spend a very brief time on the informational pages accompanying the purchase page. 
 
 
-      #### Competitor evaluation
-
-
-      The 620 chair really has one key competitor, the better known [Eames chair](https://www.vitra.com/en-gb/product/lounge-chair). I also looked at more complex examples outside of furniture such as the [Ray-Ban configurator](https://www.ray-ban.com/uk/customise) tool, and the luxury car market. 
-
-
-      * Products in this price range emphasised high quality product visualisation. With 360deg views, high resolution photography, and zoom features.
-
-      * Similar customisable products often broke up the process into stages. Many examples used accordions, forcing users to make one decision at a time. 
-
-
       #### Key points to address
-
-
-      Having understood where improvements were needed, I defined a list of user stories the new configurator would need to satisfy. These are some of the points:
 
 
       * New product visualisations would be needed. 
@@ -129,11 +115,11 @@ sections:
 
       * The footstool should have it's own configuration page.
 
-      * The configurator needed to show the modularity and customisation options of the chair; without relying on other supporting pages.
+      * The configurator needed to show the modularity, and customisation options of the chair without relying on other supporting pages.
 
       * Adding additional seats should be the last part of any staged, or segmented purchase process.
   - heading: Design
-    intro: From the user stories and research I had a clear list of features to be
+    intro: The user stories and research provided a clear list of features to be
       included in the new UI.
     headerimage: /img/design-_-solution.png
     standout: false
@@ -154,7 +140,7 @@ sections:
 
       * Most libraries couldn't support the level of customisation we needed. Using React was the easiest way of building this functionality.
 
-      * There would be a lot of images per rotation, so optimisation would be crucial.
+      * There would be a lot of images for all the possible combinations, so optimisation would be crucial.
 
 
       It was decided that renders would be preferable to photography, mainly for cost reasons. 
@@ -175,59 +161,68 @@ sections:
       #### Prototyping
 
 
-      I started prototyping with just mobile layouts first, since this presented the greatest challenge.
-
-
       ![Prototypes for mobile version](/img/620-prototypes.jpg "Prototypes for mobile version")
+
+
+      Accordions were too small, and required a lot of scrolling. Using a scrollable area with a single accordion didn't improve any of this, but made it harder to scroll. 
+
+
+      It became clear that a larger area should be available for the controls.
 
 
       ![Prototype for mobile version](/img/620-prototypes-2.jpg "Prototype for mobile version")
 
 
-      I found using a full screen modal overlay could provide the space needed, and more. This allowed me to show an additional close up image of the product, and the full visualisation was still just a button tap away.
+      Switching between a configurator view, and a product view was a step in the right direction, but it still required the colour choice to be in an awkward dropdown list.
 
 
       ![Mockup of modal design for mobile devices](/img/620-prototype.gif "Mockup of modal design for mobile devices")
 
 
-      This succinctly showed the user which aspects could be customised, and compartmentalised decision making. Using an image in the colour modal gave users both the material, and colour information they needed.
+      Splitting out the options into their own modal overlay was the best solution. 
 
 
-      The modal button adhered to the established visual language used elsewhere for in-page navigation. [The contact page was the main previous example of it's usage.](https://www.vitsoe.com/contactus) So I'd managed to avoid introducing any new UI elements.
+      * All customisation options are shown to the user.
+
+      * The additional space using a fullscreen overlay could be used to include product photography.
+
+      * Providing this close up photography when selecting colour, would provide the user with much better material and texture information on the product.
+
+      * The modal buttons followed existing visual language used elsewhere on the site. 
+
+      * Keeping the seat picker separate encouraged it to be used last, after other options had been explored.
 
 
       ![Mockup of desktop modal design](/img/intermediate-prototype-desktop.jpg "Mockup of desktop modal design")
 
 
-      The modal for colour choices was carried over to the desktop because of the advantage a close up photograph provided.
+      The modal for colour choices was carried over to the desktop because of the advantage a close up photograph provided. Desktop offered additional space to include shell and upholstery colour in one modal. 
 
 
       This wasn't necessary for the the back and feet options. It made more sense to represent these as addons, and use checkboxes here.
-
-
-      Now on all screen sizes, the customisation controls could be viewed alongside the spinner visualisation.
   - heading: "Implementation "
-    intro: Once the final design was agreed upon, I joined the other two developers
-      on our team to build it.
+    intro: "Now the final design and major features were agreed it was time to start
+      building. "
     headerimage: /img/implementation.png
     standout: false
     body: >-
       #### Technology
 
 
-      From the earlier prototype and research, the team decided that the configurator page would be built in a self-contained react app. This would make it easier to migrate in a planned upgrade of the website's infrastructure.
+      From the earlier prototype the team had agreed how the new configurator would be built. 
 
 
-      Keeping this longer term ambition in mind, we wanted to make sure we built everything to scale. New apis, data transport structures, components etc would need to serve all of Vitsoe's products. 
+      * We would build it as a self-contained React app, and use typescript.
+
+      * It should scale to work on other configurable products in Vitsoe's range
+
+      * Images would be managed outside of the CMS
 
 
       #### Data transport design
 
 
-      ![Snapshot of whiteboard showing ideas for data transport structure](/img/data-design-discussion.jpg "Whiteboard excerpt showing discussion of data transport structures")
-
-
-      Sitting around a large screen with my graphics tablet was a great substitute for an interactive whiteboard. It sped up the process of agreeing upon a structure, and kept our remote developer involved. 
+      ![Snapshot of whiteboard showing ideas for data transport structure](/img/620-data-transport-whiteboard.jpg "Whiteboard excerpt showing discussion of data transport structures")
 
 
       The structure we came up with described a product and contained all of the information our front-end would need.
@@ -236,16 +231,10 @@ sections:
       #### Adaptive, data driven UI
 
 
-      ![](/img/component-breakdown.jpg)
+      ![](/img/components-split.jpg)
 
 
-      The JSON structure we came up with, describes both customisation options, and how they should be displayed. Each option has a type such as 'colour' or 'binary', these directly correlate to a react component to render.
-
-
-      Options can be grouped, for example shell colour and leather colour were grouped into materials. When on a mobile device, groups are ignored, and all child options are put inside a modal. The modal components are agnostic to the controls they might contain and simply act as containers. 
-
-
-      ### The use of this system across other products would greatly improve the UX of the site in the future.
+      The data structure dictates which component to render, for example any product with colour customisation would use the same colour picker component. This format could then be scaled later to be used on any other vitsoe product. 
 
 
       #### Optimisation
@@ -254,47 +243,45 @@ sections:
       From the earlier prototype we knew optimisation of the large number of images would be challenging. 
 
 
-      Rendering out to multiple resolutions allowed me to implement lazy loading, but I had to try a few different strategies to get good results. 
-
-
-      I implemented a custom solution which managed the order the images loaded. As shown below.
-
-
       ![Diagram of image optimisation technique](/img/image-load-order.jpg "Diagram of image optimisation technique")
 
 
-      This loading strategy was highly effective, users would only see a pixelated image for up to 2-3 seconds, and could interact with the spinner immediately. At no point does the spinner jump, freeze or otherwise change it's behaviour.
+      Rendering out to multiple resolutions allowed me to implement lazy loading. With 16 images per rotation, loading these simultaneously took far too long. A custom implementation needed to be used which managed the order in which images loaded.
 
 
-      To make this even clearer, I added in a small loading bar along the top of the frame. The loading bar goes to 50% on the thumbnails, and the remainder when the full resolution is loaded.
+      ![Animation showing the responsiveness of the spinner when loading](/img/620-image-loading.gif "Animation showing the responsiveness of the spinner when loading")
+
+
+      This loading strategy was highly effective, users could interact with the spinner immediately after changing a customisation option. A small loading bar was added along the top of the frame so that users are aware images are loading.
 
 
       #### For developers
 
 
-      I don't have the source code for this project, but if you have react devtools installed you can check out my component structure on the live site.
+      If you have react devtools installed you can check out my component structure on the live site.
   - body_html: " "
     heading: Testing
-    intro: "Since the previous prototypes did not emulate the spinner functionality,
-      this round of usability testing was important for evaluating this. "
+    intro: This round of usability testing was important for evaluating and
+      finalising the spinner functionality.
     headerimage: /img/outcomes.png
     body: >-
-      As well as device testing, I carried out task-driven usability testing.
-      Although this was internal, I chose subjects who were outside of the sales
-      team, and were more recent hires.
+      #### Methodology
 
 
-      Starting from the home page of the site I asked them to buy specific configurations of chairs, footstools and sofas. After observing them complete the tasks, I asked them a few simple questions about the product, such as whether specific combinations were possible (e.g. swivel bases are not compatible with sofa configurations). 
+      Starting from the home page of the site participants were asked to buy specific configurations of chairs, footstools and sofas. After observing them complete the tasks, they were a few simple questions about the product.
+
+
+      #### Findings
+
+
+      Overall the feedback was very positive. Most users were quick to complete the tasks, and could answer the questions.
 
 
       * One user completed the task without interacting with the spinner at all, not realising it was interactive. This resulted in the addition of the 3D icon in the lower left corner. 
 
-      * During device testing I found on the smallest devices the confirm button in modals was not visible without scrolling. I decided to move this to the top of the screen so that it would always be visible, and in the same place.
+      * During device testing on smaller devices; the confirm button in modals was not visible without scrolling. It was moved to the top of the overlay so that it would be consistent, and visible.
 
-      * The switch to the the footstool in the top left was often mis-tapped on touch devices. It was too small, and too close to the modal buttons. Since the footstool was linked both on other pages, and beneath the chair configurator, we decided to remove this.
-
-
-      Overall the feedback was very positive. Most users were quick to complete the tasks, and could answer my questions.
+      * The switch to the the footstool in the top left was often mis-tapped on touch devices. Since the footstool was linked both on other pages, and beneath the chair configurator, we decided to remove this.
 
 
       #### Further results
