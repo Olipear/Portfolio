@@ -1,7 +1,6 @@
 backend:
   name: git-gateway
-  #TODO: change to master once completed
-  branch: dev
+  branch: master
   commit_messages:
     create: 'Create {{collection}} “{{slug}}”'
     update: 'Update {{collection}} “{{slug}}”'
