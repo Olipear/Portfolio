@@ -72,7 +72,7 @@ sections:
       ### Poor product visualisation was at the heart of it.
 
 
-      * The line drawing was not suitable for visualising a £6.5k product.
+      * The line drawing was not suitable for visualising a £3.5k product.
 
       * The line drawing took up far too much screen space, the configuration options were not visible without scrolling.
 
@@ -140,7 +140,7 @@ sections:
 
       * Most libraries couldn't support the level of customisation we needed. Using React was the easiest way of building this functionality.
 
-      * There would be a lot of images per rotation, so optimisation would be crucial.
+      * There would be a lot of images for all the possible combinations, so optimisation would be crucial.
 
 
       It was decided that renders would be preferable to photography, mainly for cost reasons. 
@@ -173,22 +173,24 @@ sections:
       ![Prototype for mobile version](/img/620-prototypes-2.jpg "Prototype for mobile version")
 
 
-      Switching between a configurator view, and a product view lead me to use modal overlays. 
+      Switching between a configurator view, and a product view was a step in the right direction, but it still required the colour choice to be in an awkward dropdown list.
 
 
       ![Mockup of modal design for mobile devices](/img/620-prototype.gif "Mockup of modal design for mobile devices")
 
 
-      Scrolling up and down is much higher effort than tapping a button, this seemed to be a good compromise. 
+      Splitting out the options into their own modal overlay was the best solution. 
 
 
-      * All customisation options are shown to the user
+      * All customisation options are shown to the user.
 
-      * The additional space using a fullscreen overlay could be used to include product photography
+      * The additional space using a fullscreen overlay could be used to include product photography.
 
       * Providing this close up photography when selecting colour, would provide the user with much better material and texture information on the product.
 
       * The modal buttons followed existing visual language used elsewhere on the site. 
+
+      * Keeping the seat picker separate encouraged it to be used last, after other options had been explored.
 
 
       ![Mockup of desktop modal design](/img/intermediate-prototype-desktop.jpg "Mockup of desktop modal design")
