@@ -10,35 +10,21 @@ featuredlink: https://www.vitsoe.com/621
 featuredlinklabel: See it live
 sections:
   - body_html: " "
-    heading: Overview
+    heading: About
     intro: ""
     headerimage: /img/about.png
-    body: >-
+    body: |-
       #### Role:
 
-
-      UX research and design, front-end development. 
-
-
-      #### Team
-
-
-      I worked closely with the 'communications'(marketing) team for a lot of my research, copy changes, and discussions around digital marketing strategy. 
-
-
-      Some of the front-end development was done by our intern at the time, who I was training in the basics of HTML/CSS.
+      UX research and design, front-end development.
   - body_html: " "
     heading: "Brief "
     intro: "As Vitsoe's most accessibly priced product, the 621 table was a gateway
       product that aimed to encourage further sales. "
-    body: >-
-      #### Objectives
+    body: |-
+      #### Business objectives
 
-
-      The 621 table was the first product I was asked to look at in terms of improving online sales. 
-
-
-      This meant the UX process I went through here was the most comprehensive, and would go on to inform later work on other products.
+      Improve online sales, specifically focusing on the 621 table initially.
     headerimage: /img/brief-_-problem.png
   - body_html: " "
     heading: Research
@@ -52,35 +38,34 @@ sections:
       My main resource was google analytics, I had set up custom event tracking on things like product customisation, videos and galleries 4 months before starting this project.
 
 
-      There were some large gaps that I'm aware could have significantly improved my UX process. Social media marketing was untracked, email promotions did not use trackable links, and I would not have access to customers for interviews, focus groups or user testing. 
-
-
       My window to the customer was via the sales teams, wherever possible I used them to better understand customer motivations and frustrations. 
 
 
       #### Personas
 
 
-      The UX personas I created involved a lot of collaboration with the most experienced Vitsoe salespeople, along with website usage data. 
-
-
-
-      These were representative of both Vitsoe's existing customer base, and their target market.
-
-
       ![Personas with confidential business information obscured](/img/personas-obscured.jpg "Personas with confidential business information obscured")
 
 
-      I could then adapt these base personas where needed for a specific project. For example, in the base persona Hans owns a shelving system from a competitor, and wants to purchase additional components from Vitsoe. For this project he would own a 620 chair and want to buy the 621 table to accompany it.
+      The UX personas I created involved a lot of collaboration with the most experienced Vitsoe salespeople, along with website usage data. 
 
 
-      #### Conflicting business goals
+      These were representative of both Vitsoe's existing customer base, and their target market. I could then adapt these base personas where needed for a specific project.
 
 
-      Early on in my researched I realised there were some fundamental issues with the website that would need to be addressed.
+      #### Awareness 
 
 
-      Vitsoe wanted to be 'the gatekeeper for Dieter Rams'. Large portions of the website are taken up with the career, history and philosophy of the designer's work. These pages were ranked at the top of search engines for 'Dieter Rams', driving a huge volume of traffic to the site. 
+      There were few pain points directly associated with the website. The biggest problem that became immediately apparent was a lack of awareness. Even long standing Vitsoe customers were unaware that there was an online shop. 
+
+
+      #### Dieter Rams
+
+
+      Large portions of the website are taken up with the career, history and philosophy of the designer's work. These pages were ranked at the top of search engines for 'Dieter Rams', driving 25% of all traffic to the site. However, the vast majority of this traffic appeared to be students copy-pasting his 10 principles of design, very few entrances to these pages visited the rest of the website.
+
+
+      #### Vitsoe Voice
 
 
       The company also has its own publication 'Vitsoe voice'; a collection of lifestyle and design articles. Many featured vitsoe products, but they would more often featured interesting Vitsoe customers, or Rams's design philosophy. 
@@ -88,48 +73,62 @@ sections:
 
       ![Previous homepage layout](/img/previous-homepage.jpg "Previous homepage layout")
 
-       Only 4% of users would navigate to Vitsoe voice from the homepage despite its prominence here. When I looked into readership, I found most were existing customers.
 
-      Website usage showed neither the editorial nor the Rams pages were driving sales. The most popular entry point for the site was a page explaining Rams's 10 principles of design, a mouse heatmap showed most visitors were copy-pasting these principles before leaving the site. Very few of these users ever visited other parts of the site, or returned.
-
-
-      Meanwhile, sales teams were reporting back that many customers, even existing customers; were surprised to learn that Vitsoe had an online shop at all. 
+      As shown here, the publication took pride of place on the homepage, obscuring the visibility of Vitsoe's products. 
 
 
-      ### It was clear that the website was trying to fulfill several different functions and not doing any of them well.
+      When I looked into readership, I found most were existing customers arriving via email newsletters, only 4% of readers arrived from the homepage. 
 
 
-      I had to confront the business owners with some difficult questions about what their business goals for the website were. They reaffirmed that they wanted the site to be first and foremost a tool for selling online.
+      #### Conflicting business goals
 
 
-      #### Site behaviour
+      Website usage showed Rams pages were driving traffic but not sales. The editorial was more successful at improving sales, but only when articles mentioned products specifically. 
 
 
-      Now looking closer at the 621 area, split into four pages, I found this to be a microcosm of the larger issues I'd found. 
+      Both of these built up the impression that Vitsoe was a design publication, and informational site for Dieter Rams's legacy. 
+
+
+      Discussions with business owners and the marketing team confronted this issue, the website needed a clear purpose. It was agreed that the website should be first and foremost a selling tool, with editorials and the Rams pages supporting that purpose. 
+
+
+      #### Shopping behaviour
+
+
+      The 621 table area of the site was split into four pages. This seemed to be a microsim of the broader issues the website faced. 
 
 
       ![Old page's issues](/img/history-621.jpg "Old page's issues")
 
 
-      Links from elsewhere on the site pointed at the introduction section, and with the path /621, it was also the most popular entry point for organic searches on the product. Of the 70% that didn't leave the site from here, less than half visited other pages within the 621 area.
+      * Few users advanced beyond the introduction page
+
+      * The introduction page contained a list of prices for the tables, but no obvious way of buying them.
+
+      * Prominent links took users away of the 621 area entirely, back to pages about Dieter's career, and the good design principles. 
+
+      * The pages were heavy on text but lacking substance on the product itself.
+
+      * Overall just 9% of users who reached one of the other 621 pages ever reached the buy page. 
+
+      * On the buy page, 90% of users would interact with one of the customisation controls. 
 
 
-      Prominent links took users away of the 621 area entirely, back to pages about Dieter's career, and the good design principles. 
+      The key issue seemed to be getting users to reach the purchase page.
 
 
-      Overall just 9% of users who reached one of the other 621 pages ever reached the buy page. 
 
 
-      The pages were heavy on text but lacking substance on the product itself. A page titled 'Design and History' added to the impression this could be an informational site about Dieter Rams rather than an online shop. 
+      #### Key issues
 
 
-      #### Purchase page
+      * The homepage was too focused on Vitsoe voice 
 
+      * Vitsoe voice needed to focus more on the product
 
-      The buy page was commonly the last page in a user journey, where customers were making a purchase decision. Users that went on to buy would often go back into the gallery, and details page before returning.
+      * The online shop needed to become the focus of the website
 
-
-      The UI itself was well laid out. 90% of those that didn't bounce interacted with the customisation controls. The real problem seemed that not enough users were reaching this page in the first place.
+      * There was too much content in the way of the purchase pages
   - body_html: " "
     heading: "Design "
     intro: A lot of my design work was not focused on the 621 product pages
@@ -164,10 +163,7 @@ sections:
       #### Working with marketing
 
 
-      Even moving it to the bottom of the page, I never discounted the value the editorial had. I used tracking of ecommerce conversion to highlight specific articles that were driving sales. Unsurprisingly articles that focused on products were better at driving sales.
-
-
-      I also built the marketing team a dashboard in Google Data Studio, and helped them begin to measure how effective their newsletters, social media, and articles were. As had been discussed with business owners, online sales needed to take precedence over readership figures.
+      The marketing team was provided with a dashboard in Google Data Studio to help them measure how effective their newsletters, social media, and articles were. Instagram was found to be the most effective social media platform, and they began focusing more effort there.
 
 
       #### Fixing the user flow
@@ -194,13 +190,13 @@ sections:
       The galleries were important for building aspiration, and also played a role in the 621's gateway strategy. Gallery images for the table often featured other vitsoe products.
 
 
-      All the gallery pages at the time had images in a list view, but they also had a fullscreen gallery lightbox which allowed users to scroll through the content. Event tracking showed the lightbox was the preferred method of navigating through them.
+      All the gallery pages at the time displayed images in a list view, but they also had a fullscreen gallery lightbox which allowed users to scroll through the content. Event tracking showed the lightbox was the preferred method of navigating through them.
 
 
       ![Old gallery lightbox](/img/old-lightbox.jpg "Old gallery lightbox")
 
 
-      Using the existing functionality of the lightbox and inserting it into the purchase page would make the images more accessible, and remove another lengthy page.
+      Inserting the existing functionality of the lightbox into the purchase page would make the images more accessible, and remove another lengthy page.
 
 
       I had wireframed a some layouts for this on paper; the key decision was whether I could use the existing product image to open the lightbox, or it needed a separate UI element. 
@@ -215,23 +211,22 @@ sections:
       My main concern was that even with good iconography and labeling, a user would reasonably expect a lightbox to open larger versions of the studio photography.  
 
 
-      Another smaller change here was to make the product image landscape on mobile, and square on desktop. Using a 16:9 ratio on mobile gave more space for the controls to be seen by a user without need to scroll up and down the page to see the product change colour and size.
+      Another smaller change here was to make the product image landscape on mobile, and square on desktop. 
+
+
+      Using a 16:9 ratio on mobile gave more space for the controls to be seen by a user without need to scroll up and down the page to see the product change colour and size.
   - body_html: " "
     heading: Follow up
-    intro: I continued to make improvements to the initial design long after the
-      changes were launched.
+    intro: Looking at behaviour is often more important than sales.
     headerimage: /img/outcomes.png
     body: >-
       #### Sales
 
 
-      Following up a full year after these changes were launched in september 2018; I found there were 46% more unique purchases, with 25% increase in the number of tables sold.  
+      There were 46% more unique purchases, with 25% increase in the number of tables sold in the year following the launch of these changes. 
 
 
-      The improved sales do not necessarily measure the success of changes on the website however. The work I did to help the marketing team, and push them towards social media may have had a more significant impact. 
-
-
-      For this reason I find checking for expected behavioural changes is a better measure of success. 
+      The work I did to help the marketing team, pushing them towards social media, may have had a more significant impact. For this reason checking behaviour is often a better measure of UX changes. 
 
 
       #### Behaviour changes
@@ -240,7 +235,7 @@ sections:
       When I compared the four months either side of the homepage and 621 area changes being launched:
 
 
-      * Vitsoe Voice readership was slightly higher. As my research showed, it was mostly being read by existing customers, so moving it further down the page did not damage it. 
+      * Vitsoe Voice readership was slightly higher. As my research showed, it was mostly being read by existing customers, so moving it further down the page did not damage readership. 
 
       * Navigation from the homepage to product pages increased by 2%. In raw numbers this accounted for an additional ~4,000 pageviews.
 
@@ -248,24 +243,15 @@ sections:
 
       * Far fewer users reached the details page, but those that did, were more likely to buy.
 
-      * Those that did reach the details, spent much longer here on average. Therefore this information was being read by more people in its condensed form.
+      * Those that did reach the details, spent much longer here on average. Showing that this information was easier to digest in this condensed form.
 
 
       #### Galleries
 
 
-      In the four months before and after launching the changes; there were 9,780 unique events for opening the gallery vs 1,254 unique pageviews for the old gallery page. An increase of 780%, so I had increased the visibility of gallery images overall.
+      In the four months before and after launching the changes: there were 9,780 unique events for opening the gallery, vs 1,254 unique pageviews for the old gallery page. An increase of 780%.
 
 
-      Excluding those who bounced, 95% of users opened the gallery lightbox. 
-
-
-      I would continue to make improvements to the gallery lightbox; adding the translucent background to show users they haven't navigated away, and the shareable links to help social media marketing. 
-
-
-      ![New gallery lightbox](/img/lightbox-–-27.jpg "New gallery lightbox")
-
-
-      This redesign could have a project write up of its own. But importantly, even a year later I was still making improvements from follow up research.
+      Excluding those who bounced, 95% of users opened the gallery lightbox.
 other_projects: More projects
 ---
