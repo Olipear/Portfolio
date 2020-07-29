@@ -1,0 +1,120 @@
+.navbar
+    align-items: stretch
+    display: block
+    position: fixed
+    top: 0 
+    left: 0
+    right: 0
+    z-index: 30
+    padding: 0.8rem 0 0.8rem 0
+    height: 3.4rem
+    background: $bg-light
+    box-shadow: $shadow 0px 1px 5px
+    background: rgba(248,248,248,0.95)
+    >.container
+        position: relative
+        display: flex
+        height: 100%
+        align-items: center
+        justify-content: space-between
+        margin: 0 1rem
+        +desktop
+            padding: 0
+            margin: 0 auto
+    .navbutton
+        display: block
+        width: 3rem
+        height: 3rem
+        position: relative
+        cursor: pointer
+        +tablet
+            display: none
+        > span
+            left: .5rem
+            position: absolute
+            background: $interact
+            width: 2rem
+            height: 3px
+            border-radius: 2px
+            +darkmode
+                background: $primary
+        &:hover > span
+            background: $hover
+            +darkmode
+                background: $secondary
+    +darkmode
+        background: $text
+    &-brand
+        align-items: center
+        display: flex
+        flex-shrink: 1
+        flex-grow: 1
+        height: 100%
+        z-index: 30
+        & > a
+            display: flex
+            align-items: stretch
+            height: 100%
+        img
+            height: 100%
+            width: auto
+            +darkmode
+                filter: brightness(3)
+    &-menu
+        position: absolute
+        right: .75rem
+        top: 0
+        margin-top: 0rem
+        max-height: 0%
+        display: block
+        transition-duration: $speed
+        transition-property: margin-top, max-height
+        transition-timing-function: $easing
+        overflow: hidden
+        +tablet
+            position: relative
+            max-height: unset
+            display: flex
+            align-items: center
+            justify-content: flex-end
+            flex-shrink: 0
+            overflow: visible
+        .menu-item
+            display: block
+            opacity: 0
+            text-decoration: none
+            h4
+                margin: 0 1rem 0 0
+            +mobile
+                transition-duration: $speed
+                transition-property: margin-top, opacity
+                transition-timing-function: $easing
+            +tablet
+                margin-left: 1.5rem
+                opacity: 1
+                h4
+                    display: none
+            .icon
+                display: flex
+                justify-content: flex-end
+                padding: 0.2rem
+        &.is-open
+            +mobile
+                overflow: visible
+                margin-top: 3rem
+                .menu-item
+                    opacity: 1
+                    margin-top: 3rem
+    &-overlay
+        display: block
+        position: fixed
+        width: 100%
+        height: 100%
+        background: $bg-light
+        opacity: 0.95
+        right: 0
+        top: 0
+        +tablet
+            display: none
+        +darkmode
+            background: $bg-dark

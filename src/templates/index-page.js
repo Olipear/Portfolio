@@ -1,184 +1,181 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
+import { graphql } from "gatsby";
+import useWindowDimensions from "../components/UseWindowDimensions";
+import {
+  useTransform,
+  useViewportScroll,
+  AnimatePresence,
+  motion,
+} from "framer-motion";
+import Layout from "../components/Layout";
+import Splash from "../components/home/Splash";
+import Blurbs from "../components/home/Blurbs";
+import About from "../components/home/About";
+import ProjectGrid from "../components/projects/ProjectGrid";
 
-import Layout from '../components/Layout'
-import ProjectRoll from '../components/ProjectRoll'
+export const IndexPageTemplate = ({ data, previewMode = false }) => {
+  const { windowHeight } = useWindowDimensions();
+  const { scrollY } = useViewportScroll();
+  const [offSplash, setOffSplash] = useState(previewMode);
 
-export const IndexPageTemplate = ({
-  image,
-  title,
-  heading,
-  subheading,
-  mainpitch,
-  description,
-  intro,
-}) => (
-  <div>
-    <div
-      className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`,
-      }}
-    >
-      <div
-        style={{
-          display: 'flex',
-          height: '150px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
-        }}
-      >
-        <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {title}
-        </h1>
-        <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {subheading}
-        </h3>
-      </div>
-    </div>
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="content">
-                <div className="content">
-                  <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
-                  </div>
-                  <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
-                  </div>
-                </div>
-                <div className="columns">
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
-                  </div>
-                </div>
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    Projects
-                  </h3>
-                  <ProjectRoll/>
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/projects">
-                      Read more
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-)
+  const pagecontent = data.markdownRemark.frontmatter;
+  const projects = data.allMarkdownRemark.edges;
 
-IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
-}
+  const scrollOffSplashProgress = useTransform(
+    scrollY,
+    [0, windowHeight - 100],
+    [0, 1]
+  );
 
-const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  useEffect(() => {
+    scrollOffSplashProgress.onChange((v) => {
+      if (v > 0.5) {
+        setOffSplash(true);
+      }
+    });
+  }, [scrollOffSplashProgress]);
 
   return (
-    <Layout>
-      <IndexPageTemplate
-        image={frontmatter.image}
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
+    <>
+      <Splash
+        content={pagecontent.splash}
+        motionProgress={scrollOffSplashProgress}
       />
-    </Layout>
-  )
-}
+      <Blurbs content={pagecontent.blurbs} triggerIn={offSplash} />
+      {projects.length > 0 ? (
+        <section className="section is-medium" id="projects">
+          <div className="container">
+            <ProjectGrid projects={projects} />
+          </div>
+        </section>
+      ) : null}
 
-IndexPage.propTypes = {
+      <About content={pagecontent.about} />
+    </>
+  );
+};
+
+IndexPageTemplate.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
+      splash: PropTypes.shape({
+        intro: PropTypes.string,
+        image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+        buttontext: PropTypes.string,
+      }),
+      burbs: PropTypes.arrayOf(
+        PropTypes.shape({
+          blurb: PropTypes.string,
+        })
+      ),
+      about: PropTypes.shape({
+        aboutbody: PropTypes.string,
+        image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+      }),
     }),
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.arrayOf(PropTypes.object) 
+    })
   }),
-}
+};
 
-export default IndexPage
+const IndexPage = ({ data }) => {
+  return (
+    <AnimatePresence>
+      <Layout splash={true}>
+        <motion.div
+          key="content"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
+          <IndexPageTemplate data={data || {}} />
+        </motion.div>
+      </Layout>
+    </AnimatePresence>
+  );
+};
+
+IndexPage.propTypes = {
+  data: PropTypes.shape(
+    {
+      markdownRemark: PropTypes.shape({
+        frontmatter: PropTypes.object,
+      }).isRequired,
+    },
+    {
+      allMarkdownRemark: PropTypes.shape({
+        edges: PropTypes.arrayOf(PropTypes.object) 
+      })
+    }
+  ),
+};
+
+export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
-        title
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
+        splash {
+          intro
+          image {
+            childImageSharp {
+              fluid(maxWidth: 500, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          buttontext
+        }
+        blurbs {
+          blurb
+        }
+        about {
+          aboutbody
+          image {
+            childImageSharp {
+              fluid(
+                maxWidth: 200
+                maxHeight: 200
+                quality: 100
+                cropFocus: ENTROPY
+              ) {
+                ...GatsbyImageSharpFluid
+              }
             }
           }
         }
-        heading
-        subheading
-        mainpitch {
-          title
-          description
+      }
+    }
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: {
+        frontmatter: {
+          templateKey: { eq: "project-entry" }
+          featuredproject: { eq: true }
         }
-        description
-        intro {
-          blurbs {
-            image {
+      }
+    ) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            featuredimage {
               childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
+                fluid(maxWidth: 650, maxHeight: 650, quality: 100) {
                   ...GatsbyImageSharpFluid
                 }
               }
             }
-            text
           }
-          heading
-          description
         }
       }
     }
   }
-`
+`;

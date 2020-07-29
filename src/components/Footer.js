@@ -1,105 +1,96 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from "react";
+import { ReactComponent as Email } from "../img/email-icon.svg";
+import { ReactComponent as Phone } from "../img/phone-icon.svg";
+import { ReactComponent as Location } from "../img/location-icon.svg";
+import { ReactComponent as Logo } from "../img/logo-mono.svg";
+import { motion } from "framer-motion";
+import scrollToSmooth from "./SmoothScroll";
+import { OutboundLink } from "gatsby-plugin-google-analytics";
+import { Link, graphql, StaticQuery } from "gatsby";
 
-import logo from '../img/logo.svg'
-import facebook from '../img/social/facebook.svg'
-import instagram from '../img/social/instagram.svg'
-import twitter from '../img/social/twitter.svg'
-import vimeo from '../img/social/vimeo.svg'
+const Footer = ({data}) => {
 
-const Footer = class extends React.Component {
-  render() {
-    return (
-      <footer className="footer has-background-black has-text-white-ter">
-        <div className="content has-text-centered">
-          <img
-            src={logo}
-            alt="Kaldi"
-            style={{ width: '14em', height: '10em' }}
-          />
-        </div>
-        <div className="content has-text-centered has-background-black has-text-white-ter">
-          <div className="container has-background-black has-text-white-ter">
-            <div className="columns">
-              <div className="column is-4">
-                <section className="menu">
-                  <ul className="menu-list">
-                    <li>
-                      <Link to="/" className="navbar-item">
-                        Home
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/about">
-                        About
-                      </Link>
-                    </li>
-                    <li>
-                      <a
-                        className="navbar-item"
-                        href="/admin/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Admin
-                      </a>
-                    </li>
-                  </ul>
-                </section>
-              </div>
-              <div className="column is-4">
-                <section>
-                  <ul className="menu-list">
-                    <li>
-                      <Link className="navbar-item" to="/projects">
-                        Projects
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/contact">
-                        Contact
-                      </Link>
-                    </li>
-                  </ul>
-                </section>
-              </div>
-              <div className="column is-4 social">
-                <a title="facebook" href="https://facebook.com">
-                  <img
-                    src={facebook}
-                    alt="Facebook"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a title="twitter" href="https://twitter.com">
-                  <img
-                    className="fas fa-lg"
-                    src={twitter}
-                    alt="Twitter"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a title="instagram" href="https://instagram.com">
-                  <img
-                    src={instagram}
-                    alt="Instagram"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a title="vimeo" href="https://vimeo.com">
-                  <img
-                    src={vimeo}
-                    alt="Vimeo"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-              </div>
-            </div>
+  return (
+    <footer className="footer">
+      <div className="container">
+        <motion.div
+          role="button"
+          onClick={() => scrollToSmooth(0)}
+          className="scroll-btn up"
+          whileHover={{ scale: 1.1, originX: 0.5, originY: 0.5 }}
+        >
+          <span></span>
+        </motion.div>
+        <div className="columns">
+          <div className="column is-one-third logo">
+            <Link to="/" title="home">
+              <Logo />
+            </Link>
+            <h4>{data.logo_strapline}</h4>
+          </div>
+          <div className="column is-offset-4 contact">
+            <ul className="contact-items">
+              <li>
+                <OutboundLink
+                  href={`tel:${data.telephone}`}
+                  eventCategory="footer-contact-link"
+                >
+                  <Phone width="24" height="24" />
+                  {data.telephone_label}
+                </OutboundLink>
+              </li>
+              <li>
+                <OutboundLink
+                  href={`mailto:${data.email}`}
+                  rel="noopener noreferrer"
+                  eventCategory="footer-contact-link"
+                >
+                  <Email width="24" height="24" />
+                  {data.email}
+                </OutboundLink>
+              </li>
+              <li>
+                <OutboundLink
+                  href={data.map_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  eventCategory="footer-contact-link"
+                >
+                  <Location width="24" height="24" />
+                  {data.map_label}
+                </OutboundLink>
+              </li>
+            </ul>
           </div>
         </div>
-      </footer>
-    )
-  }
-}
+        <div className="columns">
+          <div className="column is-one-third bottom-text">
+            <p>{data.bottom_text}</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
 
-export default Footer
+export default () => (
+  <StaticQuery
+  query={graphql`
+  query footerQuery {
+    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+      frontmatter {
+        footer {
+          logo_strapline
+          telephone
+          telephone_label
+          email
+          map_link
+          map_label
+          bottom_text
+        }
+      }
+    }
+  }
+`} render={(data) => <Footer data={data.markdownRemark.frontmatter.footer} />}/>
+);
+

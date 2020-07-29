@@ -5,8 +5,6 @@ module.exports = {
       'Oliver Pearson, UX engineer, front end developer, UI designer. Available for work both contract and full-time, based in Royal Leamington Spa.',
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass',
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
@@ -30,6 +28,8 @@ module.exports = {
       },
     },
     'gatsby-plugin-sharp',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sass',
     'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-transformer-remark',
@@ -65,13 +65,24 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
+    'gatsby-plugin-svgr',
     {
       resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
       options: {
         develop: true, // Activates purging in npm run develop
         purgeOnly: ['/all.sass'], // applies purging only on the bulma css file
+        whitelist: ['a']
+      }, // must be after other CSS plugins
+    }, 
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: "UA-111425076-1",
+        // Avoids sending pageview hits from custom paths
+        exclude: ["/admin/**"],
       },
-    }, // must be after other CSS plugins
+    },
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 }

@@ -1,0 +1,44 @@
+.splash.hero
+    height: 100vh
+    padding: 8rem 0 4rem 0
+    +tablet
+        padding: 0
+    .hero
+        &-body
+            height: 100%
+            +mobile
+                padding: 0 1.5rem
+            .container
+                display: flex
+                flex-direction: column
+                justify-content: space-between              
+                align-items: center
+                height: 100%
+                +tablet
+                    flex-direction: row
+                .title
+                    flex-shrink: 0
+                    +tablet
+                        margin-right: 1rem
+                        flex-shrink: 2
+                .image-wrapper
+                    display: contents
+                    flex-shrink: 1
+                    width: 100%
+                    max-width: 23rem
+                    margin: 0 auto
+                    +tablet
+                        display: block
+                        flex-shrink: 0
+                        max-height: unset
+                        width: 37%
+        &-footer
+            position: fixed
+            bottom: 0
+            left: 0
+            right: 0
+            width: 100%
+            color: interact
+            .scroll-btn.down
+                position: relative
+                margin: 1rem auto

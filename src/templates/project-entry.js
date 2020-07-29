@@ -1,103 +1,146 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
-import { Helmet } from 'react-helmet'
-import { graphql, Link } from 'gatsby'
-import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import React from "react";
+import PropTypes from "prop-types";
+import { graphql } from "gatsby";
+import Layout from "../components/Layout";
+import ProjectSection from "../components/projects/ProjectSection";
+import _ from "lodash";
+import { AnimatePresence, motion } from "framer-motion";
+import { OutboundLink } from "gatsby-plugin-google-analytics";
+import ProjectGrid from "../components/projects/ProjectGrid";
 
-export const ProjectEntryTemplate = ({
-  content,
-  contentComponent,
-  description,
-  tags,
-  title,
-  helmet,
-}) => {
-  const PostContent = contentComponent || Content
-
+export const ProjectEntryTemplate = ({ data }) => {
+  const thisProject = data.markdownRemark.frontmatter;
+  const otherProjects = data.allMarkdownRemark.edges;
   return (
-    <section className="section">
-      {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
-            <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map((tag) => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+    <>
+      <section className="hero is-medium project">
+        <div className="hero-body">
+          <div className="container">
+            <h1 className="title">{thisProject.description}</h1>
+            {thisProject.featuredlink ? (
+              <OutboundLink
+                href={thisProject.featuredlink}
+                className="interactive"
+                target="_blank"
+                eventCategory="project-preview"
+              >
+                <h3>{thisProject.featuredlinklabel}</h3>
+              </OutboundLink>
             ) : null}
           </div>
         </div>
-      </div>
-    </section>
-  )
-}
+      </section>
+      {thisProject.sections.map((section) => {
+        return (
+          <ProjectSection
+            key={_.trim(section.heading.substring(0, 5))}
+            section={section}
+          />
+        );
+      })}
+      {otherProjects.length > 0 ? (
+        <section className="section" id="projects">
+          <div className="container">
+            <h1>{thisProject.other_projects}</h1>
+            <ProjectGrid projects={otherProjects} />
+          </div>
+        </section>
+      ) : null}
+    </>
+  );
+};
 
 ProjectEntryTemplate.propTypes = {
-  content: PropTypes.node.isRequired,
-  contentComponent: PropTypes.func,
-  description: PropTypes.string,
-  title: PropTypes.string,
-  helmet: PropTypes.object,
-}
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        sections: PropTypes.array,
+      }),
+    }).isRequired,
+    allMarkdownRemark: PropTypes.object,
+  }),
+};
 
 const ProjectEntry = ({ data }) => {
-  const { markdownRemark: post } = data
-
   return (
-    <Layout>
-      <ProjectEntryTemplate
-        content={post.html}
-        contentComponent={HTMLContent}
-        description={post.frontmatter.description}
-        helmet={
-          <Helmet titleTemplate="%s | Project">
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
-            />
-          </Helmet>
-        }
-        tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
-      />
-    </Layout>
-  )
-}
+    <AnimatePresence>
+      <Layout splash={false} title={data.markdownRemark.frontmatter.title}>
+        <motion.div
+          key="content"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
+          <ProjectEntryTemplate data={data} />
+        </motion.div>
+      </Layout>
+    </AnimatePresence>
+  );
+};
 
 ProjectEntry.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
+    allMarkdownRemark: PropTypes.object,
   }),
-}
+};
 
-export default ProjectEntry
+export default ProjectEntry;
 
 export const pageQuery = graphql`
   query ProjectEntryByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      id
-      html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
         title
         description
-        tags
+        featuredlink
+        featuredlinklabel
+        sections {
+          intro
+          standout
+          heading
+          headerimage {
+            childImageSharp {
+              fluid(maxWidth: 280, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          body_html
+        }
+        other_projects
+      }
+    }
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: {
+        frontmatter: {
+          templateKey: { eq: "project-entry" }
+          featuredproject: { eq: true }
+        }
+        id: { nin: [$id] }
+      }
+    ) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            featuredimage {
+              childImageSharp {
+                fluid(maxWidth: 650, maxHeight: 650, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
-`
+`;

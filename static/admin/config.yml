@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
-  branch: master
+  #TODO: change to master once completed
+  branch: dev
   commit_messages:
     create: 'Create {{collection}} “{{slug}}”'
     update: 'Update {{collection}} “{{slug}}”'
@@ -8,25 +9,14 @@ backend:
     uploadMedia: '[skip ci] Upload “{{path}}”'
     deleteMedia: '[skip ci] Delete “{{path}}”'
 
+local_backend:
+  url: http://localhost:8000
+
 media_folder: static/img
 public_folder: /img
+publish_mode: editorial_workflow
 
 collections:
-  - name: "projects"
-    label: "Project"
-    folder: "src/pages/projects"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "project-entry"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
-      - {label: "Featured Image", name: "featuredimage", widget: image}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list"}
-
   - name: "pages"
     label: "Pages"
     files:
@@ -36,31 +26,81 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
           - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
-          - {label: Heading, name: heading, widget: string}
-          - {label: Subheading, name: subheading, widget: string}
-          - {label: Mainpitch, name: mainpitch, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}]}
-          - {label: Description, name: description, widget: string}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
-          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
-      - file: "src/pages/about/index.md"
-        label: "About"
-        name: "about"
+          - label: "Splash"
+            name: "splash"
+            widget: "object"
+            fields: 
+              - {label: "Intro line", name: "intro", widget: "text"}
+              - {label: "Splash image", name: "image", widget: "image"}
+              - {label: "Scroll down label", name: "buttontext", widget: "string"}
+          - label: "navigation"
+            name: "navigation"
+            widget: "object"
+            fields:
+              - {label: "Github profile link" , name: "githuburl", widget: "string"}
+              - {label: "Github profile label" , name: "githublabel", widget: "string"}
+              - {label: "Linkedin profile link", name: "linkedinurl", widget: "string"}
+              - {label: "Linkedin profile label", name: "linkedinlabel", widget: "string"}
+              - label: "CV pdf"
+                name: "cv_pdf"
+                widget: "file"
+                required: false
+                media_library:
+                  config:
+                    multiple: "false"
+              - {label: "CV pdf label", name: "cv_pdflabel", widget: "string"}
+          - label: "Blurbs"
+            name: "blurbs"
+            widget: "list"
+            create: true
+            fields:
+              - {label: "Blurb ", name: "blurb", widget: "text"}
+          - label: "About"
+            name: "about"
+            widget: "object"
+            fields:
+              - {label: "About me", name: "aboutbody", widget: "text"}
+              - {label: "Profile Pic", name: "image", widget: "image"}
+          - label: "footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - {label: "Logo strapline" , name: "logo_strapline", widget: "string"}
+              - {label: "Telephone number" , name: "telephone", widget: "string"}
+              - {label: "Telephone number label" , name: "telephone_label", widget: "string"}
+              - {label: "Email address", name: "email", widget: "string"}
+              - {label: "Maps Link", name: "map_link", widget: "string"}
+              - {label: "Maps Label", name: "map_label", widget: "string"}
+              - {label: "Bottom text", name: "bottom_text", widget: "text"}
+          - label: "404"
+            name: "notfound"
+            widget: "object"
+            fields:
+              - {label: "404 text" , name: "text", widget: "string"}
+              - {label: "404 image" , name: "image", widget: "image"}
+  - name: "projects"
+    label: "Project"
+    folder: "src/pages/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "project-entry"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured on homepage", name: "featuredproject", widget: "boolean"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Overview description", name: "description", widget: "text"}
+      - {label: "Featured Image", name: "featuredimage", widget: image}
+      - {label: "Featured link", name: "featuredlink", widget: string, required: false}
+      - {label: "Featured link label", name: "featuredlinklabel", widget: string, required: false}
+      - label: "Sections"
+        name: "sections"
+        widget: "list"
+        create: true
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/products/index.md"
-        label: "Products Page"
-        name: "products"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
-          - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
-          - {label: Heading, name: heading, widget: string}
-          - {label: Description, name: description, widget: string}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
-          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
-          - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
-          - {label: Full_image, name: full_image, widget: image}
-          - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
+          - {label: "Heading", name: "heading", widget: "string"}
+          - {label: "Introduction text", name: "intro", widget: "text", required: false}
+          - {label: "Section image", name: "headerimage", widget: "image", required: false}
+          - {label: "Is standout section", name: "standout", widget: "boolean", required: false}
+          - {label: "Body", name: "body", widget: "markdown", required: false}
+          - {label: "Body HTML (hidden)", name: "body_html", widget: hidden, required: false, default: " "}
+      - {label: "Other projects heading", name: "other_projects", widget: string}

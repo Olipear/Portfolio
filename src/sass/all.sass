@@ -1,0 +1,311 @@
+
+// bulma overrides
+$speed: 0.4s
+$easing: cubic-bezier(0.75, 0.29, 0.29, 1.35)
+$section-padding-medium: 5rem 1.5rem
+
+@import "~bulma/sass/utilities/_all.sass"
+@import "~bulma/sass/base/_all.sass"
+@import "~bulma/sass/grid/_all.sass"
+@import "~bulma/sass/elements/container.sass"
+@import "~bulma/sass/components/level.sass"
+@import "~bulma/sass/layout/_all.sass"
+
+//mixins
+=darkmode
+  @media screen and (prefers-color-scheme: dark)
+    @content
+
+// Olipear colours
+$bg-light: #F8F8F8
+$bg-medium: #eaebf1
+$bg-dark: #0B2027
+$primary: #4CB497
+$secondary: #FA9F42
+$text: #031926
+$shadow: #0b20274f
+
+$interact: #4E5166
+$hover: #24252e
+$disabled: #B8B9C2
+
+//olipear styles
+/* purgecss start ignore */
+// ---- base ----
+
+html
+  background-color: $bg-light
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+  min-width: 300px
+  overflow-x: hidden
+  overflow-y: scroll
+  text-rendering: optimizeLegibility
+  text-size-adjust: 100%
+  +darkmode
+    background-color: $text
+body
+  color: $text
+  font-size: 1rem
+  font-weight: 300
+  line-height: 1.5rem
+  +darkmode
+    color: $bg-medium
+
+hr
+  background-color: $bg-dark
+  border: none
+  display: block
+  height: 1px
+  margin: 1rem 0 2rem 0
+
+img
+  height: auto
+  max-width: 100%
+
+
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,700;0,800;1,300;1,400&display=swap')
+
+body
+  font-family: 'Montserrat', sans-serif
+
+h1, h2
+  line-height: 3rem
+  margin-bottom: 1rem
+h1
+  font-size: 1.8rem
+  font-weight: 300
+  +desktop
+    font-size: 2.2rem
+    line-height: 3.4rem
+h2
+  font-size: 1.5rem
+  font-weight: 800
+  +desktop
+    font-size: 1.8rem
+h3
+  font-size: 1.3rem
+  margin-bottom: 1rem
+  font-weight: 500
+  
+h5, h4
+  font-size: 1rem
+  margin-top: 1rem
+  margin-bottom: 0.3rem
+h4,
+  font-weight: 800
+h5
+  font-weight: 500
+
+p, body
+  font-size: 1rem
+  font-weight: 400
+p 
+  margin-bottom: 1.5rem  
+
+ul
+  list-style: disc
+ul, ol
+  padding-left: 0.75rem
+  margin-left: 1.5rem
+  margin-bottom: 2rem
+  li
+    margin-bottom: 1rem
+    
+
+// interactions
+a
+  color: $interact
+  cursor: pointer
+  text-decoration: underline
+  strong
+    color: currentColor
+  &:hover
+    color: $hover
+  +darkmode
+    color: $primary
+    &:hover
+      color: $secondary
+    
+.interactive
+  text-decoration: none
+  display: inline-block
+  background: $bg-light
+  overflow: hidden
+  border-radius: 2px
+  box-shadow: -1px 1px 4px 0px $shadow
+  transition-duration: $speed/2
+  transition-property: box-shadow
+  transition-timing-function: ease-in-out
+  &:hover, &:focus
+    box-shadow: -4px 4px 5px 1px $shadow
+  & > h1, & > h2, & > h3, & > h4, & > h5, & > p
+    &::after
+      content: ''
+      display: inline-block
+      width: 0.5em
+      height: 0.5em
+      border-right: 3px solid currentcolor
+      border-top: 3px solid currentcolor
+      border-radius: 2px
+      transform: rotate(45deg)
+      margin-left: 0.4em
+      margin-bottom: 1px
+      transition: margin $speed/2 $easing
+  &:hover
+    & > h1, & > h2, & > h3, & > h4, & > h5, & > p
+      &::after
+        margin-left: 0.6em
+  +darkmode
+    background: $bg-dark
+    box-shadow: -1px 1px 4px 0px black
+.icon 
+  color: $interact
+  svg
+    transform: scale(1)
+    transition: transform 0.1s $easing
+  &:hover:not(.disabled)
+    color: $hover
+    svg
+      transform: scale(1.1)
+  &:disabled, &.disabled
+    cursor: default
+    color: $disabled
+  +darkmode
+    color: $primary
+    &:hover:not(.disabled)
+      color: $secondary
+
+
+svg
+  fill: currentcolor
+
+.scroll-btn
+  height: 24px
+  width: 24px
+  overflow: hidden
+  background: $interact
+  border-radius: 50%
+  cursor: pointer
+  position: relative
+  span
+    height: 8px
+    width: 8px
+    border: 3px solid $bg-light
+    border-right: 0
+    border-top: 0
+    margin: auto
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+  &:hover
+    background: $hover
+  &.up span
+    transform: rotate(135deg)
+    top: 3px
+  &.down span
+    top: -3px
+    transform: rotate(-45deg)
+  &.big
+    height: 36px
+    width: 36px
+    span
+      height: 14px
+      width: 14px
+  +darkmode
+    background: $primary
+    span
+      border-color: $text
+    &:hover
+      background: $secondary
+// ---- layout -----
+.content
+  z-index: 1
+section, .section
+  z-index: 0
+  position: relative
+  &.is-medium
+    padding: $section-padding-medium
+
+// illustration brackets
+.standout
+  position: relative
+  padding: 7rem 1.5rem
+  +tablet
+    padding: 5rem 10%
+  +desktop
+    padding: 5rem 18%
+  &::before, &::after
+    content: " "
+    background-position: center
+    background-size: contain
+    background-repeat: no-repeat
+    position: absolute
+    height: 100% 
+    width: 6rem
+    display: none
+    top: 0
+    +tablet
+      display: block
+  &::before
+    background-image: url("../img/Illustrated bracket - open.png")
+    left: 1%
+    +desktop
+      left: 5%
+  &::after
+    background-image: url("../img/Illustrated bracket - close.png")
+    right: 1%
+    +desktop
+      right: 5%
+
+.quotes
+  position: relative
+  padding: 4rem
+  &::before, &::after
+    content: " "
+    background-position-y: center
+    background-size: contain
+    background-repeat: no-repeat
+    position: absolute
+    height: 5rem
+    width: 5rem
+    +desktop
+      width: 6rem
+      height: 6rem
+  &::before
+    background-image: url("../img/quote-open.png")
+    top: 0rem
+    left: 0rem
+  &::after
+    background-image: url("../img/quote-close.png")
+    bottom: 0rem
+    right: 0rem
+// ---- index page ----
+#blurb
+  h2
+    margin-bottom: 0
+    padding: 1rem 0
+    text-align: center
+    word-spacing: 0.25rem
+      
+      
+
+#about
+  .profile-pic
+    align-self: center
+    border-radius: 50%
+    overflow: hidden
+    width: 100%
+    max-width: 200px
+    height: auto
+    margin: 0 auto
+    
+
+
+@import "./navbar.sass"
+@import "./splash.sass"
+@import "./projects.sass"
+@import "./footer.sass"
+/* purgecss end ignore */
