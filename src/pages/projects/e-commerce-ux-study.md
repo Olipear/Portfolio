@@ -53,7 +53,7 @@ sections:
       These were representative of both Vitsoe's existing customer base, and their target market. I could then adapt these base personas where needed for a specific project.
 
 
-      #### Awareness 
+      #### Awareness
 
 
       There were few pain points directly associated with the website. The biggest problem that became immediately apparent was a lack of awareness. Even long standing Vitsoe customers were unaware that there was an online shop. 
@@ -77,7 +77,7 @@ sections:
       As shown here, the publication took pride of place on the homepage, obscuring the visibility of Vitsoe's products. 
 
 
-      When I looked into readership, I found most were existing customers arriving via email newsletters, only 4% of readers arrived from the homepage. 
+      Most of the readership was made up of existing customers arriving via email newsletters, only 4% of readers arrived from the homepage. 
 
 
       #### Conflicting business goals
@@ -115,8 +115,6 @@ sections:
 
 
       The key issue seemed to be getting users to reach the purchase page.
-
-
 
 
       #### Key issues
@@ -175,10 +173,10 @@ sections:
       Essentially my strategy was to simplify, following Dieter's own rules, anything that didn't support the purpose of these pages was removed. 
 
 
-      I was able to eliminate one page entirely, since the introduction page and design history page contained mostly duplicate information. 
+      One page could be eliminated entirely, since the introduction page and design history page contained mostly duplicate information. 
 
 
-      I also changed the order these pages would appear; making /621 the purchasing page, and design and details page second. 
+      The order of the pages was flipped around, making /621 the purchase page, followed by the design-and-details page. 
 
 
       This would let users see that the table was available for online purchase, it's price, and what it looked like first. If they were then more interested they could further read about the history and design of the product. 
@@ -199,22 +197,16 @@ sections:
       Inserting the existing functionality of the lightbox into the purchase page would make the images more accessible, and remove another lengthy page.
 
 
-      I had wireframed a some layouts for this on paper; the key decision was whether I could use the existing product image to open the lightbox, or it needed a separate UI element. 
-
-
       ![](/img/www.vitsoe.com_gb_621.png)
 
 
-      If it were available I'd have liked to use A/B testing here, but I had to choose now, and measure later. I decided to use the existing product image for the lightbox but I was aware this was a risky decision. 
+      The lightbox functionality was added to the existing product image which changed dependent on the colour and size selection. 
 
 
-      My main concern was that even with good iconography and labeling, a user would reasonably expect a lightbox to open larger versions of the studio photography.  
+      The image serves both as a product visualisation and as a gallery, but even with good iconography and labeling, a user might reasonably expect a lightbox to open larger versions of the studio photography. If it were available I'd have liked to use A/B testing here, but I had to choose now, and measure later. 
 
 
-      Another smaller change here was to make the product image landscape on mobile, and square on desktop. 
-
-
-      Using a 16:9 ratio on mobile gave more space for the controls to be seen by a user without need to scroll up and down the page to see the product change colour and size.
+      Another smaller change here was to make the product image landscape on mobile, and square on desktop. Using a 16:9 ratio on mobile gave more space for the controls to be seen by a user without need to scroll up and down the page to see the product change colour and size.
   - body_html: " "
     heading: Follow up
     intro: Looking at behaviour is often more important than sales.
