@@ -19,13 +19,13 @@ blurbs:
       development work. "
 about:
   aboutbody: >-
-    I currently live in Leamington spa with my partner Merle, and cat Mushu. 
+    I currently live in Leamington Spa with my partner Merle, and cat Mushu. 
 
 
-    I keep up 3D work as a hobby, I'm slowly learning to use it for concept art along with digital painting.
+    I keep up 3D work as a hobby, and I'm slowly learning to use it for concept art along with digital painting.
 
 
-    I enjoy board games, both in cafes and online more recently. I have a game night at least once a fortnight with my friends. 
+    I enjoy board games, both in cafes and, more recently, online. I have a game night at least once a fortnight with my friends. 
   image: /img/profile-pic.jpg
 footer:
   logo_strapline: Oliver Pearson
@@ -40,3 +40,4 @@ footer:
 notfound:
   text: Yes I have a 404 page. Mushu says Hi!
   image: /img/mushu.jpg
+---
