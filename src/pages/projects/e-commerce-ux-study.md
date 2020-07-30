@@ -50,10 +50,13 @@ sections:
       The UX personas I created involved a lot of collaboration with the most experienced Vitsoe salespeople, along with website usage data. 
 
 
+      ![Personas research from notebook](/img/persona-research.jpg "Personas research from notebook")
+
+
       These were representative of both Vitsoe's existing customer base, and their target market. I could then adapt these base personas where needed for a specific project.
 
 
-      #### Awareness 
+      #### Awareness
 
 
       There were few pain points directly associated with the website. The biggest problem that became immediately apparent was a lack of awareness. Even long standing Vitsoe customers were unaware that there was an online shop. 
@@ -115,8 +118,6 @@ sections:
 
 
       The key issue seemed to be getting users to reach the purchase page.
-
-
 
 
       #### Key issues
