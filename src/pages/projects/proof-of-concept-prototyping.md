@@ -4,7 +4,7 @@ date: 2020-07-03T16:06:08.432Z
 featuredproject: true
 title: Product design case study
 description: "This proof of concept was part of a wider investigation into how
-  vitsoe could improve the purchase process for the 606 Shelving System. "
+  Vitsoe could improve the purchase process for the 606 Shelving System. "
 featuredimage: /img/606-prototype-featured.jpg
 featuredlink: https://www.youtube.com/watch?v=8SOaF-Motuo&feature=youtu.be
 featuredlinklabel: See my presentation
@@ -32,12 +32,12 @@ sections:
       #### Project Length
 
 
-      The project was scheduled for 2 weeks initially, but was extended to 1 month.
+      The project was scheduled for two weeks initially, but was extended to one month.
   - heading: Brief
     headerimage: /img/brief-_-problem.png
     standout: false
     intro: This prototype was part of an ongoing UX review of the sales process for
-      their shelving system.
+      the shelving system.
     body: >-
       #### Background
 
@@ -48,7 +48,10 @@ sections:
       The sales process was inquiry led, planners (salespeople) would design the shelving system on behalf of customers.
 
 
-      In depth research on the sales process for 606 was ongoing. This included interviews with planners, behaviour analysis on the website, and sentiment analysis on the web inquiry form.
+      ![Image for 606 research](/img/606-research.jpg "Image for 606 research")
+
+
+      In-depth research on the sales process for 606 was ongoing. This included interviews with planners, behaviour analysis on the website, and sentiment analysis on the web inquiry form.
 
 
       #### Pain points
@@ -57,7 +60,7 @@ sections:
       ![User requirements map](/img/user-requirements-map.jpg "User requirements map")
 
 
-      * Planners wasted a lot of time on providing quotes for customers that could never afford the system. Customers were often unwilling to provide their budget upfront.
+      * Planners wasted a lot of time providing quotes for customers that could not afford the system. Customers were often unwilling to provide their budget upfront.
 
       * Planners found many customers who made inquiries didn't understand the basic concepts of the shelving system. 
 
@@ -82,7 +85,7 @@ sections:
 
       * Customers should be able to use the tool with no prior knowledge of the shelving system.
 
-      * Having used the tool a customer should understand more about the system. It should be informative and educational.
+      * Having used the tool, a customer should understand more about the system. It should be informative and educational.
 
       * It needed to inform customers of prices.
   - heading: Competitor tools
@@ -92,8 +95,8 @@ sections:
     standout: false
     headerimage: /img/research.png
     body: >-
-      Almost all of them were staged, allowing users to define the wall area
-      first, pick tracks then place components in separate sections. 
+      Almost all of them were staged; allowing users to define the wall area
+      first, pick tracks, and place components in separate stages. 
 
 
       After assessing many different tools, Ikea's Algot planner came out as an exemplar. 
@@ -107,7 +110,7 @@ sections:
 
       * Users can skip to step 3 by selecting from a list of templated examples. Giving them an immediate price, and promoting uses of the product a customer might not have considered. 
 
-      * The interface is simple, and offers multiple ways for a user to complete a task. For example the wall dimensions can be set by dragging handles, or by clicking on measurement labels and typing in a number.
+      * The interface is simple, and offers multiple ways for a user to complete a task. For example: the wall dimensions can be set by dragging handles, or by clicking on measurement labels and typing in a number.
 
       * Measurements on the system visualisation can be toggled, providing important information without visual clutter.
 
@@ -115,7 +118,7 @@ sections:
 
       * Dynamic illustrations let users know what would fit on different shelves using relatable objects, rather than relying on measurements. 
 
-      * Once complete, a unique sharable link was generated so that it could be shared with a partner or housemate.
+      * Once complete, a unique shareable link was generated so that it could be shared with a partner or housemate.
 
 
       Notes taken from other competitor tools:
@@ -125,7 +128,7 @@ sections:
 
       * Use of buttons to shift around components or structures was frustrating and repetitive.
 
-      * Colour should be selected separately to components, on the string planner a user would have to remove all the components to change the colour of their design.
+      * Colour should be selected separately to components; on the String planner a user would have to remove all the components to change the colour of their design.
   - heading: Wireframing and design
     intro: "The prototype evolved continually as we built it. Adding features in
       series to avoid leaving anything half finished. "
@@ -133,6 +136,9 @@ sections:
     standout: false
     body: >-
       #### Wireframes
+
+
+      ![Wireframing for 606 tool](/img/606-tool-wireframing.jpg "Wireframing for 606 tool")
 
 
       One of our development team was remote, using Adobe XD it made it easy to share and keep updated with any changes I made. 
@@ -156,7 +162,7 @@ sections:
       ![Mockup of tracks screen part 2](/img/screen-2-1-–-1.jpg "Mockup of tracks screen")
 
 
-      For this initial version, we would allow placement of the tacks anywhere. Tracks placed far away would snap to 90, and when placed closer would snap to 65 width bays.
+      For this initial version, we would allow placement of the tracks anywhere. Tracks placed far away would snap to 90cm, and when placed closer would snap to 65cm width bays.
 
 
       Some guidance was introduced here, making sure the user was unable to continue without at least one bay. 
@@ -165,7 +171,7 @@ sections:
       ![Mockup of tracks screen part 3](/img/screen-2-1-–-2.jpg "Mockup of tracks screen")
 
 
-      Adding a bay at a time was considered, but because there were multiple widths, it would require additional buttons on the active area. Use drag and drop for everything avoided complexity. 
+      Adding a bay at a time was considered, but because there were multiple widths, it would require additional buttons on the active area. Using drag and drop for everything avoided additional complexity. 
 
 
       ![Mockup of components screen](/img/screen-3.jpg "Mockup of components screen")
@@ -177,7 +183,7 @@ sections:
       Components were split into three categories, and could be filtered with pills buttons. 
 
 
-      We initially used colour coding to indicate whether a component would be allowed 
+      We initially used colour coding to indicate whether a component would be allowed. 
 
 
       #### Minimum viable product
@@ -189,7 +195,7 @@ sections:
       Working closely with the development team was invaluable, wherever some aspect of the design was unclear I could quickly provide additional sketches on paper or on XD.
 
 
-      At this stage the prototype could validate E-track placement using the wall dimensions, and component placement using a rules engine. It showed prices, used drag and drop, and allowed filtering of components by type. 
+      At this stage the prototype could validate E-track and component placement using a rules engine. It showed prices, used drag and drop, and allowed filtering of components by type. 
 
 
       #### Two week extension
@@ -206,15 +212,15 @@ sections:
 
       * More guidance would be provided.
 
-      * Colour customisation (the shelving comes in 6 colours, up until now we'd just used white)
+      * Colour customisation (the shelving comes in 6 colours, up until now we'd only used white)
 
       * An additional category for validation. Warnings would be included separately to errors. 
 
       * The option to switch to inches.
 
-      * Multiple currencies 
+      * Multiple currencies.
 
-      * Generate a unique sharable link
+      * Generate a unique shareable link.
 
 
       Features such as multiple currencies and the shareable link were tasks given to our senior developers. They were able to get to work on these features without having to wait on further mockups or design direction. 
@@ -229,7 +235,7 @@ sections:
       ![Mockup of new layout](/img/your-space-landing-–-3.jpg "Mockup of new layout")
 
 
-      This header bar would be consistent across all stages, which one space for instructional messages. 
+      This header bar would be consistent across all stages, with one space for instructional messages. 
 
 
       #### Gamification
@@ -244,7 +250,7 @@ sections:
       ![Consistent visual language ](/img/interaction-options.jpg "Consistent visual language ")
 
 
-      This let the configurator to build up complexity without over-reliance on instruction messages and hints, which are often overlooked by users.
+      This let the configurator build up complexity without over-reliance on instruction messages and hints, which are often overlooked by users.
 
 
       #### Adding difficulty
@@ -267,7 +273,7 @@ sections:
 
       * They had selected an item from the list. Learning blue meant selection.
 
-      * They had dragged and dropped a track into the green area. Learning the function of the drop targets, and how to drag and drop. 
+      * They had dragged and dropped a track into the drop target. Learning the function of the drop targets, and how to drag and drop. 
 
       * They had seen the colour change from red to unshaded as they dragged it into the drop target. Learning that the illustration changes colour when placed correctly. 
 
@@ -310,7 +316,7 @@ sections:
       The tool proved the point we wished to make; a web-based planning tool could be sufficiently complex, and follow as many rules as necessary. It also showed that it was within the reach of even a small development team.
 
 
-      This project, and along with research I carried out, provided the impetus for the company to re-prioritise crucial digital infrastructure work which was still ongoing at time of writing. Eventually this will provide the necessary framework to support a tool such as this.
+      This project, along with research I carried out, provided the impetus for the company to re-prioritise crucial digital infrastructure work which is still ongoing at time of writing. Eventually this will provide the framework to support a tool such as this.
     headerimage: /img/outcomes.png
 other_projects: More projects
 featuredpost: false
