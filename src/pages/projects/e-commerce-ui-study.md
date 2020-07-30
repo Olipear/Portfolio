@@ -20,24 +20,23 @@ sections:
       #### Team
 
 
-      Myself, one senior developer and one junior developer.
+      One senior developer, one junior developer, and myself.
     headerimage: /img/about.png
   - heading: Brief
     headerimage: /img/brief-_-problem.png
     standout: false
     intro: >
-      Vitsoe relied on its physical retail spaces for most of the sales of their
-      620 chair and footstool. Online purchases were often preceded by a shop
-      visit.
+      Vitsoe relied on its physical retail spaces for most sales of the 620
+      chair and footstool. Online purchases were often preceded by a shop visit.
     body: >-
       #### Business goals
 
 
-      * Increase sales of their 620 chair & footstool.
+      * Increase sales of the 620 chair & footstool.
 
       * Shift existing sales online.
 
-      * Reduce reliance on salespeople for sales, answer customer questions online.
+      * Reduce reliance on salespeople for sales by answering customer questions online.
 
       * Update the interface to allow the addition of a new upholstery option.
   - heading: Defining the problem
@@ -53,11 +52,11 @@ sections:
 
       * The modularity of the chair was poorly understood.
 
-      * Customers expected the leather to be more uniform, in fact it had many natural patterns/ scarring. 
+      * Customers expected the leather to be uniform, when in fact it had natural patterns/ scarring. 
 
       * Some customers were surprised by colour when they received the product.
 
-      * Customers couldn't buy a footstool one it's own.
+      * Customers couldn't buy a footstool on it's own.
 
 
       #### Source
@@ -66,7 +65,7 @@ sections:
       ![Previous buy page for the 620 chair](/img/original-page-landing.jpg "Previous buy page for the 620 chair")
 
 
-      This was the is what a customer is first presented with when they click 'configure and buy'.
+      This was what a customer was first presented with when they clicked 'configure and buy'.
 
 
       ### Poor product visualisation was at the heart of it.
@@ -74,9 +73,9 @@ sections:
 
       * The line drawing was not suitable for visualising a £3.5k product.
 
-      * The line drawing took up far too much screen space, the configuration options were not visible without scrolling.
+      * The line drawing took up far too much screen space, and the configuration options were not visible without scrolling.
 
-      * The photography available was not visible unless it was selected below the main image. 
+      * The photography available was not visible unless it was selected below the main illustration. 
 
       * The footstool could only be added to a chair purchase, and had no photography at all. 
 
@@ -93,7 +92,7 @@ sections:
 
       * Users would 'play' with the colour configurations after viewing the gallery. It seemed like they were getting ideas for colour combinations from the gallery over the configurator. 
 
-      * No purchases were made on mobile, but the gallery was popular for purchasers.
+      * No purchases were made on mobile, but the gallery was popular.
 
 
       #### User behaviour
@@ -101,9 +100,9 @@ sections:
 
       * Most users were not interacting with the configuration options.
 
-      * Users that did configure the chair often stopped after adding an additional seat. - possibly because adding a seat more than doubles the price. 
+      * Users that did configure the chair often stopped after adding an additional seat. - possibly because adding a seat drastically increases the price. 
 
-      * Most users, even purchasers would spend a very brief time on the informational pages accompanying the purchase page. 
+      * Most users, even purchasers, would spend a very brief time on the informational pages accompanying the purchase page. 
 
 
       #### User Stories
@@ -136,7 +135,7 @@ sections:
       Existing images on the buy page were the only product photography available. Business stakeholders were advised that new photography, or renders were required.
 
 
-      ### Our team created a [quick proof of concept](http://620poc.s3-website.eu-west-2.amazonaws.com/), in order to assess the practicality a product spinner.
+      ### Our team created a [quick proof of concept](http://620poc.s3-website.eu-west-2.amazonaws.com/), in order to assess the practicality of a product spinner.
 
 
       ![Screenshots of proof of concept](/img/620-poc.jpg "Screenshots of proof of concept")
@@ -161,7 +160,7 @@ sections:
       ![Initial wireframing of the 620 configurator](/img/620-initial-wireframes.jpg "Initial wireframing of the 620 configurator")
 
 
-      Staging the process was decided to be too restrictive for users. It might stand in the way of customers understanding the modular nature of the product.
+      Staging the process was deemed too restrictive for users; it might stand in the way of customers understanding the modular nature of the product.
 
 
       Condensing the controls was another option explored, this would allow the visualisation to be shown alongside the configuration controls.
@@ -193,9 +192,9 @@ sections:
 
       * All customisation options are shown to the user.
 
-      * The additional space using a fullscreen overlay could be used to include product photography.
+      * The space gained using a fullscreen overlay could be used to include product photography.
 
-      * Providing this close up photography when selecting colour, would provide the user with much better material and texture information on the product.
+      * Showing this close up photography when selecting colour, would provide the user with much better material and texture information on the product.
 
       * The modal buttons followed existing visual language used elsewhere on the site. 
 
@@ -208,10 +207,10 @@ sections:
       The modal for colour choices was carried over to the desktop because of the advantage a close up photograph provided. Desktop offered additional space to include shell and upholstery colour in one modal. 
 
 
-      This wasn't necessary for the the back and feet options. It made more sense to represent these as addons, and use checkboxes here.
+      This wasn't necessary for the back and feet options; it made more sense to represent these as addons, and use checkboxes.
   - heading: "Implementation "
-    intro: "Now the final design and major features were agreed it was time to start
-      building. "
+    intro: "Now that the final design and major features were agreed, it was time to
+      start building. "
     headerimage: /img/implementation.png
     standout: false
     body: >-
@@ -243,7 +242,7 @@ sections:
       ![](/img/components-split.jpg)
 
 
-      The data structure dictates which component to render, for example any product with colour customisation would use the same colour picker component. This format could then be scaled later to be used on any other vitsoe product. 
+      The data structure dictates which component to render, for example any product with colour customisation would use the same colour picker component. This format could be scaled later to be used on any other vitsoe product. 
 
 
       #### Optimisation
@@ -255,7 +254,7 @@ sections:
       ![Diagram of image optimisation technique](/img/image-load-order.jpg "Diagram of image optimisation technique")
 
 
-      Rendering out to multiple resolutions allowed me to implement lazy loading. With 16 images per rotation, loading these simultaneously took far too long. A custom implementation needed to be used which managed the order in which images loaded.
+      Rendering out to multiple resolutions allowed me to implement lazy loading. With 16 images per rotation, loading these simultaneously took far too long. A custom implementation managed the order in which images loaded, as shown above.
 
 
       ![Animation showing the responsiveness of the spinner when loading](/img/620-image-loading.gif "Animation showing the responsiveness of the spinner when loading")
@@ -277,7 +276,7 @@ sections:
       #### Methodology
 
 
-      Starting from the home page of the site participants were asked to buy specific configurations of chairs, footstools and sofas. After observing them complete the tasks, they were a few simple questions about the product.
+      Starting from the home page of the site, participants were asked to buy specific configurations of chairs, footstools and sofas. After observing them complete the tasks, they were asked a few simple questions about the product.
 
 
       #### Findings
@@ -290,7 +289,7 @@ sections:
 
       * During device testing on smaller devices; the confirm button in modals was not visible without scrolling. It was moved to the top of the overlay so that it would be consistent, and visible.
 
-      * The switch to the the footstool in the top left was often mis-tapped on touch devices. Since the footstool was linked both on other pages, and beneath the chair configurator, we decided to remove this.
+      * The switch to the footstool in the top left was often mis-tapped on touch devices. Since the footstool was linked both on other pages, and beneath the chair configurator, we decided to remove this.
 
 
       #### Further results
@@ -299,7 +298,7 @@ sections:
       As the last project I completed at Vitsoe, I don't have the usual follow up data I would need to properly assess it. Therefore I've kept this write-up focused on the UI design and development of the configurator. 
 
 
-      If you'd like to see an example of how I would usually measure the results of UX design changes, please check out the the ecommerce UX study below.
+      If you'd like to see an example of how I would usually measure the results of UX design changes, please check out the ecommerce UX study below.
 other_projects: More projects
 featuredpost: false
 ---
