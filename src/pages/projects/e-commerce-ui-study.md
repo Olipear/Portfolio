@@ -106,6 +106,12 @@ sections:
       * Most users, even purchasers would spend a very brief time on the informational pages accompanying the purchase page. 
 
 
+      #### User Stories
+
+
+      ![User stories](/img/620-requirements.jpg "User stories")
+
+
       #### Key points to address
 
 
@@ -147,6 +153,9 @@ sections:
 
 
       #### Initial wireframes
+
+
+      ![First sketches wireframing](/img/620-wireframing.jpg "First sketches wireframing")
 
 
       ![Initial wireframing of the 620 configurator](/img/620-initial-wireframes.jpg "Initial wireframing of the 620 configurator")
