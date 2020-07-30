@@ -54,6 +54,9 @@ sections:
       #### Pain points
 
 
+      ![User requirements map](/img/user-requirements-map.jpg "User requirements map")
+
+
       * Planners wasted a lot of time on providing quotes for customers that could never afford the system. Customers were often unwilling to provide their budget upfront.
 
       * Planners found many customers who made inquiries didn't understand the basic concepts of the shelving system. 
