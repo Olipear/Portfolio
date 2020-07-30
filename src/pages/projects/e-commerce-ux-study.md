@@ -3,7 +3,7 @@ templateKey: project-entry
 date: 2020-07-10T11:08:10.177Z
 featuredproject: true
 title: E-Commerce UX case study
-description: "Improving sales for the 621 table involved changes across the the
+description: "Improving sales for the 621 table involved changes across the
   website and digital marketing. "
 featuredimage: /img/621-featured.jpg
 featuredlink: https://www.vitsoe.com/621
