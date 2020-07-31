@@ -59,25 +59,10 @@ sections:
       * Customers couldn't buy a footstool on it's own.
 
 
-      #### Source
-
-
       ![Previous buy page for the 620 chair](/img/original-page-landing.jpg "Previous buy page for the 620 chair")
 
 
       This was what a customer was first presented with when they clicked 'configure and buy'.
-
-
-      ### Poor product visualisation was at the heart of it.
-
-
-      * The line drawing was not suitable for visualising a £3.5k product.
-
-      * The line drawing took up far too much screen space, and the configuration options were not visible without scrolling.
-
-      * The photography available was not visible unless it was selected below the main illustration. 
-
-      * The footstool could only be added to a chair purchase, and had no photography at all. 
 
 
       #### Purchase journeys
