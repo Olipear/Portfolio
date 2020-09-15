@@ -15,8 +15,6 @@ navigation:
 blurbs:
   - blurb: I take digital products from research and requirements gathering, all the
       way through to prototyping and development.
-  - blurb: "Currently available for UI / UX design and strategy, and front-end
-      development work. "
 about:
   aboutbody: >-
     I currently live in Leamington Spa with my partner Merle, and cat Mushu. 
