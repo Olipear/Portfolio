@@ -10,7 +10,7 @@ navigation:
   githublabel: Github
   linkedinurl: https://www.linkedin.com/in/oliver-pearson-799140100/
   linkedinlabel: LinkedIn
-  cv_pdf: /img/oliver-pearson-cv-2020.pdf
+  cv_pdf: /img/oliverpearson-cv.pdf
   cv_pdflabel: Download CV
 blurbs:
   - blurb: I take digital products from research and requirements gathering, all the
