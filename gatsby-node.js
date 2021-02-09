@@ -3,7 +3,6 @@ const path = require("path");
 const remark = require("remark");
 const remarkHTML = require("remark-html");
 const { createFilePath } = require("gatsby-source-filesystem");
-const { fmImagesToRelative } = require("gatsby-remark-relative-images");
 const unwrapImages = require('remark-unwrap-images')
 
 
@@ -53,7 +52,6 @@ exports.createPages = ({ actions, graphql }) => {
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
-  fmImagesToRelative(node); // convert image paths for gatsby images
 
   //convert mardown to html
   if (node.frontmatter && node.frontmatter.templateKey == 'project-entry') {
