@@ -23,7 +23,7 @@ about:
     I keep up 3D work as a hobby, and I'm slowly learning to use it for concept art along with digital painting.
 
 
-    I enjoy board games, both in cafes and, more recently, online. I have a game night at least once a fortnight with my friends. 
+    I enjoy board games, both in cafes and, more recently, online. I have a game night at least once a fortnight with my friends.
   image: /img/profile-pic.jpg
 footer:
   logo_strapline: Oliver Pearson
