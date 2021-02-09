@@ -139,7 +139,7 @@ export const pageQuery = graphql`
               fluid(
                 maxWidth: 200
                 maxHeight: 200
-                quality: 100g
+                quality: 100
                 cropFocus: ENTROPY
               ) {
                 ...GatsbyImageSharpFluid
