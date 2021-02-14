@@ -6,7 +6,6 @@ const { createFilePath } = require("gatsby-source-filesystem");
 const unwrapImages = require('remark-unwrap-images')
 
 
-
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
 
@@ -52,7 +51,7 @@ exports.createPages = ({ actions, graphql }) => {
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
-
+  
   //convert mardown to html
   if (node.frontmatter && node.frontmatter.templateKey == 'project-entry') {
     if (node.frontmatter.sections) {
